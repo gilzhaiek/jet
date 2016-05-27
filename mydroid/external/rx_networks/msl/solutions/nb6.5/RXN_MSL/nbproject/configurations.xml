@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="69">
+  <logicalFolder name="root" displayName="root" projectFiles="true">
+    <logicalFolder name="include" displayName="include" projectFiles="true">
+      <itemPath>../../../include/RXN_MSL.h</itemPath>
+      <itemPath>../../../include/RXN_MSL_Common.h</itemPath>
+      <itemPath>../../../include/RXN_MSL_Linux.h</itemPath>
+      <itemPath>../../../include/RXN_MSL_Log.h</itemPath>
+      <itemPath>../../../include/RXN_MSL_Options.h</itemPath>
+      <itemPath>../../../include/RXN_MSL_PGPS.h</itemPath>
+      <itemPath>../../../include/RXN_MSL_SAGPS.h</itemPath>
+      <itemPath>../../../include/RXN_MSL_Time.h</itemPath>
+    </logicalFolder>
+    <logicalFolder name="src" displayName="src" projectFiles="true">
+      <logicalFolder name="platforms" displayName="platforms" projectFiles="true">
+        <logicalFolder name="linux" displayName="linux" projectFiles="true">
+          <itemPath>../../../src/platforms/linux/RXN_MSL_Linux.c</itemPath>
+        </logicalFolder>
+        <itemPath>../../../src/platforms/RXN_MSL_Platform.c</itemPath>
+      </logicalFolder>
+      <itemPath>../../../src/RXN_MSL.c</itemPath>
+      <itemPath>../../../src/RXN_MSL_AbsCalls.c</itemPath>
+      <itemPath>../../../src/RXN_MSL_Common.c</itemPath>
+      <itemPath>../../../src/RXN_MSL_Log.c</itemPath>
+      <itemPath>../../../src/RXN_MSL_MsgThread.c</itemPath>
+      <itemPath>../../../src/RXN_MSL_PGPS.c</itemPath>
+      <itemPath>../../../src/RXN_MSL_SM.c</itemPath>
+      <itemPath>../../../src/RXN_MSL_Time.c</itemPath>
+    </logicalFolder>
+    <logicalFolder name="ExternalFiles"
+                   displayName="Important Files"
+                   projectFiles="false">
+      <itemPath>../../../Makefile</itemPath>
+      <itemPath>RXN_MSL-Makefile.mk</itemPath>
+    </logicalFolder>
+  </logicalFolder>
+  <sourceRootList>
+    <Elem>../../../include</Elem>
+    <Elem>../../../src</Elem>
+  </sourceRootList>
+  <projectmakefile>RXN_MSL-Makefile.mk</projectmakefile>
+  <confs>
+    <conf name="Default" type="0">
+      <toolsSet>
+        <developmentServer>localhost</developmentServer>
+        <compilerSet>GNU|GNU</compilerSet>
+        <platform>2</platform>
+      </toolsSet>
+      <makefileType>
+        <makeTool>
+          <buildCommandWorkingDir>../../..</buildCommandWorkingDir>
+          <buildCommand>make -f Makefile product=pgps license=evaluation ARCH=i386 clean all</buildCommand>
+          <cleanCommand>make -f Makefile clean</cleanCommand>
+          <executablePath>../../../../intapp/bin/gcc-4.4.3-i486-linux-gnu/Release/i386/RXN_IntApp</executablePath>
+        </makeTool>
+      </makefileType>
+    </conf>
+  </confs>
+</configurationDescriptor>

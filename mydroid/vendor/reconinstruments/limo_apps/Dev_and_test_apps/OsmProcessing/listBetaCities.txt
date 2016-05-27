@@ -1,0 +1,57 @@
+#beta3
+Almere, Netherlands
+Amersfoort, Netherlands
+Harderwijk, Netherlands
+
+#Beta2
+Friesland, Netherlands
+Switzerland, Switzerland
+Cologne, Germany
+Rhône, France 
+Akita Prefecture, Japan
+Inner West, Sydney NSW, Australia
+Trnava Region, Slovakia
+Massachusetts, USA
+New York, USA
+Multnomah County, OR, USA
+Farmington, CT, USA
+King County, WA, USA
+
+#Beta1
+Brisbane, QLD,Australia
+Salisbury, QLD, Australia
+Wooloowin, QLD, Australia
+Teneriffe, QLD, Australia
+Camp Hill, QLD, Australia
+Jamboree Heights, QLD, Australia
+Bulimba, QLD, Australia
+Morningside, QLD, Australia
+Chermside west,QLD, Australia
+Tarragindi , QLD, Australia
+Wilston, QLD, Australia
+Grange,QLD, Australia
+Vancouver, BC,Canada
+North, Vancouver, BC,Canada
+Richmond, BC,Canada
+North Saanich, BC,Canada
+Kitchener, ON,Canada
+Toronto, ON,Canada
+Livermore, California,USA
+Kensington,California,USA
+El Granada,California,USA
+San Bruno, California, USA
+Novato/Marin, California, USA
+San Francisco, California, USA
+Berkeley, California, USA
+Pacifica, California, USA
+San Anselmo, California, USA
+Mill Valley, California, USA
+Milpitas, California, USA
+Moraga, California, USA
+Los Angeles, California, USA
+Burlingame, California, USA
+Orinda, California, USA
+San Rafael, California, USA
+Topanga California, USA
+Beaverton, Oregon, USA
+Herndon, Virginia, USA

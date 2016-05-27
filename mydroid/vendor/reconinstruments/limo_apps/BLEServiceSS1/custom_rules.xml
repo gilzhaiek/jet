@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="BLEServiceSS1" default="help">
+
+
+	<target name="-pre-compile">
+		<path id="tested.project.classpath">
+			<pathelement location="extlibs/ss1api.jar" />
+		</path>
+		<echo>***** -pre-compile:
+			tested.project.classpath="${toString:tested.project.classpath}"</echo>
+	</target>
+</project>

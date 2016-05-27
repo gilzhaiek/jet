@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.reconinstruments.myactivities"
+    android:versionCode="7020"
+    android:versionName="Pre_Ivanho_2" >
+
+    <uses-sdk
+        android:minSdkVersion="10"
+        android:targetSdkVersion="17" />
+
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.WRITE_SECURE_SETTINGS" />
+
+    <application
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/ReconTheme.NoTitleBar.Fullscreen" >
+        <activity
+            android:name="com.reconinstruments.myactivities.MyActivitiesActivity"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="com.reconinstruments.myactivities" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.reconinstruments.myactivities.MyActivitiesDetailActivity"
+                android:noHistory="true"/>
+        <activity
+            android:name="com.reconinstruments.myactivities.MyActivityMapOverlayActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleInstance" >
+        </activity>
+    </application>
+
+</manifest>

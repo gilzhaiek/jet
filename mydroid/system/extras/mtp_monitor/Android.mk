@@ -1,0 +1,9 @@
+LOCAL_PATH:= $(call my-dir)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE_TAGS := eng
+LOCAL_MODULE := mtp_monitor
+LOCAL_MODULE_PATH := $(TARGET_OUT_OPTIONAL_EXECUTABLES)
+LOCAL_SRC_FILES := mtp_monitor.c 
+LOCAL_SHARED_LIBRARIES :=libcutils
+include $(BUILD_EXECUTABLE)

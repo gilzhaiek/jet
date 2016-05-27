@@ -1,0 +1,25 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.reconinstruments.systemui"
+    android:sharedUserId="android.uid.system"
+    android:versionCode="7020"
+    android:versionName="Pre_Ivanho_2" >
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="16" />
+
+    <application
+        android:allowBackup="true"
+        android:theme="@style/Theme.Transparent" >
+        <activity
+            android:name=".uplink.UplinkActivity"
+            android:screenOrientation="landscape" >
+            <intent-filter>
+                <action android:name="com.reconinstruments.systemui.uplink.UPLINK_IN_PROGRESS" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

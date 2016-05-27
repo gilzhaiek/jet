@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="bluetoothPowerButtonLabel">BT</string>
+	<string name="bluetoothSwitchLabel">S</string>
+	<string name="aLabel">A</string>
+	<string name="bLabel">B</string>
+	<string name="cLabel">C</string>
+	<string name="bluetoothPowerOn">On</string>
+	<string name="bluetoothPowerOff">Off</string>
+	<string name="commandLabel">Command:</string>
+	<string name="commandDropDownLabel">Select Command</string>
+	<string name="executeCommandLabel">Do</string>
+	<string name="remoteDeviceLabel">Remote Device Address</string>
+	<string name="parameter1Label">Parameter 1</string>
+	<string name="parameter2Label">Parameter 2</string>
+	<string name="parameter3Label">Parameter 3</string>
+	<string name="parameter4Label">Parameter 4</string>
+	<string name="parameter5Label">Parameter 5</string>
+	<string name="logOutputLabel">Output log:</string>
+	<string name="logOutputInitialText">Output</string>
+	<string name="bluetoothEnablingStatusText">Turning on</string>
+	<string name="bluetoothEnabledStatusText">Enabled</string>
+	<string name="bluetoothDisablingStatusText">Turning off</string>
+	<string name="bluetoothDisabledStatusText">Disabled</string>
+	<string name="localAddressLogMessagePrefix">Local device: </string>
+	<string name="bluetoothEnablingToastMessage">Bluetooth is turning on.</string>
+	<string name="bluetoothEnabledToastMessage">Bluetooth is enabled.</string>
+	<string name="bluetoothDisablingToastMessage">Bluetooth is turning off.</string>
+	<string name="bluetoothDisabledToastMessage">Bluetooth is disabled.</string>
+	<string name="bluetoothUnknownStateToastMessage">Received notification of Bluetooth state &lt;unrecognized&gt;.</string>
+	<string name="errorPreferencesOutOfDate">WARNING: Saved application state is out of date. State has been reset to default.</string>
+	<string name="errorBluetoothNotSupportedToastMessage">ERROR: Bluetooth is not supported on this device.</string>
+	<string name="errorEnableBluetoothToastMessage">ERROR: Bluetooth must be enabled to perform this function.</string>
+	<string name="errorInvalidBluetoothAddressToastMessage">ERROR: Bluetooth address is not formatted correctly.</string>
+	<string name="errorBTPMServerNotReachableToastMessage">ERROR: Could not connect to the BluetopiaPM service.</string>
+	<string name="Scan">Scan </string>
+	<string name="getServices">Get services </string>
+	<string name="Connect">Connect </string>
+	<string name="Disconnect">Disconnect </string>
+	<string name="Next">Next </string>
+	<string name="RemoteDeviceAddress">Remote Device Address </string>
+	<string name="Disconnected">Disconnected </string>
+	<string name="RemoteDeviceName">Remote Device Name </string>
+	<string name="NotifyOn">Notify On </string>
+	<string name="NotifyOff">Notify Off </string>
+	<string name="Pressthepowerbuttontoselectaremote">Press the power button to select a remote</string>
+	<string name="connectingtoinseconds">Connecting to # in # seconds</string>
+	<!-- Adding my shit -->
+	<string name="remotesdetected">13 NEW REMOTES DETECTED</string>
+	<string name="ninety">90</string>
+	<string name="check_the_number_on_the_back">Check the number on the back of your remote.</string>
+	<string name="press_power_button">Press POWER BUTTON to pair</string>
+	<string name="or_wait_30_seconds">or wait 30 seconds to cancel</string>
+	<string name="ffffff"> FFFFFF</string>
+</resources>

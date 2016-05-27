@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:background="#b0000000"
+	android:orientation="vertical"
+	android:id="@+id/jetToast" >
+
+ 	<FrameLayout
+ 	    android:layout_width="fill_parent"
+ 	    android:layout_height="wrap_content"
+ 	    android:layout_centerInParent="true">
+ 	    
+ 	    <View
+ 	        android:layout_width="fill_parent"
+ 	        android:layout_height="80dp"
+ 	        android:layout_gravity="center"
+ 	        android:background="#474747"/>
+
+ 	    <LinearLayout
+ 	        android:layout_width="wrap_content"
+ 	        android:layout_height="wrap_content"
+ 	        android:orientation="horizontal"
+ 	        android:layout_gravity="center"
+ 	         android:id="@+id/jetToast_message">
+ 	        <ImageView
+ 	            android:id="@+id/jetToast_image"
+ 	            android:layout_width="wrap_content"
+ 	            android:layout_height="wrap_content"
+ 	            android:layout_gravity="center"/>
+	        <TextView
+	            android:id="@+id/jetToast_text"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_gravity="center"
+	            android:singleLine="true"
+	            android:textColor="#FFFFFF"
+	            android:textSize="45dp"
+	            android:paddingLeft="25dp"/>
+	    </LinearLayout>
+        
+	</FrameLayout>
+
+</RelativeLayout>

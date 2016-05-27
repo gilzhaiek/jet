@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<com.reconinstruments.camera.ui.CameraRootView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/camera_app_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+</com.reconinstruments.camera.ui.CameraRootView>

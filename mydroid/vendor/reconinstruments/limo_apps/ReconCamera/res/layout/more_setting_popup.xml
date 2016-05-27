@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.reconinstruments.camera.ui.MoreSettingPopup xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/SettingPopupWindow" >
+
+    <FrameLayout
+        android:layout_width="@dimen/big_setting_popup_window_width"
+        android:layout_height="wrap_content"
+        android:background="@color/popup_background" >
+
+        <ListView
+            android:id="@+id/settingList"
+            style="@style/SettingItemList" />
+    </FrameLayout>
+
+</com.reconinstruments.camera.ui.MoreSettingPopup>

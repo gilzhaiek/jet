@@ -1,0 +1,11 @@
+<profile name="running">
+  <column>
+    <element activity="com.reconinstruments.dashcompass/.CompassActivity"/>
+  </column>	
+  <column class="home">
+    <element activity="com.reconinstruments.dashlivestats/.JetLiveStatsActivity" />
+  </column>
+  <column>
+    <element activity="com.reconinstruments.maps/.MapActivity" />
+  </column>
+</profile>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.reconinstruments.dashlauncher"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black"
+    android:gravity="center" >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:id="@+id/warning_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="65dp"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp"
+            android:paddingTop="55dp" >
+
+            <TextView
+                android:id="@+id/warning_1"
+                style="@style/WarningText"
+                android:text="@string/paragraph1" />
+
+            <TextView
+                android:id="@+id/warning_2"
+                style="@style/WarningText"
+                android:text="@string/paragraph2" />
+
+            <TextView
+                android:id="@+id/warning_3"
+                style="@style/WarningText"
+                android:text="@string/paragraph3" />
+        </LinearLayout>
+    </ScrollView>
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/header_button" />
+
+</FrameLayout>

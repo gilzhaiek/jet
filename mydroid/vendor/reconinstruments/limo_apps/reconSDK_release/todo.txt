@@ -1,0 +1,23 @@
+
+Notes:
+
+  -- Some source files are internal to package & not intended for documentation (list in args.txt)
+
+  -- package.html overview.html: I have basic write-up; take it as template & expand by tech-writer.
+
+  -- Not including "ReconMODService.java" -- these are "Ali constants" that should not be exposed externally
+     However this could potentially be advertised as "advanced" feature
+
+  -- Recommended to implement our own stylesheet.css
+     I took default "stylesheet.css", renamed "recon-develer-docs.css" & compiling with this. It included
+     "android-developer-docs.css" I took from Google
+
+  -- For some reasons constants show as fields; need to figure out why
+
+  -- Some code changes would be recommended (i.e. Public constructors for ReconEvent etc)
+
+  -- Document what is the Threshold for Run, Jump. Is this available via Settings?
+     Ali should read & verify summary description for all concrete ReconEvent types to ensure it is correct
+
+  -- There needs to be separate doc (outside of API scope) that clearly lists all Broadcast Values
+     (i.e changes in all measured values do not trigger broadcasts)

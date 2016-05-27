@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res/com.reconinstruments.navigation"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+>
+
+	<!-- the toolbar for  manipulate the mapView  -->
+	<LinearLayout
+		android:id="@+id/nav_bar"
+    	android:layout_width="fill_parent"
+    	android:layout_height="wrap_content"
+    	android:orientation="horizontal"
+    	android:gravity="center_horizontal"
+    	android:focusable="true"
+    	android:background="#ff2554C7"
+    >
+      	<ImageView
+	        android:id="@+id/title_icon"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:width="40dip"
+	        android:gravity="center_vertical"
+	        android:src="@drawable/lift"
+	    />
+	    
+        <TextView
+            android:id="@+id/title_text"
+            android:layout_width="wrap_content"
+            android:layout_height="20dip"
+            android:layout_weight="1"
+            android:textStyle="bold"
+            android:gravity="center_vertical"                       
+        />    
+ 	</LinearLayout>
+ 	
+    <ListView
+    		android:id="@+id/android:list"
+    		android:layout_width="fill_parent"
+    		android:layout_height="wrap_content"
+    		android:layout_weight="1"
+    />
+    
+    <LinearLayout
+		android:id="@+id/poiList_button_bar"
+    	android:layout_width="fill_parent"
+    	android:layout_height="wrap_content"
+    	android:orientation="horizontal"
+    	android:gravity="center_horizontal"
+    	android:focusable="true"
+    >
+      	<Button
+	        android:id="@+id/btn_go"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:width="40dip"
+	        android:gravity="center_vertical"
+	        android:text="Go"
+	    />
+	    
+        <Button
+            android:id="@+id/btn_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"          
+            android:textStyle="bold"
+            android:gravity="center_vertical"
+            android:text="Delete"                       
+        />    
+ 	</LinearLayout>
+</LinearLayout>

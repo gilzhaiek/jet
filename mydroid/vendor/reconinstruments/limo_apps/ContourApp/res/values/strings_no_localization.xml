@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="app_name">Contour Connect</string>
+	<string name="record_time_elapsed">%1$02d:%2$02d:%3$02d</string>
+	<string name="gps_title">GPS</string>
+	<string name="fps">FPS</string>
+	<string name="camera_contour_plus_two">Contour+2</string>
+	<string name="camera_contour_plus">Contour+</string>
+	<string name="camera_contour_gps">Contour GPS</string>
+	<!-- SETTINGS ARRAYS -->
+	<string-array name="app_info_items">
+		<item>@string/app_version</item>
+		<item>@string/cameraname</item>
+		<item>@string/fw_version</item>
+		<item>@string/cameramodel</item>
+	</string-array>
+	<string-array name="settings_items">
+		<item>@string/camera</item>
+		<item>@string/mode</item>
+		<item>@string/quality</item>
+		<item>@string/photofrequency</item>
+		<item>@string/video</item>
+		<item>@string/metering</item>
+		<item>@string/whitebalance</item>
+		<item>@string/advanced</item>
+		<item>@string/audio</item>
+		<item>@string/camerabeeps</item>
+		<item>@string/microphone</item>
+		<item>@string/cameragps</item>
+		<item>@string/gps</item>
+		<item>@string/gpsupdaterate</item>
+		<item>@string/videoformat</item>
+	</string-array>
+	<string-array name="quick_settings_items">
+		<item>@string/switch_positons</item>
+		<item>@string/switchpositiontitle</item>
+		<item>@string/switchpositiontitle</item>
+		<item>@string/globalsettings</item>
+		<item>@string/videoformat</item>
+		<item>@string/resettodefaults</item>
+		<item>@string/aboutcontourtitle</item>
+		<item>@string/app_info_title_short</item>
+	</string-array>
+	<string-array name="video_settings_items">
+		<item>@string/contrast</item>
+		<item>@string/exposure</item>
+		<item>@string/sharpness</item>
+	</string-array>
+	<string-array name="audio_settings_items">
+		<item>@string/internalmic</item>
+		<item>@string/externalmic</item>
+	</string-array>
+	<string-array name="photo_frequency">
+		<item>@string/e1sec</item>
+		<item>@string/e3sec</item>
+		<item>@string/e5sec</item>
+		<item>@string/e10sec</item>
+		<item>@string/e15sec</item>
+		<item>@string/e20sec</item>
+		<item>@string/e30sec</item>
+		<item>@string/e45sec</item>
+		<item>@string/e60sec</item>
+	</string-array>
+	<string-array name="photo_frequency_plus">
+		<item>@string/e3sec</item>
+		<item>@string/e5sec</item>
+		<item>@string/e10sec</item>
+		<item>@string/e30sec</item>
+		<item>@string/e60sec</item>
+	</string-array>
+	<string-array name="white_balance_entries">
+		<item>@string/auto</item>
+		<item>@string/incandescent</item>
+		<item>@string/fluorescent</item>
+		<item>@string/daylightd50</item>
+		<item>@string/daylightd65</item>
+		<item>@string/cloudy</item>
+		<item>@string/shade</item>
+		<item>@string/xenon</item>
+	</string-array>
+	<string-array name="metering_entries">
+		<item>@string/center</item>
+		<item>@string/average</item>
+		<item>@string/spot</item>
+	</string-array>
+	<string-array name="video_quality_entries">
+		<item>@string/low</item>
+		<item>@string/medium</item>
+		<item>@string/high</item>
+	</string-array>
+	<string-array name="video_format_entries">
+		<item>PAL (25/50/100 FPS)</item>
+		<item>NTSC (30/60/120 FPS)</item>
+	</string-array>
+	<string-array name="video_res_entries_ntsc">
+		<item>1080P / 30 FPS (1920x1080)</item>
+		<item>960P / 30 FPS (1280x960)</item>
+		<item>720P / 30 FPS (1280x720)</item>
+		<item>720P / 60 FPS (1280x720)</item>
+		<item>480P / 30 FPS (848x480)</item>
+		<item>480P / 60 FPS (848x480)</item>
+		<item>480P / 120 FPS (848x480)</item>
+		<item>Photo Mode</item>
+	</string-array>
+	<string-array name="video_res_entries_ntsc_plus">
+		<item>1080P / 30 FPS (1920x1080)</item>
+		<item>960P / 30 FPS (1280x960)</item>
+		<item>720P / 30 FPS (1280x720)</item>
+		<item>720P / 60 FPS (1280x720)</item>
+		<item>Photo Mode</item>
+	</string-array>
+	<string-array name="video_res_entries_pal">
+		<item>1080P / 25 FPS (1920x1080)</item>
+		<item>960P / 25 FPS (1280x960)</item>
+		<item>720P / 25 FPS (1280x720)</item>
+		<item>720P / 50 FPS (1280x720)</item>
+		<item>480P / 25 FPS (848x480)</item>
+		<item>480P / 50 FPS (848x480)</item>
+		<item>480P / 100 FPS (848x480)</item>
+		<item>Photo Mode</item>
+	</string-array>
+	<string-array name="video_res_entries_pal_plus">
+		<item>1080P / 25 FPS (1920x1080)</item>
+		<item>960P / 25 FPS (1280x960)</item>
+		<item>720P / 25 FPS (1280x720)</item>
+		<item>720P / 50 FPS (1280x720)</item>
+		<item>Photo Mode</item>
+	</string-array>
+	<string-array name="short_video_res_entries_ntsc">
+		<item>1080P / 30 FPS  / GPS %1$s</item>
+		<item>960P / 30 FPS  / GPS %1$s</item>
+		<item>720P / 30 FPS / GPS %1$s</item>
+		<item>720P / 60 FPS / GPS %1$s</item>
+		<item>480P / 30 FPS / GPS %1$s</item>
+		<item>480P / 60 FPS / GPS %1$s</item>
+		<item>480P / 120 FPS / GPS %1$s</item>
+		<item>Photos / %2$d sec / GPS %1$s</item>
+	</string-array>
+	<string-array name="short_video_res_entries_ntsc_plus">
+		<item>1080P / 30 FPS / GPS %1$s</item>
+		<item>960P / 30 FPS / GPS %1$s</item>
+		<item>720P / 30 FPS / GPS %1$s</item>
+		<item>720P / 60 FPS / GPS %1$s</item>
+		<item>Photos / %2$d sec / GPS %1$s</item>
+	</string-array>
+	<string-array name="short_video_res_entries_pal">
+		<item>1080P / 25 FPS / GPS %1$s</item>
+		<item>960P / 25 FPS / GPS %1$s</item>
+		<item>720P / 25 FPS / GPS %1$s</item>
+		<item>720P / 50 FPS / GPS %1$s</item>
+		<item>480P / 25 FPS / GPS %1$s</item>
+		<item>480P / 50 FPS / GPS %1$s</item>
+		<item>480P / 100 FPS / GPS %1$s</item>
+		<item>Photos / %2$d sec / GPS %1$s</item>
+	</string-array>
+	<string-array name="short_video_res_entries_pal_plus">
+		<item>1080P / 25 FPS / GPS %1$s</item>
+		<item>960P / 25 FPS / GPS %1$s</item>
+		<item>720P / 25 FPS / GPS %1$s</item>
+		<item>720P / 50 FPS / GPS %1$s</item>
+		<item>Photos / %2$d sec / GPS %1$s</item>
+	</string-array>
+	<string-array name="gps_rate_entries">
+		<item>0 Hz</item>
+		<item>1 Hz</item>
+		<item>2 Hz</item>
+		<item>4 Hz</item>
+		<item>5 Hz</item>
+	</string-array>
+	<string-array name="gps_rate_entries_plus">
+		<item>0 Hz</item>
+		<item>1 Hz</item>
+		<item>2 Hz</item>
+		<item>4 Hz</item>
+	</string-array>
+	<string-array name="gps_rate_entries_gps">
+		<item>0 Hz</item>
+		<item>1 Hz</item>
+		<item>2 Hz</item>
+	</string-array>
+	<integer-array name="quick_settings_items_layout">
+		<item>@layout/list_item_header</item>
+		<item>@layout/list_item_text</item>
+		<item>@layout/list_item_text</item>
+		<item>@layout/list_item_header</item>
+		<item>@layout/list_item_text</item>
+		<item>@layout/list_item_text</item>
+		<item>@layout/list_item_text</item>
+		<item>@layout/list_item_text</item>
+	</integer-array>
+	<integer-array name="settings_items_layout">
+		<item>@layout/list_item_header</item>
+		<item>@layout/list_item_text</item>
+		<item>@layout/list_item_text</item>
+		<item>@layout/list_item_text</item>
+		<item>@layout/list_item_header</item>
+		<item>@layout/list_item_text</item>
+		<item>@layout/list_item_text</item>
+		<item>@layout/list_item_text</item>
+		<item>@layout/list_item_header</item>
+		<item>@layout/list_item_bool</item>
+		<item>@layout/list_item_text</item>
+		<item>@layout/list_item_header</item>
+		<item>@layout/list_item_bool</item>
+		<item>@layout/list_item_text</item>
+	</integer-array>
+</resources>

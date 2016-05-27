@@ -1,0 +1,142 @@
+####################################################################################################################
+#                                                                                                                  #
+#                                                                                                                  #
+# This is the configure file for Recon Instruments Map (RIM)                                                       #
+# We are making dymatical configuration of the interested node, way and relation, which allows easily add, remove. #
+# OSM node, way and relation will be mapped into recon rmo element.                                                #
+#                                                                                                                  #
+####################################################################################################################
+
+['NODE']
+# This section is that configures the node in the format: {"OSM_TAG_KEY": "OSM_TAG_VALUE"}, "RECON_TYPE"
+
+MAX_NUM_TAGS = 10
+TAG0 ={"shop":"*"}, "shop"
+TAG1 ={"amenity":"restaurant"}, "restaurant"
+TAG2 ={"amenity":"food_court"}, "restaurant"
+TAG3 ={"amenity":"fast_food"}, "restaurant"
+TAG4 ={"amenity":"cafe"}, "restaurant"
+TAG5 ={"amenity":"hospital"}, "hospital"
+TAG6 ={"amenity":"clinic"}, "hospital"
+TAG7 ={"amenity":"doctors"}, "hospital"
+TAG8 ={"amenity":"dentist"}, "hospital"
+TAG9 ={"amenity":"toilets"}, "washroom"
+
+####################################################################################################################
+['WAY']
+# This section is that configures the way in the format: {"OSM_TAG_KEY": "OSM_TAG_VALUE"}, "RECON_TYPE"
+
+MAX_NUM_TAGS = 35
+
+TAG0 ={"highway":"residential"}, "residential road"
+TAG1 ={"surface":"paved"}, "dirt road"
+TAG2 ={"surface":"gravel"}, "dirt road"
+TAG3 ={"highway":"motorway"}, "highway"
+TAG4 ={"highway":"trunk"}, "highway"
+TAG5 ={"highway":"primary"}, "highway"
+TAG6 ={"highway":"secondary"}, "highway"
+TAG7 ={"highway":"tertiary"}, "highway"
+TAG8 ={"highway":"trunk_link"}, "highway"
+TAG9 ={"highway":"primary_link"}, "highway"
+TAG10 ={"highway":"secondary_link"}, "highway"
+TAG11 ={"highway":"tertiary_link"}, "highway"
+#area
+TAG12 ={"landuse":"residential"}, "residential area"
+TAG13 ={"leisure":"park"}, "park"
+TAG14 ={"leisure":"water_park"}, "park"
+TAG15 ={"leisure":"national_park"}, "park"
+TAG16 ={"tourism":"theme_park"}, "park
+TAG17 ={"landuse":"forest"}, "wood"
+TAG18 ={"natural":"wood"}, "wood"
+TAG19 ={"landuse":"reservoir"}, "water"
+TAG20 ={"landuse":"salt_pond"}, "water"
+TAG21 ={"natural":"water"}, "water"
+TAG22 ={"natural":"beach"}, "water"
+TAG23 ={"natural":"bay"}, "water"
+TAG24 ={"natural":"coastline"}, "water"
+TAG25 ={"natural":"spring"}, "water"
+TAG26 ={"natural":"wetland"}, "water"
+TAG27 ={"man_made":"breadwater"}, "water"
+TAG28 ={"Waterway":"*"}, "water"
+TAG29 ={"landuse":"grass"}, "field"
+TAG30 ={"landuse":"meadow"}, "field"
+TAG31 ={"landuse":"greenfield"}, "field"
+TAG32 ={"landuse":"village_green"}, "field"
+TAG33 ={"landuse":"grassland"}, "field"
+TAG34 ={"landuse":"pitch"}, "field"
+   
+
+
+####################################################################################################################
+["RELATION"]
+MAX_NUM_TAGS = 9
+TAG0 ={"route":                "ski"}, "ski"
+TAG1 ={"route":                "hiking"}, "hiking"
+TAG2 ={"route":                "bicycle"}, "bicycle"
+TAG3 ={"route":                "mtb"},	"bicycle"
+TAG4 ={"route":                "road"}, "road"
+TAG5 ={"highway":              "residential"}, "road"
+TAG6 ={"highway":              "secondary"}, "road"
+TAG7 ={"highway":              "footway"}, "road"
+TAG8 ={"route":                "bus"}, "bus"
+
+####################################################################################################################
+
+
+
+
+
+####################################################################################################################
+['NODE_DISP_TAGS']
+# This section is that configures the Node Tags that it will be showed in output xml file
+MAX_NUM_TAGS = 10
+TAG0 ="name"
+TAG1 ="addr:city"
+TAG2 ="addr:housenumber"
+TAG3 ="addr:street"
+TAG4 ="place"
+TAG5 ="is_in"
+TAG6 ="highway"
+TAG7 ="shop"
+TAG8 ="amenity"
+TAG9 ="test"
+
+####################################################################################################################
+['WAY_DISP_TAGS']
+# This section is that configures the Way Tags that will be showed in output xml file
+MAX_NUM_TAGS = 14
+
+TAG0 ="name"
+TAG1 ="addr:city"
+TAG2 ="addr:housenumber"
+TAG3 ="addr:street"
+TAG4 ="is_in"
+TAG5 ="highway"
+TAG6 ="landuse"
+TAG7 ="bicycle"
+TAG8 ="maxspeed"
+TAG9 ="bridge"
+TAG10 ="building"
+TAG11 ="leisure"
+TAG12 ="service"
+TAG13 ="footway"
+
+
+####################################################################################################################
+['RELATION_DISP_TAGS']
+# This section is that configures the Relation Tags that will be showed in output xml file
+MAX_NUM_TAGS = 7
+
+TAG0 ="name"
+TAG1 ="addr:city"
+TAG2 ="addr:housenumber"
+TAG3 ="addr:street"
+TAG4 ="is_in"
+TAG5 ="route"
+TAG6 ="landuse"
+
+####################################################################################################################
+#                                                                                                                  #
+# The 'END of Configure file'                                                                                      #
+#                                                                                                                  #
+####################################################################################################################

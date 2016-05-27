@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">MusicControlTest</string>
+    <string name="hello_world">Hello world, lets test music control!</string>
+    <string name="hello_world2">Waiting for information!</string>
+    <string name="toggle">Toggle</string>
+    <string name="next">Next</string>
+    <string name="prev">Prev</string>
+    <string name="volUp">Vol Up</string>
+    <string name="volDown">Vol Down</string>
+    <string name="menu_settings">Settings</string>
+
+</resources>

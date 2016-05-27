@@ -1,0 +1,58 @@
+GPStream Software Evaluation License
+
+RX NETWORKS EVALUATION SOFTWARE LICENSE AGREEMENT (“License Agreement”)
+
+Unless you already have a separate software license agreement with Rx Networks Inc. currently in force and governing the use of this GPStream Software, these license terms are an agreement between Rx Networks Inc. and you. Please read them. They apply to the GPStream™ Software, which includes the media on which you received it, if any. “GPStream Software” means assisted GNSS client software, in binary format, developed by Rx Networks to provide improved performance for devices using one or more GNSS, as well as related tools for development, integration, and testing which may be provided in binary or source code format. The terms also apply to any related Rx Networks products or services such as:
+* GPStream Software updates, 
+* “GPStream Services” (defined as the service that provides files, over the Internet, for use by the GPStream Software); and 
+
+By using the software, you accept these terms. If you do not accept them, do not use the software.
+
+This agreement does not give you any rights to use, deploy, sub-license GPStream Software in any commercial, charitable or personal context or make any external demonstration.
+
+TERM. The term of this agreement is 90 days after installation, or when notified by Rx Networks, whichever is first.
+
+If you comply with these license terms, you have the rights below.
+
+INSTALLATION AND USE RIGHTS.
+You may install and use any number of copies of the software on your premises to design, develop and test client GPStream Software applications.
+
+This license grants you permission to test the GPStream Software in “beta” operating environments. You may not test or otherwise use the software in a live operating environment or a production context unless Rx Networks permits you to do so under another agreement. 
+
+LIMITATIONS AND RESTRICTIONS ON USE
+You will not: 
+a) distribute or sublicense any part of the GPStream™ Software within any demonstration or evaluation system to any third party; 
+b) disclose any part of the GPStream™ Software to any third Party; 
+c) disclose any performance testing results of the GPStream™ Software to any third party. 
+d) reverse engineer, decompile or disassemble the GPStream™ Software, or otherwise attempt to determine source code or protocols;
+e) alter, modify or otherwise manipulate the GPStream™ Software or attempt to use the GPStream™ Software other than as required for evaluation purposes 
+f) alter any copyright, trademark or patent notice in the GPStream™ Software; 
+g) use Rx Networks trademarks in a way that suggests your demonstration products come from or are endorsed by Rx Networks; 
+h) use the GPStream™ Software with any service other than the GPStream Services; and
+i) use the GPStream™ Software in any way for any malicious, deceptive or unlawful purpose.
+
+TERMINATION. You may terminate this License Agreement at any time by destroying all copies of the GPStream Software and ceasing use of the GPStream Services. This License Agreement will terminate immediately without notice if you fail to comply with any provision of this License Agreement. Rx Networks may terminate this License Agreement any time by issuing notice of termination. Upon termination, you must destroy all copies of the GPStream Software and cease use of the GPStream Services.
+
+PRE-RELEASE SOFTWARE.  If the GPStream Software is a pre-release version, it may not work correctly or the way a final version of the GPStream Software will. We may change it for the final, commercial version. We also may not release a commercial version.
+
+FEEDBACK. If you give feedback about the GPStream Software to Rx Networks, you give to Rx Networks, without charge, the right to use, share and commercialize your feedback in any way and for any purpose. You also give to third parties, without charge, any patent rights needed for their products, technologies and services to use or interface with any specific parts of an Rx Networks GPStream Software or GPStream Services that includes the feedback. These rights survive this agreement.
+
+EXPORT RESTRICTIONS. You must comply with all domestic and international export laws that may apply to the location of your evaluation of the GPStream Software.
+
+SUPPORT SERVICES. Because the GPStream Software is “AS IS” and free of charge, support services will be provided on a best efforts basis.
+
+APPLICABLE LAW. VENUE.  This License Agreement shall be governed by the laws in force in the Province of British Columbia, Canada, excluding rules of private international law that lead to the application of the laws of any other jurisdiction. The parties expressly disclaim the application of the United Nations Convention on Contracts for the International Sale of Goods to the Agreement. The parties hereby submit to the jurisdiction of, and waive all venue and forum non convenience objections against, the courts located in Vancouver, British Columbia, Canada, in any litigation or action arising out of the Agreement.
+
+DISCLAIMER OF WARRANTY. THE GPSTREAM SOFTWARE IS LICENSED “AS-IS.” YOU BEAR THE RISK OF USING IT. RX NETWORKS GIVES NO EXPRESS WARRANTIES, GUARANTEES OR CONDITIONS. YOU MAY HAVE ADDITIONAL CONSUMER RIGHTS UNDER YOUR LOCAL LAWS WHICH THIS AGREEMENT CANNOT CHANGE. TO THE EXTENT PERMITTED UNDER YOUR LOCAL LAWS, RX NETWORKS EXCLUDES THE IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. 
+
+LIMITATION ON AND EXCLUSION OF REMEDIES AND DAMAGES. YOU CAN RECOVER FROM RX NETWORKS AND ITS SUPPLIERS ONLY DIRECT DAMAGES UP TO U.S. $5.00. YOU CANNOT RECOVER ANY OTHER DAMAGES, INCLUDING CONSEQUENTIAL, LOST PROFITS, SPECIAL, INDIRECT OR INCIDENTAL DAMAGES. 
+
+This limitation applies to
+* anything related to the GPStream Software, GPStream Services and support services (including code); and 
+* claims for breach of contract, breach of warranty, guarantee or condition, strict liability, negligence, or other tort to the extent permitted by applicable law. 
+
+It also applies even if Rx Networks knew or should have known about the possibility of the damages. The above limitation or exclusion may not apply to you because your country may not allow the exclusion or limitation of incidental, consequential or other damages.
+
+ENTIRE AGREEMENT. This agreement, and the terms for GPStream Software and updates, GPStream Services and support services that you use, are the entire agreement for the GPStream Software and updates, GPStream Services and support services.
+
+CONTACT. Should you have any questions concerning this License Agreement, or if you desire to contact Rx Networks Inc. for any reason, please send an email to info@rxnetworks.com; or write us at Rx Networks Inc., 1201 West. Pender Street, Suite 800, Vancouver, BC, V6E 2V2, Canada; or call us at +1.604.685.8988.

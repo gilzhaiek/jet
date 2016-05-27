@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="center" >
+
+    <TextView
+        android:id="@+id/speed"
+        style="@style/speed4x2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:text="@string/invalid_value"
+        android:textColor="#FFFFFF" />
+
+    <TextView
+        android:id="@+id/unit"
+        style="@style/white_text_shadow"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="True"
+        android:layout_toRightOf="@+id/speed"
+        android:paddingLeft="20px"
+        android:text="@string/kmh"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp" />
+
+</RelativeLayout>

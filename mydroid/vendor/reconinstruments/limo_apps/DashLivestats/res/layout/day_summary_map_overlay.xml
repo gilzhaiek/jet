@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000" >
+    <ImageView
+	     android:id="@+id/map_image"
+	     android:layout_centerInParent="true"
+	     android:layout_width="match_parent"
+	     android:layout_height="match_parent"
+	     android:contentDescription="map_image"
+	     android:visibility="gone" />
+    <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:src="@drawable/fade_post_map"/>
+     <LinearLayout
+        android:id="@+id/buttons"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_gravity="left"
+		android:layout_marginLeft="16dp"
+		android:layout_marginTop="10dp"
+		android:layout_marginBottom="15dp"
+		android:layout_alignParentBottom="true"
+		android:gravity="center_vertical">
+		<ImageView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginRight="1dp"
+			android:src="@drawable/jet_select" />
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:includeFontPadding="false"
+            android:shadowColor="@android:color/black"
+            android:shadowDy="2.0"
+            android:shadowRadius="2.0"
+			android:text="@string/day_summary_finish"
+			android:textColor="#ffffff"
+			android:textSize="30sp" />
+		<TextView
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:layout_marginLeft="17dp"
+		    android:includeFontPadding="false"
+		    android:drawableLeft="@drawable/down_arrow"
+		    android:drawablePadding="6dp"
+		    android:gravity="center"
+            android:shadowColor="@android:color/black"
+            android:shadowDy="2.0"
+            android:shadowRadius="2.0"
+		    android:text="@string/day_summary_stats"
+		    android:textColor="#ffffff"
+		    android:textSize="30sp"/>
+	</LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,36 @@
+{
+  "WARNING": "after changing file, verify JSON at http://jsonlint.com/ before committing",
+  "config_name": "Apr28_2015.0",
+  "service_parms": {
+    "enabled": "true",
+    "analytics_end_point": "https://com.reconinstruments.abc",
+    "diagnostics_end_point": "https://com.reconinstruments.def",
+    "get_config_end_point": "https://com.reconinstruments.def",
+    "analytics_dropbox_for_uplink": "/ReconApps/Analytics/data/",
+    "diagnostics_dropbox_for_uplink": "/ReconApps/Diagnostics/data/",
+    "queue_size": "200",
+    "zip_file_secs_until_stale": "86400",
+    "zip_file_max_size": "512000"
+  },
+  "event_filters": [
+    {
+      "component_type": "internal",
+      "component_id": "battery_monitor",
+      "events": [
+        {
+          "event_type": "ALL"
+        }
+      ]
+    },
+    {
+      "component_type": "external",
+      "component_id": "activitymanager",
+      "queue_size": "25",
+      "events": [
+        {
+          "event_type": "ALL"
+        }
+      ]
+    }
+  ]
+}

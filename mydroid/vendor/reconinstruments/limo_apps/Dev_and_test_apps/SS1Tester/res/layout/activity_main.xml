@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent" >
+	<Button
+		android:id="@+id/button_choose"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_alignParentLeft="true"
+		android:layout_alignParentTop="true"
+		android:text="Set Remote Device" />
+	<TextView
+		android:id="@+id/text_sppm"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_below="@+id/button_choose"
+		android:layout_marginLeft="5dp"
+		android:text="SPPM" />
+	<Button
+		android:id="@+id/button_discoverable"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_alignParentLeft="true"
+		android:layout_below="@+id/text_sppm"
+		android:text="Discoverable" />
+	<Button
+		android:id="@+id/button_connect"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_alignBaseline="@+id/button_discoverable"
+		android:layout_marginLeft="5dp"
+		android:layout_toRightOf="@+id/button_discoverable"
+		android:text="Connect" />
+	<Button
+		android:id="@+id/button_disconnect"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_alignBaseline="@+id/button_connect"
+		android:layout_marginLeft="5dp"
+		android:layout_toRightOf="@+id/button_connect"
+		android:text="Disconnect" />
+	<TextView
+		android:id="@+id/text_devm"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_alignParentLeft="true"
+		android:layout_below="@+id/button_discoverable"
+		android:layout_marginLeft="5dp"
+		android:text="DEVM" />
+	<Button
+		android:id="@+id/button_devm_discoverable"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_alignParentLeft="true"
+		android:layout_below="@+id/text_devm"
+		android:text="Discoverable" />
+	<Button
+		android:id="@+id/button_devm_connect"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_alignBaseline="@+id/button_devm_discoverable"
+		android:layout_marginLeft="5dp"
+		android:layout_toRightOf="@+id/button_devm_discoverable"
+		android:text="Connect" />
+	<Button
+		android:id="@+id/button_devm_disconnect"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_alignBaseline="@+id/button_devm_connect"
+		android:layout_marginLeft="5dp"
+		android:layout_toRightOf="@+id/button_devm_connect"
+		android:text="Disconnect" />
+	<Button
+		android:id="@+id/button_devm_unpair"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_alignParentLeft="true"
+		android:layout_below="@+id/button_devm_discoverable"
+		android:text="Unpair" />
+	<Button
+		android:id="@+id/button_devm_delete"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_alignBaseline="@+id/button_devm_unpair"
+		android:layout_marginLeft="5dp"
+		android:layout_toRightOf="@+id/button_devm_unpair"
+		android:text="Delete" />
+</RelativeLayout>

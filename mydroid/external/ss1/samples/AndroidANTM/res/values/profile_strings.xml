@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="dataReceivedEventLabel">Data Received</string>
+    <string name="disconnectedEventLabel">Disconnected</string>
+    <string name="idpsStatusEventLabel">IDPS Status</string>
+    <string name="lineStatusChangedEventLabel">Line Status Changed</string>
+    <string name="nonSessionDataConfirmationEventLabel">Non-Session Data Confirmation</string>
+    <string name="nonSessionDataReceivedEventLabel">Non-Session Data Received</string>
+    <string name="portStatusChangedEventLabel">Port Status Changed</string>
+    <string name="sessionCloseEventLabel">Session Closed</string>
+    <string name="sessionDataConfirmationEventLabel">Session Data Confirmation</string>
+    <string name="sessionDataReceivedEventLabel">Session Data Received</string>
+    <string name="sessionOpenRequestEventLabel">Session Open Request</string>
+    <string name="transmitBufferEmptyEventLabel">Transmit Buffer Empty</string>
+    <string name="connectionStatusEventLabel">Connection Status</string>
+    <string name="connectedEventLabel">Connected</string>
+    <string name="connectionRequestEventLabel">Connection Request</string>
+    
+    <!-- From DEVM API Sample -->
+    <string name="devicePoweredOnEventLabel">Device Powered On</string> 
+    <string name="devicePoweringOffEventLabel">Device Powering Off</string>
+    <string name="devicePoweredOffEventLabel">Device Powered Off</string>
+    <string name="localDevicePropertiesChangedEventLabel">Local Device Property Change</string>
+    <string name="discoveryStartedEventLabel">Discovery Started</string>
+    <string name="discoveryStoppedEventLabel">Discovery Stopped</string>
+    <string name="remoteDeviceFoundEventLabel">Remote Device Found</string>
+    <string name="remoteDevicePropertiesStatusEventLabel">Remote Device Properties Status</string>
+    <string name="remoteDevicePropertiesChangedEventLabel">Remote Device Property Change</string>
+    <string name="remoteDevicePairingStatusEventLabel">remote Device Pairing Status</string>
+    <string name="remoteDeviceServicesStatusEventLabel">Remote Device Services Status</string> 
+    <string name="remoteDeviceEncryptionStatusEventLabel">Remote Device Encryption Status</string>
+    <string name="remoteDeviceDeletedEventLabel">Remote Device Deleted</string>
+    <string name="remoteDeviceConnectionStatusEventLabel">Remote Device Connection Status</string>
+    <string name="remoteDeviceAuthenticationStatusEventLabel">Remote Device Authentication Status</string>
+    
+    <string name="userConfirmationRequestEventLabel">User Confirmation Request</string>
+    <string name="pinCodeRequestEventLabel">Pin Code Request</string>
+    <string name="passkeyRequestEventLabel">Pass Key Request</string>
+    <string name="passkeyIndicationEventLabel">Pass Key Indication</string>
+    <string name="outOfBandDataRequestEventLabel">Out Of Band Data Request</string>
+    <string name="keypressIndicationEventLabel">Key Press Indication</string>
+    <string name="ioCapabilitiesRequestEventLabel">Input-Output Request</string>
+    <string name="authenticationStatusEventLabel">Authentication Status</string>
+</resources>

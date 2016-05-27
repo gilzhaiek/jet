@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <!-- The scrolling view of images/videos in the sdcard -->
+        <com.reconinstruments.camera.ui.FilmStripView
+            android:id="@+id/gallery_filmstrip_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <include
+                android:id="@+id/loading_screen"
+                layout="@layout/loading_dialog_layout"
+                android:layout_width="240dp"
+                android:layout_height="180dp"
+                android:layout_marginLeft="94dp"
+                android:layout_marginTop="30dp"/>
+
+        <!-- A simple transparent view that will hold a gradient background .
+        	 Everything above this FrameLayout in this XML file will be "underneath"
+        	 the gradient -->
+        <FrameLayout
+            android:id="@+id/gradient_bottom_to_top"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true">
+        </FrameLayout>
+
+        <!-- The menu with share/delete options pops up when you focus on one item in the Gallery -->
+        <android.support.v4.view.ViewPager
+            android:id="@+id/gallery_filmstrip_pager_menu"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:alpha="0"
+            android:visibility="gone" />
+
+        <!-- Counter for Gallery items -->
+        <com.reconinstruments.commonwidgets.SansSemiBoldTextView
+            android:id="@+id/gallery_filmstrip_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/gallery_filmstrip_view"
+            android:layout_centerHorizontal="true"
+            android:shadowColor="@android:color/black"
+            android:shadowDy="3.0"
+            android:shadowRadius="3.0"
+            android:textSize="24dp"
+            android:drawablePadding="5dp"
+            android:layout_marginBottom="40dp" />
+        
+        <!-- 'No Media' message displayed when there is no media in the gallery -->
+        <com.reconinstruments.commonwidgets.SansRegularTextView
+            android:id="@+id/gallery_no_media_message"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"/>
+
+        <!--Gradient blot underneath go_to_camera_icon-->
+        <ImageView
+            android:id="@+id/corner_gradient"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:src="@drawable/corner_gradient_fade"/>
+
+        <!-- Icon that indicates the user can go back to the camera -->
+        <ImageView
+            android:id="@+id/go_to_camera_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/camera_mode" />
+    </RelativeLayout>
+
+</FrameLayout>

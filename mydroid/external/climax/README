@@ -1,0 +1,2 @@
+Tfa98xx_Open: Check chip revision from I2C register
+Tfa98xx_Init->Tfa98xx_specific: configure and reset all register values

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:background="@drawable/circular_gradient"
+	android:orientation="vertical" >
+	<RelativeLayout
+		android:layout_width="fill_parent"
+		android:layout_height="40dp"
+		android:background="@drawable/circular_gradient" >
+		<TextView
+			style="@style/recon_white_text_shadow"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_centerInParent="true"
+			android:text="Waiting for Phone"
+			android:textSize="24dip"
+			android:textStyle="bold" />
+		<TextView
+			android:id="@+id/timeout"
+			style="@style/recon_white_text_shadow"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_alignParentRight="true"
+			android:layout_centerVertical="true"
+			android:layout_marginRight="34dp"
+			android:text=""
+			android:textSize="24dip"
+			android:textStyle="bold" />
+	</RelativeLayout>
+	<View
+		android:layout_width="fill_parent"
+		android:layout_height="2dip"
+		android:background="@drawable/tab_bar_gradient" />
+	<TextView
+		android:id="@+id/main_text"
+		style="@style/recon_white_text_shadow"
+		android:layout_width="300dp"
+		android:layout_height="wrap_content"
+		android:layout_gravity="center"
+		android:layout_marginTop="20dp"
+		android:gravity="center"
+		android:text=" Open Engage on your Android Phone and select  \&apos;Device Pairing\&apos; and follow prompts"
+		android:textSize="24dip"
+		android:textStyle="normal" />
+	<TextView
+		android:id="@+id/btname_text"
+		style="@style/recon_white_text_shadow"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_gravity="center"
+		android:gravity="center"
+		android:text="Device Name: "
+		android:textSize="20dip"
+		android:textStyle="normal" />
+</LinearLayout>

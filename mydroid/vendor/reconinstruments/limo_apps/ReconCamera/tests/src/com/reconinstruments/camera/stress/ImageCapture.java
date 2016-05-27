@@ -1,0 +1,104 @@
+/*
+ * Copyright (C) 2009 The Android Open Source Project
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+package com.reconinstruments.camera.stress;
+
+import android.app.Activity;
+import android.app.Instrumentation;
+import android.content.Intent;
+import android.test.ActivityInstrumentationTestCase2;
+import android.util.Log;
+import android.view.KeyEvent;
+
+import com.reconinstruments.camera.app.CameraActivity;
+
+/**
+ * Junit / Instrumentation test case for camera test
+ *
+ * Running the test suite:
+ *
+ * adb shell am instrument \
+ *    -e class com.android.camera.stress.ImageCapture \
+ *    -w com.google.android.camera.tests/android.test.InstrumentationTestRunner
+ *
+ */
+
+public class ImageCapture extends ActivityInstrumentationTestCase2 <CameraActivity> {
+    private String TAG = "ImageCapture";
+    private static final long WAIT_FOR_IMAGE_CAPTURE_TO_BE_TAKEN = 4 * 1000;   //4 seconds
+    private static final long WAIT_FOR_SWITCH_CAMERA = 4 * 1000; //4 seconds
+
+    private TestUtil testUtil = new TestUtil();
+
+    // Private intent extras.
+    private final static String EXTRAS_CAMERA_FACING =
+        "android.intent.extras.CAMERA_FACING";
+
+    public ImageCapture() {
+        super(CameraActivity.class);
+    }
+
+    @Override
+    protected void setUp() throws Exception {
+        testUtil.prepareOutputFile();
+        super.setUp();
+    }
+
+    @Override
+    protected void tearDown() throws Exception {
+        testUtil.closeOutputFile();
+        super.tearDown();
+    }
+
+    public void captureImages(String reportTag, Instrumentation inst) {
+        int total_num_of_images = CameraStressTestRunner.mImageIterations;
+        Log.v(TAG, "no of images = " + total_num_of_images);
+
+        //TODO(yslau): Need to integrate the outoput with the central dashboard,
+        //write to a txt file as a temp solution
+        boolean memoryResult = false;
+
+        try {
+            testUtil.writeReportHeader(reportTag, total_num_of_images);
+            for (int i = 0; i < total_num_of_images; i++) {
+                Thread.sleep(WAIT_FOR_IMAGE_CAPTURE_TO_BE_TAKEN);
+                inst.sendCharacterSync(KeyEvent.KEYCODE_DPAD_RIGHT);
+                Thread.sleep(WAIT_FOR_IMAGE_CAPTURE_TO_BE_TAKEN);
+                testUtil.writeResult(i);
+            }
+        } catch (Exception e) {
+            Log.v(TAG, "Got exception: " + e.toString());
+            assertTrue("testImageCapture", false);
+        }
+    }
+
+    public void testBackImageCapture() throws Exception {
+        Instrumentation inst = getInstrumentation();
+        Intent intent = new Intent();
+
+        intent.setClass(getInstrumentation().getTargetContext(), CameraActivity.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        intent.putExtra(EXTRAS_CAMERA_FACING,
+                android.hardware.Camera.CameraInfo.CAMERA_FACING_BACK);
+        Activity act = inst.startActivitySync(intent);
+        Thread.sleep(WAIT_FOR_SWITCH_CAMERA);
+        captureImages("Back Camera Image Capture\n", inst);
+        act.finish();
+        // Wait for a clean finish.
+        Thread.sleep(2 * 1000); //sleep for 2 seconds.
+
+    }
+}

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <string name="audioStreamConnectedEventLabel">Audio Stream Connected</string> 
+    <string name="audioStreamDisconnectedEventLabel">Audio Stream Disconnected</string> 
+    <string name="audioStreamConnectionStatusEventLabel">Audio Stream Connection Status</string>
+    <string name="audioStreamFormatChangedEventLabel">Audio Stream Format</string>
+    <string name="audioStreamStateChangedEventLabel">Audio Stream State</string>
+    <string name="changeAudioStreamFormatStatusEventLabel">Format Change Status</string>
+    <string name="changeAudioStreamStateStatusEventLabel">State Change Status</string>
+    <string name="incomingConnectionRequestEventLabel">Incoming Connection Request</string>
+    <string name="encodedAudioStreamDataEventLabel">Encoded Audio Stream Data Event</string>
+    <string name="remoteControlPassThroughCommandConfirmationEventLabel">Remote Control Pass Through Command Confirmation</string>
+    <string name="remoteControlConnectedEventLabel">Remote Control Connected</string>
+    <string name="remoteControlConnectionStatusEventLabel">Remote Control Connected</string>
+    <string name="remoteControlDisconnectedEventLabel">Remote Control Connected</string>
+    
+    <string name="MTULabel">MTU</string>
+    <string name="frequencyLabel">Frequency</string>
+    <string name="channelsLabel">Channels</string>
+    <string name="statusLabel">Status</string>
+    <string name="stateLabel">State</string>
+    <string name="successLabel">Change Succeeded</string>
+    <string name="failureLabel">Change Failed</string>
+    <string name="requestTypeLabel">Request Type</string>
+    <string name="lengthEncodedAudioDataLabel">Encoded Data Array Length</string>
+    <string name="countDecodedFramesLabel">Number of Decoded Frames</string>
+    <string name="sizeDecodedFrameLabel">Size of Decoded Frame</string>
+    <string name="sizeEncodedFrameLabel">Size of Encoded Frame</string>
+    <string name="transactionIDLabel">Transaction Id</string>
+    <string name="responseCodeLabel">Transaction Id</string>
+    <string name="subunitTypeLabel">Subunit Type</string>
+    <string name="subunitIDLabel">Subunit Id</string>
+    <string name="operationIDLabel">Operation Id</string>
+    <string name="stateFlagLabel">State Flag</string>   
+    <string name="codecTypeLabel">Codec Type</string>
+    
+    <string name="blockSizeLabel">Block Size</string>
+    <string name="channelModeLabel">Channel Mode</string>
+    <string name="allocationMethodLabel">Allocation Method</string>
+    <string name="subBandsLabel">Sub Bands</string>
+    <string name="bitRateLabel">Bit Rate</string>
+    <string name="bitPoolLabel">Bit Pool</string>
+    <string name="frameLengthLabel">Frame Length</string>
+    
+    <string name="audioTrackChannelConfigurationLabel">Audio Track Channel Configuration</string>
+    <string name="audioTrackBufferSizeLabel">Audio Track Buffer Size</string>
+    <string name="audioTrackStreamTypeLabel">Stream Type</string>
+    <string name="audioTrackBufferModeLabel">Buffer Mode</string>
+    <string name="audioTrackPCMSampleSizeLabel">PCM Encoding Sample Size</string>
+    
+</resources>

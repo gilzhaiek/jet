@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="hello">Hello World, ReconjniActivity!</string>
+    <string name="app_name">Reconjni</string>
+    
+    <string name="send_file">Send to iPhone</string>
+    <string name="receive_file">Monitor Incoming</string>
+    
+    <string name="Pair">Pair</string>
+    <string name="Reset">Reset</string>
+    <string name="Unpair">Unpair</string>
+
+</resources>

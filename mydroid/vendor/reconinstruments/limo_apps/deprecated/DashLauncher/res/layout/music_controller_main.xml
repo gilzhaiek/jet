@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/circular_gradient"
+    android:paddingBottom="0dip"
+    android:paddingLeft="15dip"
+    android:paddingRight="15dip" >
+
+    <RelativeLayout
+        android:id="@+id/controller"
+        android:layout_width="fill_parent"
+        android:layout_height="170dip"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="0dip" >
+
+		        <ImageView
+		            android:id="@+id/play_pause_icon"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_centerInParent="true"
+		            android:src="@drawable/music_icon_play" />
+		
+		        <ImageView
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_centerInParent="true"
+		            android:paddingRight="83dip"
+		            android:src="@drawable/music_icon_previous" />
+		
+		        <ImageView
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_centerInParent="true"
+		            android:paddingLeft="83dip"
+		            android:src="@drawable/music_icon_next" />
+		
+		        <ImageView
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_centerInParent="true"
+		            android:paddingBottom="83dip"
+		            android:src="@drawable/music_icon_plus" />
+		
+		        <ImageView
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_centerInParent="true"
+		            android:paddingTop="83dip"
+		            android:src="@drawable/music_icon_minus" />
+		        
+        <com.reconinstruments.dashlauncher.music.VolumeView
+            android:id="@+id/volume"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+        	android:visibility="gone"
+            android:layout_centerInParent="true" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/song_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="15dip"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:visibility="gone"
+        android:layout_centerHorizontal="true"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/artist_name"
+            style="@style/white_text_shadow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:includeFontPadding="false"
+            android:singleLine="true"
+            android:text="Artist"
+            android:textSize="20dip"
+            android:textStyle="bold" />
+
+        <!-- android:ellipsize="marquee" -->
+
+        <TextView
+            android:id="@+id/song_name"
+            style="@style/white_text_shadow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:includeFontPadding="false"
+            android:singleLine="true"
+            android:text="Song Name"
+            android:textSize="26dip" 
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/album_name"
+            style="@style/white_text_shadow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:includeFontPadding="false"
+            android:singleLine="true"
+            android:text="Album"
+            android:textSize="18dip"
+            android:textStyle="bold"
+            android:paddingTop="2dip" />
+    </LinearLayout>
+	<LinearLayout
+        android:id="@+id/no_song"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="15dip"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:visibility="gone"
+        android:layout_centerHorizontal="true"
+        android:orientation="vertical" >
+
+        <TextView
+            style="@style/gray_text_shadow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:includeFontPadding="false"
+            android:singleLine="true"
+            android:text="No Music Playing"
+            android:textSize="24dip"
+            android:textStyle="bold" />
+
+        <!-- android:ellipsize="marquee" -->
+
+        <TextView
+            style="@style/gray_text_shadow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:includeFontPadding="false"
+            android:singleLine="true"
+            android:text="Press select to shuffle"
+            android:textSize="20dip" 
+            android:textStyle="bold" />
+    </LinearLayout>
+</RelativeLayout>

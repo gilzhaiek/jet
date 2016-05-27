@@ -1,0 +1,10 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.reconinstruments.mfiservice" android:sharedUserId="android.uid.system">
+
+    <application android:name=".MFiServiceApp" android:persistent="true">
+        <uses-library android:name="com.stonestreetone.bluetopiapm" />
+        <uses-library android:name="com.reconinstruments.mfi" />
+    </application>
+</manifest>
+
+

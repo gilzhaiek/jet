@@ -1,0 +1,83 @@
+#include <stdio.h>              // printf(), file io
+#include <stdlib.h>             // exit(),getenv(), NULL
+#include <fcntl.h>              // O_RDWR, O_NOCTTY, O_NONBLOCK, O_ASYNC, fcntl()
+#include <sys/ioctl.h>          // lock the device, set modem control lines etc.
+#include <sys/stat.h>           // filesystem modes for open()
+#include <unistd.h>             // usleep() 
+#include <termios.h>            // termios 
+#include <errno.h>
+
+#include <linux/i2c.h>
+#include <linux/i2c-dev.h>
+
+#define I2C_DEV_ID		0x34
+#define I2C_WR_COUNT		1
+
+int wi2c (int fd, unsigned char* reg)
+{
+	int retry = 3;
+	int ret;
+	printf("writing...\n");
+	do
+	{
+		ret = write(fd, reg, I2C_WR_COUNT+1);
+	} while (ret != (I2C_WR_COUNT+1) && retry-- > 0);
+
+	if (retry == -1)
+	{
+		printf ("Fail to write %d (%d)\n", I2C_WR_COUNT, ret);
+	}
+	return ret;
+}
+
+int main(int argc, char* argv[])
+{
+	int ok = 1;
+	int ret;
+	unsigned char output[1024];
+
+	char input1[1024], input2[1024], c[1024];
+	int run=1;
+	int reg, value;
+
+	int busNum = 1, devId, regNum;
+	char filename[1024];
+	int fd;
+
+	printf(".. %d\n", argc);
+	if (argc < 3)
+	{
+		printf("Usage : ctest dev_id reg_num\n");
+		return -1;
+	}
+	devId = atoi(argv[1]);
+	regNum = atoi(argv[2]);
+	if (argc > 3)
+		busNum = atoi(argv[3]);
+	printf ("Bus-%d : DevId = %d(0x%x)  RegNum = %d(0x%x)\n", busNum, devId, devId, regNum, regNum);
+	sprintf(filename, "/dev/i2c-%d", busNum);
+	printf ("%s\n", filename);
+	
+	fd = open( filename, O_RDWR );
+	if( fd < 0 )
+	{
+		printf ("Fail to open\n");
+		return -1;
+	}
+
+	ok = ioctl( fd, I2C_SLAVE, devId );
+	if ( ok < 0 )
+	{
+		printf ("Fail to set %x as slave\n", I2C_DEV_ID);
+		close(fd);
+		return -1;
+	}
+
+	printf("reading... ");
+	output[0] = 0x04;output[1] = 1;	ret = write(fd, output, I2C_WR_COUNT+1);
+
+
+	close(fd);	
+	return 0;
+}
+

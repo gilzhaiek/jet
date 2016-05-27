@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/circular_gradient" >
+
+    <View
+        android:layout_width="2dp"
+        android:layout_height="190px"
+        android:layout_marginTop="15px"
+        android:layout_marginLeft="151px"
+        android:background="@drawable/vertical_gradient" />
+
+    <View
+        android:layout_width="2dp"
+        android:layout_height="190px"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="15px"
+        android:layout_marginRight="151px"
+        android:background="@drawable/vertical_gradient" />
+
+    <View
+        android:layout_width="378px"
+        android:layout_height="2dip"
+        android:layout_marginTop="110px"
+        android:layout_gravity="center"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/horizontal_gradient" />
+    
+    <GridView
+        android:id="@+id/gridview"
+        android:layout_width="378px"
+        android:layout_height="190px"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:layout_marginTop="15px"
+        android:clipToPadding="true"
+        android:fadingEdge="none"
+        android:horizontalSpacing="0px"
+        android:listSelector="@drawable/apps_selector"
+        android:numColumns="3"
+        android:overScrollMode="never"
+        android:scrollbarSize="0dp"
+        android:verticalSpacing="0px" />
+
+</RelativeLayout>

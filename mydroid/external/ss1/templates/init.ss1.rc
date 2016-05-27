@@ -1,0 +1,28 @@
+
+service ss1btpm /system/bin/SS1BTPM
+    group bluetooth net_bt_admin
+    disabled
+
+
+########################
+# The following definitions apply to Android 4.0 and above
+
+on post-fs-data
+    mkdir /data/misc/ss1 0771 bluetooth net_bt_stack
+
+on boot
+    insmod /system/lib/modules/SS1VNETM.ko NumberOfDevices=1
+    wait /dev/SS1VNET0
+    chown bluetooth net_bt_stack /dev/SS1VNET0
+    chmod 660 /dev/SS1VNET0
+
+service dhcpcd_ss1vnet0 /system/bin/dhcpcd -ABKL
+    class main
+    disabled
+    oneshot
+
+service iprenew_ss1vnet0 /system/bin/dhcpcd -n
+    class main
+    disabled
+    oneshot
+

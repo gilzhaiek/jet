@@ -1,0 +1,20 @@
+<HTML>
+<BODY>
+The Recon Instruments SDK is written as an add-on on top of standard Google Android API.<p>
+
+The exposed API is structured in such a fashion that the learning curve for anyone with Android Development experience should be minimal.
+This API is generic across Recon Instruments products – from a developer perspective there is no environment / product distinction (i.e. snow / dirt / etc.).
+Instead client apps are written in terms of single generic API while the differences (if any) are handled internally.
+This simplifies issues like portability and maintenance for the end developer. <p>
+
+This first version of the SDK focuses on <b><i>"Recon Events"</i></b>. 
+This data is logically related to the external Hardware Sensor Input. Recon Events fall into the following 2 categories: <p>
+    <ul>
+       <li> 1. Direct derivative of Sensor Input (cardinality = 1:1). For instance Temperature Data
+       <li> 2. Aggregates of multiple Sensor Input Data gathered over period of time (cardinality = 1:m). For instance Run or Jump Events
+    </ul>
+</p>
+SDK Clients have read-only access to Events which are managed on their behalf by the MOD Live Platform. <p>
+Further releases of Recon SDK will add different features, such as the Web Connectivity Framework and Bluetooth Low Energy conectivity etc.
+</BODY>
+</HTML>

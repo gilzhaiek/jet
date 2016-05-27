@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<map2D formatVer="1.0">
+	<!-- map will be drawn in the following order -->
+	<!-- and objects/text will be drawn using colors and styles set by the rendering theme set in the current activity profile -->
+    <object type="land" 				source="recon_base" />
+    <object type="ocean" 				source="recon_base" />
+    <object type="city"  				source="recon_base" />
+    <object type="woods" 				source="recon_base" />
+    <object type="park"  				source="recon_base" />
+    <object type="water" 				source="recon_base" />
+    <object type="waterway" 			source="recon_base" />
+    <object type="highway-residential"  source="recon_base" />
+    <object type="highway-tirtiary"  	source="recon_base" />
+    <object type="highway-secondary" 	source="recon_base" />
+    <object type="highway-primary"   	source="recon_base" />
+    <object type="highway-motorway"  	source="recon_base" />
+    <object type="border-national"  	source="recon_base" />
+    <name   obj="city" 					aboveCameraHeightScale="2.1" />
+    <name   obj="border-national"		belowCameraHeightScale="2.1" />
+    <name   obj="highway-motorway"		belowCameraHeightScale="2.1" />
+    <name   obj="highway-primary" 		belowCameraHeightScale="2.1" />
+    <name   obj="highway-secondary" 	belowCameraHeightScale="2.1" />
+    <name   obj="highway-tirtiary" 		belowCameraHeightScale="1.1" />
+    <name   obj="highway-residential" 	belowCameraHeightScale="0.6" />
+</map2D>
+    

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="center" >
+
+    <TextView
+        android:id="@+id/recon_progress_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:textColor="#FFFFFF"
+        android:textSize="32sp" />
+
+    <ProgressBar
+        android:id="@+id/recon_progress_bar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="8px"
+        android:layout_below="@id/recon_progress_text"
+        android:layout_marginTop="15px"
+        android:progressDrawable="@drawable/recon_horizontal_progress_bar" />
+
+
+</RelativeLayout>

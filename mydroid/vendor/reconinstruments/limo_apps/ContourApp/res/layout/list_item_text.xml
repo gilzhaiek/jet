@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.contour.connect.views.CheckableLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:background="@drawable/list_item_background_sel"
+	android:gravity="center_vertical"
+	android:orientation="horizontal" >
+	<TextView
+		xmlns:android="http://schemas.android.com/apk/res/android"
+		android:id="@+id/header_text"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:background="@color/list_header_bg"
+		android:gravity="center_vertical|left"
+		android:paddingBottom="3dp"
+		android:paddingLeft="10dp"
+		android:paddingTop="3dp"
+		android:shadowColor="#000"
+		android:shadowDx="1.0"
+		android:shadowDy="1.0"
+		android:shadowRadius="1.0"
+		android:textAppearance="?android:attr/textAppearanceMedium"
+		android:textColor="@color/header_text_color"
+		android:visibility="gone" />
+	<ImageView
+		android:id="@+id/list_item_check"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginLeft="10dp"
+		android:gravity="center_vertical|left"
+		android:src="@drawable/ic_check"
+		android:visibility="gone" />
+	<TextView
+		xmlns:android="http://schemas.android.com/apk/res/android"
+		android:id="@+id/text"
+		android:layout_width="0dp"
+		android:layout_height="wrap_content"
+		android:layout_marginBottom="6dp"
+		android:layout_marginLeft="10dp"
+		android:layout_marginTop="6dp"
+		android:layout_weight="1.0"
+		android:gravity="center_vertical|left"
+		android:textAppearance="?android:attr/textAppearanceLarge"
+		android:textColor="@color/text_default" />
+	<TextView
+		xmlns:android="http://schemas.android.com/apk/res/android"
+		android:id="@+id/settings_desc"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginRight="10dp"
+		android:gravity="center_vertical|right"
+		android:textAppearance="?android:attr/textAppearanceLarge"
+		android:textColor="@color/text_contour_green" />
+	<ImageView
+		android:id="@+id/settings_more"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginRight="10dp"
+		android:gravity="center_vertical|right"
+		android:src="@drawable/ic_action_more"
+		android:visibility="gone" />
+</com.contour.connect.views.CheckableLinearLayout>

@@ -1,0 +1,30 @@
+The arcitecture could be seen at https://docs.google.com/a/reconinstruments.com/drawings/d/11I9ccU4EG9_lGgK0atlXROm_QhF89m_J2vQ9a80lKuY/edit
+
+####Generic porting:
+In the mydroid/device/ti/jet/device.mk file, check ANT plugin modules section
+
+####Build ANT modules
+Check mydroid/device/ti/jet/framework/JET_ANT
+
+###Enable ANT for Snow2 manually:
+1) clean build snow image
+
+2)
+adb install StonestreetOneAntService.apk. This can be built either by the package name StonestreetOneAntService, or using testing project located at tools/StonestreetOneANTService/
+##We recommand to use testing project, Because in the Jet project by far, the system is using BLE by default and need to go to the setting menu->sensor and choose ANT mode.
+
+3)
+adb install StonestreetOneANTService/prebuilts/Android_ANTRadioService_4-2-0.apk
+adb install StonestreetOneANTService/prebuilts/AntPlusPlugins_2.0.0.apk
+#The firmware replacement  below is not necessary now because SS1 can send corrcet patch file to the wilink7
+#adb remount
+#adb push StonestreetOneANTService/prebuilts/BT2.12_ANT_1.17.bts system/etc/firmware/
+#adb shell chmod 644 system/etc/firmware/BT2.12_ANT_1.17.bts
+
+4)
+#Note: If we want to just simply test ANT without worrying about ANT/BLE switch and BLE service conflict, we need:
+adb remount
+adb shell rm /system/app/BLEServiceSS1.apk
+adb install Home.apk in tools/TestApps
+
+5)Compile and install dummy java library in Android_antradio-library. This dummy library is just used to be compliant with ANT legacy. It will not effect any ANT performance.

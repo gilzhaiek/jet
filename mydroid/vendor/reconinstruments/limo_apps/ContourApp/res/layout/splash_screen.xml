@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent" >
+	<ImageView
+		android:id="@+id/splash_logo"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_centerInParent="true"
+		android:scaleType="center"
+		android:src="@drawable/contour_logo" />
+	<ProgressBar
+		android:id="@+id/splash_progress"
+		style="@style/WidgetProgressBarSmall"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_below="@+id/splash_logo"
+		android:layout_centerHorizontal="true"
+		android:layout_marginTop="10dp" />
+	<TextView
+		android:id="@+id/splash_status_text"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_below="@+id/splash_progress"
+		android:layout_centerHorizontal="true"
+		android:layout_marginTop="5dp"
+		android:text="@string/statusmsgloading"
+		android:textAppearance="?android:attr/textAppearanceMedium"
+		android:textColor="@color/text_default" />
+</RelativeLayout>

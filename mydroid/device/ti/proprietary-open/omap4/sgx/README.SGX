@@ -1,0 +1,94 @@
+#==========================================================================
+# SGX Binaries
+#==========================================================================
+
+sgx.tgz now contains two sets of binaries. One built for SGX540 and one built for SGX544.
+The SGXCORE and SGC_CORE_REV is appended to the end of each file. pvrsrvinit is now a
+wrapper which detects the current processor and loads the corresponding core specific
+pvrsrvinit.
+
+[DDK Version]
+    1.9RC2@2139099    
+[DDK commit ID]
+    ad6e72e SGX UM: Set ro.product.processor before loading modules
+[Branch]
+    origin/1.9/RC2
+[Kernel modules built against]
+    Kernel Version: 3.0.31 with CONFIG_MODVERSIONS=y and CONFIG_SCHED_TRACER=y
+[Patches added since last release]
+    ad6e72e SGX UM: Set ro.product.processor before loading modules
+    c59e125 SGX UM: Pvrsrvinit fix typo in remount command
+    b5a4dca SGX UM: Remove BRN32044 for omap5
+    b3f0cc6 SGX UM: Fix coefficients for RGB->NV12 blit
+    dcd7ea1 OMAP5: WA: Race condition when SGX is powered down
+
+This DDK require kernel patch for bltsville update header to 2.2
+http://review.omapzoom.org/#/c/26780/
+
+This kernel also now has omaplfb added to it:
+commit b49820dbb7d5851101136e8e27210cb410fc9822
+Author: Hemant Hariyani <hemanthariyani@ti.com>
+Date:   Thu Jul 26 14:16:53 2012 -0500
+
+    omaplfb: Add omaplfb to the kernel tree
+
+    omaplfb has dependencies on several kernel components and it will
+    be easier to maintain it in the kernel tree.
+    
+    Sync'd to DDK omaplfb patch:
+    omaplfb: Allocate a clear buffer with 8 pixel stride per GC requirement
+
+#==========================================================================
+#   Cloning instructions
+#==========================================================================
+# git clone ssh://<your_AID>@gerrit.ext.ti.com:29418/img-ddk-linux-android
+# cd img-ddk-linux-android
+# git checkout -b <local_branch_name> DDKcommitID
+
+#===========================================================================
+#   Build and Install Instructions
+#===========================================================================
+DDK:
+- Building DDK
+Go through README in ddk source tree.
+
+Build for 4430/4460
+# ./build_DDK.sh -g 540 --build release
+
+Build for 4470
+# ./build_DDK.sh -g 544sc --build release
+
+- Installing DDK
+# export DISCIMAGE=<PATH TO ANDROID ROOT DIRECTORY>
+# ./build_DDK.sh -g 540 --install release
+# ./build_DDK.sh -g 544sc --install release
+
+#===========================================================================
+#   Building SGX Kernel Modules
+#===========================================================================
+SGX kernel modules source is located in sgx_src/eurasia_km.tgz
+
+Make sure kernel is built before building modules
+
+#tar -xvf ANDROID_ROOT/device/ti/proprietary-open/omap4/sgx_src/eurasia_km.tgz
+
+# cd ANDROID_ROOT/device/ti/proprietary-open/omap4/sgx_src/eurasia_km/eurasiacon/build/linux2/omap4430_android/
+# export KERNELDIR=path_to_kernel
+
+To build for OMAP4460/OMAP4430 (SGX 540):
+# make ARCH=arm CROSS_COMPILE=arm-none-linux-gnueabi- TARGET_PRODUCT="blaze_tablet" BUILD=release TARGET_SGX=540 PLATFORM_VERSION=4.0
+
+To build for OMAP4470 (SGX 544 single core):
+# make ARCH=arm CROSS_COMPILE=arm-none-linux-gnueabi- TARGET_PRODUCT="blaze_tablet" BUILD=release TARGET_SGX=544sc PLATFORM_VERSION=4.0
+
+Once the .ko's are built, install them onto device (/system/lib/modules)
+
+For 4460:
+# cd ANDROID_ROOT/device/ti/proprietary-open/omap4/sgx_src/eurasia_km/eurasiacon/binary2_540_120_omap4430_android_release/target/
+# adb push pvrsrvkm_sgx540_120.ko /system/lib/modules/
+
+For 4470
+# cd ANDROID_ROOT/device/ti/proprietary-open/omap4/sgx_src/eurasia_km/eurasiacon/binary2_544_120_omap4430_android_release/target/
+# adb push pvrsrvkm_sgx544_112.ko /system/lib/modules/
+
+Reboot device.

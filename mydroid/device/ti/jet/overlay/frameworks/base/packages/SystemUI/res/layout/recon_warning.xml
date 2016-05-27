@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/bottom_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#CC000000" >
+
+    <RelativeLayout
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:paddingTop="18px" >
+
+        <ImageView
+            android:id="@+id/warning_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="6px"
+            android:src="@drawable/warning_icon" />
+
+        <TextView
+            android:id="@+id/warning_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/warning_img"
+            android:paddingLeft="5dp"
+            android:shadowColor="#000000"
+            android:shadowDx="0.0"
+            android:shadowDy="1.4"
+            android:shadowRadius="2.0"
+            android:textColor="#FFFFFF"
+            android:textSize="30sp" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/warning_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/title"
+        android:gravity="center"
+        android:textColor="#FFFFFF"
+        android:lineSpacingExtra="-8px"
+        android:shadowColor="#000000"
+        android:shadowDx="0.0"
+        android:shadowDy="1.4"
+        android:shadowRadius="2.0"
+        android:textSize="24sp" />
+
+    <Button
+        android:id="@+id/ok_btn"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/recon_ok_btn"
+        android:paddingLeft="24px"
+        android:paddingBottom="28px"
+        android:text="OK"
+        android:textSize="32sp"
+        android:drawableLeft="@drawable/snow2_select"
+        android:drawablePadding="5dp" />
+
+</RelativeLayout>

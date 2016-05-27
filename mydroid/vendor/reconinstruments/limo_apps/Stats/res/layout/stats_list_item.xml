@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" -->
+<!--     android:orientation="horizontal" -->
+<!--     android:weightSum="1" -->
+<!-- 	      android:background="@color/background_color"> -->
+
+<LinearLayout
+   xmlns:android="http://schemas.android.com/apk/res/android"
+   android:orientation="horizontal"
+   android:background="@color/background_color"
+   android:paddingLeft="20dp"
+   android:paddingRight="20dp"
+   >
+
+  <!-- The following linear layout is for name of stat-->
+  <LinearLayout
+     android:layout_width="177dp"
+     android:layout_height="match_parent"
+     android:background="@color/separator_color_light"
+     android:paddingTop="1dp"
+     >
+
+    
+    <LinearLayout
+       android:layout_width="wrap_content"
+       android:layout_height="match_parent"
+       android:layout_alignParentLeft="true"
+       android:gravity="left|center_vertical"
+       android:orientation="vertical"
+       android:background="@color/background_color"
+       >
+
+    <TextView
+       android:id="@+id/row_icon"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_marginTop="1dp"
+       android:padding="0dp"
+       android:singleLine="true"
+       android:textSize="0px"
+       android:textStyle="bold"
+       android:includeFontPadding="false"
+       android:background="@drawable/runs_icon"
+       />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_weight="0.43"
+        android:gravity="left|center_vertical"
+        android:orientation="vertical"
+       android:background="@color/background_color"
+       android:paddingLeft="10dp"
+
+       >
+        <TextView
+            android:id="@+id/row_label_small"
+            style="@style/white_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20px"
+            android:textStyle="bold"
+            android:visibility="visible"
+            android:includeFontPadding="false"
+	   android:background="@color/background_color"/>
+
+        <TextView
+            android:id="@+id/row_label"
+            style="@style/white_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Label"
+            android:textSize="20px"
+            android:textStyle="bold"
+            android:includeFontPadding="false"
+	   android:background="@color/background_color"/>
+    </LinearLayout>
+  </LinearLayout>
+    <!-- This one is for the separator -->
+    <TextView
+       android:id="@+id/separator"
+       android:layout_width="10px"
+       android:layout_height="match_parent"
+       android:layout_marginTop="1dp"
+       android:padding="0dp"
+       android:singleLine="true"
+       android:textSize="0px"
+       android:textStyle="bold"
+       android:includeFontPadding="false"
+       android:background="#FF0000"
+       style="@style/stats_text_gray" />
+    
+    <!-- This one is for stats value-->
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="1dp"
+       android:layout_marginRight="5dp"
+        android:layout_weight="1"
+        android:gravity="left|center_vertical"
+        android:orientation="vertical"
+        android:padding="0dp"
+       >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+	   android:layout_marginTop="1dp"
+            android:gravity="top"
+            android:orientation="horizontal"
+	   android:background="@color/background_color_light">
+
+            <TextView
+                android:id="@+id/row_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="0dp"
+                android:paddingLeft="10dp"
+                android:singleLine="true"
+                android:text="0"
+                android:textSize="44px"
+                android:textStyle="bold"
+                android:includeFontPadding="false"
+                style="@style/stats_text_gray" />
+
+            <TextView
+                android:id="@+id/row_unit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="0dp"
+                android:ellipsize="marquee"
+                android:padding="0dp"
+                android:singleLine="true"
+                android:textSize="20px"
+                android:includeFontPadding="false"
+                style="@style/stats_text_gray" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/row_info"
+            style="@style/stats_text_gray" 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-10dp"
+            android:ellipsize="marquee"
+            android:singleLine="true"
+            android:textSize="16px"
+            android:visibility="gone"
+            android:includeFontPadding="false"
+             />
+    </LinearLayout>
+</LinearLayout>

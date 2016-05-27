@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<color name="transparent">#00000000</color>
+    <color name="opaque_red">#ffff0000</color>
+    <color name="transparent_red">#80ff0000</color>
+    <color name="opaque_blue">#0000ff</color>
+    <color name="opaque_green">#0f0</color>
+    <color name="pure_white">#ffffffff</color>
+    <color name="transparent_white">#99ffffff</color>
+    <color name="menu_highlight">#ffffffff</color>
+    <color name="menu_regular">#ffa0a0a0</color>
+    <color name="menu_selector">#ff1480e8</color>
+    <color name="tab_selector">#ff1480e8</color>
+    <color name="overlay_view_bg">#99000000</color>
+</resources>

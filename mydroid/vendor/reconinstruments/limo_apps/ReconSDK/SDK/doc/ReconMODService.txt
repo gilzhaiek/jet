@@ -1,0 +1,369 @@
+******************************************************************************
+* Quick start guide for using Recon MOD Service: a part of recon SDK
+* Property of Recon Instruments. (c) 2011-2012
+* Author: Ali R. Mohazab
+* Version: 0.1
+******************************************************************************
+==============================================================================
+1.0 Introduction
+==============================================================================
+
+The Recon MOD Service is a service that runs in the background of MOD
+Live.  It is responsible for providing functionality similar to that
+of Recon's lower end product aka MOD. The main functionality that
+Recon MOD Service provides is listed below:
+
+ * Altitude
+   * Current altitude
+   * Max Altitude for the day
+   * Min Altitude for the day
+   * All time Max altitude
+   * All time min altitude
+ * Current location
+ * Temperature
+   * Current temperature
+   * Max temperature for the day
+   * Min temperature for the day
+   * All Time Max Temperature
+   * All Time Min Temperature
+ * Distance
+   * Total Distance for the day
+   * All Time Distance
+   * Total Vertical for the day
+   * All Time Vertical.
+ * Runs where each run has
+   * Length
+   * Vertical
+   * Distance
+   * Number
+ * Jumps where each jump has
+   * Air
+   * Distance
+   * Height
+ * Speed
+   * Current Speed
+   * Max speed for the day
+   * Average speed for the day
+   * All Time Max Speed
+   * All Time Average
+ * Start of the day
+
+Application programmers can write their apps using the services
+provided by MOD Service. For example a developer can write an app that
+plots temperature as a function of altitude. The corresponding jar
+file that the service should be linked with is ReconMODService.jar
+
+==============================================================================
+2.0 The Service
+==============================================================================
+
+Recon MOD Service provides two categories of services for external
+applications that want to use the data.
+
+ * Service through binding
+ * Notification through broadcast messages
+
+------------------------------------------------------------------------------
+2.1  Service through binding
+------------------------------------------------------------------------------
+
+Any third-party application that is interested in the gathered stats
+up to the time of request can request such stats by binding to Recon
+MOD Service, through a messenger interface. Any particular request say
+the request for list of all jumps will be sent to the service through
+this messenger with a unique id e.g.
+(ReconMODServiceMessage.MSG_GET_JUMP_BUNDLE).  The requested
+information will be serialized or bundled (see Bundle class Doc in
+android) and sent back again through messenger. The flow of
+information from the service to the client is only once per
+request. The service will NOT keep updating the clients as results are
+being updated unless the clients specifically ask for it, every time
+through repeated requests. For sample implementation of teh client
+look at
+http://developer.android.com/reference/android/app/Service.html, under
+"/** Messenger for communicating with service. */".
+
+The action needed for the intent is "RECON_MOD_SERVICE".
+
+/////////////////////////////////////////////////////////////////////////
+//Java Code:
+void doBindService() {
+     // Establish a connection with the service.
+     bindService (new Intent("RECON_MOD_SERVICE"),
+		 mConnection, Context.BIND_AUTO_CREATE);
+     mIsBound = true;
+}
+/////////////////////////////////////////////////////////////////////////
+
+This type of service is useful for getting a lump of aggregate results
+and history.
+
+The list of all valid message ids is a  part of ReconMODServiceMessage
+and described below:
+
+******************************************
+    MSG_RESULT
+    MSG_RESULT_CHRONO
+    MSG_GET_ALTITUDE_BUNDLE
+    MSG_GET_DISTANCE_BUNDLE
+    MSG_GET_JUMP_BUNDLE
+    MSG_GET_LOCATION_BUNDLE
+    MSG_GET_RUN_BUNDLE
+    MSG_GET_SPEED_BUNDLE
+    MSG_GET_TEMPERATURE_BUNDLE
+    MSG_GET_TIME_BUNDLE
+    MSG_GET_VERTICAL_BUNDLE
+    MSG_GET_FULL_INFO_BUNDLE
+
+    MSG_CHRONO_START_STOP
+    MSG_CHRONO_LAP_TRIAL
+    MSG_CHRONO_START_NEW_TRIAL
+    MSG_CHRONO_STOP_TRIAL
+
+    MSG_RESET_STATS
+    MSG_RESET_ALLTIME_STATS
+******************************************
+
+
+The client will send a message of type MSG_GET_* to Recon MOD Service
+and the service will return a bundle with a message of type
+MSG_RESULT.
+
+Sample communication on service side to send a request would be:
+
+//////////////////////////////////////////////////////////////////////////////
+// java code:
+Message msg =
+    Message.obtain(null,ReconTranscendService.MSG_GET_ALTITUDE_BUNDLE, 0, 0);
+msg.replyTo = mMessenger; //So that the service knows what the return address is.
+mService.send(msg);
+//////////////////////////////////////////////////////////////////////////////
+
+As indicated earlier, the reply from the service will have a message
+of type *MSG_RESULT* along with some bundle. The message can be
+processed in the *IncomingHandler* of the client
+activity. Sample:
+
+//////////////////////////////////////////////////////////////////////////////
+// java code:
+switch (msg.what){
+    case ReconTranscendService.MSG_RESULT:
+           Bundle b = (Bundle) msg.getData();
+           int orig = msg.arg1;//It will be MSG_GET_*, which is the
+                               //code for the original message that
+                               //caused a response from the service
+           //Process the bundle
+           break;
+     }
+//////////////////////////////////////////////////////////////////////////////
+
+The next secion lists all the response bundles
+
+..............................................................................
+2.1.1 The list of response bundles
+..............................................................................
+
+Request msg: MSG_GET_ALTITUDE_BUNDLE
+Fields of response bundle:
+       "PreviousAlt"  (float) in meters
+       "Alt" (float) in meteres
+       "MaxAlt" (float) in meters
+       "HeightOffsetAvg" (float) in meters
+       "HeightOffsetN" (int) 
+       "GpsAlt" (float) in meters
+       "PreviousGpsAlt" (float) in meters
+       "PressureAlt"  (float) meters
+       "PreviousPressureAlt" (float) in meters
+       "MaxPressureAlt" (float) in meters
+       "IsCallibrating" (boolean)
+       "IsInitialized" (boolean)
+
+Request msg: MSG_GET_DISTANCE_BUNDLE
+Fields of response bundle:
+       "HorzDistance"  (float) in meters
+       "VertDistance"  (float) in meters
+       "Distance" (float) in meters
+       "AllTimeDistance" (float) in meters
+
+Request msg: MSG_GET_DISTANCE_BUNDLE
+Fields of response bundle:
+       "Jumps" (ArrayList<Bundle>) for each bundle:
+             "Number" (int)
+             "Date" (long) in unix epoch time 
+             "Air" (int) in ms
+             "Distance" (float) in meters
+	     "Height" (float) in meters
+	     "Drop" (float) in meters
+
+Request msg: MSG_GET_LOCATION_BUNDLE
+Fields of response bundle:
+       "Location" (Location)
+       "PreviousLocation" (Location)
+
+Request msg: MSG_GET_RUN_BUNDLE
+Fields of response bundle:
+       "AllTimeTotalNumberOfSkiRuns" (int)
+       "Runs" (ArrayList<Bundle>) for each bundle:
+             "Number" (int)
+             "Start" (int)
+             "AverageSpeed" (float) in km/h
+             "MaxSpeed" (float) in km/h
+
+Request msg: MSG_GET_SPEED_BUNDLE 
+Fields of response bundle:
+       "HorzSpeed" (float) in km/h
+       "VertSpeed" (float) in km/h
+       "Speed" (float) in km/h
+       "MaxSpeed" (float) in km/h
+
+Request msg: MSG_GET_TEMPERATURE_BUNDLE
+Fields of response bundle:
+       "MaxTemperature" (int) in celcius
+       "MinTemperature" (int) in celcius
+       "Temperature" (int) in celcius
+
+Request msg: MSG_GET_TIME_BUNDLE 
+Fields of response bundle:
+       "LastUpdate" (long) in unix epoch time
+       "TheUpdateBefore" (long) in unix epoch time
+
+Request msg: MSG_GET_VERTICAL_BUNDLE
+Fields of response bundle:
+       "Vert" (float) in meters
+       "AllTimeVert" (float) in meters
+
+Request msg: MSG_GET_CHRONO_BUNDLE
+Fields of response bundle:
+      "Trials" (ArrayList<Bundle>) for each bundle:
+              "StartTime" (long)
+	      "EndTime" (long)
+	      "ElapsedTime" (long)
+              "Laps" (ArrayList<Bundle>) for each bundle:
+	      	     "IsRunning" (boolean)
+		     "HasRun" (boolean)
+		     "StartTime" (long)
+		     "EndTime" (long)
+		     "ElapsedTime" (long)
+Notes: "IsRunning" is true if this lap is currently active. "HasRun"
+remains true once the lap has ever started. Using these booleans, you
+can determine which time fields would be valid.
+
+Request msg: MSG_GET_FULL_INFO_BUNDLE
+Fields of response bundle:
+       "ALTITUDE_BUNDLE" (Bundle)
+       "SPEED_BUNDLE" (Bundle)
+       "DISTANCE_BUNDLE" (Bundle)
+       "JUMP_BUNDLE" (Bundle)
+       "RUN_BUNDLE" (Bundle)
+       "TEMPERATURE_BUNDLE" (Bundle)
+       "VERTICAL_BUNDLE" (Bundle)
+       "LOCATION_BUNDLE" (Bundle)
+
+------------------------------------------------------------------------------
+2.2 Notification through broadcast message 
+------------------------------------------------------------------------------
+
+In a complementary model to "service through binding", the service
+will broadcast messages when critical stats have changed. Any party
+interested in the messages, regardless of the fact that they are bound
+to the service or not, can receive these messages, through a broadcast
+receiver.
+
+This type of service is useful for change notification. e.g. New Max
+altitude New Max speed or a New jump.
+
+The list of all broadcast intents used by Recon MOD Service are listed
+below. All intents have "Bundle" as extra, which can be accessed by
+getBundleExtra("Bundle"); The return type being the bundle associated
+with broadcast. e.g. jumpintent.getBundleExtra("Bundle"), returns a
+Jump info bundle.
+
+..............................................................................
+2.2.1 List of all broadcast intents  
+..............................................................................
+
+ * "RECON_MOD_BROADCAST_ALTITUDE" (When new altitude record is set
+   meriting a popup)
+ 
+ * "RECON_MOD_BROADCAST_DISTANCE" (When new distance record is set
+    meriting a popup)
+
+ * "RECON_MOD_BROADCAST_JUMP" (When a new jump is detected)
+ 
+ * "RECON_MOD_BROADCAST_LOCATION"
+ 
+ * "RECON_MOD_BROADCAST_RUN" (When a run is finished)
+ 
+ * "RECON_MOD_BROADCAST_SPEED" (When max speed is reached meriting a
+   popup)
+ 
+ * "RECON_MOD_BROADCAST_TEMPERATURE" (When max or min temperature is
+   reached meriting a popup)
+ 
+ * "RECON_MOD_BROADCAST_TIME" (TBD)
+ 
+ * "RECON_MOD_BROADCAST_VERTICAL" (When a new vertical record is set,
+   meriting a popup)
+
+
+................................................................................
+2.2.2  Handling broadcast intents
+................................................................................
+
+The intent that has been broadcast has one extra piece of information
+and atmost two:
+
+ * a key="Bundle" which has the bundle associated with the broadcast
+   type. e.g. SpeedBroadcast will have a SpeedBundle associated with
+   key "Bundle"
+
+ * (optional) a key="WhichOne" associated with a string. The content
+   of the string is the key of the field of the bundle that is of most
+   interest. So for example if maximum altitude is reached,
+   RECON_MOD_BROADCAST_ALTITUDE will be fired then: "Bundle" ->
+   Altitude Bundle Object (which is a regular bundle). "WhichOne" ->
+   "MaxAlt"
+
+=================================================================================
+3.0 Error handling
+=================================================================================
+
+ *NOTE* : This section is incomplete: both in the SDK jar file and
+this documentation. The error values should be integrated better as
+static constants.
+
+At times a good/meaningful value for the sensor read may not
+exist. For example the GPS fix may be lost and hence the speed is not
+reliable. 
+
+Below we list the INVALID values for various bundles. [In the final
+version] The bundles that are not listed don't have invalid fields by
+nature. For example the distance bundle will always have valid values
+for the fields.
+
+----------------------------------------------------------------------------------
+3.1 Altitude Bundle
+----------------------------------------------------------------------------------
+
+An invalid field in the Altitude bundle will have a value of -10000.
+
+----------------------------------------------------------------------------------
+3.2 Jump Bundle 
+----------------------------------------------------------------------------------
+
+An invalud field in the jump bundle will have a value of -10000.
+
+----------------------------------------------------------------------------------
+3.3 Speed Bundle 
+----------------------------------------------------------------------------------
+
+An invalid speed in the bundle will have a value of -1, which is
+physically impossible. 
+
+----------------------------------------------------------------------------------
+3.4 Temperature Bundle 
+----------------------------------------------------------------------------------
+
+An invalid field in Temperature bundle will have a value of -274 (-1K
+which is physically impossible).
+

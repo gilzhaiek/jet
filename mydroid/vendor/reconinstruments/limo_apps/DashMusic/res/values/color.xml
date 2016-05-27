@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="alt_color">#f58020</color>
+    <color name="speed_color">#6abd45</color>
+    <color name="air_color">#FF00FF</color>
+    <color name="vertical_color">#00edff</color>
+    <color name="selected_text_color">#ff000000</color>
+    <color name="unselected_text_color">#dddddd</color>
+    <color name="selected_tab_color">#ffffff</color>
+    <color name="unselected_tab_color">#8d8e90</color>
+    <color name="LightGrey">#D3D3D3</color>
+    <color name="gray">#808080</color>
+    <color name="reconGrayText">#a3a4a5</color>
+    <color name="reconGrayVolContainer">#606164</color>
+    <color name="DarkGray">#A9A9A9</color>
+    <color name="DarkSlateGray">#2F4F4F</color>
+    <color name="LightSlateGray">#778899</color>
+ 	<color name="SlateGray">#708090</color>
+ 	<color name="ReconGray">#000000</color>
+ 	<color name="white">#ffffff</color>
+</resources>

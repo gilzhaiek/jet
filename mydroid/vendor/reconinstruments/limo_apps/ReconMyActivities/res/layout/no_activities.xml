@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+			  android:orientation="vertical"
+			  android:layout_width="match_parent"
+			  android:layout_height="match_parent"
+			  android:gravity="center">
+	<TextView
+			android:id="@+id/textView1"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="@string/no_activities_title"
+			android:textColor="@color/recon_white"
+			android:textSize="40sp"
+			android:typeface="normal"
+			android:layout_alignParentTop="true"/>
+	<TextView
+			android:id="@+id/textView2"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="@string/no_activities_body"
+			android:textColor="@color/recon_jet_non_highlight_text_button"
+			android:textSize="22sp"
+			android:typeface="normal"
+			android:layout_alignParentTop="true"
+			android:gravity="center"/>
+</LinearLayout>

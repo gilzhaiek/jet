@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="180dp"
+	android:background="@drawable/circular_gradient" >
+	<RelativeLayout
+		android:id="@+id/header"
+		android:layout_width="fill_parent"
+		android:layout_height="40dp"
+		android:background="@drawable/circular_gradient" >
+		<TextView
+			style="@style/recon_white_text_shadow"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_centerInParent="true"
+			android:text="Update App"
+			android:textSize="24dip"
+			android:textStyle="bold" />
+	</RelativeLayout>
+	<View
+		android:id="@+id/divider"
+		android:layout_width="fill_parent"
+		android:layout_height="2dip"
+		android:layout_below="@id/header"
+		android:background="@drawable/tab_bar_gradient" />
+	<TextView
+		style="@style/recon_white_text_shadow"
+		android:layout_width="300dp"
+		android:layout_height="wrap_content"
+		android:layout_below="@id/divider"
+		android:layout_centerHorizontal="true"
+		android:layout_marginBottom="25dp"
+		android:layout_marginTop="25dp"
+		android:gravity="center"
+		android:text="Mobile App out of date\nPlease get the latest version from Google Play"
+		android:textSize="24dip"
+		android:textStyle="normal" />
+</RelativeLayout>

@@ -1,0 +1,33 @@
+--- /data/wlan_wcs_android/a0387670/liorc_MCP_2.x_1_dev/WiLink/CUDK/os/linux/src/Android.mk	2010-10-12 10:50:39.000000000 +0200
++++ /work/mydroid_L25_froyo_3.3/hardware/ti/wlan/mcp_2.x_Snapshot/CUDK/os/linux/src/Android.mk	2010-10-14 18:28:36.000000000 +0200
+@@ -14,7 +14,7 @@
+ 
+ WILINK_ROOT = ../../../..
+ CUDK_ROOT = $(WILINK_ROOT)/CUDK
+-ANDR_TI_SUPP_LIB_DIR ?= $(WILINK_ROOT)/../../../../external/wpa_supplicant
++ANDR_TI_SUPP_LIB_DIR = $(WILINK_ROOT)/../../../../external/wpa_supplicant_6
+ # TI_SUPP_LIB_DIR = $(WILINK_ROOT)/external_suppl
+ 
+ DK_DEFINES = 
+@@ -49,10 +49,9 @@
+ 	ParsEvent.c \
+         osapi.c
+ 
+-
+ ifeq ($(BUILD_SUPPL), y)
+ LOCAL_SRC_FILES += \
+-	$(ANDR_TI_SUPP_LIB_DIR)/wpa_ctrl.c
++	$(ANDR_TI_SUPP_LIB_DIR)/wpa_supplicant/src/common/wpa_ctrl.c
+ endif
+ 
+ 
+@@ -71,7 +70,8 @@
+         $(LOCAL_PATH)/$(WILINK_ROOT)/platforms/os/linux/inc \
+         $(LOCAL_PATH)/$(WILINK_ROOT)/platforms/os/common/inc \
+         $(LOCAL_PATH)/$(WILINK_ROOT)/TWD/FirmwareApi \
+-	external/wpa_supplicant \
++	external/wpa_supplicant_6/wpa_supplicant/src/common \
++        external/wpa_supplicant_6/wpa_supplicant/src/utils \
+         $(LOCAL_PATH)/$(CUDK_ROOT)/configurationutility/inc
+ 
+ LOCAL_MODULE:=libtiOsLib

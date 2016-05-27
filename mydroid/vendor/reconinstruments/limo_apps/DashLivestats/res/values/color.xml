@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<color name="jet_greg_text">#808181</color>
+	<color name="jet_in_activity">#ffa200</color>
+	<color name="jet_not_in_activity">#808080</color>
+</resources>

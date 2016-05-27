@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources> 
+    <string name="disconnectedEventLabel">Disconnected</string> 
+    <string name="connectionStatusEventLabel">Connection Status</string>
+    <string name="phonebookSetEventLabel">PhoneBook Set</string>
+    <string name="phonebookSizeEventLabel">PhoneBook Size</string>
+    <string name="phonebookPullEventLabel">vCard Data</string>
+    <string name="vCardListingEventLabel">vCard Listing</string> 
+    
+</resources>

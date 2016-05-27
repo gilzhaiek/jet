@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<stack>
+	
+		<!-- First Row -->
+		<ReconCard id="1" img="@drawable/directions1" left="8" right="7" next="2" delay="5000"/>
+		<ReconCard id="2" img="@drawable/directions2" left="8" right="7" next="3" delay="5000" />
+		<ReconCard id="3" img="@drawable/directions3" left="8" right="7" next="4" delay="5000" />
+		<ReconCard id="4" img="@drawable/directions4" left="8" right="7" next="5" delay="5000" />
+		<ReconCard id="5" img="@drawable/directions5" left="8" right="7" next="6" delay="5000" />
+		<ReconCard id="6" img="@drawable/directions6" left="8" right="7" next="1" delay="5000" />
+		
+		<ReconCard id="7" img="@drawable/engine" left="1" right="8" up="3" down="2" />
+		<ReconCard id="8" img="@drawable/map" left="7" right="1" down="2" />
+	</stack>
+</resources>

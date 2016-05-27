@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:orientation="vertical" >
+	<RelativeLayout
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginRight="20dip"
+		android:layout_marginTop="5dip"
+		android:orientation="horizontal" >
+		<Button
+			android:id="@+id/alertbtn_Handle"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_alignParentRight="true"
+			android:layout_alignParentTop="true"
+			android:background="@android:color/transparent"
+			android:drawableLeft="@drawable/select_button"
+			android:drawablePadding="10dip"
+			android:text="@string/alert_handle"
+			android:textColor="#ffffff"
+			android:textSize="20sp"
+			android:textStyle="bold" />
+		<Button
+			android:id="@+id/alertbtn_Dismiss"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_alignParentTop="true"
+			android:layout_marginRight="15dip"
+			android:layout_toLeftOf="@+id/alertbtn_Handle"
+			android:background="@android:color/transparent"
+			android:drawableLeft="@drawable/back_button"
+			android:drawablePadding="10dip"
+			android:text="@string/alert_dismiss"
+			android:textColor="#ffffff"
+			android:textSize="20sp"
+			android:textStyle="bold" />
+	</RelativeLayout>
+	<RelativeLayout
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:background="@drawable/notification_container"
+		android:paddingRight="20dip" >
+		<ImageView
+			android:id="@+id/alertIcon"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_centerVertical="true"
+			android:layout_marginLeft="10dip" />
+		<TextView
+			android:id="@+id/alertCategory"
+			style="@style/MessageContextStyle"
+			android:layout_toRightOf="@+id/alertIcon"
+			android:paddingLeft="15dip"
+			android:paddingRight="10dip"
+			android:paddingTop="5dip"
+			android:text="Category"
+			android:textColor="#000000"
+			android:textSize="24sp"
+			android:textStyle="bold" />
+		<TextView
+			android:id="@+id/alertMessage"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_below="@+id/alertCategory"
+			android:layout_toRightOf="@+id/alertIcon"
+			android:ellipsize="marquee"
+			android:focusable="true"
+			android:marqueeRepeatLimit="marquee_forever"
+			android:paddingBottom="5dip"
+			android:paddingLeft="15dip"
+			android:paddingRight="10dip"
+			android:scrollHorizontally="true"
+			android:singleLine="true"
+			android:text="Message"
+			android:textColor="#6a6a6a"
+			android:textSize="20sp"
+			android:textStyle="bold" />
+		<!--
+     		<TextView
+			android:id="@+id/alertDate"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:layout_alignBottom="@+id/alertCategory"
+			android:layout_alignParentRight="true"
+			android:gravity="right"
+			android:text="Date"
+			android:textColor="#6a6a6a"
+			android:textSize="20sp" />
+		-->
+	</RelativeLayout>
+</LinearLayout>

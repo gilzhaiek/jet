@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/android_layouts_suck"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:paddingLeft="20dp"
+	android:paddingRight="20dp" >
+	<LinearLayout
+		android:id="@+id/topBar"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="12dp"
+		android:orientation="horizontal" >
+		<TextView
+			android:id="@+id/msgCategory"
+			style="@style/recon_white_text_shadow"
+			android:layout_width="0px"
+			android:layout_height="wrap_content"
+			android:layout_alignParentLeft="true"
+			android:layout_weight="1"
+			android:ellipsize="end"
+			android:maxLines="2"
+			android:singleLine="false"
+			android:text=""
+			android:textSize="28px"
+			android:textStyle="bold" />
+		<TextView
+			android:id="@+id/msgDate"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_alignParentRight="true"
+			android:layout_centerVertical="true"
+			android:fontFamily="sans-serif-semibold"
+			android:text=""
+			android:textColor="@color/recon_text_gray"
+			android:textSize="20px" />
+	</LinearLayout>
+	<RelativeLayout
+		android:id="@+id/secondRow"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:layout_below="@id/topBar"
+		android:layout_marginTop="-5dp"
+		android:orientation="horizontal" >
+		<TextView
+			android:id="@+id/msgnav_count"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:fontFamily="sans-serif-semibold"
+			android:includeFontPadding="false"
+			android:text=""
+			android:textColor="@color/recon_text_gray"
+			android:textSize="20sp" />
+	</RelativeLayout>
+	<RelativeLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_below="@id/secondRow"
+		android:layout_marginBottom="20dp"
+		android:layout_marginTop="20dp"
+		android:descendantFocusability="blocksDescendants"
+		android:focusable="false" >
+		<ListView
+			android:id="@android:id/list"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:cacheColorHint="#00000000"
+			android:divider="@null"
+			android:dividerHeight="0dp"
+			android:fadingEdge="vertical"
+			android:fadingEdgeLength="30dp"
+			android:focusable="false"
+			android:listSelector="@android:color/transparent" />
+	</RelativeLayout>
+</RelativeLayout>

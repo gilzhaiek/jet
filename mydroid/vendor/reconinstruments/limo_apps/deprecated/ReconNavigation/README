@@ -1,0 +1,15 @@
+***********************
+*   ReconNavigation   *
+***********************
+Here is a quick overview on build process. 
+
+ * You need ShapePackage project in order to build this app: note that
+   ROOT/src/com/recon is soft linked to ROOT/../ShapePackage/com/recon
+
+ * The following jar files are also needed:
+   HQMobileClasses.jar
+   ReconI2c.jar
+   TranscendService.jar
+   limopm.jar
+   ReconSettingsUtil.jar
+

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="meters">meters</string>
+	<string name="feet">feet</string>
+	<string name="meters_abr">M</string>
+	<string name="feet_abr">FT</string>
+	<string name="kmh">KM/H</string>
+	<string name="mph">MPH</string>
+	<string name="minkm">KM</string>
+	<string name="minmi">MI</string>
+	<string name="invalid_value">---</string>
+	<string name="max_speed">MAX\nSPEED</string>
+	<string name="air_time">AIR TIME</string>
+	<string name="altitude">ALTITUDE</string>
+	<string name="vertical">VERTICAL</string>
+</resources>

@@ -1,0 +1,1 @@
+expect -c 'spawn ssh simon@10.10.75.'"$1"'; expect assword {send "recon1234\n"; exp_continue} "simon@RECON" {send -- "bash report.bash\nexit\n";exp_continue;} "exit" {sleep 5};' |  awk '/\| [0-9]/{print $2" "$3" "$4;}'

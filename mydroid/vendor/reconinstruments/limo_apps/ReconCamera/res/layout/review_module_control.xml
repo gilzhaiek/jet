@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.reconinstruments.camera.ui.RotatableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/CameraControls"
+    android:layout_gravity="right|center_vertical"
+    android:layout_marginRight="2dip" >
+
+    <ImageView
+        android:id="@+id/btn_done"
+        style="@style/ReviewControlIcon"
+        android:layout_gravity="top|right"
+        android:background="@drawable/bg_pressed"
+        android:contentDescription="@string/accessibility_review_ok"
+        android:scaleType="center"
+        android:src="@drawable/ic_menu_done_holo_light"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/btn_retake"
+        style="@style/ReviewControlIcon"
+        android:layout_gravity="right|center_vertical"
+        android:background="@drawable/bg_pressed"
+        android:contentDescription="@string/accessibility_review_retake"
+        android:focusable="true"
+        android:scaleType="center"
+        android:src="@drawable/ic_btn_shutter_retake"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/btn_cancel"
+        style="@style/ReviewControlIcon"
+        android:layout_gravity="bottom|right"
+        android:background="@drawable/bg_pressed"
+        android:contentDescription="@string/accessibility_review_cancel"
+        android:scaleType="center"
+        android:src="@drawable/ic_menu_cancel_holo_light"
+        android:visibility="gone" />
+
+</com.reconinstruments.camera.ui.RotatableLayout>

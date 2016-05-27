@@ -1,0 +1,10 @@
+.tmp_versions
+.tty_hci.ko.cmd
+.tty_hci.mod.o.cmd
+.tty_hci.o.cmd
+Module.symvers
+modules.order
+tty_hci.ko
+tty_hci.mod.c
+tty_hci.mod.o
+tty_hci.o

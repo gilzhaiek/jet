@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_height="fill_parent">
+	<TextView android:id="@+id/unit" 
+		android:text="km/h" 
+		android:layout_alignParentTop="true"
+		android:layout_width="wrap_content" android:layout_height="wrap_content" 
+		android:layout_alignParentRight="true" 
+		android:textColor="#FFFFFF"
+		android:textSize="30px"
+		android:layout_marginRight="20px"
+		style="@style/white_text_shadow" />
+	
+	<TextView  android:id="@+id/speed" style="@style/speed4x4"	/>
+</RelativeLayout>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center_horizontal">
+  	<com.reconinstruments.example.widgets.ReconPickerView
+  		android:id="@+id/monthPicker"
+  		android:layout_width="wrap_content"
+  		android:layout_height="wrap_content"
+  		android:layout_margin="2dip" />
+  	<com.reconinstruments.example.widgets.ReconPickerView 
+  		android:id="@+id/dayPicker"
+  		android:layout_width="wrap_content"
+  		android:layout_height="wrap_content" 
+  		android:layout_margin="2dip"/>
+  	<com.reconinstruments.example.widgets.ReconPickerView 
+  		android:id="@+id/yearPicker"
+  		android:layout_width="wrap_content"
+  		android:layout_height="wrap_content" 
+  		android:layout_margin="2dip"/>
+</LinearLayout>

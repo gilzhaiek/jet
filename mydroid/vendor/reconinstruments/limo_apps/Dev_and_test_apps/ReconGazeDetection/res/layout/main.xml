@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="18dp"
+        android:paddingLeft="30dp"
+        android:paddingRight="20dp">
+
+        <TextView
+            android:id="@id/GazeDetText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans"
+            android:text="@string/GazeDetect"
+            android:textSize="36dp"
+            android:textColor="@color/recon_grey"/>
+
+        <TextView
+            android:id="@+id/CalText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/GazeDetText"
+            android:layout_gravity="bottom"
+            android:fontFamily="sans"
+            android:text="@string/Calibrate"
+            android:textSize="36dp"
+            android:textColor="@color/recon_grey"/>
+
+        <ImageView
+            android:id="@+id/CheckBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="12dp"
+            android:paddingLeft="0dp"
+            android:paddingTop="10dp"
+            android:src="@drawable/checkbox_grey"/>
+
+    </RelativeLayout>
+
+</LinearLayout>
+

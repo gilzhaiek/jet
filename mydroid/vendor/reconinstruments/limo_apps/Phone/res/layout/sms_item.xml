@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Most of the attributes are copied from simple_list_item_1.xml  which is defined as the default textview for ListView -->
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/sms_reply_item"
+    android:layout_width="fill_parent"
+    android:layout_height="40dip"
+    android:gravity="center"
+    android:paddingBottom="8dip"
+    android:text="Reply"
+    android:textSize="24sp"
+    android:textStyle="bold"
+    android:typeface="sans" />

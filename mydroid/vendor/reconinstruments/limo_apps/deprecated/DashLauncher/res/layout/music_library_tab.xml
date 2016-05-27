@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tab_name"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:shadowColor="#FF000000"
+    android:shadowDx="0"
+    android:shadowDy="0"
+    android:shadowRadius="4"
+    android:textColor="#FFFFFF"
+    android:textSize="25dip"
+    android:textStyle="bold"
+    android:focusable="false" />

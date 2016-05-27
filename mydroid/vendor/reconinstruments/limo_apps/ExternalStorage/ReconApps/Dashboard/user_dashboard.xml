@@ -1,0 +1,20 @@
+<Recon-Dashboard-Layouts>
+  <layout layout_id="7" name="">
+    <widget name="spd_6x4"/>
+  </layout>
+  <layout layout_id="8" name="">
+    <widget name="spd_3x4"/>
+    <widget name="vrt_3x4"/>
+  </layout>
+  <layout layout_id="9" name="">
+    <widget name="spd_3x4"/>
+    <widget name="alt_3x2"/>
+    <widget name="vrt_3x2"/>
+  </layout>
+  <layout layout_id="10" name="">
+    <widget name="spd_3x2"/>
+    <widget name="alt_3x2"/>
+    <widget name="dst_3x2"/>
+    <widget name="vrt_3x2"/>
+  </layout>
+</Recon-Dashboard-Layouts>

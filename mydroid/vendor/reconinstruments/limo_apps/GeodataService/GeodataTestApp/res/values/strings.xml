@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Geodata Test App</string>
+    <string name="service_response">choose API call to test...</string>
+    <string name="service_state">Geodata Service not running</string>
+
+</resources>

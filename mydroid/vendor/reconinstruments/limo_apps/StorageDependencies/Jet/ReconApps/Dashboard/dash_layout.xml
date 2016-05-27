@@ -1,0 +1,27 @@
+<dash-layout id="1">
+	<main-metric>
+		<speed />
+	</main-metric>
+	<secondary-metrics>
+		<distance />
+		<duration />
+		<grade />
+		<elevgain />
+		<calorie />
+		<heartrate />
+		<cadence />
+	</secondary-metrics>
+</dash-layout>
+<dash-layout id="2">
+	<main-metric>
+		<pace />
+	</main-metric>
+	<secondary-metrics>
+		<distance />
+		<duration />
+		<grade />
+		<elevgain />
+		<calorie />
+		<heartrate />
+	</secondary-metrics>
+</dash-layout>

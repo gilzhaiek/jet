@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/BLEServiceSS1/BLEServiceSS1.iml" filepath="$PROJECT_DIR$/BLEServiceSS1/BLEServiceSS1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Android_MobileSDK/CommonUtil/CommonUtil.iml" filepath="$PROJECT_DIR$/Android_MobileSDK/CommonUtil/CommonUtil.iml" />
+      <module fileurl="file://$PROJECT_DIR$/CompassSensor/CompassSensor.iml" filepath="$PROJECT_DIR$/CompassSensor/CompassSensor.iml" />
+      <module fileurl="file://$PROJECT_DIR$/DashLivestats/DashLivestats.iml" filepath="$PROJECT_DIR$/DashLivestats/DashLivestats.iml" />
+      <module fileurl="file://$PROJECT_DIR$/libraries/Dashlauncher_element/Dashlauncher_element.iml" filepath="$PROJECT_DIR$/libraries/Dashlauncher_element/Dashlauncher_element.iml" />
+      <module fileurl="file://$PROJECT_DIR$/libraries/ExternalSensorsService/ExternalSensorsService.iml" filepath="$PROJECT_DIR$/libraries/ExternalSensorsService/ExternalSensorsService.iml" />
+      <module fileurl="file://$PROJECT_DIR$/GeodataService/GeodataService/GeodataService.iml" filepath="$PROJECT_DIR$/GeodataService/GeodataService/GeodataService.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Android_MobileSDK/HUDConnectivity/HUDConnectivity.iml" filepath="$PROJECT_DIR$/Android_MobileSDK/HUDConnectivity/HUDConnectivity.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Android_MobileSDK/HUDPhoneStatusExchange/HUDPhoneStatusExchange.iml" filepath="$PROJECT_DIR$/Android_MobileSDK/HUDPhoneStatusExchange/HUDPhoneStatusExchange.iml" />
+      <module fileurl="file://$PROJECT_DIR$/JetDashSettings/JetDashSettings.iml" filepath="$PROJECT_DIR$/JetDashSettings/JetDashSettings.iml" />
+      <module fileurl="file://$PROJECT_DIR$/JetMusic/JetMusic.iml" filepath="$PROJECT_DIR$/JetMusic/JetMusic.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MapSDK/MapSDK.iml" filepath="$PROJECT_DIR$/MapSDK/MapSDK.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Android_MobileSDK/MobileConnectLibrary/MobileConnectLibrary.iml" filepath="$PROJECT_DIR$/Android_MobileSDK/MobileConnectLibrary/MobileConnectLibrary.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Phone/Phone.iml" filepath="$PROJECT_DIR$/Phone/Phone.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ReconAppInstaller/ReconAppInstaller.iml" filepath="$PROJECT_DIR$/ReconAppInstaller/ReconAppInstaller.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ReconApplauncher/ReconApplauncher.iml" filepath="$PROJECT_DIR$/ReconApplauncher/ReconApplauncher.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ReconBLE_java/ReconBLE_java.iml" filepath="$PROJECT_DIR$/ReconBLE_java/ReconBLE_java.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ReconCompass/ReconCompass.iml" filepath="$PROJECT_DIR$/ReconCompass/ReconCompass.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Android_MobileSDK/ReconHUDServiceHelper/ReconHUDServiceHelper.iml" filepath="$PROJECT_DIR$/Android_MobileSDK/ReconHUDServiceHelper/ReconHUDServiceHelper.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ReconItemHost/ReconItemHost.iml" filepath="$PROJECT_DIR$/ReconItemHost/ReconItemHost.iml" />
+      <module fileurl="file://$PROJECT_DIR$/libraries/ReconMessageAPI/ReconMessageAPI.iml" filepath="$PROJECT_DIR$/libraries/ReconMessageAPI/ReconMessageAPI.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ReconMyActivities/ReconMyActivities.iml" filepath="$PROJECT_DIR$/ReconMyActivities/ReconMyActivities.iml" />
+      <module fileurl="file://$PROJECT_DIR$/libraries/ReconOSCommonWidgets/ReconOSCommonWidgets.iml" filepath="$PROJECT_DIR$/libraries/ReconOSCommonWidgets/ReconOSCommonWidgets.iml" />
+      <module fileurl="file://$PROJECT_DIR$/libraries/ReconPhoneProvider/ReconPhoneProvider.iml" filepath="$PROJECT_DIR$/libraries/ReconPhoneProvider/ReconPhoneProvider.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ReconSystemUI/ReconSystemUI.iml" filepath="$PROJECT_DIR$/ReconSystemUI/ReconSystemUI.iml" />
+      <module fileurl="file://$PROJECT_DIR$/libraries/ReconUtils/ReconUtils.iml" filepath="$PROJECT_DIR$/libraries/ReconUtils/ReconUtils.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ServiceWithCallBack/ServiceWithCallBack.iml" filepath="$PROJECT_DIR$/ServiceWithCallBack/ServiceWithCallBack.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SnowMapApp/SnowMapApp.iml" filepath="$PROJECT_DIR$/SnowMapApp/SnowMapApp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Android_MobileSDK/TimeSync/TimeSync.iml" filepath="$PROJECT_DIR$/Android_MobileSDK/TimeSync/TimeSync.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Android_MobileSDK/WebApi/WebApi.iml" filepath="$PROJECT_DIR$/Android_MobileSDK/WebApi/WebApi.iml" />
+      <module fileurl="file://$PROJECT_DIR$/libraries/isOakleyDecider/isOakleyDecider.iml" filepath="$PROJECT_DIR$/libraries/isOakleyDecider/isOakleyDecider.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mapApp/mapApp.iml" filepath="$PROJECT_DIR$/mapApp/mapApp.iml" />
+    </modules>
+  </component>
+</project>

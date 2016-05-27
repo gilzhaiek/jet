@@ -1,0 +1,41 @@
+<Recon-Dashboard-Layouts>
+	<layout layout_id="9" name="" sport_id="1">
+		<widget name="spd_3x4" />
+		<widget name="dst_3x2" />
+		<widget name="dur_3x2" />
+	</layout>
+	<layout layout_id="9" name="" sport_id="1">
+		<widget name="spd_3x4" />
+		<widget name="cad_3x2" />
+		<widget name="hrt_3x2" />
+	</layout>
+	<layout layout_id="10" name="" sport_id="1">
+		<widget name="spd_3x2" />
+		<widget name="cad_3x2" />
+		<widget name="hrt_3x2" />
+		<widget name="dst_3x2" />
+	</layout>
+	<layout layout_id="10" name="" sport_id="1">
+		<widget name="spd_3x2" />
+		<widget name="trg_3x2" />
+		<widget name="cal_3x2" />
+		<widget name="ev_3x2" />
+	</layout>
+	<layout layout_id="9" name="" sport_id="2">
+		<widget name="pace_3x4" />
+		<widget name="dst_3x2" />
+		<widget name="dur_3x2" />
+	</layout>
+	<layout layout_id="10" name="" sport_id="2">
+		<widget name="pace_3x2" />
+		<widget name="pace_avg_3x2" />
+		<widget name="hrt_3x2" />
+		<widget name="dur_3x2" />
+	</layout>
+	<layout layout_id="10" name="" sport_id="2">
+		<widget name="dst_3x2" />
+		<widget name="ev_3x2" />
+		<widget name="cal_3x2" />
+		<widget name="trg_3x2" />
+	</layout>
+</Recon-Dashboard-Layouts>

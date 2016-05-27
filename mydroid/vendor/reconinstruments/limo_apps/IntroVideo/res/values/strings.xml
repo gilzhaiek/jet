@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Demo Videos</string>
+    <string name="before_using">BEFORE USING YOUR HUD</string>
+    <string name="update_and_activate">Update and activate at:</string>
+    <string name="engage_url">reconinstruments.com/getstarted</string>
+    <string name="airwave_url">reconinstruments.com/airwave</string>
+</resources>

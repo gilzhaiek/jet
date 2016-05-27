@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="app_name">DashLivestats</string>
+	<string name="action_settings">Settings</string>
+	<string name="hello_world">Hello world!</string>
+	<string name="meters">meters</string>
+	<string name="feet">feet</string>
+	<string name="meters_abr">m</string>
+	<string name="feet_abr">ft</string>
+	<string name="kmh">km/h</string>
+	<string name="mph">mph</string>
+	<string name="invalid_value">---</string>
+	<string name="max_speed">MAX\nSPEED</string>
+	<string name="air_time">AIR TIME</string>
+	<string name="altitude">ALTITUDE</string>
+	<string name="vertical">VERTICAL</string>
+	<string name="heart_rate">HEART RATE</string>
+	<string name="avg_heart_rate">AVG HR</string>
+	<string name="cadence">CADENCE</string>
+	<string name="avg_cadence">AVG CADENCE</string>
+	<string name="calories">CALORIES</string>
+	<string name="distance">DISTANCE</string>
+	<string name="elev_gain">ELEV GAIN</string>
+	<string name="duration">DURATION</string>
+	<string name="pace">PACE</string>
+	<string name="avg_pace">AVG PACE</string>
+	<string name="speed">SPEED</string>
+	<string name="avg_speed">AVG SPEED</string>
+	<string name="grade">GRADE</string>
+	<string name="power">POWER</string>
+	
+	<string name="day_paused">Day Paused</string>
+	<string name="day_resume">RESUME</string>
+	<string name="day_view">VIEW DAY</string>
+	
+	<string name="day_in_progress">ACTIVITY IN PROGRESS</string>
+	<string name="day_summary_finish">FINISH</string>
+	<string name="day_summary_map">MAP</string>
+	<string name="day_summary_stats">STATS</string>
+</resources>

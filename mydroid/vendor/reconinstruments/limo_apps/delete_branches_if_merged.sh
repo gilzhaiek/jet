@@ -1,0 +1,1 @@
+while read line; do git cherry master $line | awk 'BEGIN{A=0;} /+/ {A=A+1} END{if (A > 0) print "echo bad "A" '"$line"'"; else print "echo good "A" '"$line"'; bash git_delete_branch.bash '"$line"';";}'; done | bash 2> /dev/null

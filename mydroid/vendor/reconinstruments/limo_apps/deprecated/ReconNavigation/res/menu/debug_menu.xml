@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/debug_menu_toggleArrowEffect"
+          android:title="Toggle Arrow" />
+    <item android:id="@+id/debug_menu_showLocationXY"
+          android:title="Add Debug Buddies" />
+    <item android:id="@+id/debug_menu_showReNetworkDiagnostic"
+          android:title="Show Diagnostic" />
+    <item android:id="@+id/debug_menu_loadSite"
+     android:title="Load Debug Sites" />
+    <item android:id="@+id/debug_menu_dropPin"
+     android:title="Drop Pin" />  
+    <item android:id="@+id/debug_menu_toggle_toolbar"
+     android:title="Toggle Toolbar" />
+     
+<!--        
+        <menu>        
+            <item android:id="@+id/debug_menu_site28"
+                android:title="28(NA)" />                    
+            <item android:id="@+id/debug_menu_site140"
+                android:title="140(NA)"/>        
+            <item android:id="@+id/debug_menu_site507"
+                android:title="507(NA)"/>
+            <item android:id="@+id/debug_menu_site497"
+                android:title="497(NA)"/>                
+            <item android:id="@+id/debug_menu_site510"
+                android:title="510(NA)"/>
+            <item android:id="@+id/debug_menu_site5204"
+                android:title="5204(Euro)"/>                
+            <item android:id="@+id/debug_menu_site5215"
+                android:title="5215(Euro)"/>                
+            <item android:id="@+id/debug_menu_site729"
+                android:title="729(Euro)"/>      
+            <item android:id="@+id/debug_menu_site5069"
+                android:title="5069(Austrial)"/>
+            <item android:id="@+id/debug_menu_site641"
+                android:title="641(Austrial)"/>                                                                                 
+            <item android:id="@+id/debug_menu_site5029"
+                android:title="5029(Austrial)"/>                                                                                                                                                                              
+        </menu>
+       
+    </item>
+-->     
+</menu>

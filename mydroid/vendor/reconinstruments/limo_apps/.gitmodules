@@ -1,0 +1,3 @@
+[submodule "Android_MobileSDK"]
+	path = Android_MobileSDK
+	url = git@github.com:ReconInstruments/Android_MobileSDK.git

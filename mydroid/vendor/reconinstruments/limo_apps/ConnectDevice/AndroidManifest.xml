@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+	package="com.reconinstruments.connectdevice"
+	android:versionCode="6783"
+	android:versionName="3.1_postalpha_sept24" >
+	<uses-sdk android:minSdkVersion="10" />
+	<uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+	<uses-permission android:name="android.permission.BLUETOOTH" />
+	<uses-permission android:name="android.permission.WRITE_SETTINGS" />
+	<uses-permission android:name="android.permission.GET_TASKS" />
+	<application
+		android:debuggable="false"
+		android:icon="@drawable/icon"
+		android:label="@string/app_name" >
+		<activity
+			android:name=".ChooseDeviceActivity"
+			android:theme="@style/ReconTheme.NoTitleBar" >
+			<intent-filter>
+				<action android:name="com.reconinstruments.connectdevice.CONNECT" />
+				<action android:name="com.reconinstruments.connectdevice.CONNECT_ANDROID" />
+				<action android:name="com.reconinstruments.connectdevice.CONNECT_IOS" />
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="android.intent.category.DEFAULT" />
+			</intent-filter>
+		</activity>
+		<activity
+			android:name=".DisconnectDeviceActivity"
+			android:theme="@style/ReconTheme.NoTitleBar" >
+		</activity>
+		<activity
+			android:name=".android.FirstConnectActivity"
+			android:theme="@style/ReconTheme.NoTitleBar" >
+		</activity>
+		<activity
+			android:name=".android.WaitingActivity"
+			android:theme="@style/ReconTheme.NoTitleBar" >
+			<intent-filter>
+				<category android:name="android.intent.category.DEFAULT" />
+			</intent-filter>
+		</activity>
+		<activity
+			android:name=".android.FailedActivity"
+			android:theme="@style/ReconTheme.NoTitleBar" >
+		</activity>
+		<activity
+			android:name=".android.UpdateActivity"
+			android:theme="@android:style/Theme.Dialog" >
+			<intent-filter>
+				<action android:name="com.reconinstruments.connectdevice.UPDATE_ANDROID" />
+				<category android:name="android.intent.category.DEFAULT" />
+			</intent-filter>
+		</activity>
+		<activity
+			android:name=".ios.RemoteWarningActivity"
+			android:theme="@style/ReconTheme.NoTitleBar" >
+		</activity>
+		<activity
+			android:name=".ios.FirstConnectActivity"
+			android:theme="@style/ReconTheme.NoTitleBar" >
+		</activity>
+		<activity
+			android:name=".ios.ConnectActivity"
+			android:theme="@style/ReconTheme.NoTitleBar.Fullscreen" >
+			<intent-filter>
+				<category android:name="android.intent.category.DEFAULT" />
+			</intent-filter>
+		</activity>
+		<activity
+			android:name=".ios.WaitingActivity"
+			android:theme="@style/ReconTheme.NoTitleBar" >
+		</activity>
+		<activity
+			android:name=".ios.BtNotificationFristActivity"
+			android:theme="@style/ReconTheme.NoTitleBar.Fullscreen" >
+		</activity>
+		<activity
+			android:name=".ios.BtNotificationSecondActivity"
+			android:theme="@style/ReconTheme.NoTitleBar" >
+		</activity>
+		<activity
+			android:name=".ios.BtNotificationThirdActivity"
+			android:theme="@style/ReconTheme.NoTitleBar" >
+		</activity>
+		<activity
+			android:name=".ios.BtReconnectActivity"
+			android:theme="@style/ReconTheme.NoTitleBar" >
+		</activity>
+		<activity
+			android:name=".ios.MfiReconnectActivity"
+			android:theme="@style/ReconTheme.NoTitleBar" >
+		</activity>
+		<activity
+			android:name=".ios.BtNotificationForthActivity"
+			android:theme="@style/ReconTheme.NoTitleBar.Fullscreen" >
+		</activity>
+		<activity
+			android:name=".ios.BtNotificationFivthActivity"
+			android:theme="@style/ReconTheme.NoTitleBar" >
+		</activity>
+		<activity
+			android:name=".ios.BtNotificationSixthActivity"
+			android:theme="@style/ReconTheme.NoTitleBar" >
+		</activity>
+		<activity
+			android:name=".ios.IosBtToggleActivity"
+			android:theme="@style/ReconTheme.NoTitleBar" >
+			<intent-filter>
+				<action android:name="com.reconinstruments.connectdevice.TOGGLE_IOS_BT" />
+				<category android:name="android.intent.category.DEFAULT" />
+			</intent-filter>
+		</activity>
+		<activity
+			android:name=".ios.FailedActivity"
+			android:theme="@style/ReconTheme.NoTitleBar" >
+			<intent-filter>
+				<action android:name="com.reconinstruments.connectdevice.IOS_RETRY" />
+				<category android:name="android.intent.category.DEFAULT" />
+			</intent-filter>
+		</activity>
+		<receiver android:name=".ios.IOSDeviceNameReceiver" >
+			<intent-filter>
+				<action android:name="com.reconinstruments.IOS_DEVICE_NAME" />
+			</intent-filter>
+		</receiver>
+		<receiver android:name=".PhoneConnectionReceiver" >
+			<intent-filter>
+				<action android:name="com.reconinstruments.connectdevice.RECONNECT" />
+			</intent-filter>
+		</receiver>
+		<receiver android:name=".ios.IosBtToggleReceiver" >
+			<intent-filter>
+				<action android:name="com.reconinstruments.connect.TOGGLE_IOS_BT" />
+			</intent-filter>
+		</receiver>
+		<!-- <receiver -->
+		<!-- android:name=".ios.BtTelephonyReceiver" -->
+		<!-- android:enabled="true" -->
+		<!-- android:exported="true" -->
+		<!-- android:process=":bttelephonyreceiver" > -->
+		<!-- <intent-filter> -->
+		<!-- <action android:name="com.reconinstruments.BtTelephonyStateChanged" /> -->
+		<!-- </intent-filter> -->
+		<!-- </receiver> -->
+	</application>
+</manifest>

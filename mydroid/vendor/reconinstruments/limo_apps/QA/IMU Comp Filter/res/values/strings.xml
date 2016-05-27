@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="hello">IMU Complementary Filter Test</string>
+    <string name="app_name">RAW data logger</string>
+    <string name="AccX">Acceleration X: </string>
+    <string name="AccY">Acceleration Y: </string>
+    <string name="AccZ">Acceleration Z: </string>
+    <string name="GyroX">Gyro X:</string>
+    <string name="GyroY">Gyro Y:</string>
+    <string name="GyroZ">Gyro Z:</string>
+    <string name="MagX">Magnetic X:</string>
+    <string name="MagY">Magnetic Y:</string>
+    <string name="MagZ">Magnetic Z:</string>
+    <string name="roll">Kalman Roll:</string>
+    <string name="pitch">Kalman Pitch:</string>
+    <string name="yaw">Kalman Yaw:</string>
+    <string name="datalogging">Start data logging</string>
+    <string name="comp_roll">Complementary Roll:</string>
+    <string name="comp_pitch">Complementary Pitch:</string>
+    <string name="comp_yaw">Complementary Yaw:</string>
+
+</resources>

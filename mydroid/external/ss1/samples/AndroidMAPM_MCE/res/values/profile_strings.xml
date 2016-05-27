@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <string name="disconnectedEventLabel">Disconnected</string> 
+    <string name="connectionStatusEventLabel">Connection Status</string> 
+    <string name="queryCurrentFolderEventLabel">Current Folder</string>
+    <string name="enableNotificationsResponseEventLabel">Enable Notifications</string>
+    <string name="setFolderResponseEventLabel">Set Folder</string>
+    <string name="setFolderAbsoluteResponseEventLabel">Set Folder Absolute</string>
+    <string name="getFolderListingResponseEventLabel">Get Folder Listing</string>
+    <string name="getFolderListingSizeResponseEventLabel">Get Folder Listing Size</string>
+    <string name="getMessageListingResponseEventLabel">Get Message Listing</string>
+    <string name="getMessageListingSizeResponseEventLabel">Get Message Listing Size</string>
+    
+    <string name="connectRemoteDeviceLabel">connectRemoteDevice result:</string>
+    <string name="disconnectLabel">disconnect result:</string>
+    <string name="abortLabel">abort result:</string>
+    <string name="parseRemoteMessageAccessServicesLabel">parseRemoteMessageAccessServices result:</string>
+    <string name="enableNotificationsLabel">enableNotifications result:</string>
+    <string name="setFolderLabel">setFolder result: </string>
+    <string name="setFolderAbsoluteLabel">setFolderAbsolute result: </string>
+    <string name="getFolderListingLabel">getFolderListing result: </string>
+    <string name="getFolderListingSizeLabel">getFolderListingSize result: </string>
+    <string name="getMessageListingLabel">getMessageListing result: </string>
+    <string name="getMessageListingSizeLabel">getMessageListingSize result: </string>
+    <string name="getMessageLabel">getMessage result: </string>
+    <string name="setMessageStatusLabel">setMessageStatus result: </string>
+    <string name="pushMessageLabel">pushMessage result: </string>
+    <string name="updateInboxLabel">updateInbox result: </string>
+    
+    <string name="bluetoothAddressLabel">Bluetooth Address</string>
+    <string name="instanceIDLabel">Instance ID</string>
+    <string name="connectionTypeLabel">Connection Type</string>
+    <string name="connectionStatusLabel">Connection Status</string>
+    <string name="currentPathLabel">Current Path</string>
+    <string name="responseStatusCodeLabel">Response Status Code</string>
+    <string name="numberOfFoldersLabel">Number of Folders</string>
+    <string name="isFinalLabel">Final Packet</string>
+    <string name="newMessageLabel">New Messages Present</string>
+    <string name="timeMSELabel">Message Access Server Time</string>
+    <string name="validUTCLabel">Valid UTC Offset</string>
+    <string name="offsetUTCLabel">UTC Offset</string>
+    <string name="numberOfMessagesLabel">Number of Messages</string>
+    <string name="fractionDeliverLabel">Fractional Email Status</string>
+    
+    <string name="serviceNameLabel">Service Name</string>
+    <string name="serverInstanceIDLabel">Server Instance ID</string>
+    <string name="serverPortLabel">Server Port</string>
+    <string name="supportedMessageTypesLabel">Suppported Message Types</string>
+    
+    <string name="successLabel">Success</string>
+    <string name="notFoundLabel">Not Found</string>
+    <string name="serviceUnavailableLabel">Service Unavailable</string>
+    <string name="badRequestLabel">Bad Request</string>
+    <string name="notImplementedLabel">Not Implemented</string>
+    <string name="unauthorizedLabel">Unauthorized</string>
+    <string name="preconditionFailedLabel">Precondition Failed</string>
+    <string name="notAcceptableLabel">Not Acceptable</string>
+    <string name="forbiddenLabel">Forbidden</string>
+    <string name="serverErrorLabel">Server Error</string>
+    <string name="operationAbortedLabel">Operation Aborted</string>
+    <string name="operationAbortedResourcesLabel">Operation Aborted Resources</string>
+    <string name="devicePowerOffLabel">Device Power Off</string>
+    <string name="unableToSubmitRequestLabel">Unable to Submit Request</string>
+    <string name="unknownLabel">Unknown</string>        
+    
+</resources>

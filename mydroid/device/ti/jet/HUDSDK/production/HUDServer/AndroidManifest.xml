@@ -1,0 +1,21 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.reconinstruments.hudserver" android:sharedUserId="android.uid.system">
+    <uses-permission android:name="android.permission.REBOOT" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+  <permission
+    android:name="com.reconinstruments.hudserver.GLANCE_CALIBRATION"
+    android:label="glance_calibration"
+    android:permissionGroup="android.permission-group.HARDWARE_CONTROLS"
+    android:protectionLevel="signatureOrSystem" />
+
+    <application android:name=".HUDServerApp" android:persistent="true">
+        <uses-library android:name="com.reconinstruments.os" />
+        <uses-library android:name="com.reconinstruments.lib" />
+        <uses-library android:name="com.stonestreetone.bluetopiapm" />
+        <uses-library android:name="com.reconinstruments.mfi" />
+    </application>
+</manifest>

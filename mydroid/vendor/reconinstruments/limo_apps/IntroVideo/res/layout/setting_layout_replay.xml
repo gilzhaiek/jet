@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:background="@color/recon_window_bg"
+	android:orientation="vertical" >
+	<LinearLayout
+		android:id="@+id/setting_desc"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:focusable="false"
+		android:gravity="left"
+		android:orientation="vertical"
+		android:paddingLeft="20px" >
+		<TextView
+			android:id="@+id/setting_desc_text_1"
+			style="@style/recon_white_text_shadow"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:focusable="false"
+			android:gravity="center_horizontal"
+			android:paddingBottom="22px"
+			android:paddingTop="10px"
+			android:text="@string/before_using"
+			android:textSize="28px"
+			android:textStyle="bold" />
+		<TextView
+			android:id="@+id/setting_desc_text_2"
+			style="@style/recon_white_text_shadow"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:focusable="false"
+			android:paddingTop="00px"
+			android:text="@string/update_and_activate"
+			android:textSize="24px" />
+		<!-- FIXME chagne 00px to 20 when font is changed -->
+		<TextView
+			android:id="@+id/setting_desc_text_3"
+			android:layout_width="wrap_content"
+			android:layout_height="0dp"
+			android:layout_weight="1"
+			android:focusable="false"
+			android:paddingBottom="20px"
+			android:text="@string/engage_url"
+			android:textColor="#ff4848"
+			android:textSize="24px" />
+	</LinearLayout>
+	<ListView
+		android:id="@android:id/list"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginBottom="3dp"
+		android:layout_marginLeft="3dp"
+		android:layout_marginRight="3dp"
+		android:listSelector="@drawable/recon_list_item_selector"
+		android:padding="0px"
+		android:scrollbars="none" />
+</LinearLayout>

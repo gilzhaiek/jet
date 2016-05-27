@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+
+	<add-resource type="color" name="recon_dialog_divider"/>
+	<add-resource type="color" name="recon_dialog_button_text_white"/>
+	<color name="recon_dialog_divider">#2d76bf</color>
+	<color name="recon_dialog_button_text_white">#f5f5f5</color>
+
+</resources>
+

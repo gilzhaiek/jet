@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/bg_1" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <Button
+            android:id="@+id/onOffselector"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/updown_arrow_selector"
+             android:layout_toLeftOf="@+id/hourSelector"
+             android:layout_marginRight="65dp"
+             android:layout_centerInParent="true"
+             android:onClick="onClick_accept"/>
+
+        <Button
+            android:id="@+id/hourSelector"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_toLeftOf="@+id/middle"
+            android:layout_marginRight="18dp"
+            android:background="@drawable/updown_arrow_selector" 
+            android:onClick="onClick_accept"/>
+
+        <TextView
+            android:id="@+id/middle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text=""
+            android:textColor="#ffffff"
+            android:textSize="48sp" />
+
+        <Button
+            android:id="@+id/minuteSelector"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="18dp"
+            android:layout_toRightOf="@+id/middle"
+            android:background="@drawable/updown_arrow_selector" 
+            android:onClick="onClick_accept"/>
+
+        <Button
+            android:id="@+id/ampmSelector"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_toRightOf="@+id/minuteSelector"
+            android:layout_marginLeft="15dp"
+            android:background="@drawable/updown_arrow_selector" 
+            android:onClick="onClick_accept"/>
+
+        <Button
+            android:id="@+id/deleteSelector"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="35dp"
+            android:layout_toRightOf="@+id/ampmSelector"
+            android:background="@drawable/delete_selector" 
+            android:onClick="onClick_delete"/>
+    </RelativeLayout>
+
+    
+    <!-- bottom layer: on/off, hour, colon, minute and am/pm -->
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <TextView
+            android:id="@+id/on_off1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_toLeftOf="@+id/hour"
+            android:layout_marginRight="50dp"
+            android:text="@string/on"
+            android:textColor="#00aaff"
+            android:textSize="35sp" />
+
+        <TextView
+            android:id="@+id/hour"
+            android:text="@string/hour"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_toLeftOf="@+id/colon"
+            android:layout_marginRight="1dp"
+            android:textColor="#ffffff"
+            android:textSize="48sp" />
+
+        <TextView
+            android:id="@+id/colon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text=":"
+            android:textColor="#ffffff"
+            android:textSize="48sp" />
+
+        <TextView
+            android:id="@+id/minute"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_toRightOf="@+id/colon"
+            android:layout_marginLeft="1dp"
+            android:text="@string/minute"
+            android:textColor="#ffffff"
+            android:textSize="48sp" />
+
+        <TextView
+            android:id="@+id/ampm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/minute"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/minute"
+            android:text="@string/ampm"
+            android:textColor="#ffffff"
+            android:textSize="28sp" />
+    </RelativeLayout>
+
+</FrameLayout>

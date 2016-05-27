@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical" android:layout_width="fill_parent"
+	android:layout_height="fill_parent" android:paddingLeft="15px">
+
+	<TextView android:id="@+id/trial_time" android:text="00:00:00"
+		android:textColor="@color/chrono_yellow" android:layout_width="wrap_content"
+		android:layout_height="wrap_content" android:textSize="30px" />
+
+	<TextView android:id="@+id/trial_time_ms" android:text=".00"
+		android:textColor="@color/chrono_yellow" android:layout_width="wrap_content"
+		android:layout_height="wrap_content" android:textSize="20px"
+		android:layout_toRightOf="@+id/trial_time"
+		android:layout_alignBaseline="@+id/trial_time" />
+
+	<ListView android:id="@+id/laps_list" 
+	    android:layout_width="fill_parent" 
+	    android:layout_height="wrap_content" 
+	    android:layout_below="@+id/trial_time" 
+	    android:listSelector="@drawable/menu_selector"
+	    android:divider="#00000000" />
+
+</RelativeLayout>

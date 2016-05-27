@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- -*-  indent-tabs-mode:nil;  -*- -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/remote_view"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	 >
+	<ImageView
+		android:id="@+id/image_view"
+		android:layout_width="176dp"
+		android:layout_height="114dp"
+		android:layout_alignParentTop="true"
+		android:layout_centerHorizontal="true"
+		android:layout_marginTop="30dp"
+		android:adjustViewBounds="true"
+            android:scaleType="centerInside"/>
+	<TextView
+		android:id="@+id/text_view"
+		style="@style/recon_jet_text_button"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_alignParentBottom="true"
+		android:layout_centerHorizontal="true"
+		android:layout_marginBottom="10dp"
+		android:gravity="center"
+		android:text=""
+		android:textSize="44sp" />
+</RelativeLayout>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" xmlns:app="http://schemas.android.com/apk/res/com.reconinstruments.dashlauncher">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ALERT"
+        android:textColor="#FFFF0000"
+        android:textSize="22sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:lines="4"
+        android:paddingLeft="50dip"
+        android:paddingRight="50dip"
+        android:text="The maps on your device are corrupted, please update your maps"
+        android:textColor="#FFFFFFFF"
+        android:textSize="24sp" />
+
+    <!-- <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:lines="1"
+        android:paddingLeft="50dip"
+        android:paddingRight="50dip"
+        android:text="TODO: Fill in when you know what to do"
+        android:textColor="#FFFFFFFF"
+        android:textSize="17sp" /> -->
+
+   <TextView
+        android:id="@+id/accept_button"
+        style="@style/black_text_shadow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/selector_42"
+        android:text="Ok"
+        android:textSize="28sp"
+        android:textStyle="bold"
+		android:gravity="center"/>
+
+</LinearLayout>

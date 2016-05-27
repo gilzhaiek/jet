@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:background="@drawable/circular_gradient"
+	android:orientation="vertical" >
+	<TextView
+		style="@style/recon_white_text_shadow"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:background="@drawable/circular_gradient"
+		android:focusable="false"
+		android:gravity="center"
+		android:paddingBottom="1dip"
+		android:paddingTop="1dip"
+		android:text="Setup New Smartphone"
+		android:textSize="24px"
+		android:textStyle="bold" />
+	<View
+		android:layout_width="fill_parent"
+		android:layout_height="2dip"
+		android:background="@drawable/tab_bar_gradient" />
+	<TextView
+		style="@style/recon_white_text_shadow"
+		android:layout_width="300dp"
+		android:layout_height="wrap_content"
+		android:layout_gravity="center"
+		android:layout_marginBottom="10dp"
+		android:layout_marginTop="10dp"
+		android:gravity="center"
+		android:text="Choose the smartphone type you would like to pair with"
+		android:textSize="20dip"
+		android:textStyle="normal" />
+	<com.reconinstruments.commonwidgets.CustomTextView
+		android:id="@+id/android_item"
+		style="@style/recon_focusable_text_shadow"
+		android:layout_width="fill_parent"
+		android:layout_height="40dp"
+		android:background="@drawable/background_transition42"
+		android:focusable="true"
+		android:gravity="center"
+		android:text="Android"
+		android:textSize="24dip"
+		android:textStyle="bold" />
+	<com.reconinstruments.commonwidgets.CustomTextView
+		android:id="@+id/iphone_item"
+		style="@style/recon_focusable_text_shadow"
+		android:layout_width="fill_parent"
+		android:layout_height="40dp"
+		android:background="@drawable/background_transition42"
+		android:focusable="true"
+		android:gravity="center"
+		android:text="iPhone"
+		android:textSize="24dip"
+		android:textStyle="bold" />
+</LinearLayout>

@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.reconinstruments.dashlauncher"
+    android:versionCode="6730"
+    android:versionName="2.1.2_RC9" 
+	  >
+    <uses-sdk
+        android:minSdkVersion="10"
+        android:targetSdkVersion="10" />
+
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.DELETE_PACKAGES" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_SECURE_SETTINGS" />
+    <uses-permission android:name="android.permission.CHANGE_CONFIGURATION" />
+    <uses-permission android:name="android.permission.SET_TIME" />
+    <uses-permission android:name="android.permission.SET_TIME_ZONE" />
+    <uses-permission android:name="android.permission.REBOOT" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <application
+        android:name=".DashLauncherApp"
+        android:debuggable="false"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:persistent="true"
+       >
+
+        <!-- AppLauncher -->
+        <activity
+            android:name=".applauncher.AppsOrSettingsActivity"
+            android:launchMode="singleInstance"
+            android:theme="@android:style/Theme.NoTitleBar" />
+        <activity
+            android:name=".applauncher.AppLauncherActivity"
+            android:launchMode="singleInstance"
+            android:theme="@android:style/Theme.NoTitleBar" />
+
+        <!-- Live Stats -->
+        <!-- removed line from livestats: android:launchMode="singleInstance" -->
+        <activity
+            android:name=".livestats.LiveStatsActivity"
+            android:launchMode="singleInstance"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+
+        <!-- Setting -->
+        <activity
+            android:name=".settings.SettingsActivity"
+            android:launchMode="singleInstance"
+            android:theme="@android:style/Theme.NoTitleBar" />
+        <activity
+            android:name=".settings.HelpActivity"
+            android:launchMode="singleInstance"
+            android:theme="@android:style/Theme.NoTitleBar" />
+        <activity
+            android:name=".settings.BrightnessActivity"
+            android:launchMode="singleInstance"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name=".settings.bluetooth.BluetoothActivity"
+            android:launchMode="singleInstance"
+            android:theme="@android:style/Theme.NoTitleBar" />
+        <activity
+            android:name=".settings.DateTimeActivity"
+            android:launchMode="singleInstance"
+            android:theme="@android:style/Theme.NoTitleBar" />
+        <activity
+            android:name=".settings.TimeZoneActivity"
+            android:launchMode="singleInstance"
+            android:theme="@android:style/Theme.NoTitleBar" />
+        <activity
+            android:name=".settings.ResetStatsActivity"
+            android:launchMode="singleInstance"
+            android:theme="@android:style/Theme.NoTitleBar" />
+        <activity
+            android:name=".settings.SetUnitsActivity"
+            android:launchMode="singleInstance"
+            android:theme="@android:style/Theme.NoTitleBar" />
+        <activity
+            android:name=".settings.UpdateActivity"
+            android:launchMode="singleInstance"
+            android:theme="@android:style/Theme.NoTitleBar" />
+        <activity
+            android:name=".settings.ManualTimeActivity"
+            android:launchMode="singleInstance"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name=".settings.advanced.AdvancedActivity"
+            android:launchMode="singleInstance"
+            android:theme="@android:style/Theme.NoTitleBar" />
+        <activity
+            android:name=".settings.AboutActivity"
+            android:launchMode="singleInstance"
+            android:theme="@android:style/Theme.NoTitleBar" />
+        <activity
+            android:name=".settings.advanced.UninstallActivity"
+            android:launchMode="singleInstance"
+            android:theme="@android:style/Theme.NoTitleBar" />
+        <activity
+            android:name=".settings.advanced.FactoryResetActivity"
+            android:launchMode="singleInstance"
+            android:theme="@android:style/Theme.NoTitleBar" />
+
+        <service
+            android:name=".settings.service.SettingService"
+            android:enabled="true"
+	   android:sharedUserId="android.uid.phone"
+	    >
+	  <intent-filter>
+	    <action android:name="RECON_SETTING_SERVICE"/>
+	  </intent-filter>
+	</service>
+
+        <!-- Notifications -->
+
+        <activity
+            android:name=".notifications.NotificationsActivity"
+            android:launchMode="singleInstance"
+            android:theme="@android:style/Theme.NoTitleBar" />
+
+        <service
+            android:name=".notifications.NotificationsService"
+            android:enabled="true" >
+	  <intent-filter> <action android:name="RECON_NOTIFICATION_SERVICE"/></intent-filter>
+	</service>
+	
+        <provider
+            android:name=".notifications.NotificationsProvider"
+            android:authorities="com.reconinstruments.dashlauncher.notifications" />
+
+        <!-- RADAR -->
+
+        <activity
+            android:name=".radar.ReconRadarActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleInstance"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+
+        <service
+            android:name=".radar.maps.MapsService"
+            android:enabled="true"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="RECON_MAP_SERVICE" />
+            </intent-filter>
+        </service>
+
+        <!-- MUSIC -->
+
+        <activity
+            android:name=".music.MusicActivity"
+            android:launchMode="singleInstance"
+            android:theme="@android:style/Theme.NoTitleBar" />
+        <activity
+            android:name=".music.MusicControllerActivity"
+            android:launchMode="singleInstance"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
+        <activity
+            android:name=".music.library.LibraryActivity"
+            android:launchMode="singleInstance"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
+        <activity
+            android:name=".music.library.MusicListActivity"
+            android:launchMode="singleInstance"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
+        <activity
+            android:name=".PrePairDashActivity"
+            android:launchMode="singleInstance"
+            android:theme="@android:style/Theme.NoTitleBar" />
+
+        <!-- WARNING PROMPT -->
+        <activity
+            android:name=".WarningActivity"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.HOME" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+	    <intent-filter>
+                <action android:name="RECON_DASHLAUNCHER" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+        <activity
+            android:name=".MapsCorruptionActivity" 
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>        
+    </application>
+
+</manifest>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent" >
+	<com.reconinstruments.commonwidgets.SansLightTextView
+		android:id="@+id/text_view"
+		style="@style/recon_jet_text_button"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_centerHorizontal="true"
+		android:layout_marginTop="0dp"
+		android:ellipsize="end"
+		android:gravity="center"
+		android:lines="1"
+		android:maxLines="1"
+		android:text=""
+		android:textSize="46sp" />
+</RelativeLayout>

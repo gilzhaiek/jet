@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<stack>
+	
+		<!-- Main Menu -->
+		<ReconCard id="1" img="v2_m_menu1.png" down="2" up="5" select="6" />  <!-- Timeline -->
+		<ReconCard id="2" img="v2_m_menu2.png" down="3" up="1" select="20" /> <!-- Procedures -->
+		<ReconCard id="3" img="v2_m_menu3.png" down="4" up="2" select="7" /> <!-- Test display -->
+		<ReconCard id="4" img="v2_m_menu4.png" down="5" up="3" select="8" /> <!-- Statuses -->
+		<ReconCard id="5" img="v2_m_menu5.png" down="1" up="4" select="17" /> <!-- Photos -->
+		
+		<!-- Timeline -->
+		<ReconCard id="6" img="v2_timeline1.png" back="1" />
+		
+		<!-- Test display -->
+		<ReconCard id="7" img="v2_test_disp1.png" back="3" />
+		
+		<!-- Statuses -->
+		<ReconCard id="8" img="v2_status1.png" down="9" up="10" back="4"/>
+		<ReconCard id="9" img="v2_status2.png" down="10" up="8" back="4"/>
+		<ReconCard id="10" img="v2_status3.png" down="8" up="9" back="4"/>
+		
+		<!-- Photos -->
+		<ReconCard id="17" img="v2_photo1.png" down="18" up="19" back="5"/>
+		<ReconCard id="18" img="v2_photo2.png" down="19" up="17" back="5"/>
+		<ReconCard id="19" img="v2_photo3.png" down="17" up="18" back="5"/>
+		
+		<!-- Procedures -->
+		<ReconCard id="20" img="v2_p_menu1.png" down="21" up="22" select="23" back="2"/>
+		<ReconCard id="21" img="v2_p_menu2.png" down="22" up="20" select="55" back="2"/>
+		<ReconCard id="22" img="v2_p_menu3.png" down="20" up="21" select="61" back="2"/>
+		
+			<!-- Lsep -->
+			<ReconCard id="23" img="v2_lsep1.png" down="24" up="54" back="20"/>
+			<ReconCard id="24" img="v2_lsep2.png" down="25" up="23" back="20"/>
+			<ReconCard id="25" img="v2_lsep3.png" down="26" up="24" back="20"/>
+			<ReconCard id="26" img="v2_lsep4.png" down="27" up="25" back="20"/>
+			<ReconCard id="27" img="v2_lsep5.png" down="28" up="26" back="20"/>
+			<ReconCard id="28" img="v2_lsep6.png" down="29" up="27" back="20"/>
+			<ReconCard id="29" img="v2_lsep7.png" down="30" up="28" back="20"/>
+			<ReconCard id="30" img="v2_lsep8.png" down="31" up="29" back="20"/>
+			<ReconCard id="31" img="v2_lsep9.png" down="32" up="30" back="20"/>
+			<ReconCard id="32" img="v2_lsep10.png" down="33" up="31" back="20"/>
+			<ReconCard id="33" img="v2_lsep11.png" down="34" up="32" back="20"/>
+			<ReconCard id="34" img="v2_lsep12.png" down="35" up="33" back="20"/>
+			<ReconCard id="35" img="v2_lsep13.png" down="36" up="34" back="20"/>
+			<ReconCard id="36" img="v2_lsep14.png" down="37" up="35" back="20"/>
+			<ReconCard id="37" img="v2_lsep15.png" down="38" up="36" back="20"/>
+			<ReconCard id="38" img="v2_lsep16.png" down="39" up="37" back="20"/>
+			<ReconCard id="39" img="v2_lsep17.png" down="40" up="38" back="20"/>
+			<ReconCard id="40" img="v2_lsep18.png" down="41" up="39" back="20"/>
+			<ReconCard id="41" img="v2_lsep19.png" down="42" up="40" back="20"/>
+			<ReconCard id="42" img="v2_lsep20.png" down="43" up="41" back="20"/>
+			<ReconCard id="43" img="v2_lsep21.png" down="44" up="42" back="20"/>
+			<ReconCard id="44" img="v2_lsep22.png" down="45" up="43" back="20"/>
+			<ReconCard id="45" img="v2_lsep23.png" down="46" up="44" back="20"/>
+			<ReconCard id="46" img="v2_lsep24.png" down="47" up="45" back="20"/>
+			<ReconCard id="47" img="v2_lsep25.png" down="48" up="46" back="20"/>
+			<ReconCard id="48" img="v2_lsep26.png" down="49" up="47" back="20"/>
+			<ReconCard id="49" img="v2_lsep27.png" down="50" up="48" back="20"/>
+			<ReconCard id="50" img="v2_lsep28.png" down="51" up="49" back="20"/>
+			<ReconCard id="51" img="v2_lsep29.png" down="52" up="50" back="20"/>
+			<ReconCard id="52" img="v2_lsep30.png" down="53" up="51" back="20"/>
+			<ReconCard id="53" img="v2_lsep31.png" down="54" up="52" back="20"/>
+			<ReconCard id="54" img="v2_lsep32.png" down="23" up="53" back="20"/>
+			
+			<!-- Egress -->
+			<ReconCard id="55" img="v2_cab_egress1.png" down="56" up="60" back="21"/>
+			<ReconCard id="56" img="v2_cab_egress2.png" down="57" up="55" back="21"/>
+			<ReconCard id="57" img="v2_cab_egress3.png" down="58" up="56" back="21"/>
+			<ReconCard id="58" img="v2_cab_egress4.png" down="59" up="57" back="21"/>
+			<ReconCard id="59" img="v2_cab_egress5.png" down="60" up="58" back="21"/>
+			<ReconCard id="60" img="v2_cab_egress6.png" down="55" up="59" back="21"/>
+			
+			<!-- Samp Col -->
+			<ReconCard id="61" img="v2_samp_col1.png" down="62" up="64" back="22"/>
+			<ReconCard id="62" img="v2_samp_col2.png" down="63" up="61" back="22"/>
+			<ReconCard id="63" img="v2_samp_col3.png" down="64" up="62" back="22"/>
+			<ReconCard id="64" img="v2_samp_col4.png" down="65" up="63" back="22"/>
+			<ReconCard id="65" img="v2_samp_col5.png" down="61" up="64" back="22" />
+			
+	</stack>
+</resources>

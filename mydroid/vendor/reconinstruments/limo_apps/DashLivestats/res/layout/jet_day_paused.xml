@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:layout_centerInParent="true"
+	android:gravity="center"
+	android:orientation="vertical" >
+	<TextView
+		android:id="@+id/text_view"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:gravity="center"
+		android:includeFontPadding="false"
+		android:text="Activity Paused"
+		android:textColor="#ffffff"
+		android:textSize="40dp" />
+	<LinearLayout
+		android:id="@+id/line"
+		android:layout_width="match_parent"
+		android:layout_height="1dip"
+		android:layout_marginBottom="3dp"
+		android:layout_marginTop="3dp"
+		android:orientation="vertical" >
+	</LinearLayout>
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:gravity="center_horizontal" >
+		<!-- RESUME -->
+		<LinearLayout
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginRight="10dp"
+			android:gravity="center_vertical" >
+			<ImageView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginRight="3dp"
+				android:src="@drawable/jet_select" />
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="-3dp"
+				android:gravity="center"
+				android:includeFontPadding="false"
+				android:text="RESUME"
+				android:textColor="#ffffff"
+				android:textSize="30dp" />
+		</LinearLayout>
+		<!-- VIEW DAY -->
+		<LinearLayout
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginLeft="10dp"
+			android:gravity="center_vertical" >
+			<ImageView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginRight="4dp"
+				android:src="@drawable/icon_down" />
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="-3dp"
+				android:gravity="center"
+				android:includeFontPadding="false"
+				android:text="STOP"
+				android:textColor="#ffffff"
+				android:textSize="30dp" />
+		</LinearLayout>
+	</LinearLayout>
+</LinearLayout>

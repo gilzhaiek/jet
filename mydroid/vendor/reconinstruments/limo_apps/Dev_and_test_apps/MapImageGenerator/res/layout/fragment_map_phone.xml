@@ -1,0 +1,83 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <com.reconinstruments.mapImages.mapview.ReconMapView
+        android:id="@+id/map_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:gravity="center" />
+
+    <ImageButton
+        android:id="@+id/button_pan_left"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/icon_pan_left"
+        android:contentDescription="move map left"
+        android:focusable="false"
+        android:focusableInTouchMode="false" />
+
+    <ImageButton
+        android:id="@+id/button_pan_up"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/icon_pan_up"
+        android:contentDescription="move map up"
+        android:focusable="false"
+        android:focusableInTouchMode="false" />
+
+    <ImageButton
+        android:id="@+id/button_pan_down"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/icon_pan_down"
+        android:contentDescription="move map down"
+        android:focusable="false"
+        android:focusableInTouchMode="false" />
+
+    <ImageButton
+        android:id="@+id/button_pan_right"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/icon_pan_right"
+        android:contentDescription="move map right"
+        android:focusable="false"
+        android:focusableInTouchMode="false" />
+
+    <ImageButton
+        android:id="@+id/button_zoom"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/icon_zoom"
+        android:contentDescription="zoom"
+        android:focusable="false"
+        android:focusableInTouchMode="false" />
+
+    <ImageButton
+        android:id="@+id/button_toggle_poi"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="15dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/icon_toggle_poi"
+        android:contentDescription="toggle POI"
+        android:focusable="false"
+        android:focusableInTouchMode="false" />
+
+</RelativeLayout>

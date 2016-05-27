@@ -1,0 +1,6 @@
+The content of this folder are used for signing apps as system
+apps. The platform keys that we use here are the same as the ones we
+use in building limo. This folder should be in the same root as the
+root folder of the app that is being signed. Then by invoking
+make_app.bash from the root of the app folder, the app gets signed
+using the keys here.

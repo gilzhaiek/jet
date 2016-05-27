@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<style name="recon_BrightnessBox">
+		<item name="android:layout_width">300dip</item>
+		<item name="android:layout_height">138dip</item>
+		<item name="android:backgroundDimEnabled">true</item>
+		<item name="android:backgroundDimAmount">1</item>
+		<item name="android:layout_gravity">center_horizontal</item>
+		<item name="android:layout_marginTop">35px</item>
+		<item name="android:background">#7e7e7e</item>
+		<item name="android:orientation">vertical</item>
+	</style>
+	<style name="recon_TimeSettingBox">
+		<item name="android:layout_width">276dip</item>
+		<item name="android:layout_height">148dip</item>
+		<item name="android:backgroundDimEnabled">true</item>
+		<item name="android:backgroundDimAmount">1</item>
+		<item name="android:layout_gravity">center_horizontal</item>
+		<item name="android:layout_marginTop">30px</item>
+		<item name="android:background">#7e7e7e</item>
+		<item name="android:orientation">vertical</item>
+	</style>
+</resources>

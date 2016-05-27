@@ -1,0 +1,128 @@
+/******************************************************************************\
+##                                                                            *
+## Unpublished Proprietary and Confidential Information of Texas Instruments  *
+## Israel Ltd. Do Not Disclose.                                               *
+## Copyright 2008 Texas Instruments Israel Ltd.                               *
+## All rights reserved. All unpublished rights reserved.                      *
+##                                                                            *
+## No part of this work may be used or reproduced in any form or by any       *
+## means, or stored in a database or retrieval system, without prior written  *
+## permission of Texas Instruments Israel Ltd. or its parent company Texas    *
+## Instruments Incorporated.                                                  *
+## Use of this work is subject to a license from Texas Instruments Israel     *
+## Ltd. or its parent company Texas Instruments Incorporated.                 *
+##                                                                            *
+## This work contains Texas Instruments Israel Ltd. confidential and          *
+## proprietary information which is protected by copyright, trade secret,     *
+## trademark and other intellectual property rights.                          *
+##                                                                            *
+## The United States, Israel  and other countries maintain controls on the    *
+## export and/or import of cryptographic items and technology. Unless prior   *
+## authorization is obtained from the U.S. Department of Commerce and the     *
+## Israeli Government, you shall not export, reexport, or release, directly   *
+## or indirectly, any technology, software, or software source code received  *
+## from Texas Instruments Incorporated (TI) or Texas Instruments Israel,      *
+## or export, directly or indirectly, any direct product of such technology,  *
+## software, or software source code to any destination or country to which   *
+## the export, reexport or release of the technology, software, software      *
+## source code, or direct product is prohibited by the EAR. The subject items *
+## are classified as encryption items under Part 740.17 of the Commerce       *
+## Control List (“CCL”). The assurances provided for herein are furnished in  *
+## compliance with the specific encryption controls set forth in Part 740.17  *
+## of the EAR -Encryption Commodities and Software (ENC).                     *
+##                                                                            *
+## NOTE: THE TRANSFER OF THE TECHNICAL INFORMATION IS BEING MADE UNDER AN     *
+## EXPORT LICENSE ISSUED BY THE ISRAELI GOVERNMENT AND THE APPLICABLE EXPORT  *
+## LICENSE DOES NOT ALLOW THE TECHNICAL INFORMATION TO BE USED FOR THE        *
+## MODIFICATION OF THE BT ENCRYPTION OR THE DEVELOPMENT OF ANY NEW ENCRYPTION.*
+## UNDER THE ISRAELI GOVERNMENT'S EXPORT LICENSE, THE INFORMATION CAN BE USED *
+## FOR THE INTERNAL DESIGN AND MANUFACTURE OF TI PRODUCTS THAT WILL CONTAIN   *
+## THE BT IC.                                                                 *
+##                                                                            *
+\******************************************************************************/
+/*******************************************************************************\
+*
+*   FILE NAME:      ccm_vaci_cal_chip_6350.c
+*
+*   BRIEF:          This file define the audio capabilities and 
+*                   configuration API for Dolphin 6350 PG 2.11
+*                  
+*
+*   DESCRIPTION:    This is an internal configuration file  Dolphin 6350 PG 2.11
+                    For the CCM_VACI_CAL moudule.
+*
+*   AUTHOR:         Malovany Ram
+*
+\*******************************************************************************/
+
+#ifndef __CCM_VACI_CAL_CHIP_6350_H_
+#define __CCM_VACI_CAL_CHIP_6350_H_
+
+/********************************************************************************
+ *
+ * Include files
+ *
+ *******************************************************************************/
+
+#include "ccm_audio_types.h"
+#include "ccm_vaci_chip_abstraction_int.h"
+
+/********************************************************************************
+ *
+ * Function declarations
+ *
+ *******************************************************************************/
+
+/*-------------------------------------------------------------------------------
+ * CAL_GetAudioCapabilities_6350()
+ *
+ * Brief:  
+ *     Gets the audio capabilities for 6350 PG 2.11
+ *
+ * Description:
+ *     Gets the audio capabilities for 6350 PG 2.11
+ *
+ * Type:
+ *      Synchronous
+ *
+ * Parameters:
+ *      tOperationtoresource [out] - pointer to a struct that holds information
+ *          regarding mapping operation to resource acorrding to eChip_Version.
+ *      tOpPairConfig [out] - pointer to a struct holding allowed operation 
+ *          pairs
+ *      tResource [out] - pointer to a struct that holds information regarding 
+ *          resource support acording to eChip_Version
+ *      tOperation [out] - pointer to a struct that holds information regarding
+ *          opeartion support acording to eChip_Version
+     
+ *
+ * Returns:
+ *      N/A
+ */
+void CAL_GetAudioCapabilities_6350 (TCAL_MappingConfiguration *tOperationtoresource,
+                                    TCAL_OpPairConfig *tOpPairConfig,
+                                    TCAL_ResourceSupport *tResource,
+                                    TCAL_OperationSupport *tOperation);
+/*-------------------------------------------------------------------------------
+ * Cal_Prep_BtOverFm_Config_6350()
+ *
+ * Brief:  
+ *  Prepre the BT over FM command for 6350 PG 2.11     
+ *
+ * Description:
+ *  Prepre the BT over FM command for 6350 PG 2.11
+ *
+ * Type:
+ *      
+ *
+ * Parameters:
+ *      pToken [out] - pointer to the command token
+ *      pUserData [out] - pointer to user data
+ *
+ * Returns:
+ *      N/A
+ */
+void Cal_Prep_BtOverFm_Config_6350(McpHciSeqCmdToken *pToken, void *pUserData);
+
+#endif /* __CCM_VACI_CAL_CHIP_6350_H_*/
+

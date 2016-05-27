@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/widget2x2" android:background="@drawable/widget_temp_2x2_new"
+    >
+	
+	<TextView android:id="@+id/tmp_field" style="@style/widget_field" android:layout_alignParentBottom="True" android:singleLine="True" />
+	
+</RelativeLayout>

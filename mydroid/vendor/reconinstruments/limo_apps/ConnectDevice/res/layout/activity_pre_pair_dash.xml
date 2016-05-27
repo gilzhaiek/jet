@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:background="@drawable/circular_gradient"
+	android:gravity="center_vertical"
+	android:orientation="vertical" >
+	<RelativeLayout
+		android:id="@+id/setup_item"
+		android:layout_width="fill_parent"
+		android:layout_height="112dp"
+		android:layout_marginTop="15dip"
+		android:background="@drawable/background_transition112"
+		android:focusable="true" >
+		<TextView
+			android:id="@+id/setup_text"
+			style="@style/recon_white_text_shadow"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_centerHorizontal="true"
+			android:layout_marginTop="20dp"
+			android:text="Setup New Smartphone"
+			android:textSize="20dip"
+			android:textStyle="bold" />
+		<TextView
+			style="@style/recon_white_text_shadow"
+			android:layout_width="240dp"
+			android:layout_height="wrap_content"
+			android:layout_below="@id/setup_text"
+			android:layout_centerHorizontal="true"
+			android:gravity="center"
+			android:text="Add music control to your MOD Live experience"
+			android:textSize="16dip" />
+	</RelativeLayout>
+	<RelativeLayout
+		android:id="@+id/no_show_item"
+		android:layout_width="fill_parent"
+		android:layout_height="112dp"
+		android:layout_marginBottom="15dip"
+		android:layout_marginTop="15dip"
+		android:background="@drawable/background_transition112"
+		android:focusable="true" >
+		<TextView
+			android:id="@+id/no_show_text"
+			style="@style/recon_white_text_shadow"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_centerHorizontal="true"
+			android:layout_marginTop="20dp"
+			android:text="Do not show this again"
+			android:textSize="20dip"
+			android:textStyle="bold" />
+		<TextView
+			style="@style/recon_white_text_shadow"
+			android:layout_width="240dp"
+			android:layout_height="wrap_content"
+			android:layout_below="@id/no_show_text"
+			android:layout_centerHorizontal="true"
+			android:gravity="center"
+			android:text="You can set up a smartphone later through settings"
+			android:textSize="16dip" />
+	</RelativeLayout>
+</LinearLayout>

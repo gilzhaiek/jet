@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.rxnetworks.rxnservicesxybrid"
+    android:versionCode="7"
+    android:versionName="7.0.0" >
+
+    <uses-sdk android:minSdkVersion="10" />
+
+	<uses-permission android:name="android.permission.INTERNET"/>
+	<uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+	<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+	<uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+	<uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+	<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    
+    <application
+        android:icon="@drawable/rx_icon"
+        android:label="@string/app_name" >
+                <receiver android:name="com.rxnetworks.rxnservicesxybrid.RXNetworksServiceManager" 
+                  android:enabled="true" 
+                  android:exported="false"
+                  android:label="RXNetworksServiceManager">
+           <intent-filter>
+               <action android:name="android.intent.action.BOOT_COMPLETED" />
+           </intent-filter>
+        </receiver>
+        <service android:name = "com.rxnetworks.rxnserviceslib.RXNetworksService" android:enabled = "true">
+        </service>
+    </application>
+</manifest>

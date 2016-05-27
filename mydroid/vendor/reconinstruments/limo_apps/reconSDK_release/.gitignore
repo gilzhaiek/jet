@@ -1,0 +1,4 @@
+# Ignore bin and gen
+gen/
+bin/
+local.properties

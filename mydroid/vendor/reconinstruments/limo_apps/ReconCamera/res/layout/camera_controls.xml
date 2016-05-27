@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.reconinstruments.camera.ui.CameraControls xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/camera_controls"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <ImageView
+        android:id="@+id/preview_thumb"
+        android:layout_width="@dimen/capture_size"
+        android:layout_height="@dimen/capture_size"
+        android:layout_gravity="top|right"
+        android:contentDescription="@string/switch_photo_filmstrip"
+        android:scaleType="centerInside"
+        android:visibility="invisible" />
+
+</com.reconinstruments.camera.ui.CameraControls>

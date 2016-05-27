@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<permissions>
+  <library name="com.reconinstruments.os.hudremote"
+    file="/system/framework/com.reconinstruments.os.hudremote.jar"/>
+</permissions>
+

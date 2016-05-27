@@ -1,0 +1,11 @@
+A unified set of themes and widgets that should replace all UI code and assets that is not unique to any specific project.
+In the manifest set application/activities themes like this:
+	android:theme="@style/ReconTheme.NoTitleBar"
+
+Currently themes are a simple base on the default themes with only the background set mostly as a place holder, but they should specify things like font colors, selectors etc. And remove those things from layouts.
+
+
+TODO: 
+delete duplicated assets from other projects
+be able to reskin the entire OS only by changing this project
+

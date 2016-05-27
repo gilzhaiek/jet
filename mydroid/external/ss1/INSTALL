@@ -1,0 +1,141 @@
+ Stonestreet One Bluetopia Platform Manager
+         Installation instructions
+--------------------------------------------
+
+NOTE: These instructions assume an existing development environment capable of
+building the unmodified Android source tree. All directory paths are relative to
+the root of the Android source tree.
+
+
+- Copy the SS1 module tree from the release package directory
+
+     source/ss1/
+
+  into the Android source tree at
+
+     ./external/ss1/
+
+
+- For Android 4.1 and earlier:
+
+    Patch ./frameworks/base/core/jni/Android.mk using one of
+
+       ./external/ss1/templates/2.1_frameworks_base_core_jni_Android.mk.patch
+       ./external/ss1/templates/2.2_frameworks_base_core_jni_Android.mk.patch
+       ./external/ss1/templates/2.3_frameworks_base_core_jni_Android.mk.patch
+       ./external/ss1/templates/4.0_frameworks_base_core_jni_Android.mk.patch
+       ./external/ss1/templates/4.1_frameworks_base_core_jni_Android.mk.patch
+
+    according to your build target (Android 2.1 Eclair, 2.2 Froyo, 2.3
+    Gingerbread, or 4.0 Ice Cream Sandwich, respectively). For example, from
+    the root of the Ice Cream Sandwich source tree, run the command:
+
+      patch -p1 -d frameworks/base/ < ./external/ss1/templates/4.0_frameworks_base_core_jni_Android.mk.patch
+
+
+- Enable A2DP audio integration:
+
+    For Android 2.3 and earlier:
+      Change all dependencies on liba2dp to use libSS1A2DP, instead. Normally,
+      this includes, at least:
+
+           libaudioflinger   (./frameworks/base/services/audioflinger/Android.mk)
+           libaudiointerface (./frameworks/base/services/audioflinger/Android.mk)
+           libaudio          (--varies--)
+                             (Dream/Sapphire: ./hardware/msm7k/libaudio/Android.mk)
+                             (Passion: ./hardware/msm7k/libaudio-qsd8k/Android.mk)
+
+    For Android 4.0 and later:
+      Add, to your product's PRODUCT_PACKAGES list, the module,
+
+           audio.a2dp.<board name>
+
+      The "<board name>" comes from the TARGET_BOOTLOADER_BOARD_NAME variable,
+      which is usually set in your BoardConfig.mk makefile. Be sure to use the
+      actual board name value in the PRODUCT_PACKAGES list -- do NOT use the
+      literal string, "audio.a2dp.$(TARGET_BOOTLOADER_BOARD_NAME)", because
+      this variable is not yet defined at the time your product definition is
+      loaded.
+
+      For example, the Galaxy Nexus phone ("maguro" product) uses a bootloader
+      board name of "tuna", so the appropriate package for this device would be
+
+           PRODUCT_PACKAGES += audio.a2dp.tuna
+
+      Optionally, any dependency on the "audio.a2dp.default" module can be
+      removed.
+
+
+- Add entries to your product- or board-specific init.rc (normally, init.rc or
+  init.<platform>.rc):
+
+  - For Android v4.1 and older, add the record for the "ss1btpm" service from
+
+       ./external/ss1/templates/init.ss1.rc
+
+  - For Android v4.2 and newer, add the 'on post-fs-data' section from
+  
+       ./external/ss1/templates/init.ss1.rc
+
+    to your platform-specific init script, as appropriate (normally, init.rc or
+    init.<platform>.rc).
+
+
+- Add to your BoardConfig.mk the definition
+
+      SS1_BTPSVEND_VARIANT := <BT Device Name>
+
+  where "BT Device Name" corresponds to one of the chipset initialization source
+  files in ./external/ss1/BTPSVEND/ matching the name BTPSVEND_<BT Device Name>.c.
+
+         For example, to use the source file,
+            ./external/ss1/BTPSVEND/BTPSVEND_btchip-dev3.c,
+         specify in your BoardConfig.mk:
+            SS1_BTPSVEND_VARIANT := btchip-dev3
+
+
+- Your product definition should depend on, at least, the SS1BTPM package and
+  the associated Java/JNI library. Other utilities, such as LinuxDEVM, may be
+  useful in development but are not recommended for production builds. For a
+  simple installation, the minimum required dependencies can be added by
+  including the provided make script in your product definition:
+
+      include ./external/ss1/products/ss1_base.mk
+
+
+- Enable PAN integration (Recommended for Android 4.x, Optional for Android 2.x):
+
+   - Build the SS1VNETM.ko kernel driver found in
+
+         ./external/ss1/Dist/Bluetopia/VNET/driver/source/
+
+     and integrate this driver into your product build so that the driver is
+     installed at
+
+         /system/lib/modules/
+
+   - Add init script directives to load the SS1VNETM.ko module at boot.
+   
+     Example definitions for loading modules and services can be found in
+
+         ./external/ss1/templates/init.ss1.rc
+
+   - For Android 4.0 and later:
+   
+      - Add service definitions for the "dhcpcd_ss1vnet0" and
+	"iprenew_ss1vnet0" services. Examples can be found in
+
+             ./external/ss1/templates/init.ss1.rc
+       
+      - Add a mask for the "ss1vnet0" network interface created by the driver
+	to your product's config.xml to allow tethering on the interface:
+
+            <string-array translatable="false" name="config_tether_bluetooth_regexs">
+                <item>"bnep\\d"</item>
+                <item>"ss1vnet\\d"</item>
+            </string-array>
+
+
+- A clean build is recommended immediately after installation to ensure all
+  dependencies are built correctly.
+

@@ -1,0 +1,25 @@
+/**
+ * \mainpage
+ * 
+ * \htmlonly
+ * Acronyms
+ * <table border="1">
+ * <tr><td width="50px">AGPS</td><td>Assisted GPS</td></tr>
+ * <tr><td width="50px">API</td><td>Application Programming Interface</td></tr>
+ * <tr><td width="50px">AP</td><td>Wi-Fi Access Point</td></tr>
+ * <tr><td width="50px">BCE</td><td>BroadCast Ephemeris</td></tr>
+ * <tr><td width="50px">CDMA</td><td>Code Division Multiple Access.</td></tr> 
+ * <tr><td width="50px">GPS</td><td>Global Positioning System </td></tr>
+ * <tr><td width="50px">GNSS</td><td>Global Navigation Satellite System</td></tr>
+ * <tr><td width="50px">GSM</td><td>Global System for Mobile Communications</td></tr> 
+ * <tr><td width="50px">IODE</td><td>Issue of Data Ephemeris</td></tr>
+ * <tr><td width="50px">IP</td><td>Internet Protocol</td></tr>
+ * <tr><td width="50px">LTE</td><td>Long Term Evolution</td></tr>
+ * <tr><td width="50px">TCP</td><td>Transmission Control Protocol</td></tr>
+ * <tr><td width="50px">TTFF</td><td>Time To First Fix</td></tr>
+ * <tr><td width="50px">UMTS</td><td>Universal Mobile Telecommunication System. Used herein interchangeably with WCDMA</td></tr>
+ * <tr><td width="50px">UTC</td><td>Coordinated Universal Time</td></tr>
+ * <tr><td width="50px">WCDMA</td><td>Wideband CDMA</td></tr> 
+ * </table>
+ * \endhtmlonly
+ */ 

@@ -1,0 +1,184 @@
+package com.reconinstruments.compass;
+
+import org.apache.commons.math3.optimization.GoalType;
+import org.apache.commons.math3.optimization.PointValuePair;
+import org.apache.commons.math3.optimization.direct.NelderMeadSimplex;
+import org.apache.commons.math3.optimization.direct.SimplexOptimizer;
+
+import android.content.Context;
+import android.hardware.Sensor;
+import android.hardware.SensorEvent;
+import android.hardware.SensorEventListener;
+import android.hardware.SensorManager;
+import android.os.Build;
+import android.util.Log;
+
+public class CompassSensorListener implements SensorEventListener {
+
+	private static final String TAG = "CompassSensorListener";
+
+	private SensorManager mSensorManager;
+	private float[] mMagneticValues;
+
+	//	private float[] mAccelerometerValues;
+
+	//	private float mAzimuth;
+	//	private float mPitch;
+	//	private float mRoll;
+
+	// Magnetometer error correction
+	private double magOffsetX = 0, magOffsetY = 0, magOffsetZ = 0;
+	private ErrFunction errFunction;
+	private boolean loggingForErrorCorrection = false;
+	private boolean optimizationComplete = false;
+
+	Context context;
+
+	public CompassSensorListener(Context context)
+	{
+		this.context = context;
+		// Sensor Stuff
+		mSensorManager = (SensorManager) context.getSystemService(Context.SENSOR_SERVICE);
+		mSensorManager.registerListener(this,
+				mSensorManager.getDefaultSensor(Sensor.TYPE_MAGNETIC_FIELD),
+				SensorManager.SENSOR_DELAY_FASTEST);
+		//		mSensorManager.registerListener(this,
+		//				mSensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER),
+		//				SensorManager.SENSOR_DELAY_NORMAL);
+	}
+
+	public void startCalibration(){
+		// Clear old data and start correction
+		loggingForErrorCorrection = true;
+		errFunction = new ErrFunction();
+	}
+	public void calibrationComplete(){
+		mSensorManager.unregisterListener(this);
+		loggingForErrorCorrection = false;
+		calculateOffsets();
+	}
+
+	@Override
+	public void onAccuracyChanged(Sensor sensor, int accuracy) {
+	}
+
+	@Override
+	public void onSensorChanged(SensorEvent event) {
+		switch (event.sensor.getType()) {
+		case Sensor.TYPE_MAGNETIC_FIELD:
+			mMagneticValues = event.values.clone();//limoToAndroidMag(event.values.clone());
+
+			if(loggingForErrorCorrection && errFunction != null) {
+				errFunction.addPoints(Double.valueOf(mMagneticValues[0]), Double.valueOf(mMagneticValues[1]), Double.valueOf(mMagneticValues[2]));
+			}
+			
+			//non tilt azimuth
+			double degrees = Math.toDegrees(Math.abs(Math.atan2(mMagneticValues[2], mMagneticValues[1]) - Math.PI));
+			if(optimizationComplete) Log.d(TAG, "non tilt az: " + degrees);
+
+			/*
+			if(degrees >= 0 && degrees < 22.5)
+				heading.setText("N " + (int) degrees);
+			else if(degrees >= 22.5 && degrees < 67.5)
+				heading.setText("NE " + (int) degrees);
+			else if(degrees >= 67.5 && degrees < 112.5)
+				heading.setText("E " + (int) degrees);
+			else if(degrees >= 112.5 && degrees < 157.5)
+				heading.setText("SE " + (int) degrees);
+			else if(degrees >= 157.5 && degrees < 202.5)
+				heading.setText("S " + (int) degrees);
+			else if(degrees >= 202.5 && degrees < 247.5)
+				heading.setText("SW " + (int) degrees);
+			else if(degrees >= 247.5 && degrees < 292.5)
+				heading.setText("W " + (int) degrees);
+			else if(degrees >= 292.5 && degrees < 337.5)
+				heading.setText("NW " + (int) degrees);
+			else if(degrees >= 337.5)
+				heading.setText("N " + (int) degrees);*/
+
+			break;
+			//		case Sensor.TYPE_ACCELEROMETER:
+			//			mAccelerometerValues = limoToAndroidAccel(event.values.clone());
+			//			break;
+		}
+		//
+		//		if (mMagneticValues != null && mAccelerometerValues != null) {
+		//			float[] R = new float[9];
+		//			float[] I = new float[9];
+		//			SensorManager.getRotationMatrix(R, I, mAccelerometerValues,
+		//					mMagneticValues);
+		//			float[] orientation = new float[3];
+		//			SensorManager.getOrientation(R, orientation);
+		//			mAzimuth = orientation[0];
+		//			mPitch = orientation[1];
+		//			mRoll = orientation[2];
+
+		//			Log.d(TAG, "azimuth: " + Math.toDegrees(SensorManager.getInclination(I)));
+		//			Log.d(TAG, "pitch: " + Math.toDegrees(mPitch));
+		//			Log.d(TAG, "roll: " + Math.toDegrees(mRoll));
+		//		}
+	}
+
+	//	private float[] limoToAndroidAccel(float[] values) {
+	//		float[] arr = new float[3];
+	//
+	//		arr[0] = values[2];
+	//		arr[1] = values[0];
+	//		arr[2] = -values[1];
+	//
+	//		return arr;
+	//	}
+
+	private float[] limoToAndroidMag(float[] values) {
+		float[] arr = new float[3];
+
+		arr[0] = values[0] + (float) magOffsetX;
+		arr[1] = values[1] + (float) magOffsetY;
+		arr[2] = values[2] + (float) magOffsetZ;
+
+		return arr;
+	}
+
+	//	public float calcMagYaw(float[] orientation) {
+	//		return (float) Math.toDegrees(Math.atan2(-orientation[0], orientation[1]));
+	//	}
+
+	public void calculateOffsets() {
+		//Toast.makeText(context, "Running Optimization", Toast.LENGTH_SHORT).show();
+
+		if(errFunction != null){
+			// Run optimizer
+			SimplexOptimizer optimizer = new SimplexOptimizer();
+			optimizer.setSimplex(new NelderMeadSimplex(3));
+			final PointValuePair optimum = optimizer.optimize(1000, errFunction, GoalType.MINIMIZE, new double[] { 0, 0, 0 });
+
+			// Get values
+			magOffsetX = optimum.getPoint()[0];
+			magOffsetY = optimum.getPoint()[1];
+			magOffsetZ = optimum.getPoint()[2];
+			//Toast.makeText(context, "Optimization Complete", Toast.LENGTH_SHORT).show();
+			
+			if (Build.PRODUCT.equals("limo")) {
+				// Save values
+				SensorConfWriter.writeMagOffsets(context, optimum.getPoint(), true);
+			}
+			else {
+				double avgMagStrengh = errFunction.GetAverageMagStrengh(magOffsetX, magOffsetY, magOffsetZ);
+				//Log.i(TAG,"Average Mag Strengh : " + avgMagStrengh);
+				if(errFunction.CalculateOffsetAndScale(avgMagStrengh)){ 	//if Calculation of the offset and scale success then save values
+					double[] offsets = errFunction.GetOffsets();
+					double[] scales  = errFunction.GetScales();
+					// Save values
+					SensorConfWriter.writeMagOffsetsAndScale(context, offsets, scales, true);
+				}else{
+					Log.e(TAG, "calibration error please try again ...");
+				}
+			}
+			
+			
+			optimizationComplete = true;
+		}
+
+	}
+}
+

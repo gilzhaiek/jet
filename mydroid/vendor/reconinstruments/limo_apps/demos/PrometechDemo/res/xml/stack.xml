@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<stack>
+	
+		<!-- First Row -->
+		<ReconCard id="1" img="@drawable/sensors_screen" up="3" down="2" />
+		<ReconCard id="2" img="@drawable/map_screen" up="1" down="3" />
+		<ReconCard id="3" img="@drawable/ir_screen" up="2" down="1" />
+	</stack>
+</resources>

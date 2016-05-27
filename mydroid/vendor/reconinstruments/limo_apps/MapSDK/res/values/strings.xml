@@ -1,0 +1,27 @@
+<resources>
+
+    <string name="app_name">MapSDK</string>
+    
+    <string name="zoom_contentDescription">zoom</string>
+    <string name="explore_contentDescription">explore</string>
+    <string name="connection_btn_contentDescription">connection_btn</string>
+    <string name="gps_blink_contentDescription">gps_blink</string>
+    <string name="zoom_button">ZOOM</string>
+    <string name="find_friend_button">FRIENDS</string>
+
+    <!--config file for base map - i.e. no Points of Interest, just streets-->
+    <string name="osm_base_config">MapTypes/osm_base_street_map.xml</string>
+
+    <!--config file to include Points of Interest on maps-->
+    <string name="osm_street_config">MapTypes/osm_street_map.xml</string>
+
+    <string name="rendering_schemes">rendering_schemes.xml</string>
+    <string name="reticle_configuration">reticle_configuration.xml</string>
+    <string name="scale_pitch_curves">scale_pitch_curves.xml</string>
+    <string name="velocity_curves">velocity_curves.xml</string>
+    <string name="square_tex">square_tex.obj</string>
+
+    <!--Snow specific file-->
+    <string name="md_snow_map">MapTypes/md_snow_map.xml</string>
+
+</resources>

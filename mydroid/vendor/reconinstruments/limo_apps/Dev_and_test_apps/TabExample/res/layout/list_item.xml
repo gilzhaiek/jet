@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="wrap_content"
+	android:padding="5dp"
+	android:orientation="horizontal">
+    <TextView android:id="@+id/toptext" 
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:textSize="24sp" 
+		android:textColor="@drawable/text_selector"
+		android:ellipsize="end"
+		android:singleLine="true"  />
+</LinearLayout>

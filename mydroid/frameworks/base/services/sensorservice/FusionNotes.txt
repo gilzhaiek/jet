@@ -1,0 +1,18 @@
+To implement Recon Fusion, these changes were made:
+
+1. Added Eigen library files
+2. Added stlport and c++ includes to Android.mk
+3. Replaced Fusion.cpp and Fusion.h with Recon's
+
+Todo:
+
+1. Substitute Eigen's Vectors and Matrix structures with google's vec.h, mat.h
+2. Handle mag, acc and gyro data separately. Right now it's hacked for the three to accumulate before calling one long function
+3. Properly correct sensor coordinates to X = East, Y =  North, Z =  Up in the driver. Right now the axis are wrong, and the Z axis of the Magnetometer is flipped
+4. getBias() needs to be implemented instead of returning a dummy
+
+To build, install, and reboot:
+
+1. Run buildinstallreboot.sh
+
+Note: Reboot is required to see effect.

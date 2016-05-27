@@ -1,0 +1,10 @@
+<StorePath> /certificate/client_keystore.bks
+<ImplType> Socket
+<Localhost> false
+<slphost_fqdn> 208.8.164.7
+<port> 7275
+<mcc> 404
+<mnc> 45
+<lac> 1425
+<ci> 4791
+<msisdn> 918951322358

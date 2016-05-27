@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_height="fill_parent" android:layout_width="fill_parent"
+	android:id="@+id/chrono_layout" android:paddingLeft="15px">
+
+	<ImageView android:id="@+id/arrow" android:src="@drawable/arrow"
+		android:layout_alignParentTop="True" android:layout_alignParentRight="True"
+		android:layout_width="wrap_content" android:layout_height="wrap_content" />
+
+	<TextView android:id="@+id/chrono" android:text="CHRONO"
+		android:textColor="@color/chrono_yellow" style="@style/detailText" />
+
+	<TextView android:id="@+id/chrono_number" android:text="#0"
+		style="@style/detailText" android:layout_toRightOf="@+id/chrono"
+		android:layout_marginLeft="10px" />
+
+	<TextView android:id="@+id/chrono_time" android:text="00:06"
+		android:textColor="@color/chrono_yellow" android:textSize="50px"
+		style="@style/detailText" android:layout_below="@+id/chrono"
+		android:layout_marginTop="15px" />
+
+	<TextView android:id="@+id/chrono_time_ms" android:text=".25"
+		android:textColor="@color/chrono_yellow" style="@style/detailText"
+		android:layout_toRightOf="@+id/chrono_time"
+		android:layout_alignBaseline="@+id/chrono_time" android:layout_below="@+id/chrono"
+		android:textSize="40px" />
+
+	<TextView android:id="@+id/chrono_start_end_time"
+		android:text="--" style="@style/detailText" android:layout_below="@+id/chrono_time" />
+
+</RelativeLayout>

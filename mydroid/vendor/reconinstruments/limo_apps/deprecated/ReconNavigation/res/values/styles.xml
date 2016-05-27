@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<style name="testTextViewStyle" >
+		<item name="android:textSize">20dip</item>
+		<item name="android:textColor">@color/pure_white</item>
+		<item name="android:textColorHighlight">@color/opaque_blue</item>
+		<item name="android:background">@drawable/gray</item>
+	</style>
+	<style name="menuTextViewStyle" parent="@android:style/TextAppearance.Medium">
+		<item name="android:textSize">20dip</item>
+		<item name="android:textColor">@color/pure_white</item>
+		<item name="android:textColorHighlight">@color/opaque_blue</item>
+		<item name="android:background">@drawable/gray</item>
+		<item name="android:typeface">serif</item>		        
+	</style>
+</resources>

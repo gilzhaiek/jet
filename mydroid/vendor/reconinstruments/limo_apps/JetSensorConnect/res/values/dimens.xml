@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="wheel_layout_bottom_margin">-7px</dimen>
+    <dimen name="wheel_layout_top_margin">-14px</dimen>
+    <dimen name="wheel_layout_text_size">70px</dimen>
+    <dimen name="wheel_layout_left_margin">20px</dimen>
+</resources>

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:layout_marginLeft="30dp"
+	android:layout_marginRight="30dp"
+	android:orientation="horizontal" >
+	<LinearLayout
+		android:id="@+id/left_layout"
+		android:layout_width="0dp"
+		android:layout_height="match_parent"
+		android:layout_weight="0.5" >
+		<RelativeLayout
+			android:id="@+id/valid_left_layout"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:visibility="visible" >
+			<com.reconinstruments.commonwidgets.AutofitTextView
+				android:id="@+id/value1"
+				android:layout_width="wrap_content"
+				android:layout_height="match_parent"
+				android:layout_alignParentLeft="true"
+				android:gravity="center"
+				android:includeFontPadding="false"
+				android:singleLine="true"
+				android:text=""
+				android:textColor="#ffffff"
+				android:textSize="64dp" />
+			<TextView
+				android:id="@+id/unit1"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_centerVertical="true"
+				android:layout_marginLeft="2dp"
+				android:layout_toRightOf="@+id/value1"
+				android:includeFontPadding="false"
+				android:text=""
+				android:textColor="#ffff00"
+				android:textSize="16dp" />
+		</RelativeLayout>
+		<LinearLayout
+			android:id="@+id/invalid_left_layout"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:gravity="center"
+			android:orientation="horizontal"
+			android:visibility="gone" >
+			<ImageView
+				android:id="@+id/invalid_left_image"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:gravity="center"
+				android:src="@drawable/select_button" />
+		</LinearLayout>
+	</LinearLayout>
+	<LinearLayout
+		android:id="@+id/right_layout"
+		android:layout_width="0dp"
+		android:layout_height="match_parent"
+		android:layout_weight="0.5" >
+		<RelativeLayout
+			android:id="@+id/valid_right_layout"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:visibility="visible" >
+			<com.reconinstruments.commonwidgets.AutofitTextView
+				android:id="@+id/value2"
+				android:layout_width="wrap_content"
+				android:layout_height="match_parent"
+				android:layout_alignParentLeft="true"
+				android:background="@null"
+				android:gravity="center"
+				android:includeFontPadding="false"
+				android:singleLine="true"
+				android:text=""
+				android:textColor="#ffffff"
+				android:textSize="64dp" />
+			<TextView
+				android:id="@+id/unit2"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_centerVertical="true"
+				android:layout_marginLeft="2dp"
+				android:layout_toRightOf="@+id/value2"
+				android:includeFontPadding="false"
+				android:text=""
+				android:textColor="#ffff00"
+				android:textSize="16dp" />
+		</RelativeLayout>
+		<LinearLayout
+			android:id="@+id/invalid_right_layout"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:gravity="center"
+			android:orientation="horizontal"
+			android:visibility="gone" >
+			<ImageView
+				android:id="@+id/invalid_right_image"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:gravity="center"
+				android:src="@drawable/select_button" />
+		</LinearLayout>
+	</LinearLayout>
+</LinearLayout>

@@ -1,0 +1,17 @@
+.svn
+Dist/Bluetopia/VNET/driver/source/*.cmd
+Dist/Bluetopia/VNET/driver/source/*.ko
+Dist/Bluetopia/VNET/driver/source/*.mod.c
+Dist/Bluetopia/VNET/driver/source/*.mod.o
+Dist/Bluetopia/VNET/driver/source/*.o
+Dist/Bluetopia/VNET/driver/source/modules.order
+Dist/Bluetopia/VNET/driver/source/Module.symvers
+Dist/Bluetopia/VNET/driver/source/.tmp_versions/
+tty_hci_driver/*.cmd
+tty_hci_driver/*.ko
+tty_hci_driver/*.mod.c
+tty_hci_driver/*.mod.o
+tty_hci_driver/*.o
+tty_hci_driver/modules.order
+tty_hci_driver/Module.symvers
+tty_hci_driver/.tmp_versions/

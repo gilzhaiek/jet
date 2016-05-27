@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.stonestreetone.bluetopiapm.sample.gatm_clt"
+    android:versionCode="1"
+    android:versionName="1.0" >
+    
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+
+    <uses-sdk android:minSdkVersion="10" />
+    
+    <uses-feature android:name="android.hardware.bluetooth" />
+
+    <application
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name" >
+
+        <activity
+            android:label="@string/app_name" 
+            android:name="com.stonestreetone.bluetopiapm.sample.gatm_clt.MainActivity"     
+            android:windowSoftInputMode="adjustPan" >            
+
+            <intent-filter>
+
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+
+            </intent-filter>            
+
+        </activity>    
+        
+        <uses-library android:name="com.stonestreetone.bluetopiapm" />                
+        
+    </application>
+
+</manifest>

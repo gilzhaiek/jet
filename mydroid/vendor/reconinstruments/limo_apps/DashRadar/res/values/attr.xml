@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="Theme">
+        <attr format="reference" name="CustomTextView"/>
+    </declare-styleable>
+
+    <declare-styleable name="CustomTextView">
+        <attr name="shadowColors" format="color|reference"/>
+        <attr name="android:shadowDx"/>
+        <attr name="android:shadowDy"/>
+        <attr name="android:shadowRadius"/>
+
+    </declare-styleable>
+</resources>

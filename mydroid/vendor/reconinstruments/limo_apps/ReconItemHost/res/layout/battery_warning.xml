@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:custom="http://schemas.android.com/apk/res/com.reconinstruments.itemhost"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent" >
+	<RelativeLayout
+		android:id="@+id/top"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_alignParentTop="true"
+		android:layout_centerHorizontal="true"
+		android:layout_marginTop="20dp" >
+		<ImageView
+			android:id="@+id/warning_img"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:paddingTop="6dp"
+			android:src="@drawable/warning_icon" />
+		<TextView
+			android:id="@+id/warning_title"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_toRightOf="@id/warning_img"
+			android:paddingLeft="5dp"
+			android:textColor="@android:color/white"
+			android:textSize="30dp" />
+	</RelativeLayout>
+	<TextView
+		android:id="@+id/warning_text"
+		android:layout_width="wrap_content"
+		android:layout_height="match_parent"
+		android:layout_below="@+id/top"
+		android:layout_above="@+id/ok_button_layout"
+		android:layout_gravity="center"
+		android:gravity="center"
+		android:paddingLeft="30dp"
+		android:paddingRight="30dp"
+		android:text="OK"
+		android:textColor="@android:color/white"
+		android:textSize="24dp" />
+	<LinearLayout
+			android:id="@+id/ok_button_layout"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_alignParentBottom="true"
+			android:paddingLeft="30dp"
+			android:orientation="horizontal">
+		<com.reconinstruments.commonwidgets.ButtonWidgetLayout
+				android:id="@+id/ok_button"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				custom:buttonText="OK"
+			/>
+	</LinearLayout>
+</RelativeLayout>

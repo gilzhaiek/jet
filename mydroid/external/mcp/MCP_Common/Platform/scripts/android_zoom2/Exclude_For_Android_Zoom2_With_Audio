@@ -1,0 +1,15 @@
+MCP_Common/Platform/audio_config/WinXP/*
+MCP_Common/Platform/audio_codecs/WinXP/*
+MCP_Common/Platform/inc/ubuntu_x86/*
+MCP_Common/Platform/inc/WinXP/*
+MCP_Common/Platform/inc/1.6_zoom2/*
+MCP_Common/Platform/fmhal/LINUX/ubuntu_x86/*
+MCP_Common/Platform/fmhal/WinXP/*
+MCP_Common/Platform/bthal/LINUX/ubuntu_x86/*
+MCP_Common/Platform/bthal/WinXP/*
+MCP_Common/Platform/os/LINUX/ubuntu_x86/*
+MCP_Common/Platform/os/WinXP/*
+MCP_Common/Platform/hw/LINUX/ubuntu_x86/*
+MCP_Common/Platform/hw/WinXP/*
+
+

@@ -1,0 +1,21 @@
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/linearLayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:gravity="center|top"
+        android:orientation="vertical" >
+
+        <Button
+            android:id="@+id/Root"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:text="@string/RootText" />
+
+        <Button
+            android:id="@+id/LogDump"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Logcat_Dump" />
+
+    </LinearLayout>

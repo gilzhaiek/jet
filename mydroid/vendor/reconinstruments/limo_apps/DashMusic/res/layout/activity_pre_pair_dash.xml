@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/ReconGray"
+    android:gravity="center_vertical"
+    android:orientation="vertical" xmlns:app="http://schemas.android.com/apk/res/com.reconinstruments.dashlauncher">
+
+    <RelativeLayout
+        android:id="@+id/setup_item"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background_transition112" >
+
+        <ImageView
+            android:id="@+id/setup_music_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="10dp"
+        	android:layout_alignParentLeft="true"
+        	android:src="@drawable/music_image"/>
+         <TextView
+            android:id="@+id/setup_text"
+       		style="@style/focusable_text_shadow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+			android:layout_toRightOf="@+id/setup_music_image"
+            android:text="MUSIC PLAYER"
+            android:textSize="28dp"
+            android:textStyle="bold"
+            android:duplicateParentState="true" />
+
+         <TextView
+             android:id="@+id/setup_info"
+             style="@style/focusable_text_shadow"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_below="@id/setup_text"
+             android:layout_centerHorizontal="true"
+             android:layout_centerVertical="true"
+             android:layout_marginLeft="30dp"
+             android:layout_marginRight="30dp"
+             android:duplicateParentState="true"
+             android:lineSpacingExtra="-7dp"
+             android:gravity="center_vertical|center_horizontal"
+             android:text="@string/no_connection_text"
+             android:textColor="@color/reconGrayText"
+             android:textSize="22dp"
+             android:fontFamily="sans-light"
+             android:textStyle="bold"
+              />
+
+         <ImageView
+            android:id="@+id/setup_music_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="15dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="10dp"
+        	android:layout_alignParentLeft="true"
+        	android:layout_alignParentBottom="true"
+        	android:src="@drawable/select_button"/>
+         
+         <TextView
+            android:id="@+id/setup_music_button_text"
+       		style="@style/focusable_text_shadow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="5dp"
+            android:paddingBottom = "3dp"
+			android:layout_toRightOf="@+id/setup_music_button"
+			
+            android:text="CONNECT SMARTPHONE"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:duplicateParentState="true" />
+    </RelativeLayout>
+
+</LinearLayout>

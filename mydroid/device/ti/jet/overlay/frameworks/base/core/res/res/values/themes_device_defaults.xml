@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<resources>
+
+    <style name="Theme.DeviceDefault.Dialog.Alert" parent="Theme.Holo.Dialog.Alert">
+        <item name="buttonBarButtonStyle">@android:style/Widget.DeviceDefault.Button.Borderless</item>
+        <item name="alertDialogStyle">@android:style/AlertDialog.DeviceDefault</item>
+        <item name="progressBarStyle">@android:style/Widget.DeviceDefault.ProgressBar</item>
+        <item name="progressBarStyleHorizontal">@android:style/Widget.DeviceDefault.ProgressBar.Horizontal</item>
+        <item name="progressBarStyleSmall">@android:style/Widget.DeviceDefault.ProgressBar.Small</item>
+        <item name="progressBarStyleSmallTitle">@android:style/Widget.DeviceDefault.ProgressBar.Small.Title</item>
+        <item name="progressBarStyleLarge">@android:style/Widget.DeviceDefault.ProgressBar.Large</item>
+        <item name="progressBarStyleInverse">@android:style/Widget.DeviceDefault.ProgressBar.Inverse</item>
+        <item name="progressBarStyleSmallInverse">@android:style/Widget.DeviceDefault.ProgressBar.Small.Inverse</item>
+        <item name="progressBarStyleLargeInverse">@android:style/Widget.DeviceDefault.ProgressBar.Large.Inverse</item>
+    </style>
+
+</resources>

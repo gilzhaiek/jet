@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="70dp"
+	android:background="@drawable/key_selector" >
+	<FrameLayout
+		android:id="@+id/groupIcon"
+		android:layout_width="74dp"
+		android:layout_height="70dp"
+		android:layout_alignParentLeft="true" >
+		<ImageView
+			android:id="@+id/groupIconImage"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:src="@drawable/group_icon" />
+	</FrameLayout>
+	<View
+		android:layout_width="1px"
+		android:layout_height="match_parent"
+		android:layout_toRightOf="@+id/groupIcon"
+		android:background="#000" />
+	<TextView
+		android:id="@+id/groupName"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginLeft="20dp"
+		android:layout_marginTop="6dp"
+		android:layout_toLeftOf="@+id/messageByGroupCountIcon"
+		android:layout_toRightOf="@+id/groupIcon"
+		android:ellipsize="end"
+		android:singleLine="true"
+		android:text="PHONE CALLS"
+		android:textColor="#6c6d6f"
+		android:textSize="20sp"
+		android:textStyle="bold" />
+	<TextView
+		android:id="@+id/messageByGroup"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_below="@+id/groupName"
+		android:layout_marginLeft="20dp"
+		android:layout_marginTop="-5dp"
+		android:layout_toLeftOf="@+id/messageByGroupDate"
+		android:layout_toRightOf="@+id/groupIcon"
+		android:ellipsize="end"
+		android:singleLine="true"
+		android:text="Frank Underwood"
+		android:textSize="22sp"
+		android:textStyle="bold" />
+	<TextView
+		android:id="@+id/messageByGroupCountText"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_alignParentRight="true"
+		android:layout_marginRight="20dp"
+		android:layout_marginTop="6dp"
+		android:background="@drawable/count0"
+		android:ellipsize="end"
+		android:gravity="center"
+		android:singleLine="true"
+		android:text="11"
+		android:textColor="#FFF"
+		android:textSize="20sp"
+		android:textStyle="bold" />
+	<TextView
+		android:id="@+id/messageByGroupDate"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_alignBottom="@id/messageByGroup"
+		android:layout_alignParentRight="true"
+		android:layout_marginRight="20dp"
+		android:fontFamily="sans-serif-semibold"
+		android:gravity="right"
+		android:text="date"
+		android:textColor="#6c6d6f"
+		android:textSize="20sp" />
+</RelativeLayout>

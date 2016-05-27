@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="51">
+  <logicalFolder name="root" displayName="root" projectFiles="true">
+    <logicalFolder name="include" displayName="include" projectFiles="true">
+      <logicalFolder name="chipsets" displayName="chipsets" projectFiles="true">
+        <itemPath>../../../include/chipsets/RXN_CL_HH2Daemon.h</itemPath>
+      </logicalFolder>
+      <logicalFolder name="platforms" displayName="platforms" projectFiles="true">
+        <logicalFolder name="linux" displayName="linux" projectFiles="true">
+          <itemPath>../../../include/platforms/linux/RXN_CL_Linux.h</itemPath>
+        </logicalFolder>
+      </logicalFolder>
+      <itemPath>../../../include/RXN_CL.h</itemPath>
+      <itemPath>../../../include/RXN_CL_Common.h</itemPath>
+      <itemPath>../../../include/RXN_CL_Protocol.h</itemPath>
+    </logicalFolder>
+    <logicalFolder name="src" displayName="src" projectFiles="true">
+      <logicalFolder name="chipsets" displayName="chipsets" projectFiles="true">
+        <itemPath>../../../src/chipsets/RXN_CL_HH2Daemon.c</itemPath>
+        <itemPath>../../../src/chipsets/RXN_CL_MARVELL.c</itemPath>
+      </logicalFolder>
+      <logicalFolder name="platforms" displayName="platforms" projectFiles="true">
+        <logicalFolder name="linux" displayName="linux" projectFiles="true">
+          <itemPath>../../../src/platforms/linux/RXN_CL_Linux.c</itemPath>
+        </logicalFolder>
+      </logicalFolder>
+      <itemPath>../../../src/RXN_CL.c</itemPath>
+      <itemPath>../../../src/RXN_CL_Common.c</itemPath>
+      <itemPath>../../../src/RXN_CL_Data.c</itemPath>
+      <itemPath>../../../src/RXN_CL_Protocol.c</itemPath>
+    </logicalFolder>
+    <logicalFolder name="thirdparty" displayName="thirdparty" projectFiles="true">
+      <logicalFolder name="gll" displayName="gll" projectFiles="true">
+        <logicalFolder name="include" displayName="include" projectFiles="true">
+          <itemPath>../../../thirdparty/gll/include/config.h</itemPath>
+          <itemPath>../../../thirdparty/gll/include/crc16.h</itemPath>
+          <itemPath>../../../thirdparty/gll/include/glgpsapi.h</itemPath>
+          <itemPath>../../../thirdparty/gll/include/gltp.h</itemPath>
+          <itemPath>../../../thirdparty/gll/include/GPIO.h</itemPath>
+          <itemPath>../../../thirdparty/gll/include/lestream.h</itemPath>
+          <itemPath>../../../thirdparty/gll/include/nmea.h</itemPath>
+        </logicalFolder>
+      </logicalFolder>
+      <logicalFolder name="marvell" displayName="marvell" projectFiles="true">
+        <logicalFolder name="include" displayName="include" projectFiles="true">
+          <itemPath>../../../thirdparty/marvell/include/parserdefinitions.h</itemPath>
+          <itemPath>../../../thirdparty/marvell/include/usrApi.h</itemPath>
+        </logicalFolder>
+      </logicalFolder>
+    </logicalFolder>
+    <logicalFolder name="ExternalFiles"
+                   displayName="Important Files"
+                   projectFiles="false">
+      <itemPath>../../../Makefile</itemPath>
+      <itemPath>RXN_CL-Makefile.mk</itemPath>
+    </logicalFolder>
+  </logicalFolder>
+  <sourceRootList>
+    <Elem>../../../src</Elem>
+    <Elem>../../../include</Elem>
+    <Elem>../../../test</Elem>
+    <Elem>../../../thirdparty</Elem>
+  </sourceRootList>
+  <projectmakefile>RXN_CL-Makefile.mk</projectmakefile>
+  <confs>
+    <conf name="Default" type="0">
+      <toolsSet>
+        <developmentServer>localhost</developmentServer>
+        <compilerSet>GNU|GNU</compilerSet>
+        <platform>2</platform>
+      </toolsSet>
+      <makefileType>
+        <makeTool>
+          <buildCommandWorkingDir>../../..</buildCommandWorkingDir>
+          <buildCommand>make -f Makefile</buildCommand>
+          <cleanCommand>make -f Makefile clean</cleanCommand>
+          <executablePath>../../../../sample/egInt/bin/RXN_EgInt_SAGPS</executablePath>
+        </makeTool>
+        <requiredProjects>
+        </requiredProjects>
+      </makefileType>
+      <item path="../../../include/RXN_CL.h">
+        <itemTool>3</itemTool>
+      </item>
+      <item path="../../../include/RXN_CL_Common.h">
+        <itemTool>3</itemTool>
+      </item>
+      <item path="../../../include/RXN_CL_Protocol.h">
+        <itemTool>3</itemTool>
+      </item>
+      <item path="../../../include/chipsets/RXN_CL_HH2Daemon.h">
+        <itemTool>3</itemTool>
+      </item>
+      <item path="../../../include/platforms/linux/RXN_CL_Linux.h">
+        <itemTool>3</itemTool>
+      </item>
+      <item path="../../../src/RXN_CL.c">
+        <itemTool>0</itemTool>
+      </item>
+      <item path="../../../src/RXN_CL_Common.c">
+        <itemTool>0</itemTool>
+      </item>
+      <item path="../../../src/RXN_CL_Data.c">
+        <itemTool>0</itemTool>
+      </item>
+      <item path="../../../src/RXN_CL_Protocol.c">
+        <itemTool>0</itemTool>
+      </item>
+      <item path="../../../src/chipsets/RXN_CL_HH2Daemon.c">
+        <itemTool>0</itemTool>
+      </item>
+      <item path="../../../src/chipsets/RXN_CL_MARVELL.c">
+        <itemTool>0</itemTool>
+      </item>
+      <item path="../../../src/platforms/linux/RXN_CL_Linux.c">
+        <itemTool>0</itemTool>
+      </item>
+      <item path="../../../thirdparty/gll/include/GPIO.h">
+        <itemTool>3</itemTool>
+      </item>
+      <item path="../../../thirdparty/gll/include/config.h">
+        <itemTool>3</itemTool>
+      </item>
+      <item path="../../../thirdparty/gll/include/crc16.h">
+        <itemTool>3</itemTool>
+      </item>
+      <item path="../../../thirdparty/gll/include/glgpsapi.h">
+        <itemTool>3</itemTool>
+      </item>
+      <item path="../../../thirdparty/gll/include/gltp.h">
+        <itemTool>3</itemTool>
+      </item>
+      <item path="../../../thirdparty/gll/include/lestream.h">
+        <itemTool>3</itemTool>
+      </item>
+      <item path="../../../thirdparty/gll/include/nmea.h">
+        <itemTool>3</itemTool>
+      </item>
+      <item path="../../../thirdparty/marvell/include/parserdefinitions.h">
+        <itemTool>3</itemTool>
+      </item>
+      <item path="../../../thirdparty/marvell/include/usrApi.h">
+        <itemTool>3</itemTool>
+      </item>
+    </conf>
+  </confs>
+</configurationDescriptor>

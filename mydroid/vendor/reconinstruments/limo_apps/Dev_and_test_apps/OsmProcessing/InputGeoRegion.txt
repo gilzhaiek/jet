@@ -1,0 +1,54 @@
+####################################################################################################################
+#                                                                                                                  #
+#                                                                                                                  #
+#                                                                                                                  #
+# This is the configure one or more Geo Regions to process and get Recon Instruments Map in RECON TILE format.     #
+#                                                                                                                  #
+# You can select one or more Geo Regions to process it (by removing the comment sign '#').                         #
+#                                                                                                                  #
+# It ignores all of the comment line that starts with sign '#'                                                     #
+#                                                                                                                  #                                                                                                               #
+# Each Geo Region format: GEO_REGION_NAME; left_longitude; bottom_latitude; right_longitude; top_latitude          #
+#                                                                                                                  #
+#                                            - 48.814228, 9.225061                                                                      #
+#                                                                                                                  #
+####################################################################################################################
+#"Cupertino, CA, USA_50KM "; -122.3019; 37.1860; -121.7580; 37.5359
+#"Cupertino, CA, USA";-122.1223; 37.2645; -121.8820; 37.4116
+#"Foothill rang, CA, USA"; -118.0646; 33.4681; -117.4095; 34.0094
+#"Foothill Range, CA, USA_20KM"; -117.8091; 33.5897; -117.5942; 33.7492
+#'Stuttgart, German_moreNorth'; 9.1832; 48.7162; 9.4369; 48.9881
+#'Stuttgart, German'; 9.1015; 48.7385; 9.2903; 48.8135
+#'London, UK2'; -0.4092; 51.3786; 0.2458; 51.6683
+#'London_30km, UK'; -0.2980; 51.4052; 0.0824; 51.6035
+#'Stuttgart_30km, German'; 9.0287; 48.6803; 9.3267; 48.8679
+#'London, UK_old'; -0.7031; 51.2722; 0.7526; 51.8782
+#'London_10km, UK2'; -0.7031; 51.00; 0.7526; 51.90
+#'Stuttgart_10km, German'; 8.6517; 48.4383; 9.6227; 49.1035
+
+
+#'City Vancouver, BC, Canada'; -123.2618; 49.1925; -123.0067; 49.2969
+#'Toronto, ON, Canada'; -79.6392727; 43.5806328; -79.1132193; 58.72
+
+#'Europ_Main'; -12; 34.60; 42.0; 59.0
+#'Europ_North'; 3.0; 59.0; 33.0; 72.0
+#'Iceland';-25.0; 63.0; -12.0;67.0
+
+#'Canada'; -141; 49.0; -52.0; 70.0
+#'Canada_Lower_Area'; -132.0; 49.0; -52.0; 53.0
+'Canada_Middle_Area'; -136.0; 53.0; -56.0; 57.00
+#'Canada_Upper_Area'; -141.0; 57.00; -61.0; 70.00
+#'Victoria island'; -129.166; 48.239; -122.717; 51.055
+ 
+#'USA'; -125.0; 26.0; -52.0; 49.0
+#'USA_Upper_Area'; -125.0; 44.0; -52.0; 49.0
+#'USA_Middle_Area'; -125.0; 31.0; -69.0; 44.0
+#'USA_Lower_Area'; -125.0; 22.0; -79.0; 31.0
+#'USA_Alaska_Area'; -170.0; 54.0; -141.0; 72.0
+#'USA_Hawaii_Area'; -178.0; 18.0; -154.0; 29.0
+
+#'Austrilia'; 112.0; -44.0; 154; -10.0
+#'Japan'; 129.0; 30.00; 149.0; 46.0
+
+
+    

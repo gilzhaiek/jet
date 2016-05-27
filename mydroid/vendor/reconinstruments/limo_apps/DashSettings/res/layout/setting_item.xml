@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res/com.reconinstruments.dashlauncher"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:layout_gravity="left|center_vertical"
+	android:paddingBottom="5dp"
+	android:paddingLeft="20dp"
+	android:paddingTop="5dp" >
+	<LinearLayout
+		android:layout_width="wrap_content"
+		android:layout_height="match_parent"
+		android:layout_centerVertical="true"
+		android:orientation="vertical"
+		android:paddingLeft="20dip" >
+		<com.reconinstruments.commonwidgets.CustomTextView
+			android:id="@+id/setting_text"
+			style="@style/recon_selectable_text_shadow"
+			android:layout_width="wrap_content"
+			android:layout_height="match_parent"
+			android:layout_alignParentLeft="true"
+			android:textColor="@drawable/selectable_text_highlight_color"
+			android:textSize="24px" />
+		<com.reconinstruments.commonwidgets.CustomTextView
+			android:id="@+id/setting_subtext"
+			style="@style/recon_selectable_text_shadow"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_alignParentLeft="true"
+			android:textColor="@drawable/selectable_text_highlight_color"
+			android:textSize="18px"
+			android:visibility="gone" />
+	</LinearLayout>
+	<CheckBox
+		android:id="@+id/setting_checkbox"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_alignParentRight="true"
+		android:layout_centerVertical="true"
+		android:layout_marginRight="30px"
+		android:focusable="false"
+		android:visibility="gone" />
+	<ImageView
+		android:id="@+id/setting_checkmark"
+		android:layout_width="30px"
+		android:layout_height="30px"
+		android:layout_alignParentRight="true"
+		android:layout_centerVertical="true"
+		android:layout_marginRight="30px"
+		android:focusable="false"
+		android:src="@drawable/box_off_selectable"
+		android:visibility="gone" />
+</RelativeLayout>

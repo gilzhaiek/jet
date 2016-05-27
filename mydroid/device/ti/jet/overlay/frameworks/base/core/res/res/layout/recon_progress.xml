@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_centerInParent="true"
+    android:background="#CC000000"
+    android:gravity="center" >
+
+    <ProgressBar android:id="@+id/recon_progress_bar"
+        android:maxHeight="36px"
+        android:minHeight="36px"
+        android:maxWidth="36px"
+        android:minWidth="36px"
+        android:indeterminateOnly="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:indeterminateBehavior="repeat"
+        android:indeterminateDrawable="@drawable/recon_spinner_progress_bar" />
+
+    <TextView
+        android:id="@+id/recon_progress_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="8px"
+        android:layout_toRightOf="@id/recon_progress_bar"
+        android:shadowColor="#FF000000"
+        android:shadowDx="0.0"
+        android:shadowDy="1.4"
+        android:shadowRadius="2.0"
+        android:textColor="#FFFFFF"
+        android:textSize="38sp" />
+
+</RelativeLayout>

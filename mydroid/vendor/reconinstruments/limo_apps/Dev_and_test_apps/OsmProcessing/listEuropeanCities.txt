@@ -1,0 +1,457 @@
+London, United Kingdom
+Berlin, Germany
+Madrid, Spain
+Rome, Italy
+Paris, France
+Hamburg, Germany
+Budapest, Hungary
+Vienna, Austria
+Warsaw, Poland
+Bucharest, Romania
+Barcelona, Spain
+Stockholm, Sweden
+Munich, Germany
+Milan, Italy
+Prague, Czech Republic
+Sofia, Bulgaria
+Copenhagen, Denmark
+Birmingham, United Kingdom
+Cologne, Germany
+Brussels, Belgium
+Naples, Italy
+Turin, Italy
+Marseille, France
+Valencia, Spain
+Amsterdam, Netherlands
+Zagreb, Croatia
+Kraków, Poland
+Riga, Latvia
+Łódź, Poland
+Athens, Greece
+Seville, Spain
+Palermo, Italy
+Frankfurt, Germany
+Wrocław, Poland
+Zaragoza, Spain
+Helsinki, Finland
+Genoa, Italy
+Stuttgart, Germany
+Glasgow, United Kingdom
+Düsseldorf, Germany
+Dortmund, Germany
+Essen, Germany
+Poznań, Poland
+Gothenburg, Sweden
+Bremen, Germany
+Vilnius, Lithuania
+Rotterdam, Netherlands
+Málaga, Spain
+Dublin, Ireland
+Dresden, Germany
+Leipzig, Germany
+Hanover, Germany
+Lisbon, Portugal
+Nuremberg, Germany
+Manchester, United Kingdom
+Duisburg, Germany
+Lyon, France
+Den Haag, Netherlands
+Liverpool, United Kingdom
+Gdańsk, Poland
+Antwerp, Belgium
+Edinburgh, United Kingdom
+Leeds, United Kingdom
+Toulouse, France
+Sheffield, United Kingdom
+Bratislava, Slovakia
+Bristol, United Kingdom
+Szczecin, Poland
+Brno, Czech Republic
+Tallinn, Estonia
+Bochum, Germany
+Murcia, Spain
+Bologna, Italy
+Bydgoszcz, Poland
+Kaunas, Lithuania
+Wuppertal, Germany
+Palma de Mallorca, Spain
+Florence, Italy
+Lublin, Poland
+Bilbao, Spain
+Thessaloniki, Greece
+Nice, France
+Plovdiv, Bulgaria
+Varna, Bulgaria
+Alicante, Spain
+Leicester, United Kingdom
+Bielefeld, Germany
+Katowice, Poland
+Valladolid, Spain
+Bari, Italy
+Iaşi, Romania
+Cardiff, United Kingdom
+Córdoba, Spain
+Ostrava, Czech Republic
+Catania, Italy
+Bonn, Germany
+Timișoara, Romania
+Mannheim, Germany
+Cluj-Napoca, Romania
+Coventry, United Kingdom
+Constanţa, Romania
+Kingston upon Hull, United Kingdom
+Craiova, Romania
+Vigo, Spain
+Bradford, United Kingdom
+Białystok, Poland
+Galaţi, Romania
+Utrecht, Netherlands
+Karlsruhe, Germany
+Nantes, France
+Malmö, Sweden
+Ljubljana, Slovenia
+Braşov, Romania
+Belfast, United Kingdom
+Wiesbaden, Germany
+Brighton & Hove, United Kingdom
+Strasbourg, France
+StemmaVene.PNG Venice, Italy
+Münster, Germany
+Gijón, Spain
+Gelsenkirchen, Germany
+Augsburg, Germany
+Mönchengladbach, Germany
+Stoke-on-Trent, United Kingdom
+Aachen, Germany
+Montpellier, France
+Gdynia, Poland
+Verona, Italy
+Espoo, Finland
+Messina, Italy
+Wolverhampton, United Kingdom
+Graz, Austria
+Nottingham, United Kingdom
+Częstochowa, Poland
+L'Hospitalet, Spain
+Braunschweig, Germany
+Plymouth, United Kingdom
+Porto, Portugal
+A Coruña, Spain
+Chemnitz, Germany
+Granada, Spain
+Bordeaux, France
+Krefeld, Germany
+Halle (Saale), Germany
+Kiel, Germany
+Southampton, United Kingdom
+Košice, Slovakia
+Reading, United Kingdom
+Ghent, Belgium
+Derby, United Kingdom
+Sosnowiec, Poland
+Magdeburg, Germany
+Ploieşti, Romania
+Aarhus, Denmark
+Radom, Poland
+Vitoria-Gasteiz, Spain
+Lille, France
+Swansea, United Kingdom
+Nicosia, Cyprus
+Badalona, Spain
+Oberhausen, Germany
+Freiburg, Germany
+Tampere, Finland
+Brăila, Romania
+Trieste, Italy
+Lübeck, Germany
+Kielce, Poland
+Eindhoven, Netherlands
+Toruń, Poland
+Rennes, France
+Debrecen, Hungary
+Padua, Italy
+Oradea, Romania
+Vantaa, Finland
+Oviedo, Spain
+Erfurt, Germany
+Aberdeen, United Kingdom
+Taranto, Italy
+Charleroi, Belgium
+Gliwice, Poland
+Burgas, Bulgaria
+Sabadell, Spain
+Terrassa, Spain
+Rostock, Germany
+Bytom, Poland
+Móstoles, Spain
+Pamplona, Spain
+Hagen, Germany
+Dudley, United Kingdom
+Kassel, Germany
+Mainz, Germany
+Almere, Netherlands
+Zabrze, Poland
+Groningen, Netherlands
+Newcastle upon Tyne, United Kingdom
+Northampton, United Kingdom
+Linz, Austria
+Cartagena, Spain
+Brescia, Italy
+Klaipėda, Lithuania
+Jerez de la Frontera, Spain
+Portsmouth, United Kingdom
+Liège, Belgium
+Luton, United Kingdom
+Preston, United Kingdom
+Santander, Spain
+Milton Keynes, United Kingdom
+Hamm, Germany
+Limassol, Cyprus
+Donostia, Spain
+Tilburg, Netherlands
+Miskolc, Hungary
+Reggio Calabria, Italy
+Reims, France
+Amadora, Portugal
+Fuenlabrada, Spain
+Alcalá de Henares, Spain
+Saarbrücken, Germany
+Turku, Finland
+Vila Nova de Gaia, Portugal
+Split, Croatia
+Bielsko-Biała, Poland
+Bacău, Romania
+Split, Croatia
+Modena, Italy
+Le Havre, France
+Leganés, Spain
+Norwich, United Kingdom
+Pilsen, Czech Republic
+Olsztyn, Poland
+Prato, Italy
+Castellon de la Plana, Spain
+Saint-Étienne, France
+Walsall, United Kingdom
+Herne, Germany
+Piraeus, Greece
+Braga, Portugal
+Odense, Denmark
+Mülheim, Germany
+Burgos, Spain
+Bournemouth, United Kingdom
+Piteşti, Romania
+Nijmegen, Netherlands
+Arad, Romania
+Patras, Greece
+Toulon, France
+Cagliari, Italy
+Osnabrück, Germany
+Solingen, Germany
+Parma, Italy
+Ludwigshafen, Germany
+Szeged, Hungary
+Leverkusen, Germany
+Southend on Sea, United Kingdom
+Rzeszów, Poland
+Pécs, Hungary
+Oldenburg, Germany
+Getafe, Spain
+Livorno, Italy
+Salamanca, Spain
+Grenoble, France
+Swindon, United Kingdom
+Foggia, Italy
+Sibiu, Romania
+Neuss, Germany
+Dijon, France
+Salzburg, Austria
+Rousse, Bulgaria
+Alcorcon, Spain
+Perugia, Italy
+Coimbra, Portugal
+Ruda Śląska, Poland
+Potsdam, Germany
+Angers, France
+Logroño, Spain
+Haarlem, Netherlands
+Huddersfield, United Kingdom
+Târgu Mureş, Romania
+Huelva, Spain
+Villeurbanne, France
+Saint-Denis, Réunion, France
+Poole, United Kingdom
+Oulu, Finland
+Paderborn, Germany
+Dundee, United Kingdom
+Oxford, United Kingdom
+Heidelberg, Germany
+Middlesbrough, United Kingdom
+Le Mans, France
+Blackpool, United Kingdom
+Nîmes, France
+Rybnik, Poland
+Reggio Emilia, Italy
+Aix-en-Provence, France
+Brest, France
+Darmstadt, Germany
+Uppsala, Sweden
+Arnhem, Netherlands
+Heraklion, Greece
+Newport, United Kingdom
+Clermont-Ferrand, France
+Rijeka, Croatia
+Bolton, United Kingdom
+Baia Mare, Romania
+Limoges, France
+Ipswich, United Kingdom
+Breda Wappen klein.PNG Breda, Netherlands
+Stara Zagora, Bulgaria
+Telford, United Kingdom
+Salerno, Italy
+York, United Kingdom
+Peristeri, Greece
+West Bromwich, United Kingdom
+Wapenapeldoorn.JPG Apeldoorn, Netherlands
+Badajoz, Spain
+Peterborough, United Kingdom
+Cádiz, Spain
+Stockport, United Kingdom
+Leon, Spain
+Tours, France
+Ravenna, Italy
+Würzburg, Germany
+Amiens, France
+Buzău, Romania
+Jyväskylä, Finland
+Tychy, Poland
+Dąbrowa Górnicza, Poland
+Ferrara, Italy
+Enschede, Netherlands
+Larissa, Greece
+Regensburg, Germany
+Šiauliai, Lithuania
+Opole, Poland
+Győr, Hungary
+Wałbrzych, Poland
+Płock, Poland
+Elbląg, Poland
+Slough, United Kingdom
+Gorzów Wielkopolski, Poland
+Amersfoort, Netherlands
+Siracusa, Italy
+Gloucester, United Kingdom
+Stadtwappen Goettingen.PNG Göttingen, Germany
+Recklinghausen Wappen.jpg Recklinghausen, Germany
+Heilbronn, Germany
+Aalborg, Denmark
+Ingolstadt, Germany
+Wolfsburg, Germany
+Watford, United Kingdom
+Metz, France
+Preston, United Kingdom
+Agualva-Cacém, Portugal
+Ulm, Germany
+Włocławek, Poland
+Monza, Italy
+Offenbach am Main, Germany
+Cork, Ireland
+Bottrop, Germany
+Maribor, Slovenia
+Santa Coloma de Gramenet, Spain
+Pforzheim, Germany
+Latina, Italy
+Dordrecht, Netherlands
+Mataró, Spain
+Zielona Góra, Poland
+Tarnów, Poland
+Leiden, Netherlands
+Innsbruck, Austria
+Perpignan, France
+Maastricht, Netherlands
+Bruges, Belgium
+Rotherham, United Kingdom
+Tarragona, Spain
+Zoetermeer, Netherlands
+Besançon, France
+Bremerhaven, Germany
+Pescara, Italy
+Nyíregyháza, Hungary
+Botoşani, Romania
+Marbella, Spain
+Remscheid, Germany
+Panevėžys, Lithuania
+Chorzów, Poland
+Lleida, Spain
+Boulogne-Billancourt, France
+Orléans, France
+Cambridge, United Kingdom
+Fürth, Germany
+Bergamo, Italy
+Jaén, Spain
+Satu Mare, Romania
+Reutlingen, Germany
+Daugavpils, Latvia
+Rouen, France
+Râmnicu Vâlcea, Romania
+Västerås, Sweden
+Zwolle, Netherlands
+Mulhouse, France
+Ourense, Spain
+Caen, France
+Kalisz, Poland
+Forlì, Italy
+Osijek, Croatia
+Salzgitter, Germany
+Koszalin, Poland
+Moers, Germany
+Piatra Neamţ, Romania
+Vicenza, Italy
+Örebro, Sweden
+Pleven, Bulgaria
+Suceava, Romania
+Saint-Denis, Seine-Saint-Denis, France
+Exeter, United Kingdom
+Namur, Belgium
+Kallithea, Greece
+Algeciras, Spain
+Eastbourne, United Kingdom
+Drobeta-Turnu Severin, Romania
+Koblenz, Germany
+Kecskemét, Hungary
+Siegen, Germany
+Legnica, Poland
+Bergisch Gladbach, Germany
+Sutton Coldfield, United Kingdom
+Nancy, France
+Cottbus, Germany
+Liberec, Czech Republic
+Blackburn, United Kingdom
+Terni, Italy
+Trento, Italy
+Colchester, United Kingdom
+Linköping, Sweden
+Gera, Germany
+Luxembourg, Luxembourg
+Oldham, United Kingdom
+Trier, Germany
+Saint-Paul, France
+Székesfehérvár, Hungary
+Dos Hermanas, Spain
+Erlangen.jpg Erlangen, Germany
+Argenteuil, France
+Montreuil, France
+St Helens, United Kingdom
+Hildesheim, Germany
+Jena, Germany
+Lahti, Finland
+Olomouc, Czech Republic
+Tartu, Estonia
+'s-Hertogenbosch, Netherlands
+Almada, Portugal
+Torrejón de Ardoz, Spain
+Novara, Italy
+Witten, Germany
+Crawley, United Kingdom
+Ancona, Italy
+Słupsk, Poland
+Bolzano, Italy

@@ -1,0 +1,120 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/compass_activity_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+	android:background="#000000"
+    tools:context=".CompassActivity" >
+
+    <ImageView
+        android:id="@+id/compass_bar"
+        android:contentDescription="bar"
+        android:layout_width="wrap_content"
+        android:layout_height="70dp"
+        android:layout_marginTop="43dp"
+        android:src="@drawable/compass_bar" />
+    
+    <ImageView
+        android:id="@+id/compass_underline"
+        android:contentDescription="underline"
+        android:layout_width="match_parent"
+        android:layout_height="13dp"
+        android:layout_marginTop="104dp"
+        android:src="@drawable/orange_pointer" />
+    
+    <LinearLayout 
+        android:id="@+id/buddy_name_container"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="76dp"
+        android:layout_below="@id/compass_underline"
+        android:visibility="gone"
+        android:gravity="center_horizontal">
+        <com.reconinstruments.commonwidgets.SansSemiBoldTextView
+	        android:id="@+id/buddy_name"
+	        android:layout_width="wrap_content"
+	        android:layout_height="48dp"
+	 		android:textIsSelectable="false"
+	 		android:textSize = "30sp"
+	 		android:textStyle = "bold"
+	 		android:textColor="#fff"/>
+	    <com.reconinstruments.commonwidgets.SansSemiBoldTextView
+	        android:id="@+id/distance_from_me"
+	        android:layout_width="wrap_content"
+	        android:layout_height="28dp"
+	 		android:textIsSelectable="false"
+	 		android:textSize = "26sp"
+	 		android:textColor="#fff"
+	    	android:gravity="center"
+	    	android:singleLine="true" 
+	    	android:lines="1"
+	    	android:ellipsize="end"
+	    	android:layout_marginLeft="3dp"/>
+	    
+    </LinearLayout>
+
+    <com.reconinstruments.commonwidgets.SansSemiBoldTextView
+        android:id="@+id/offline_time"
+        android:layout_width="wrap_content"
+        android:layout_height="36dp"
+ 		android:textIsSelectable="false"
+ 		android:textSize = "22sp"
+ 		android:textStyle = "bold"
+ 		android:textColor="#aaa"
+    	android:gravity="center"
+     	android:layout_centerHorizontal="true" 
+     	android:layout_marginTop = "147dp"
+     	android:visibility="gone"
+        android:layout_alignParentTop="true"/>
+    
+    <LinearLayout 
+        android:id="@+id/tap_text_container"
+        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="39dp"
+        android:orientation="horizontal"
+        android:visibility="invisible">
+	    <com.reconinstruments.commonwidgets.SansSemiBoldTextView
+	        android:id="@+id/tap_text"
+	        android:drawableRight="@drawable/share_location_icon"
+	        android:drawablePadding="8dp"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	 		android:textIsSelectable="false"
+	    	android:layout_marginRight="5dp"
+	 		android:textSize = "22sp"
+	 		android:textStyle="bold"
+	 		android:textColor="@color/recon_text_gray"
+	     	android:layout_marginLeft = "15dp"
+	    	android:gravity="center" 
+	    	android:text="@string/tap"/>     
+	    <com.reconinstruments.commonwidgets.SansSemiBoldTextView
+	        android:id="@+id/on_engage_app_text"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	 		android:textIsSelectable="false"
+	    	android:layout_marginRight="15dp"
+	 		android:textSize = "22sp"
+	 		android:textStyle="bold"
+	 		android:textColor="@color/recon_text_gray"
+	    	android:gravity="center_horizontal"
+	    	android:text="@string/on_engage_app"/>  
+    </LinearLayout>
+    <com.reconinstruments.commonwidgets.SansSemiBoldTextView
+	        android:id="@+id/number_buddies"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	 		android:textIsSelectable="false"
+	    	android:layout_marginRight="15dp"
+	 		android:textSize = "22sp"
+	 		android:textStyle="bold"
+	 		android:textColor="@color/recon_text_gray"
+	     	android:layout_marginLeft = "15dp"
+	     	android:layout_marginBottom = "5dp"
+	    	android:layout_centerHorizontal="true"
+	    	android:gravity="center"
+	    	android:layout_alignParentBottom="true"
+	    	android:includeFontPadding="false"/>  
+</RelativeLayout>

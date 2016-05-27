@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_marginTop="40sp"
+              android:layout_width="428sp"
+              android:layout_height="match_parent">
+    <LinearLayout
+                  android:orientation="horizontal"
+                  android:layout_gravity="center"
+                  android:gravity="center"
+                  android:layout_marginLeft="14sp"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content">
+        <include
+                android:id="@+id/notifications"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="27dp"
+                layout="@layout/quick_nav_icon" />
+        <include
+                android:id="@+id/camera"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="3dp"
+                layout="@layout/quick_nav_icon" />
+        <include
+                android:id="@+id/rightView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                layout="@layout/quick_nav_icon" />
+
+    </LinearLayout>
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_marginTop="10sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+    <TextView
+            android:id="@+id/swipeView"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/home_text_1"
+            android:textSize="18sp"
+            android:textColor="@color/recon_nav_grey"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textStyle="bold" />
+        <ImageView
+                android:id="@+id/downArrow"
+                android:layout_marginTop="2sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/dwn_arrow"/>
+   <TextView
+            android:id="@+id/returnSentence"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/home_text_2"
+            android:textSize="18sp"
+            android:textColor="@color/recon_nav_grey"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textStyle="bold" />
+        </LinearLayout>
+</LinearLayout>

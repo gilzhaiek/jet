@@ -1,0 +1,3 @@
+include ':..:HUDResources'
+include ':..:..:production:hudos'
+include ':HUDConnectivityTester'

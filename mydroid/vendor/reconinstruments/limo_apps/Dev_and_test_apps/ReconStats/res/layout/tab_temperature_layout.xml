@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_height="fill_parent" android:layout_width="fill_parent"
+	android:id="@+id/last_jump_layout" android:paddingLeft="15px">
+
+	<TextView android:id="@+id/tab_title" android:text="--"
+		android:textColor="@color/temp_green" style="@style/detailText"
+		android:layout_width="wrap_content" android:layout_height="wrap_content" />
+
+	
+	<!-- Max Temp -->
+	<TextView android:id="@+id/max_temp" android:text="Max"
+		style="@style/detailText" android:layout_below="@+id/tab_title" />
+
+	<TextView android:id="@+id/max_temp_field" android:text="--"
+		android:textColor="@color/temp_green" style="@style/detailText"
+		android:layout_toLeftOf="@+id/max_temp_field_unit"
+		android:layout_marginRight="10px" android:layout_alignBaseline="@+id/max_temp" />
+
+	<TextView android:id="@+id/max_temp_field_unit"
+		android:text="m" style="@style/detailText"
+		android:layout_alignParentRight="True" android:layout_alignBaseline="@+id/max_temp" />
+	
+	
+	<!-- Min Temp -->
+	<TextView android:id="@+id/min_temp" android:text="Min"
+		style="@style/detailText" android:layout_below="@+id/max_temp" />
+
+	<TextView android:id="@+id/min_temp_field" android:text="--"
+		android:textColor="@color/temp_green" style="@style/detailText"
+		android:layout_toLeftOf="@+id/min_temp_field_unit"
+		android:layout_marginRight="10px" android:layout_alignBaseline="@+id/min_temp" />
+
+	<TextView android:id="@+id/min_temp_field_unit"
+		android:text="m" style="@style/detailText"
+		android:layout_alignParentRight="True" android:layout_alignBaseline="@+id/min_temp" />
+	
+	
+	<!-- All Time Max Temp -->
+	<TextView android:id="@+id/all_time_max_temp" android:text="All Time Max"
+		style="@style/detailText" android:layout_below="@+id/min_temp" />
+
+	<TextView android:id="@+id/all_time_max_temp_field" android:text="--"
+		android:textColor="@color/temp_green" style="@style/detailText"
+		android:layout_toLeftOf="@+id/all_time_max_temp_field_unit"
+		android:layout_marginRight="10px" android:layout_alignBaseline="@+id/all_time_max_temp" />
+
+	<TextView android:id="@+id/all_time_max_temp_field_unit"
+		android:text="m" style="@style/detailText"
+		android:layout_alignParentRight="True" android:layout_alignBaseline="@+id/all_time_max_temp" />
+	
+	
+	<!-- All Time Min Temp -->
+	<TextView android:id="@+id/all_time_min_temp" android:text="All Time Min"
+		style="@style/detailText" android:layout_below="@+id/all_time_max_temp" />
+
+	<TextView android:id="@+id/all_time_min_temp_field" android:text="--"
+		android:textColor="@color/temp_green" style="@style/detailText"
+		android:layout_toLeftOf="@+id/all_time_min_temp_field_unit"
+		android:layout_marginRight="10px" android:layout_alignBaseline="@+id/all_time_min_temp" />
+
+	<TextView android:id="@+id/all_time_min_temp_field_unit"
+		android:text="m" style="@style/detailText"
+		android:layout_alignParentRight="True" android:layout_alignBaseline="@+id/all_time_min_temp" />
+	
+</RelativeLayout>

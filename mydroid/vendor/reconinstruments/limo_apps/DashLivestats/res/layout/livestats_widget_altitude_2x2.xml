@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/recon_widget2x2" android:background="@drawable/widget_alt_2x2"
+    >
+		<TextView
+		android:id="@+id/value"
+		style="@style/recon_widget_field"
+		android:layout_alignParentBottom="True"
+		android:singleLine="True" />
+</RelativeLayout>

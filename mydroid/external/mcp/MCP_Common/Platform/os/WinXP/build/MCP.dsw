@@ -1,0 +1,283 @@
+Microsoft Developer Studio Workspace File, Format Version 6.00
+# WARNING: DO NOT EDIT OR DELETE THIS WORKSPACE FILE!
+
+###############################################################################
+
+Project: "APPS_BT"="..\..\..\..\..\EBTIPS\apps\WinXP-btips\projects\apps\apps.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    APPS_BT
+    ..\..\..\..\..\EBTIPS\apps\WinXP-btips
+    end source code control
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "APPS_FM"=..\..\..\..\..\HSW_FMStack\apps\WinXP\APPS_FM.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    APPS_FM
+    ..\..\..\..\..\HSW_FMStack\apps
+    end source code control
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "APPS_MCP"=.\APPS_MCP\APPS_MCP.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    APPS_MCP
+    .
+    end source code control
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name APPS_FM
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name MCP_common
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name MCP_HAL
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name APPS_BT
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name SBC_encoder
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name SRC
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "BTL"="..\..\..\..\..\EBTIPS\apps\WinXP-btips\projects\btl\btl.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    BTL
+    ..\..\..\..\..\EBTIPS
+    end source code control
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "BT_HAL"=.\bthal.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    BT_HAL
+    ..\..\..\..
+    end source code control
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "BT_stack"="..\..\..\..\..\EBTIPS\apps\WinXP-btips\projects\stack\stack.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    BT_stack
+    ..\..\..\..\..\EBTIPS\apps\WinXP-btips\projects\stack
+    end source code control
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "CCM"=.\ccm.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    CCM
+    ..\..\..
+    end source code control
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "FM_HAL"=.\fmhal.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    FM_HAL
+    ..\..\..\..
+    end source code control
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "FM_stack"=..\..\..\..\..\HSW_FMStack\build\fm.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    fm
+    ..\..\..\..\..\HSW_FMStack\build
+    end source code control
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "MCP_HAL"=.\mcp_hal.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    MCP_HAL
+    ..\..\..\..
+    end source code control
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "MCP_common"=.\mcp_common.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    MCP_common
+    ..\..\..
+    end source code control
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name BT_HAL
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name BT_stack
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name BTL
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name CCM
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name FM_HAL
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name FM_stack
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name MCP_HAL
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name MCP_tran
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "MCP_tran"=.\mcp_tran.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    MCP_tran
+    ..\..\..
+    end source code control
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "SBC_encoder"=.\sbc_encoder\sbc_encoder.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    SBC_encoder
+    ..\..
+    end source code control
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "SRC"=.\src\src.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    SRC
+    .\src
+    end source code control
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Global:
+
+Package=<5>
+{{{
+}}}
+
+Package=<3>
+{{{
+}}}
+
+###############################################################################
+

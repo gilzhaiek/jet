@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Welcome</string>
+    
+    <!-- string identifiers for each tutorial page -->
+    <string name="swipe_backward_page">SwipeBackward</string>
+    <string name="swipe_down_page">SwipeDown</string>
+    <string name="back_button_page">BackButton</string>
+    <string name="select_button_page">SelectButton</string>
+    <string name="finished_page">Finished</string>
+    
+    <!-- Swipe transition success -->
+    <string name="swipe_forward_success">Great!</string>
+    <string name="swipe_backward_success">Perfect!</string>
+    <string name="swipe_down_success">Excellent!</string>
+    <string name="back_success">Well Done!</string>
+    <string name="select_success">Finished!</string>
+    
+    <!-- tutorial messages -->
+    <string name="intro_welcome_message">This is your TOUCHPAD</string>
+    <string name="swipe_forward_bottom_text_1">Try swiping it </string>
+    <string name="swipe_forward_bottom_text_2">forward</string>
+    <string name="swipe_back_bottom_text_1">Now swipe </string>
+    <string name="swipe_back_bottom_text_2">backward</string>
+    <string name="swipe_down_bottom_text_1">Let\'s try swiping </string>
+    <string name="swipe_down_bottom_text_2">down</string>
+    <string name="back_button_top_text"> is your BACK button</string>
+    <string name="back_button_bottom_text">Try clicking it</string>
+    <string name="select_button_top_text"> is your SELECT button</string>
+    <string name="select_button_bottom_text">Click it to finish</string>
+    <string name="outro_message">Time to start piloting JET</string>
+    
+</resources>

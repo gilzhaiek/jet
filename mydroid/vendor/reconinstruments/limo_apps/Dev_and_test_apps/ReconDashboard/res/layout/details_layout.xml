@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent" android:layout_height="fill_parent">
+
+	<!-- MENU -->
+	<LinearLayout android:id="@+id/details_menu"
+		android:layout_height="fill_parent" android:layout_width="60px"
+		android:orientation="vertical" android:layout_alignParentLeft="True">
+
+		<TextView android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:text="1" />
+
+		<TextView android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:text="2" />
+
+		<TextView android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:text="3" />
+
+		<TextView android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:text="4" />
+
+	</LinearLayout>
+
+	<!-- Current Screen -->
+	<RelativeLayout android:layout_height="fill_parent"
+		android:layout_width="328px" android:orientation="vertical"
+		android:layout_toRightOf="@+id/details_menu"
+		android:layout_marginLeft="15px">
+
+		<ImageView android:id="@+id/arrow" android:src="@drawable/arrow"
+			android:layout_alignParentTop="True" android:layout_alignParentRight="True"
+			android:layout_width="wrap_content" android:layout_height="wrap_content" />
+
+		<!-- Last Run View -->
+		<RelativeLayout android:id="@+id/last_run_view"
+			android:visibility="visible" android:layout_height="fill_parent"
+			android:layout_width="fill_parent">
+
+			<TextView android:id="@+id/last_run" android:text="LAST RUN"
+				style="@style/detailText" android:textColor="@color/vert_blue" />
+
+			<TextView android:id="@+id/last_run_number" android:text="#0"
+				style="@style/detailText" android:layout_toRightOf="@+id/last_run"
+				android:layout_marginLeft="10px" />
+
+			<TextView android:id="@+id/max_speed" android:text="MAX SPEED"
+				style="@style/detailText" android:layout_below="@+id/last_run" />
+
+			<TextView android:id="@+id/max_speed_field" android:text="--"
+				android:textColor="@color/max_speed_green" style="@style/detailText"
+				android:layout_toLeftOf="@+id/max_speed_field_unit"
+				android:layout_marginRight="10px" android:layout_alignBaseline="@+id/max_speed" />
+
+			<TextView android:id="@+id/max_speed_field_unit"
+				android:text="kmh" style="@style/detailText"
+				android:layout_alignParentRight="True" android:layout_alignBaseline="@+id/max_speed" />
+
+			<TextView android:id="@+id/avg_speed" android:text="AVG SPEED"
+				style="@style/detailText" android:layout_below="@+id/max_speed" />
+
+			<TextView android:id="@+id/avg_speed_field" android:text="--"
+				android:textColor="@color/max_speed_green" style="@style/detailText"
+				android:layout_toLeftOf="@+id/avg_speed_field_unit"
+				android:layout_marginRight="10px" android:layout_alignBaseline="@+id/avg_speed" />
+
+			<TextView android:id="@+id/avg_speed_field_unit"
+				android:text="kmh" style="@style/detailText"
+				android:layout_alignParentRight="True" android:layout_alignBaseline="@+id/avg_speed" />
+
+			<TextView android:id="@+id/vertical" android:text="VRT"
+				style="@style/detailText" android:layout_below="@+id/avg_speed" />
+
+			<TextView android:id="@+id/vertical_field" android:text="--"
+				android:textColor="@color/vert_blue" style="@style/detailText"
+				android:layout_toLeftOf="@+id/vertical_field_unit"
+				android:layout_marginRight="10px" android:layout_alignBaseline="@+id/vertical" />
+
+			<TextView android:id="@+id/vertical_field_unit"
+				android:text="m" style="@style/detailText"
+				android:layout_alignParentRight="True" android:layout_alignBaseline="@+id/vertical" />
+
+			<TextView android:id="@+id/distance" android:text="DST"
+				style="@style/detailText" android:layout_below="@+id/vertical" />
+
+			<TextView android:id="@+id/distance_field" android:text="--"
+				android:textColor="@color/dist_purple" style="@style/detailText"
+				android:layout_toLeftOf="@+id/distance_field_unit"
+				android:layout_marginRight="10px" android:layout_alignBaseline="@+id/distance" />
+
+			<TextView android:id="@+id/distance_field_unit"
+				android:text="m" style="@style/detailText"
+				android:layout_alignParentRight="True" android:layout_alignBaseline="@+id/distance" />
+
+		</RelativeLayout>
+
+		<!-- Last Jump View -->
+		<RelativeLayout android:id="@+id/last_jump_view"
+			android:visibility="gone" android:layout_height="fill_parent"
+			android:layout_width="fill_parent">
+
+			<TextView android:id="@+id/last_jump" android:text="LAST JUMP"
+				android:textColor="@color/jump_pink" style="@style/detailText"
+				android:layout_width="wrap_content" android:layout_height="wrap_content" />
+
+			<TextView android:id="@+id/last_jump_number" android:text="#0"
+				style="@style/detailText" android:layout_toRightOf="@+id/last_jump"
+				android:layout_marginLeft="10px" />
+
+			<TextView android:id="@+id/air_time" android:text="AIR T"
+				style="@style/detailText" android:layout_below="@+id/last_jump" />
+
+			<TextView android:id="@+id/air_time_field" android:text="--"
+				android:textColor="@color/jump_pink" style="@style/detailText"
+				android:layout_toLeftOf="@+id/air_time_field_unit"
+				android:layout_marginRight="10px" android:layout_alignBaseline="@+id/air_time" />
+
+			<TextView android:id="@+id/air_time_field_unit"
+				android:text="s" style="@style/detailText"
+				android:layout_alignParentRight="True" android:layout_alignBaseline="@+id/air_time" />
+
+			<TextView android:id="@+id/jump_distance" android:text="DIST"
+				style="@style/detailText" android:layout_below="@+id/air_time" />
+
+			<TextView android:id="@+id/jump_distance_field" android:text="--"
+				android:textColor="@color/jump_pink" style="@style/detailText"
+				android:layout_toLeftOf="@+id/jump_distance_field_unit"
+				android:layout_marginRight="10px" android:layout_alignBaseline="@+id/jump_distance" />
+
+			<TextView android:id="@+id/jump_distance_field_unit"
+				android:text="m" style="@style/detailText"
+				android:layout_alignParentRight="True" android:layout_alignBaseline="@+id/jump_distance" />
+
+			<TextView android:id="@+id/height" android:text="HEIGHT"
+				style="@style/detailText" android:layout_below="@+id/jump_distance" />
+
+			<TextView android:id="@+id/height_field" android:text="--"
+				android:textColor="@color/jump_pink" style="@style/detailText"
+				android:layout_toLeftOf="@+id/height_field_unit"
+				android:layout_marginRight="10px" android:layout_alignBaseline="@+id/height" />
+
+			<TextView android:id="@+id/height_field_unit" android:text="m"
+				style="@style/detailText" android:layout_alignParentRight="True"
+				android:layout_alignBaseline="@+id/height" />
+
+			<TextView android:id="@+id/drop" android:text="DROP"
+				style="@style/detailText" android:layout_below="@+id/height" />
+
+			<TextView android:id="@+id/drop_field" android:text="--"
+				android:textColor="@color/jump_pink" style="@style/detailText"
+				android:layout_toLeftOf="@+id/drop_field_unit"
+				android:layout_marginRight="10px" android:layout_alignBaseline="@+id/drop" />
+
+			<TextView android:id="@+id/drop_field_unit" android:text="m"
+				style="@style/detailText" android:layout_alignParentRight="True"
+				android:layout_alignBaseline="@+id/drop" />
+
+		</RelativeLayout>
+
+		<!-- Chrono View -->
+		<RelativeLayout android:id="@+id/chrono_view"
+			android:visibility="gone" android:layout_height="fill_parent"
+			android:layout_width="fill_parent">
+
+			<TextView android:id="@+id/chrono" android:text="CHRONO"
+				android:textColor="@color/chrono_yellow" style="@style/detailText" />
+
+			<TextView android:id="@+id/chrono_number" android:text="#0"
+				style="@style/detailText" android:layout_toRightOf="@+id/chrono"
+				android:layout_marginLeft="10px" />
+
+			<TextView android:id="@+id/chrono_time" android:text="00:06"
+				android:textColor="@color/chrono_yellow" android:textSize="50px"
+				style="@style/detailText" android:layout_below="@+id/chrono"
+				android:layout_marginTop="15px" />
+
+			<TextView android:id="@+id/chrono_time_ms" android:text=".25"
+				android:textColor="@color/chrono_yellow" style="@style/detailText"
+				android:layout_toRightOf="@+id/chrono_time"
+				android:layout_alignBaseline="@+id/chrono_time"
+				android:layout_below="@+id/chrono" android:textSize="40px" />
+
+			<TextView android:id="@+id/chrono_start_end_time" android:text="--"
+				style="@style/detailText" android:layout_below="@+id/chrono_time" />
+
+		</RelativeLayout>
+
+	</RelativeLayout>
+
+</RelativeLayout>

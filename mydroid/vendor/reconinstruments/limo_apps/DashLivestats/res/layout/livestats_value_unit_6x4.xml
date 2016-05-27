@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--To be included in a RelativeLayout-->
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content">
+    <com.reconinstruments.commonwidgets.SansSemiBoldTextView
+            android:id="@+id/value"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/seperator"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="-10dp"
+            android:gravity="center"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:text=""
+            android:textColor="#ffffff"
+            android:textSize="116dp"/>
+    <com.reconinstruments.commonwidgets.SansSemiBoldTextView
+            android:id="@+id/unit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="4dp"
+            android:layout_marginRight="10dp"
+            android:text=""
+            android:textColor="#808080"
+            android:textSize="20dp"/>
+</merge>

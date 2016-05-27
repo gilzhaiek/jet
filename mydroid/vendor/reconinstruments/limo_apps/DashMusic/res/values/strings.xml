@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="app_name">DashMusic</string>
+	<string name="action_settings">Settings</string>
+	<string name="hello_world">Hello world!</string>
+	<string name="error">Connection Error</string>
+	<string name="android_overlay">No Phone Connected\nOpen Engage on your Android Phone to connect</string>
+	<string name="android_overlay_oakley">No Phone Connected\nOpen AirWave on your Android Phone to connect</string>
+	<string name="no_connection_text">You must have a smartphone\nconnected to enable this feature</string>
+</resources>

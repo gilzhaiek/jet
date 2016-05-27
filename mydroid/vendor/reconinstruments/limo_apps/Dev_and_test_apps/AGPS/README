@@ -1,0 +1,14 @@
+Patrick Cho
+
+This is AGPS code from JACK and I removed the hard coded file paths and names.
+
+You can have a look at GPSAssist.java and change the constant path of the aiding files.
+
+
+To pull all aiding files from the server unit that is collecting ephemeris files, I created
+
+a script file. in server.conf, first line is serial number of the server unit and you can run
+
+prepare_aidings.bash to pull all the files and rename them. And you can push those alm and raw files
+
+to right path and run the assist application.

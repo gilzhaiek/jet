@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/widget2x2" android:background="@drawable/widget_maxspd_2x2"
+    >
+	
+	<TextView android:id="@+id/maxspd_field" style="@style/widget_field" android:layout_alignParentBottom="True" android:singleLine="True"/>
+	<TextView android:id="@+id/unit_field" 
+	    android:layout_toRightOf="@+id/maxspd_field"
+	    android:layout_alignBaseline="@+id/maxspd_field"
+	    android:textSize="20px"
+	    style="@style/widget_field" />
+</RelativeLayout>

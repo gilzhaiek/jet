@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:background="@color/recon_jet_background" >
+	<RelativeLayout
+		android:id="@+id/top_bar"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="20dp" >
+		<LinearLayout
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_centerHorizontal="true"
+			android:layout_centerVertical="true"
+			android:orientation="horizontal" >
+			<ImageView
+				android:id="@+id/remote"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_gravity="center"
+				android:src="@drawable/remote_header_icon" />
+			<TextView
+				android:id="@+id/title_text"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_gravity="center"
+				android:layout_marginLeft="10dp"
+				android:layout_toRightOf="@id/remote"
+				android:maxLines="1"
+				android:text="@string/remotesdetected"
+				android:textColor="#ffffff"
+				android:textSize="30dp" />
+			<TextView
+				android:id="@+id/timer_text"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_alignParentRight="true"
+				android:layout_gravity="center"
+				android:layout_marginLeft="10dp"
+				android:text=""
+				android:textColor="#ffb300"
+				android:textSize="30dp" />
+		</LinearLayout>
+	</RelativeLayout>
+	<com.reconinstruments.commonwidgets.CenterListView
+		android:id="@android:id/list"
+		android:layout_width="210dp"
+		android:layout_height="150dp"
+		android:layout_centerInParent="true"
+		android:divider="@null"
+		android:dividerHeight="0dp"
+		android:listSelector="@drawable/check_selector" />
+	<TextView
+		android:id="@+id/center_text"
+		android:layout_width="380dp"
+		android:layout_height="match_parent"
+		android:layout_centerInParent="true"
+		android:layout_marginLeft="30dp"
+		android:layout_marginRight="30dp"
+		android:gravity="center"
+		android:text="@string/check_the_number_on_the_back"
+		android:textColor="#ffffff"
+		android:textSize="22dp" />
+	<!-- semi-bold^ -->
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_alignParentBottom="true"
+		android:layout_centerHorizontal="true"
+		android:layout_marginBottom="20dp"
+		android:orientation="vertical" >
+		<TextView
+			android:id="@+id/white_text"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:gravity="center_horizontal"
+			android:text="@string/press_power_button"
+			android:textColor="#ffffff"
+			android:textSize="22dp" />
+		<TextView
+			android:id="@+id/gray_text"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:gravity="center_horizontal"
+			android:text=""
+			android:textColor="#ffffff"
+			android:textSize="22dp"
+			android:visibility="gone" />
+	</LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- this is the SNOW-specific configuration for geodata service data - replace for other products -->
+
+<root>
+<file_id id="dsm_configuration.xml Oct 30, 2014 A"/>
+<profile name="snow" >
+	<transcoder name="ReconBaseTranscoder" />      <!-- referenced as client-friendly source id enum RECON_BASE (hardcoded in transcoder) -->
+	<transcoder name="ReconSnowTranscoder" />      <!-- referenced as client-friendly source id enum RECON_SNOW (hardcoded in transcoder) -->
+<!-- old...	<transcoder name="MDTranscoder" />       referenced as client-friendly source id enum MD_SKI (hardcoded in transcoder) -->
+</profile>
+</root>

@@ -1,0 +1,11 @@
+sh mkkey.sh platform
+
+-> then put recon123 for password
+
+
+# sh mkkey.sh media
+# not needed for now
+# sh mkkey.sh shared
+# not needed for now
+# sh mkkey.sh release
+# not needed for now

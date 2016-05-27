@@ -1,0 +1,11 @@
+This app contains a stand-alone activity that detects jumps based on
+recon sensor framework. It uses free fall interrupt listener in the
+context of android framework (with free fall event added by
+recon). Following receiving of this free fall interrupt it will put
+another instance of sensor listener into high freq read. and calculate
+jump height and distance.
+
+To have a fully working solution, the algorithms implemented in the
+activity should be put in a service and then interfaced with MOD Service.
+
+

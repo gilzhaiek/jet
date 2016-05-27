@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <string name="connectedEventLabel">PAN Connected</string> 
+    <string name="disconnectedEventLabel">PAN Disconnected</string> 
+    <string name="connectionStatusEventLabel">PAN Connection Status</string>
+    <string name="incomingConnectionRequestEventLabel">PAN Incoming Connection Request</string>
+
+    <string name="statusLabel">Status</string>
+    <string name="serviceTypeLabel">Service Type</string>
+    <string name="authorizationRequiredLabel">Authorization Required</string>
+    <string name="authenticationRequiredLabel">Authentication Required</string>
+    <string name="encryptionRequiredLabel">Encryption Required</string>
+    <string name="personalAreaNetworkUserLabel">Personal Area Network User</string>
+    <string name="networkAccessPointLabel">Network Access Point</string>
+    <string name="groupAdhocNetworkLabel">Group Adhoc Network</string>
+    
+</resources>

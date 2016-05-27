@@ -1,0 +1,132 @@
+<merge xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <LinearLayout
+        android:id="@+id/no_song"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:layout_marginLeft="110dp"
+        android:duplicateParentState="true">
+
+         <com.reconinstruments.widgets.CustomTextView
+       		style="@style/focusable_text_shadow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:text="No Music Playing"
+            android:textSize="24dip"
+            android:textStyle="bold"
+            android:duplicateParentState="true" />
+
+        <LinearLayout
+            android:id="@+id/shuffle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:duplicateParentState="true" >
+
+         <com.reconinstruments.widgets.CustomTextView
+       		style="@style/focusable_text_shadow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:text="Shuffle Songs"
+                android:textSize="18dip"
+                android:textStyle="normal"
+                android:duplicateParentState="true" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/music_shuffle_focusable"
+                android:duplicateParentState="true" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/song_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="left|center_vertical"
+        android:layout_gravity="left|center_vertical"
+        android:visibility="gone" 
+        android:duplicateParentState="true">
+        
+
+         <com.reconinstruments.widgets.CustomTextView
+            android:id="@+id/player_state"
+       		style="@style/focusable_text_shadow"
+            android:layout_width="85dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="60dp"
+            android:gravity="right"
+            android:text="Music Playing"
+            android:textSize="24dip"
+            android:textStyle="bold"
+            android:duplicateParentState="true" />
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="2dp"
+            android:layout_height="70dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_toRightOf="@id/player_state"
+            android:background="@drawable/vertical_gradient" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" 
+            android:layout_toRightOf="@+id/divider"
+            android:orientation="vertical"
+            android:layout_marginRight="30dp"
+            android:duplicateParentState="true">
+
+         <com.reconinstruments.widgets.CustomTextView
+                android:id="@+id/artist_name"
+       		style="@style/focusable_text_shadow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:includeFontPadding="false"
+                android:singleLine="true"
+                android:text="Artist"
+                android:textSize="20dip"
+                android:duplicateParentState="true"/>
+         <com.reconinstruments.widgets.CustomTextView
+                android:id="@+id/song_name"
+       		style="@style/focusable_text_shadow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:includeFontPadding="false"
+                android:singleLine="true"
+                android:text="Song Name"
+                android:textSize="22dip"
+                android:textStyle="bold"  
+                android:duplicateParentState="true"/>
+
+            <!-- android:ellipsize="marquee" -->
+
+
+
+         <com.reconinstruments.widgets.CustomTextView
+                android:id="@+id/album_name"
+       		style="@style/focusable_text_shadow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:includeFontPadding="false"
+                android:singleLine="true"
+                android:text="Album"
+                android:textSize="20dip"
+                android:duplicateParentState="true"/>
+                
+        </LinearLayout>
+    </RelativeLayout>
+
+</merge>

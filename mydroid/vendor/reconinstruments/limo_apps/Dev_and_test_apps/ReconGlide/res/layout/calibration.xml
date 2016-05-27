@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:paddingTop="10dip"
+    android:paddingBottom="10dip"
+    android:paddingLeft="20dip"
+    android:paddingRight="20dip" >
+    
+    <TextView
+        android:id="@+id/title"
+        android:textSize="50dip"
+        android:textColor="#FFFFFF"
+        android:text="Altitude Calibration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true" />
+
+    <RelativeLayout 
+        android:layout_height="fill_parent"
+        android:layout_width="125dip"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true" >
+    	
+        <!-- Calibrated Alt -->
+    	<RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="90dip"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/border_orange" >
+            
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dip"
+                android:orientation="horizontal"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true" >
+                
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="7dip"
+                    android:layout_marginRight="10dip"
+                    android:src="@drawable/altitude_20" />
+                
+                <TextView android:id="@+id/cal_alt_title" 
+	                android:text="CAL"
+	                android:textSize="30dip"
+	                android:textColor="#FFFF8C14"
+	                android:lines="1"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content" />
+                
+            </LinearLayout>
+            
+            <TextView android:id="@+id/cal_alt_field" 
+                android:text="--"
+                style="@style/field"
+                android:layout_marginBottom="10dip"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentBottom="true" />
+            
+        </RelativeLayout>
+
+        <!-- Raw Alt -->
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="90dip"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/border_orange" >
+            
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dip"
+                android:orientation="horizontal"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true" >
+                
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="7dip"
+                    android:layout_marginRight="10dip"
+                    android:src="@drawable/altitude_20" />
+                
+                <TextView android:id="@+id/raw_alt_title" 
+	                android:text="RAW"
+	                android:textSize="30dip"
+	                android:textColor="#FFFF8C14"
+	                android:lines="1"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content" />
+                
+            </LinearLayout>
+            
+            <TextView android:id="@+id/raw_alt_field" 
+                android:text="--"
+                style="@style/field"
+                android:layout_marginBottom="10dip"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentBottom="true" />
+            
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+</RelativeLayout>

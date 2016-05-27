@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_height="fill_parent" android:layout_width="fill_parent"
+	android:id="@+id/last_jump_layout" android:paddingLeft="15px">
+
+	<TextView android:id="@+id/tab_title" android:text="--"
+		android:textColor="@color/vert_blue" style="@style/detailText"
+		android:layout_width="wrap_content" android:layout_height="wrap_content" />
+	
+	<!-- Max Speed -->
+	<TextView android:id="@+id/max_speed" android:text="Max Speed"
+		style="@style/detailText" android:layout_below="@+id/tab_title" />
+
+	<TextView android:id="@+id/max_speed_field" android:text="--"
+		android:textColor="@color/max_speed_green" style="@style/detailText"
+		android:layout_toLeftOf="@+id/max_speed_field_unit"
+		android:layout_marginRight="10px" android:layout_alignBaseline="@+id/max_speed" />
+
+	<TextView android:id="@+id/max_speed_field_unit"
+		android:text="m" style="@style/detailText"
+		android:layout_alignParentRight="True" android:layout_alignBaseline="@+id/max_speed" />
+	
+	
+	<!-- Avg Speed -->
+	<TextView android:id="@+id/avg_speed" android:text="Avg Speed"
+		style="@style/detailText" android:layout_below="@+id/max_speed" />
+
+	<TextView android:id="@+id/avg_speed_field" android:text="--"
+		android:textColor="@color/max_speed_green" style="@style/detailText"
+		android:layout_toLeftOf="@+id/avg_speed_field_unit"
+		android:layout_marginRight="10px" android:layout_alignBaseline="@+id/avg_speed" />
+
+	<TextView android:id="@+id/avg_speed_field_unit"
+		android:text="m" style="@style/detailText"
+		android:layout_alignParentRight="True" android:layout_alignBaseline="@+id/avg_speed" />
+
+	
+	<!-- Vertical -->
+	<TextView android:id="@+id/vertical" android:text="Vertical"
+		style="@style/detailText" android:layout_below="@+id/avg_speed" />
+
+	<TextView android:id="@+id/vertical_field" android:text="--"
+		android:textColor="@color/vert_blue" style="@style/detailText"
+		android:layout_toLeftOf="@+id/vertical_field_unit"
+		android:layout_marginRight="10px" android:layout_alignBaseline="@+id/vertical" />
+
+	<TextView android:id="@+id/vertical_field_unit"
+		android:text="m" style="@style/detailText"
+		android:layout_alignParentRight="True" android:layout_alignBaseline="@+id/vertical" />
+	
+	
+	<!-- Distance -->
+	<TextView android:id="@+id/distance" android:text="Distance"
+		style="@style/detailText" android:layout_below="@+id/vertical" />
+
+	<TextView android:id="@+id/distance_field" android:text="--"
+		android:textColor="@color/dist_purple" style="@style/detailText"
+		android:layout_toLeftOf="@+id/distance_field_unit"
+		android:layout_marginRight="10px" android:layout_alignBaseline="@+id/distance" />
+
+	<TextView android:id="@+id/distance_field_unit"
+		android:text="m" style="@style/detailText"
+		android:layout_alignParentRight="True" android:layout_alignBaseline="@+id/distance" />
+	
+</RelativeLayout>

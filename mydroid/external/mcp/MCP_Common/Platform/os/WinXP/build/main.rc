@@ -1,0 +1,814 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+FMRADIO DIALOGEX 0, 0, 357, 342
+STYLE DS_MODALFRAME | WS_MINIMIZEBOX | WS_POPUP | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_LEFTSCROLLBAR
+CAPTION "FM Radio Control"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    PUSHBUTTON      "Stop Seek",ID_FM_STOP_SEEK,10,138,56,14
+    CONTROL         125,IDC_STATIC,"Static",SS_BITMAP,9,1,343,96,
+                    WS_EX_TRANSPARENT
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME | SS_SUNKEN,90,25,
+                    185,35
+    LTEXT           "PS name",IDC_STATIC,96,30,35,10,SS_SUNKEN,
+                    WS_EX_TRANSPARENT
+    LTEXT           "Radio Text",IDC_STATIC,95,45,36,8,SS_SUNKEN,
+                    WS_EX_TRANSPARENT
+    CONTROL         "On",ID_FM_ONOFF,"Button",BS_OWNERDRAW | WS_TABSTOP,320,
+                    15,15,15
+    CONTROL         "Up",ID_FM_SEEK_UP,"Button",BS_OWNERDRAW | WS_TABSTOP,
+                    305,45,18,14
+    CONTROL         "Down",ID_FM_SEEK_DOWN,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,285,45,12,14
+    LISTBOX         ID_FM_TRACE,3,279,345,60,LBS_NOINTEGRALHEIGHT | 
+                    WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "Current Band",IDC_STATIC,85,100,83,29
+    GROUPBOX        "Set Frequency (KHz)",IDC_STATIC,3,100,81,29
+    LTEXT           "",ID_FM_PS_NAME,135,29,70,11,SS_SUNKEN,
+                    WS_EX_TRANSPARENT
+    LTEXT           "",ID_FM_RADIO_TEXT,134,45,101,10,SS_SUNKEN,
+                    WS_EX_TRANSPARENT
+    LTEXT           "",ID_FM_RDS_INDICATION,220,30,30,10,SS_SUNKEN,
+                    WS_EX_TRANSPARENT
+    EDITTEXT        ID_FM_TUNE_FREQ,7,111,35,14,ES_AUTOHSCROLL | ES_NUMBER
+    PUSHBUTTON      "OK",ID_FM_TUNE,47,111,31,14
+    PUSHBUTTON      "Mono",ID_FM_MONO,271,110,26,14
+    PUSHBUTTON      "Stereo",ID_FM_STEREO,311,110,26,14
+    GROUPBOX        "Mute",IDC_STATIC,165,129,169,39
+    PUSHBUTTON      "Mute",ID_FM_MUTE,171,144,25,14
+    PUSHBUTTON      "Unmute",ID_FM_UNMUTE,199,144,29,14
+    PUSHBUTTON      "Att",ID_FM_ATT,231,144,21,14
+    GROUPBOX        "RDS",IDC_STATIC,3,175,148,69
+    PUSHBUTTON      "RDS On",ID_FM_RDS_ON,23,184,53,12
+    PUSHBUTTON      "RDS_Off",ID_FM_RDS_OFF,80,184,55,12
+    PUSHBUTTON      "On",ID_FM_AF_ON,13,220,24,12
+    PUSHBUTTON      "Off",ID_FM_AF_OFF,43,220,30,12
+    GROUPBOX        "Current RSSI ",IDC_STATIC,171,101,84,29
+    EDITTEXT        ID_FM_RSSI_VAL,91,157,38,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "Set RSSI Search level",ID_FM_RSSI_GO,74,141,82,11
+    PUSHBUTTON      "Get",ID_FM_RSSI_GET,176,112,24,11
+    EDITTEXT        ID_FM_RSSI_GET_VAL,207,112,42,12,ES_AUTOHSCROLL | 
+                    ES_READONLY
+    EDITTEXT        ID_FM_AF_LIST,75,220,58,12,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "",ID_FM_MOST_INDICATION,240,45,29,11,0,
+                    WS_EX_TRANSPARENT
+    CONTROL         "Button1",ID_FM_VOLUME_UP,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,65,45,15,14
+    CONTROL         "Button1",ID_FM_VOLUME_DOWN,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,40,45,15,14
+    PUSHBUTTON      "Change",ID_FM_BAND1,131,113,33,12,NOT WS_TABSTOP
+    PUSHBUTTON      "EXIT",ID_FM_EXIT,1,263,71,13
+    EDITTEXT        ID_FM_WRITE_BAND,89,113,40,12,ES_AUTOHSCROLL | 
+                    ES_READONLY
+    GROUPBOX        "Mono/Stereo",IDC_STATIC,264,100,80,28
+    EDITTEXT        ID_FM_GET_PI_BAND2,74,202,63,12,ES_AUTOHSCROLL | 
+                    ES_READONLY
+    PUSHBUTTON      "On",ID_FM_RF_MUTE_ON,263,144,28,14
+    PUSHBUTTON      "Off",ID_FM_RF_MUTE_OFF,297,143,26,14
+    GROUPBOX        "RF Dep",IDC_STATIC,257,135,72,28
+    LTEXT           "PI code",IDC_STATIC,41,205,26,8
+    GROUPBOX        "",IDC_STATIC,4,127,157,48
+    GROUPBOX        "",IDC_STATIC,70,134,88,39
+    GROUPBOX        "AF List",IDC_STATIC,9,212,127,25
+    GROUPBOX        "",IDC_STATIC,5,195,137,47
+    GROUPBOX        "VAC Operations",IDC_STATIC,166,173,186,104
+    PUSHBUTTON      "Set Targets",FM_RX_SET_TARGETS,180,209,98,12
+    COMBOBOX        FM_RX_TARGETS_COMBO_BOX,171,185,50,55,CBS_DROPDOWNLIST | 
+                    NOT WS_VISIBLE | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "Set Digital Configuration",
+                    FM_RX_SET_DIGITAL_SAMPLE_FREQ,173,255,81,13
+    COMBOBOX        FM_RX_SAMPLE_FREQ_COMBO_BOX,261,254,80,105,
+                    CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "Start Audio",FM_RX_ENABLE_AUDIO_ROUTING,230,185,47,16
+    PUSHBUTTON      "Stop Audio",FM_RX_DISABLE_AUDIO_ROUTING,288,185,55,16
+    CONTROL         "analog",FM_RX_TARGET_ANALOG_CHECK_BOX,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,298,211,37,10
+    GROUPBOX        "",IDC_STATIC,173,202,169,45
+    CONTROL         "Pcm",FM_RX_APP_GUI_AUDIO_TARGET_PCM,"Button",
+                    BS_AUTORADIOBUTTON,181,224,30,10
+    CONTROL         "I2s",FM_RX_APP_GUI_AUDIO_TARGET_I2S,"Button",
+                    BS_AUTORADIOBUTTON,181,234,25,10
+    GROUPBOX        "",IDC_STATIC,169,247,177,26
+    CONTROL         "Fm->Sco",FM_RX_APP_GUI_AUDIO_TARGET_FM_O_SCO,"Button",
+                    BS_AUTORADIOBUTTON,221,224,44,10
+    CONTROL         "Fm->A3dp",FM_RX_APP_GUI_AUDIO_TARGET_FM_O_A3DP,"Button",
+                    BS_AUTORADIOBUTTON,221,234,48,10
+    CONTROL         "Not Digital",FM_RX_APP_GUI_AUDIO_TARGET_NOT_DIGITAL,
+                    "Button",BS_AUTORADIOBUTTON,280,234,49,10
+    PUSHBUTTON      "Set Seek Spacing",FM_RX_SET_SEEK_SPACING,81,246,63,13
+    COMBOBOX        FM_RX_SET_SEEK_SPACING_COMBO_BOX,86,262,55,61,
+                    CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "Get Seek Spacing",FM_RX_GET_SEEK_SPACING,11,246,63,13
+END
+
+FM_TX_RDS_MANUAL_MODE DIALOG DISCARDABLE  0, 0, 204, 53
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Manual RDS Mode"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,147,7,50,14,WS_DISABLED
+    PUSHBUTTON      "Cancel",IDCANCEL,147,23,50,14
+    PUSHBUTTON      "Open file",IDC_BUTTON_ODEN_RDS_RAW_DATA_FILE,23,17,82,
+                    14,WS_DISABLED
+END
+
+IDD_MCPAPP DIALOG DISCARDABLE  0, 0, 195, 107
+STYLE DS_MODALFRAME | DS_3DLOOK | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "MCP APP"
+MENU MENU_BTUG
+FONT 10, "Times New Roman"
+BEGIN
+    PUSHBUTTON      "BT",ID_BT_BUTTON,68,21,50,29
+    PUSHBUTTON      "FM RX",ID_FMRX_BUTTON,14,9,50,25
+    PUSHBUTTON      "NAVC",ID_NAVC_BUTTON,123,21,50,28
+    PUSHBUTTON      "FM TX",ID_FMTX_BUTTON,14,36,50,25
+    PUSHBUTTON      "SAVE TRACE",IDC_TRACE_BUTTON,31,66,50,28
+    PUSHBUTTON      "Report Configuration",ID_REPORT_BUTTON,96,66,78,27
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    FMRADIO, DIALOG
+    BEGIN
+        BOTTOMMARGIN, 339
+    END
+
+    FM_TX_RDS_MANUAL_MODE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 197
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 46
+    END
+
+    IDD_MCPAPP, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 188
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 100
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""..\\..\\..\\..\\..\\\\EBTIPS\\apps\\WinXP-btips\\main.rc""\r\n"
+    "\0"
+END
+
+1 TEXTINCLUDE MOVEABLE PURE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE MOVEABLE PURE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE MOVEABLE PURE 
+BEGIN
+    "#include ""../common/bluemgr.rc""\0"
+END
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""../../inc/config.h""\r\n"
+    "#ifdef BTSTACK \r\n"
+    "#include ""../common/bluemgr.rc""\r\n"
+    "#endif\0"
+END
+
+1 TEXTINCLUDE MOVEABLE PURE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE MOVEABLE PURE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE MOVEABLE PURE 
+BEGIN
+    "#include ""../../inc/config.h""\r\n"
+    "#include ""../common/bluemgr.rc""\r\n"
+    "\0"
+END
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""\\B_TIPS\\btstack\\inc\\config.h""\r\n"
+    "#ifdef BTSTACK\r\n"
+    "#include ""../common/bluemgr.rc""\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""../../inc/config.h""\r\n"
+    "#ifdef BTSTACK\r\n"
+    "#include ""../common/bluemgr.rc""\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""../common/bluemgr.rc""\0"
+END
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""../../minios/common/bluemgr.rc""\0"
+END
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""../common/bluemgr.rc""\r\n"
+    "\0"
+END
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""../../minios/common/bluemgr.rc""\0"
+END
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""\\B_TIPS\\btstack\\inc\\config.h""\r\n"
+    "#ifdef BTSTACK\r\n"
+    "#include ""../common/bluemgr.rc""\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""../../inc/config.h""\r\n"
+    "#ifdef BTSTACK\r\n"
+    "#include ""../common/bluemgr.rc""\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""../common/bluemgr.rc""\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_BITMAP1             BITMAP  DISCARDABLE     "skinsmall.bmp"
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x40004L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "Comments", "\0"
+            VALUE "CompanyName", "Texas Instruments, Inc.\0"
+            VALUE "FileDescription", "MCP Sample Application\0"
+            VALUE "FileVersion", "1, 0, 0, 1\0"
+            VALUE "InternalName", "APPS_MCP.exe\0"
+            VALUE "LegalCopyright", "Copyright © 2007\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OriginalFilename", "APPS_MCP.exe\0"
+            VALUE "PrivateBuild", "\0"
+            VALUE "ProductName", "Texas Instruments MCP Sample Application\0"
+            VALUE "ProductVersion", "1, 0, 0, 1\0"
+            VALUE "SpecialBuild", "\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+#endif    // !_MAC
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// Dutch (Netherlands) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_NLD)
+#ifdef _WIN32
+LANGUAGE LANG_DUTCH, SUBLANG_DUTCH
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+MENU_BTUG MENU DISCARDABLE 
+BEGIN
+    POPUP "Info"
+    BEGIN
+        MENUITEM "&About",                      BTUG_ABOUT
+    END
+    MENUITEM "",                            65535
+END
+
+#endif    // Dutch (Netherlands) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// Unknown language: 0xD, 0x1 resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_HEB)
+#ifdef _WIN32
+LANGUAGE 0xD, 0x1
+#pragma code_page(1255)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+FM_TX DIALOGEX 0, 0, 445, 386
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION
+CAPTION "FM TX"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    PUSHBUTTON      "Enable",FM_TX_ENABLE,17,19,51,16
+    PUSHBUTTON      "Disable",FM_TX_DISABLE,17,40,51,14
+    PUSHBUTTON      "Start ",FM_TX_START_TRANSMISSION,22,70,52,14
+    COMBOBOX        FM_TX_CONFIG_MONO_STEREO,350,55,72,30,CBS_DROPDOWN | 
+                    CBS_AUTOHSCROLL | CBS_DISABLENOSCROLL | WS_DISABLED | 
+                    WS_VSCROLL
+    LTEXT           "Mono / Stereo",IDC_STATIC,297,57,47,8
+    EDITTEXT        FM_TX_CONFIG_FREQ,171,23,35,14,ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    LTEXT           "Power Level (0-31)",IDC_STATIC,284,19,60,8
+    EDITTEXT        FM_TX_CONFIG_POWER_LEVEL,350,17,22,14,ES_AUTOHSCROLL | 
+                    WS_DISABLED
+    COMBOBOX        FM_TX_CONFIG_PRE_EMPHASIS_FILTER,350,35,72,65,
+                    CBS_DROPDOWNLIST | CBS_AUTOHSCROLL | CBS_DISABLENOSCROLL | 
+                    WS_DISABLED | WS_VSCROLL
+    LTEXT           "Pre Emphasis Filter",IDC_STATIC,284,38,60,8
+    PUSHBUTTON      "Disable",FM_TX_DISABLE_RDS,165,122,52,12
+    PUSHBUTTON      "EXIT",FM_TX_EXIT,7,314,428,15
+    PUSHBUTTON      "Off",FM_TX_UNMUTE,17,132,26,10
+    PUSHBUTTON      "Auto Config RDS",FM_TX_RDS_CONFIG,361,105,75,14,
+                    WS_DISABLED
+    GROUPBOX        "Enable/Disable",IDC_STATIC,14,7,111,51
+    GROUPBOX        "Transmission Parameters",IDC_STATIC,144,7,286,73
+    LISTBOX         FM_TX_REPORT,7,211,428,96,LBS_NOINTEGRALHEIGHT | 
+                    WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        FM_TX_MUTE_STATE,46,123,36,12,ES_AUTOHSCROLL | 
+                    ES_READONLY
+    EDITTEXT        FM_TX_RDS_ENABLED_STATE,225,108,48,26,ES_AUTOHSCROLL | 
+                    ES_READONLY
+    EDITTEXT        FM_TX_TRANSMISSION_STATE,78,79,41,14,ES_AUTOHSCROLL | 
+                    ES_READONLY
+    EDITTEXT        FM_TX_ENABLED_STATE,72,19,48,35,ES_AUTOHSCROLL | 
+                    ES_READONLY
+    PUSHBUTTON      "Stop",FM_TX_STOP_TRANSMISSION,22,88,52,14
+    PUSHBUTTON      "On",FM_TX_MUTE,17,118,26,10
+    PUSHBUTTON      "Enable",FM_TX_ENABLE_RDS,165,106,51,13
+    PUSHBUTTON      "-",FM_TX_CONFIG_DECREASE_FREQ,211,31,15,8
+    LTEXT           "Freq",IDC_STATIC,153,25,15,8
+    PUSHBUTTON      "+",FM_TX_CONFIG_INCREASE_FREQ,211,22,15,8
+    PUSHBUTTON      "Edit",FM_TX_CONFIG_EDIT_APPLY,153,60,50,14
+    PUSHBUTTON      "Cancel",FM_TX_CONFIG_CANCEL,207,60,50,14,WS_DISABLED
+    GROUPBOX        "Transmission",IDC_STATIC,14,60,111,45
+    GROUPBOX        "RDS",IDC_STATIC,159,94,283,47
+    GROUPBOX        "Mute",IDC_STATIC,13,108,74,36
+    COMBOBOX        FM_TX_RDS_CONFIG_RDS_MODE2,373,123,65,61,
+                    CBS_DROPDOWNLIST | WS_DISABLED | WS_VSCROLL | WS_TABSTOP,
+                    WS_EX_TRANSPARENT | WS_EX_STATICEDGE
+    PUSHBUTTON      "Set Transmission mode",FM_TX_SET_RDS_TRANSMISSION_MODE,
+                    289,124,78,14,WS_DISABLED
+    GROUPBOX        "Audio Source",IDC_STATIC,121,153,321,38
+    PUSHBUTTON      "Set Audio Source",FM_TX_SET_AUDIO_SOURCE,308,164,69,20
+    COMBOBOX        IDC_AUDIO_SOURCE,381,164,56,47,CBS_DROPDOWN | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "Change Audio Configuration",
+                    FM_TX_CHANGE_AUDIO_CONFIGURATION,127,164,95,19
+    COMBOBOX        IDC_SAMPLE_FREQ,231,164,48,114,CBS_DROPDOWN | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "DEBUG VAC",IDC_STATIC,19,334,415,29,NOT WS_VISIBLE
+    EDITTEXT        FM_TX_PCM_LR_SWAP,23,345,26,14,ES_AUTOHSCROLL | NOT 
+                    WS_VISIBLE
+    EDITTEXT        FM_TX_PCM_BIT_OFFSET,54,345,24,14,ES_AUTOHSCROLL | NOT 
+                    WS_VISIBLE
+    EDITTEXT        FM_TX_PCM_SLOT_OFFSET,81,345,31,14,ES_AUTOHSCROLL | NOT 
+                    WS_VISIBLE
+    EDITTEXT        FM_TX_PCM_INTERFACE_CHANNEL_DATA_SIZE,117,345,23,14,
+                    ES_AUTOHSCROLL | NOT WS_VISIBLE
+    EDITTEXT        FM_TX_I2S_DATA_WIDTH,262,342,26,14,ES_AUTOHSCROLL | NOT 
+                    WS_VISIBLE
+    EDITTEXT        FM_TX_I2S_DATA_FORMAT,292,341,24,14,ES_AUTOHSCROLL | NOT 
+                    WS_VISIBLE
+    EDITTEXT        FM_TX_I2S_MASTER_SLAVE,320,341,26,14,ES_AUTOHSCROLL | 
+                    NOT WS_VISIBLE
+    EDITTEXT        FM_TX_I2S_SDO_TRI_STATE,349,342,19,14,ES_AUTOHSCROLL | 
+                    NOT WS_VISIBLE
+    EDITTEXT        FM_TX_I2S_SDO_PHASE_SELECT,370,342,21,14,ES_AUTOHSCROLL | 
+                    NOT WS_VISIBLE
+    EDITTEXT        FM_TX_I2S_SDO_3ST_ALW,393,342,21,14,ES_AUTOHSCROLL | NOT 
+                    WS_VISIBLE
+    PUSHBUTTON      "Apply VAC Debug",FM_TX_APPLY_VAC_DEBUG,21,366,90,14,NOT 
+                    WS_VISIBLE
+    COMBOBOX        IDC_GET_COMMAND,21,166,93,42,CBS_DROPDOWN | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "Get Commands",IDC_STATIC,13,152,106,50
+    PUSHBUTTON      "Get",FM_TX_GET_COMMAND_BUTTON,37,184,50,14
+END
+
+FM_TX_AUTO_RDS DIALOGEX 0, 0, 458, 277
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION
+CAPTION "Auto RDS Configuration"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "Apply All",FM_TX_RDS_CONFIG_APPLY,314,257,67,17
+    PUSHBUTTON      "Exit",FM_TX_RDS_CONFIG_CANCEL,387,257,69,17
+    COMBOBOX        FM_TX_RDS_CONFIG_MUSIC_SPEECH_FLGA,211,119,71,56,
+                    CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP,
+                    WS_EX_TRANSPARENT | WS_EX_STATICEDGE
+    GROUPBOX        "Traffic Codes",IDC_STATIC,21,140,91,43,0,
+                    WS_EX_TRANSPARENT
+    CONTROL         "TP",FM_TX_RDS_CONFIG_TP_CODE,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,69,153,25,10,WS_EX_TRANSPARENT
+    CONTROL         "TA",FM_TX_RDS_CONFIG_TA_CODE,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,69,164,25,10,WS_EX_TRANSPARENT
+    GROUPBOX        "Display Configuration",IDC_STATIC,25,58,187,30,0,
+                    WS_EX_TRANSPARENT
+    COMBOBOX        FM_TX_RDS_CONFIG_TEXT_REPERTOIRE,210,103,48,54,
+                    CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP,
+                    WS_EX_TRANSPARENT | WS_EX_STATICEDGE
+    EDITTEXT        FM_TX_RDS_CONFIG_PI_CODE,75,103,28,14,ES_AUTOHSCROLL,
+                    WS_EX_TRANSPARENT | WS_EX_STATICEDGE
+    EDITTEXT        FM_TX_RDS_CONFIG_AF_CODE,196,165,31,14,ES_AUTOHSCROLL,
+                    WS_EX_TRANSPARENT | WS_EX_STATICEDGE
+    EDITTEXT        FM_TX_RDS_CONFIG_PTY_CODE,75,119,40,14,ES_AUTOHSCROLL,
+                    WS_EX_TRANSPARENT | WS_EX_STATICEDGE
+    CONTROL         "No AF Code",FM_TX_RDS_CONFIG_NO_AF_CODE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,129,148,55,10,
+                    WS_EX_TRANSPARENT
+    GROUPBOX        "AF",IDC_STATIC,124,140,106,44,0,WS_EX_TRANSPARENT
+    EDITTEXT        FM_TX_RDS_CONFIG_SCROLL_SPEED,82,71,35,14,ES_AUTOHSCROLL,
+                    WS_EX_TRANSPARENT | WS_EX_STATICEDGE
+    GROUPBOX        "",IDC_STATIC,13,6,438,195
+    GROUPBOX        "PS",IDC_STATIC,19,14,207,80,WS_TABSTOP
+    GROUPBOX        "Radio Text",IDC_STATIC,236,14,209,79
+    EDITTEXT        FM_TX_RDS_PS_TEXT,83,25,130,16,ES_AUTOHSCROLL
+    PUSHBUTTON      "Set Ps Text",IDC_BUTTON_SET_PS_TEXT,31,25,50,16
+    COMBOBOX        IDC_COMBO_DISPLAY_MODE,156,71,47,64,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP,WS_EX_TRANSPARENT | 
+                    WS_EX_STATICEDGE
+    PUSHBUTTON      "Set Rt Text ",IDC_BUTTON_RT_TEXT,241,34,50,48
+    EDITTEXT        FM_TX_RDS_RT_TEXT,300,39,127,16,ES_AUTOHSCROLL,
+                    WS_EX_STATICEDGE
+    COMBOBOX        IDC_COMBO_RT_TYPE,325,65,48,57,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP,WS_EX_TRANSPARENT | 
+                    WS_EX_STATICEDGE
+    LTEXT           "Type",IDC_STATIC,299,65,23,10
+    PUSHBUTTON      "Set Pi Code",IDC_BUTTON_SET_PI_CODE,20,102,51,14
+    PUSHBUTTON      "Set PTY Code",IDC_BUTTON_SET_PTY_CODE,21,118,50,14
+    PUSHBUTTON      "Set Repertoire",IDC_BUTTON_SET_REPERETOIRE,124,102,82,
+                    15
+    GROUPBOX        "",IDC_STATIC,293,30,144,51
+    PUSHBUTTON      "Set",IDC_BUTTON_SET_TRAFFIC_CODES,27,153,33,21
+    PUSHBUTTON      "Set Music/Speech Flag",IDC_BUTTON_SET_MUSIC_SPEECH_FLAG,
+                    124,119,81,16
+    PUSHBUTTON      "Set AF",IDC_BUTTON_SET_AF,139,165,50,15
+    PUSHBUTTON      "Scroll Speed",IDC_BUTTON_SET_SCROLL_SPEED,32,70,44,15
+    PUSHBUTTON      "Mode",IDC_BUTTON_SET_DISPLAY_MODE,125,72,28,13
+    GROUPBOX        "ECC",IDC_STATIC,317,100,129,61
+    EDITTEXT        IDC_EDIT_ECC_CODE,384,118,27,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "Set ECC ",IDC_BUTTON_SET_ECC_CODE,342,116,33,17
+    GROUPBOX        "Transmited Groups Mask",IDC_STATIC,13,206,149,62
+    CONTROL         "PS",IDC_CHECK_PS,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    111,220,25,10,WS_EX_TRANSPARENT
+    CONTROL         "RT",IDC_CHECK_RT,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    111,235,26,10
+    CONTROL         "ECC",IDC_CHECK_ECC,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,111,252,30,10
+    PUSHBUTTON      "Transmited Groups",IDC_BUTTON_SET_TRANSMITED_GROUPS,26,
+                    220,77,42
+END
+
+NAVC_APP DIALOG DISCARDABLE  0, 0, 337, 161
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "NAVC_APP"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "EXIT",NAVC_APP_EXIT,246,120,73,27
+    PUSHBUTTON      "On",NAVC_APP_ON,21,18,50,14
+    PUSHBUTTON      "Off",NAVC_APP_OFF,98,17,50,14
+    LTEXT           "State:",IDC_STATIC,181,20,20,8
+    EDITTEXT        NAVC_APP_STATE_EDIT_BOX,206,18,40,14,ES_AUTOHSCROLL | 
+                    ES_READONLY
+    LISTBOX         NAVC_APP_REPORT,18,41,199,106,LBS_NOINTEGRALHEIGHT | 
+                    WS_VSCROLL | WS_HSCROLL | WS_TABSTOP
+    PUSHBUTTON      "MSStand",NAVC_APP_MSSTAND,257,41,62,16
+END
+
+REPORT_APP DIALOG DISCARDABLE  0, 0, 325, 226
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Report Configuration"
+FONT 8, "MS Sans Serif"
+BEGIN
+    GROUPBOX        "Severity",ID_SEVERITY,15,14,108,202
+    GROUPBOX        "Modules",ID_MODULES,138,14,172,147
+    CONTROL         "Init",IDC_SEV_INIT,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,34,32,25,10
+    CONTROL         "Information",IDC_SEV_INFORMATION,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,34,49,51,10
+    CONTROL         "Warning",IDC_SEV_WARNING,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,34,68,43,10
+    CONTROL         "Error",IDC_SEV_ERROR,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,35,86,31,10
+    CONTROL         "Fatal Error",IDC_SEV_FATALERROR,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,35,105,48,10
+    CONTROL         "State Machine",IDC_SEV_SM,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,35,124,62,10
+    CONTROL         "Console",IDC_SEV_CONSOLE,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,35,143,41,10
+    CONTROL         "Debug RX",IDC_SEV_DEBUGRX,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,36,162,49,10
+    CONTROL         "Debug TX",IDC_SEV_DEBUGTX,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,36,180,49,10
+    CONTROL         "Debug Control",IDC_SEV_DEBUGCONTROL,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,36,199,61,10
+    CONTROL         "NAVC",IDC_MOD_NAVC,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,155,30,35,10
+    CONTROL         "BT",IDC_MOD_BT,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    156,48,35,10
+    CONTROL         "MCPF",IDC_MOD_MCPF,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,156,84,35,10
+    CONTROL         "FM",IDC_MOD_FM,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    156,66,26,10
+    CONTROL         "Transport",IDC_MOD_TRANS,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,156,103,46,10
+    CONTROL         "Queue",IDC_MOD_QUEUE,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,156,122,37,10
+    CONTROL         "Report",IDC_MOD_REPORT,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,156,141,37,10
+    CONTROL         "Sleep Mngr",IDC_MOD_IFSLPMNG,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,243,30,52,10
+    CONTROL         "Bus Drv",IDC_MOD_BUSDRV,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,243,49,41,10
+    CONTROL         "HAL UART",IDC_MOD_HALUART,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,243,67,52,10
+    CONTROL         "UI",IDC_MOD_UI,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    244,84,23,10
+    CONTROL         "ADS",IDC_MOD_ADS,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    244,102,31,10
+    CONTROL         "RR",IDC_MOD_RR,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    244,120,27,10
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    FM_TX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 442
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 380
+    END
+
+    FM_TX_AUTO_RDS, DIALOG
+    BEGIN
+        BOTTOMMARGIN, 274
+    END
+
+    NAVC_APP, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 330
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 154
+    END
+    REPORT_APP, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 318
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 219
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+#endif    // Unknown language: 0xD, 0x1 resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#include "..\..\..\..\..\\EBTIPS\apps\WinXP-btips\main.rc"
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

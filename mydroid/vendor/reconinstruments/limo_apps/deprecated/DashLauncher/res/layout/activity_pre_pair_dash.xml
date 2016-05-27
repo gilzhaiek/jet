@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/circular_gradient"
+    android:gravity="center_vertical"
+    android:orientation="vertical" xmlns:app="http://schemas.android.com/apk/res/com.reconinstruments.dashlauncher">
+
+    <RelativeLayout
+        android:id="@+id/setup_item"
+        android:layout_width="fill_parent"
+        android:layout_height="110dp"
+        android:layout_marginTop="21dip"
+        android:background="@drawable/background_transition112"
+        android:focusable="true" >
+
+         <com.reconinstruments.widgets.CustomTextView
+            android:id="@+id/setup_text"
+       		style="@style/focusable_text_shadow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+			android:layout_centerHorizontal="true"
+            android:text="Set up new smartphone"
+            android:textSize="24dip"
+            android:textStyle="bold"
+            android:duplicateParentState="true" />
+            
+
+         <com.reconinstruments.widgets.CustomTextView
+       		style="@style/focusable_text_shadow"
+            android:layout_width="240dp"
+            android:layout_height="wrap_content"
+			android:layout_centerHorizontal="true"
+			android:gravity="center"
+            android:layout_below="@id/setup_text"
+            android:text="Add music control to your HUD experience"
+            android:textSize="17dip" 
+            android:duplicateParentState="true"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/no_show_item"
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        android:layout_marginBottom="15dip"
+        android:background="@drawable/background_transition62"
+        android:focusable="true" >
+
+         <com.reconinstruments.widgets.CustomTextView
+            android:id="@+id/no_show_text"
+       		style="@style/focusable_text_shadow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+        	android:layout_marginTop="0dip"
+			android:layout_centerHorizontal="true"
+            android:text="Do not show this again"
+            android:textSize="20dip"
+            android:textStyle="bold" 
+            android:duplicateParentState="true"/>
+
+         <com.reconinstruments.widgets.CustomTextView
+       		style="@style/focusable_text_shadow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+			android:layout_centerHorizontal="true"
+			android:gravity="center"
+            android:layout_below="@id/no_show_text"
+            android:text="You can setup a phone later through settings"
+            android:textSize="17dip"
+            android:duplicateParentState="true" />
+    </RelativeLayout>
+
+</LinearLayout>

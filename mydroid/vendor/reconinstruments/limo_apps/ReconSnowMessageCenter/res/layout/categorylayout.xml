@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="70dp"
+	android:background="@drawable/key_selector" >
+	<ImageView
+		android:id="@+id/newIcon"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_alignParentLeft="true"
+		android:layout_margin="2dp"
+		android:background="@drawable/new_indicator" />
+	<FrameLayout
+		android:id="@+id/categoryIconFrame"
+		android:layout_width="70dp"
+		android:layout_height="70dp"
+		android:visibility="visible" >
+		<ImageView
+			android:id="@+id/categoryIcon"
+			android:layout_width="34dp"
+			android:layout_height="34dp"
+			android:layout_alignParentLeft="true"
+			android:layout_gravity="center" />
+	</FrameLayout>
+	<TextView
+		android:id="@+id/messageByCategoryDate"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_alignParentRight="true"
+		android:layout_marginRight="20dp"
+		android:layout_marginTop="12dp"
+		android:fontFamily="sans-serif-semibold"
+		android:gravity="right"
+		android:text="11:36am"
+		android:textSize="20sp" />
+	<TextView
+		android:id="@+id/categoryName"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="8dp"
+		android:layout_toLeftOf="@+id/messageByCategoryDate"
+		android:layout_toRightOf="@+id/categoryIconFrame"
+		android:singleLine="true"
+		android:text="Category"
+		android:textSize="25sp"
+		android:textStyle="bold" />
+	<TextView
+		android:id="@+id/messageByCategory"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_below="@+id/categoryName"
+		android:layout_marginRight="20dp"
+		android:layout_marginTop="-8dp"
+		android:layout_toRightOf="@+id/categoryIconFrame"
+		android:ellipsize="end"
+		android:scrollHorizontally="true"
+		android:singleLine="true"
+		android:text="MESSAGE"
+		android:textSize="20sp"
+		android:textStyle="bold" />
+</RelativeLayout>

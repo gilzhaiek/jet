@@ -1,0 +1,5 @@
+# Remove generated init.rc from either snow or sun
+init.omap4jetboard.rc
+boot/zImage
+boot/u-boot.bin
+overlay/frameworks/base/core/res/res/xml/power_profile.xml

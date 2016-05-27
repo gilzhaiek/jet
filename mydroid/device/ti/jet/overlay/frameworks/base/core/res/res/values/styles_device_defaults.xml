@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<resources>
+
+    <style name="Widget.DeviceDefault.Button.Borderless" parent="Widget.Holo.Button.Borderless" >
+        <item name="android:background">@android:drawable/item_background_recon</item>
+        <item name="android:textSize">34sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@android:color/recon_dialog_button_text</item>
+    </style>
+
+    <!-- AlertDialog Styles -->
+    <style name="AlertDialog.DeviceDefault" parent="AlertDialog.Holo">
+        <item name="fullDark">@android:drawable/recon_dialog_full</item>
+        <item name="fullBright">@android:drawable/recon_dialog_full</item>
+        <item name="topDark">@android:drawable/recon_dialog_top</item>
+        <item name="topBright">@android:drawable/recon_dialog_top</item>
+        <item name="centerDark">@android:drawable/recon_dialog_center</item>
+        <item name="centerMedium">@android:drawable/recon_dialog_center</item>
+        <item name="centerBright">@android:drawable/recon_dialog_center</item>
+        <item name="bottomDark">@android:drawable/recon_dialog_bottom</item>
+        <item name="bottomMedium">@android:drawable/recon_dialog_bottom</item>
+        <item name="bottomBright">@android:drawable/recon_dialog_bottom</item>
+        <item name="layout">@android:layout/alert_dialog_recon</item>
+        <item name="listLayout">@android:layout/select_dialog_holo</item>
+        <item name="progressLayout">@android:layout/progress_dialog_recon</item>
+        <item name="horizontalProgressLayout">@android:layout/alert_dialog_progress_holo</item>
+        <item name="listItemLayout">@android:layout/select_dialog_item_holo</item>
+        <item name="multiChoiceItemLayout">@android:layout/select_dialog_multichoice_holo</item>
+        <item name="singleChoiceItemLayout">@android:layout/select_dialog_singlechoice_holo</item>
+    </style>
+
+
+    <!-- DialogWindowTitle Styles -->
+    <style name="DialogWindowTitle.DeviceDefault" parent="DialogWindowTitle.Holo">
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="Widget.DeviceDefault.ProgressBar" parent="Widget.Holo.ProgressBar" >
+        <item name="android:indeterminateDrawable">@android:drawable/progress_medium_recon</item>
+        <item name="android:minHeight">32dp</item>
+        <item name="android:maxHeight">32dp</item>
+        <item name="android:minWidth">32dp</item>
+        <item name="android:maxWidth">32dp</item>
+    </style>
+    <style name="Widget.DeviceDefault.ProgressBar.Small" parent="Widget.Holo.ProgressBar.Small" >
+        <item name="android:indeterminateDrawable">@android:drawable/progress_small_recon</item>
+    </style>
+    <style name="Widget.DeviceDefault.ProgressBar.Large" parent="Widget.Holo.ProgressBar.Large" >
+        <item name="android:indeterminateDrawable">@android:drawable/progress_large_recon</item>
+    </style>
+
+</resources>

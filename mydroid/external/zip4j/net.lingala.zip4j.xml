@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<permissions>
+  <library name="net.lingala.zip4j"
+    file="/system/framework/net.lingala.zip4j.jar"/>
+</permissions>
+

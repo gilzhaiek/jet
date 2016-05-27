@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" xmlns:app="http://schemas.android.com/apk/res/com.reconinstruments.dashlauncher">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="WARNING"
+        android:textColor="#FFFF0000"
+        android:textSize="22sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:lines="2"
+        android:paddingLeft="50dip"
+        android:paddingRight="50dip"
+        android:text="Always be aware of your surroundings, direction, and speed."
+        android:textColor="#FFFFFFFF"
+        android:textSize="17sp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:lines="3"
+        android:paddingLeft="50dip"
+        android:paddingRight="50dip"
+        android:text="Concentrating on the display while moving may distract you and cause injury or death to yourself or others."
+        android:textColor="#FFFFFFFF"
+        android:textSize="17sp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:lines="3"
+        android:paddingLeft="50dip"
+        android:paddingRight="50dip"
+        android:text="Do not use product while driving, running, bike riding, or walking on uneven surfaces or stairways."
+        android:textColor="#FFFFFFFF"
+        android:textSize="17sp" />
+
+    <TextView
+        android:id="@+id/accept_button"
+        style="@style/black_text_shadow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/selector_42"
+        android:text="Read and Understood"
+        android:textSize="24sp"
+        android:textStyle="bold"
+		android:gravity="center"/>
+
+</LinearLayout>

@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<rendering_scheme>
+    
+<!-- mpp = meters per pixel -->
+<file_id id="Snow Dec 2 2014"/>
+<general>
+	<resort_labels text_size="20" text_rgb_color="fbff00"  />
+    <pan_over_text text_size="20" text_rgb_color="ffffff" text_outline_width="2" text_outline_rgb_color="4d4d4d" />
+	<pan_over_box bkgd_rgb_color="000000" bkgd_alpha="102" outline_width="2" outline_rgb_color="404040" outline_alpha="0" />
+    <grid bkgd_grey_color="80" line_gray_color="90" line_alpha="255" line_width="1" />
+ <!-- the following are not implemented yet -->
+    <map_bg_color rgb_color="ffffff" alpha="255" />
+    <vignette_file image="explore_btn" />
+    <trail_outlines enabled="0" />
+    <area_outlines enabled="0" />
+    <idle_velocity threshold="3.0" />
+</general>
+<messages>
+    <message state="error_initializing"		message="initialization issue..." />
+    <message state="waiting_for_service"	message="map service initializing..." />
+    <message state="waiting_for_location" 	message="waiting for GPS fix..." />
+    <message state="error_with_service"		message="problem with map service..." />
+    <message state="map_data_unavailable" 	message="map data unavailable..." />
+    <message state="out_of_memory" 			message="Out of memory. Can not load map." />
+    <message state="error_loading_themes" 	message="corrupt drawing theme file..." />
+    <message state="loading_data" 			message="loading map..." />
+    <message state="error_loading_data" 	message="error loading map" />
+    <message state="waiting_for_map" 	 	message="loading map..." />
+</messages>
+<rates>
+    <rate item="frame_rate"		rate="15.0" />
+    <rate item="pan_rate"		rate="0.0005" />
+    <rate item="rotation_rate"	rate="5.0" />
+    <rate item="scale_rate"		rate="0.25" />
+    <rate item="velocity_rate"	rate="5.0" />
+</rates>
+<user_icon file="user_arrow_contrast" />
+<zoom_levels>
+<!-- app code currently limited to max 4 zoom levels -->
+    <zoom_level zoom_level="1" default_mpp="3.0" max_mpp="3.0" />
+    <zoom_level zoom_level="2" snap_to_mpp="2.0" />
+    <zoom_level zoom_level="3" snap_to_mpp="1.0" />
+    <zoom_level zoom_level="4" snap_to_mpp="0.5" />
+</zoom_levels>
+<scale_ranges>
+<!-- app code currently limited to max 4 scale ranges -->
+    <scale_range scale_range="1" from_mpp="0.0" to_mpp="0.6" />  <!-- LOWEST zoom scale  -->
+    <scale_range scale_range="2" from_mpp="0.6" to_mpp="1.2" />
+    <scale_range scale_range="3" from_mpp="1.8" to_mpp="2.8" />
+    <scale_range scale_range="4" from_mpp="2.8" to_mpp="10000.0" />   <!-- HIGHEST zoom scale -->
+</scale_ranges>
+<!-- shaders and mesh files must be present in mapApp/assets folder -->
+<meshes>
+       <mesh meshtype="map" vshader="vertex_shader" fshader="fragment_shader" src="square_tex.obj"/>
+       <mesh meshtype="user_icon" vshader="vertex_shader" fshader="fragment_shader" src="square_tex.obj"/>
+       <mesh meshtype="reticle" vshader="vertex_shader" fshader="fragment_shader" src="square_tex.obj"/>
+       <mesh meshtype="reticle_item" vshader="vertex_shader" fshader="fragment_shader" src="square_tex.obj"/>
+       <mesh meshtype="poi" vshader="vertex_shader" fshader="fragment_shader" src="square_tex.obj"/>
+</meshes>
+<!-- type ids much match values BitmapTypes in RenderSchemeManager.java -->
+<pois>  
+    <asset_scale scale_range="1" asset_scale="1.0" />
+    <asset_scale scale_range="2" asset_scale="1.0" />
+    <asset_scale scale_range="3" asset_scale="1.0" />
+	<asset_scale scale_range="4" asset_scale="1.0" />
+    <type id="0" poitype="buddy" meshtype="poi">
+        <image4state image="buddy_icon_4" state="normal"/>
+        <image_mod image="buddy_icon_2" state="normal" scale_range="1" />  
+        <image_mod image="buddy_icon_2" state="normal" scale_range="2" />  
+        <image_mod image="buddy_icon_2" state="normal" scale_range="3" />  
+        <image_mod image="buddy_icon_1" state="normal" scale_range="4" />  
+        
+		<image4state image="buddy_active_4" state="hasFocus" />
+		<image_mod image="buddy_active_2" state="hasFocus" scale_range="1" vertOffsetPercent="33" /> 
+		<image_mod image="buddy_active_2" state="hasFocus" scale_range="2" vertOffsetPercent="33" /> 
+		<image_mod image="buddy_active_2" state="hasFocus" scale_range="3" vertOffsetPercent="33" /> 
+		<image_mod image="buddy_active_2" state="hasFocus" scale_range="4" vertOffsetPercent="33" /> 
+		
+        <image4state image="buddy_icon_4" state="disabled"/>
+        <image_mod image="buddy_icon_offline_2" state="disabled" scale_range="1" />  
+        <image_mod image="buddy_icon_offline_2" state="disabled" scale_range="2" />  
+        <image_mod image="buddy_icon_offline_2" state="disabled" scale_range="3" />  
+        <image_mod image="buddy_icon_offline_1" state="disabled" scale_range="4" />  
+        
+		<image4state image="buddy_active_4" state="disabledFocus" />
+		<image_mod image="buddy_active_offline_2" state="disabledFocus" scale_range="1" vertOffsetPercent="33" /> 
+		<image_mod image="buddy_active_offline_2" state="disabledFocus" scale_range="2" vertOffsetPercent="33" /> 
+		<image_mod image="buddy_active_offline_2" state="disabledFocus" scale_range="3" vertOffsetPercent="33" /> 
+		<image_mod image="buddy_active_offline_2" state="disabledFocus" scale_range="4" vertOffsetPercent="33" /> 
+		
+		</type>
+    <type id="1" poitype="car_parking" meshtype="poi">
+		<image4state image="parking_icon_4" state="normal"/>
+        <image_mod image="parking_icon_2" state="normal" scale_range="1" />  
+        <image_mod image="parking_icon_2" state="normal" scale_range="2" />  
+        <image_mod image="parking_icon_2" state="normal" scale_range="3" />  
+        <image_mod image="parking_icon_1" state="normal" scale_range="4" />  
+        
+		<image4state image="parking_active_4" state="hasFocus" />
+		<image_mod image="parking_active_2" state="hasFocus" scale_range="1" vertOffsetPercent="33" /> 
+		<image_mod image="parking_active_2" state="hasFocus" scale_range="2" vertOffsetPercent="33" /> 
+		<image_mod image="parking_active_2" state="hasFocus" scale_range="3" vertOffsetPercent="33" /> 
+		<image_mod image="parking_active_2" state="hasFocus" scale_range="4" vertOffsetPercent="33" /> 
+		
+    </type>
+    <type id="2" poitype="chairlift" meshtype="poi">
+        <image4state image="lift_icon_4" state="normal"/>
+        <image_mod image="lift_icon_2" state="normal" scale_range="1" />  
+        <image_mod image="lift_icon_2" state="normal" scale_range="2" />  
+        <image_mod image="lift_icon_2" state="normal" scale_range="3" />  
+        <image_mod image="lift_icon_1" state="normal" scale_range="4" />  
+        
+		<image4state image="lift_active_4" state="hasFocus" />
+		<image_mod image="lift_active_2" state="hasFocus" scale_range="1" vertOffsetPercent="33" /> 
+		<image_mod image="lift_active_2" state="hasFocus" scale_range="2" vertOffsetPercent="33" /> 
+		<image_mod image="lift_active_2" state="hasFocus" scale_range="3" vertOffsetPercent="33" /> 
+		<image_mod image="lift_active_2" state="hasFocus" scale_range="4" vertOffsetPercent="33" /> 
+		
+    </type>
+    <type id="3" poitype="information" meshtype="poi">
+        <image4state image="info_icon_4" state="normal"/>
+        <image_mod image="info_icon_2" state="normal" scale_range="1" />  
+        <image_mod image="info_icon_2" state="normal" scale_range="2" />  
+        <image_mod image="info_icon_2" state="normal" scale_range="3" />  
+        <image_mod image="info_icon_1" state="normal" scale_range="4" />  
+        
+		<image4state image="info_active_4" state="hasFocus" />
+		<image_mod image="info_active_2" state="hasFocus" scale_range="1" vertOffsetPercent="33" /> 
+		<image_mod image="info_active_2" state="hasFocus" scale_range="2" vertOffsetPercent="33" /> 
+		<image_mod image="info_active_2" state="hasFocus" scale_range="3" vertOffsetPercent="33" /> 
+		<image_mod image="info_active_2" state="hasFocus" scale_range="4" vertOffsetPercent="33" /> 
+		
+    </type>
+    <type id="4" poitype="restaurant" meshtype="poi">
+        <image4state image="food_icon_4" state="normal"/>
+        <image_mod image="food_icon_2" state="normal" scale_range="1" />  
+        <image_mod image="food_icon_2" state="normal" scale_range="2" />  
+        <image_mod image="food_icon_2" state="normal" scale_range="3" />  
+        <image_mod image="food_icon_1" state="normal" scale_range="4" />  
+        
+		<image4state image="food_active_4" state="hasFocus" />
+		<image_mod image="food_active_2" state="hasFocus" scale_range="1" vertOffsetPercent="33" /> 
+		<image_mod image="food_active_2" state="hasFocus" scale_range="2" vertOffsetPercent="33" /> 
+		<image_mod image="food_active_2" state="hasFocus" scale_range="3" vertOffsetPercent="33" /> 
+		<image_mod image="food_active_2" state="hasFocus" scale_range="4" vertOffsetPercent="33" /> 
+    </type>
+    <type id="5" poitype="store" meshtype="poi">
+        <image4state image="food_icon_4" state="normal"/>
+        <image_mod image="food_icon_2" state="normal" scale_range="1" />  
+        <image_mod image="food_icon_2" state="normal" scale_range="2" />  
+        <image_mod image="food_icon_2" state="normal" scale_range="3" />  
+        <image_mod image="food_icon_1" state="normal" scale_range="4" />  
+        
+		<image4state image="food_active_4" state="hasFocus" />
+		<image_mod image="food_active_2" state="hasFocus" scale_range="1" vertOffsetPercent="33" /> 
+		<image_mod image="food_active_2" state="hasFocus" scale_range="2" vertOffsetPercent="33" /> 
+		<image_mod image="food_active_2" state="hasFocus" scale_range="3" vertOffsetPercent="33" /> 
+		<image_mod image="food_active_2" state="hasFocus" scale_range="4" vertOffsetPercent="33" /> 
+    </type>
+    <type id="6" poitype="hospital" meshtype="poi">
+        <image4state image="food_icon_4" state="normal"/>
+        <image_mod image="food_icon_2" state="normal" scale_range="1" />  
+        <image_mod image="food_icon_2" state="normal" scale_range="2" />  
+        <image_mod image="food_icon_2" state="normal" scale_range="3" />  
+        <image_mod image="food_icon_1" state="normal" scale_range="4" />  
+        
+		<image4state image="food_active_4" state="hasFocus" />
+		<image_mod image="food_active_2" state="hasFocus" scale_range="1" vertOffsetPercent="33" /> 
+		<image_mod image="food_active_2" state="hasFocus" scale_range="2" vertOffsetPercent="33" /> 
+		<image_mod image="food_active_2" state="hasFocus" scale_range="3" vertOffsetPercent="33" /> 
+		<image_mod image="food_active_2" state="hasFocus" scale_range="4" vertOffsetPercent="33" /> 
+    </type>
+    <type id="7" poitype="washroom" meshtype="poi">
+        <image4state image="washroom_icon_4" state="normal"/>
+        <image_mod image="washroom_icon_3" state="normal" scale_range="1" />  
+        <image_mod image="washroom_icon_3" state="normal" scale_range="2" />  
+        <image_mod image="washroom_icon_3" state="normal" scale_range="3" />  
+        <image_mod image="washroom_icon_1" state="normal" scale_range="4" />  
+        
+		<image4state image="washroom_active_4" state="hasFocus" />
+		<image_mod image="washroom_active_2" state="hasFocus" scale_range="1" vertOffsetPercent="33" /> 
+		<image_mod image="washroom_active_2" state="hasFocus" scale_range="2" vertOffsetPercent="33" /> 
+		<image_mod image="washroom_active_2" state="hasFocus" scale_range="3" vertOffsetPercent="33" /> 
+		<image_mod image="washroom_active_2" state="hasFocus" scale_range="4" vertOffsetPercent="33" /> 
+    </type>
+    <type id="8" poitype="drinkingwater" meshtype="poi">
+        <image4state image="drinkingwater_icon_4" state="normal"/>
+        <image_mod image="drinkingwater_icon_3" state="normal" scale_range="1" />  
+        <image_mod image="drinkingwater_icon_3" state="normal" scale_range="2" />  
+        <image_mod image="drinkingwater_icon_3" state="normal" scale_range="3" />  
+        <image_mod image="drinkingwater_icon_1" state="normal" scale_range="4" />  
+        
+		<image4state image="drinkingwater_active_4" state="hasFocus" />
+		<image_mod image="drinkingwater_active_2" state="hasFocus" scale_range="1" vertOffsetPercent="33" /> 
+		<image_mod image="drinkingwater_active_2" state="hasFocus" scale_range="2" vertOffsetPercent="33" /> 
+		<image_mod image="drinkingwater_active_2" state="hasFocus" scale_range="3" vertOffsetPercent="33" /> 
+		<image_mod image="drinkingwater_active_2" state="hasFocus" scale_range="4" vertOffsetPercent="33" /> 
+    </type>
+</pois>
+<trails>	<!-- subtype ids much match values NamedPathTypes in RenderSchemeManager.java -->
+    <trail_label_offset factor="0.5" />
+    <trail_label_capitaliztion on="true" />
+    <type type="trail">
+	    <sizes4scale_range scale_range="1" trail_width="20" text_size="20" text_rgb_color="ffffff" text_outline_width="0" text_outline_rgb_color="ffffff"/>
+	    <sizes4scale_range scale_range="2" trail_width="16" text_size="16" text_rgb_color="ffffff" text_outline_width="0" text_outline_rgb_color="ffffff"/>
+	    <sizes4scale_range scale_range="3" trail_width="14" text_size="14" text_rgb_color="ffffff" text_outline_width="0" text_outline_rgb_color="ffffff"/>
+	    <sizes4scale_range scale_range="4" trail_width="10"  text_size="12" text_rgb_color="ffffff" text_outline_width="0" text_outline_rgb_color="ffffff" />
+	    <subtype id="0" type="green trail" >
+	        <params4state rgb_color="1dad00" alpha="255" state="normal"/>
+	        <params4state rgb_color="00A651" alpha="255" state="hasFocus"/>
+	    </subtype>
+	    <subtype id="1" type="blue trail" >
+	        <params4state rgb_color="007eff" alpha="255" state="normal"/>
+	        <params4state rgb_color="0095DA" alpha="255" state="hasFocus"/>
+	    </subtype>
+	    <subtype id="2" type="black trail" >
+	        <params4state rgb_color="000000" alpha="255" state="normal"/>
+	        <params4state rgb_color="000000" alpha="255" state="hasFocus"/>
+	    </subtype>
+	    <subtype id="3" type="dblblack trail" >
+	        <params4state rgb_color="000000" alpha="255" state="normal"/>
+	        <params4state rgb_color="000000" alpha="255" state="hasFocus"/>
+	    </subtype>
+	    <subtype id="4" type="red trail" >
+	        <params4state rgb_color="ff0000" alpha="255" state="normal"/>
+	        <params4state rgb_color="ff0000" alpha="255" state="hasFocus"/>
+	    </subtype>
+    </type>
+    <type type="trunk">
+	    <sizes4scale_range scale_range="1" trail_width="20" text_size="20" text_rgb_color="ffffff" text_outline_width="0" text_outline_rgb_color="ffffff"/>
+	    <sizes4scale_range scale_range="2" trail_width="16" text_size="16" text_rgb_color="ffffff" text_outline_width="0" text_outline_rgb_color="ffffff"/>
+	    <sizes4scale_range scale_range="3" trail_width="14" text_size="14" text_rgb_color="ffffff" text_outline_width="0" text_outline_rgb_color="ffffff"/>
+	    <sizes4scale_range scale_range="4" trail_width="10"  text_size="12" text_rgb_color="ffffff" text_outline_width="0" text_outline_rgb_color="ffffff" />
+	    <subtype id="5" type="green trunk" >
+	        <params4state rgb_color="1dad00" alpha="255" state="normal"/>
+	        <params4state rgb_color="00A651" alpha="255" state="hasFocus"/>
+	    </subtype>
+	    <subtype id="6" type="blue trunk" >
+	        <params4state rgb_color="007eff" alpha="255" state="normal"/>
+	        <params4state rgb_color="0095DA" alpha="255" state="hasFocus"/>
+	    </subtype>
+	    <subtype id="7" type="black trunk" >
+	        <params4state rgb_color="3a3a3a" alpha="255" state="normal"/>
+	        <params4state rgb_color="000000" alpha="255" state="hasFocus"/>
+	    </subtype>
+	    <subtype id="8" type="dblblack trunk" >
+	        <params4state rgb_color="000000" alpha="255" state="normal"/>
+	        <params4state rgb_color="000000" alpha="255" state="hasFocus"/>
+	    </subtype>
+	    <subtype id="9" type="red trunk" >
+	        <params4state rgb_color="ff0000" alpha="255" state="normal"/>
+	        <params4state rgb_color="ff0000" alpha="255" state="hasFocus"/>
+	    </subtype>
+    </type>
+    <type type="ski lift">
+	    <sizes4scale_range scale_range="1" trail_width="24" text_size="20" text_rgb_color="ffffff" text_outline_width="0" text_outline_rgb_color="ffffff"/>
+	    <sizes4scale_range scale_range="2" trail_width="20" text_size="16" text_rgb_color="ffffff" text_outline_width="0" text_outline_rgb_color="ffffff"/>
+	    <sizes4scale_range scale_range="3" trail_width="16" text_size="14" text_rgb_color="ffffff" text_outline_width="0" text_outline_rgb_color="ffffff"/>
+	    <sizes4scale_range scale_range="4" trail_width="12"  text_size="12" text_rgb_color="ffffff" text_outline_width="0" text_outline_rgb_color="ffffff" />
+        <subtype id="10" type="ski lift" >
+	        <params4state rgb_color="ff0000" alpha="128" state="normal"/>
+	        <params4state rgb_color="ff0000" alpha="255" state="hasFocus"/>
+	    </subtype>
+    </type>
+
+
+<!-- JET CITY MAP STARTS HERE -->
+<!-- JET CITY MAP STARTS HERE -->
+<!-- JET CITY MAP STARTS HERE -->
+<!-- JET CITY MAP STARTS HERE -->
+
+
+    <type type="road motorway">
+	    <sizes4scale_range scale_range="1" trail_width="80" text_size="20" text_rgb_color="ffffff" text_outline_width="0" text_outline_rgb_color="ffffff"/>
+	    <sizes4scale_range scale_range="2" trail_width="50" text_size="18" text_rgb_color="ffffff" text_outline_width="0" text_outline_rgb_color="ffffff"/>
+	    <sizes4scale_range scale_range="3" trail_width="25" text_size="14" text_rgb_color="ffffff" text_outline_width="0" text_outline_rgb_color="ffffff"/>
+	    <sizes4scale_range scale_range="4" trail_width="16" text_size="14" text_rgb_color="ffffff" text_outline_width="0" text_outline_rgb_color="ffffff"/>
+	    <subtype id="11" type="road motorway" >
+	        <params4state rgb_color="333333" alpha="255" state="normal"/>
+	        <params4state rgb_color="ffffff" alpha="255" state="hasFocus"/>
+	    </subtype>
+    </type>
+    <type type="road artery primary">
+	    <sizes4scale_range scale_range="1" trail_width="80" text_size="20" text_rgb_color="ffffff" text_outline_width="0" text_outline_rgb_color="ffffff"/>
+	    <sizes4scale_range scale_range="2" trail_width="50" text_size="18" text_rgb_color="ffffff" text_outline_width="0" text_outline_rgb_color="ffffff"/>
+	    <sizes4scale_range scale_range="3" trail_width="25" text_size="14" text_rgb_color="ffffff" text_outline_width="0" text_outline_rgb_color="ffffff"/>
+	    <sizes4scale_range scale_range="4" trail_width="16" text_size="14" text_rgb_color="ffffff" text_outline_width="0" text_outline_rgb_color="ffffff"/>
+	    <subtype id="12" type="road artery primary" >
+	        <params4state rgb_color="333333" alpha="255" state="normal"/>      <!-- RED ff5858 Georgia, Howe St, Seymour St, Graville Bridge -->
+	        <params4state rgb_color="ffffff" alpha="255" state="hasFocus"/>
+	    </subtype>
+    </type>
+        <type type="road artery secondary">
+	    <sizes4scale_range scale_range="1" trail_width="60" text_size="20" text_rgb_color="ffffff" text_outline_width="0" text_outline_rgb_color="ffffff"/>
+	    <sizes4scale_range scale_range="2" trail_width="40" text_size="18" text_rgb_color="ffffff" text_outline_width="0" text_outline_rgb_color="ffffff"/>
+	    <sizes4scale_range scale_range="3" trail_width="20" text_size="14" text_rgb_color="ffffff" text_outline_width="0" text_outline_rgb_color="ffffff"/>
+	    <sizes4scale_range scale_range="4" trail_width="14" text_size="14" text_rgb_color="ffffff" text_outline_width="0" text_outline_rgb_color="ffffff"/>
+	    <subtype id="13" type="road artery secondary" >
+	        <params4state rgb_color="333333" alpha="255" state="normal"/>       <!-- BROWN d09122 Pacific Blvd, Burrard -->
+	        <params4state rgb_color="ffffff" alpha="255" state="hasFocus"/>
+	    </subtype>
+    </type>
+        <type type="road artery tertiary">
+	    <sizes4scale_range scale_range="1" trail_width="55" text_size="20" text_rgb_color="ffffff" text_outline_width="0" text_outline_rgb_color="ffffff"/>
+	    <sizes4scale_range scale_range="2" trail_width="35" text_size="18" text_rgb_color="ffffff" text_outline_width="0" text_outline_rgb_color="ffffff"/>
+	    <sizes4scale_range scale_range="3" trail_width="18" text_size="14" text_rgb_color="ffffff" text_outline_width="0" text_outline_rgb_color="ffffff"/>
+	    <sizes4scale_range scale_range="4" trail_width="12" text_size="14" text_rgb_color="ffffff" text_outline_width="0" text_outline_rgb_color="ffffff"/>
+	    <subtype id="14" type="road artery tertiary" >
+	        <params4state rgb_color="333333" alpha="255" state="normal"/>        <!-- GREEN  45c024 Granville, Richards, Homer -->
+	        <params4state rgb_color="ffffff" alpha="255" state="hasFocus"/>
+	    </subtype>
+    </type>
+    <type type="road residential">
+	    <sizes4scale_range scale_range="1" trail_width="20" text_size="16" text_rgb_color="ffffff" text_outline_width="0" text_outline_rgb_color="ffffff"/>
+	    <sizes4scale_range scale_range="2" trail_width="16" text_size="14" text_rgb_color="ffffff" text_outline_width="0" text_outline_rgb_color="ffffff"/>
+	    <sizes4scale_range scale_range="3" trail_width="14" text_size="12" text_rgb_color="ffffff" text_outline_width="0" text_outline_rgb_color="ffffff"/>
+	    <sizes4scale_range scale_range="4" trail_width="10" text_size="10"  text_rgb_color="ffffff" text_outline_width="0" text_outline_rgb_color="ffffff"/>
+		<subtype id="15" type="road residential" >
+	        <params4state rgb_color="333333" alpha="255" state="normal"/>
+	        <params4state rgb_color="777777" alpha="255" state="hasFocus"/>
+	    </subtype>
+    </type>
+    <type type="walkway">
+	    <sizes4scale_range scale_range="1" trail_width="14" text_size="16" text_rgb_color="ffffff" text_outline_width="0" text_outline_rgb_color="ffffff"/>
+	    <sizes4scale_range scale_range="2" trail_width="14" text_size="14" text_rgb_color="ffffff" text_outline_width="0" text_outline_rgb_color="ffffff"/>
+	    <sizes4scale_range scale_range="3" trail_width="8"  text_size="12"  text_rgb_color="ffffff" text_outline_width="0" text_outline_rgb_color="ffffff"/>
+	    <sizes4scale_range scale_range="4" trail_width="8"  text_size="10"  text_rgb_color="ffffff" text_outline_width="0" text_outline_rgb_color="ffffff" />
+		<subtype id="16" type="walkway" >
+	        <params4state rgb_color="333333" alpha="255" state="normal"/>
+	        <params4state rgb_color="707070" alpha="255" state="hasFocus"/>
+	    </subtype>
+    </type>
+    <type type="national border">
+	    <sizes4scale_range scale_range="1" trail_width="14" text_size="16" text_rgb_color="ffffff" text_outline_width="0" text_outline_rgb_color="ffffff"/>
+	    <sizes4scale_range scale_range="2" trail_width="14" text_size="14" text_rgb_color="ffffff" text_outline_width="0" text_outline_rgb_color="ffffff"/>
+	    <sizes4scale_range scale_range="3" trail_width="8"  text_size="12"  text_rgb_color="ffffff" text_outline_width="0" text_outline_rgb_color="ffffff"/>
+	    <sizes4scale_range scale_range="4" trail_width="8"  text_size="8"  text_rgb_color="ffffff" text_outline_width="0" text_outline_rgb_color="ffffff" />
+		<subtype id="17" type="national border" >
+	        <params4state rgb_color="707070" alpha="255" state="normal"/>
+	        <params4state rgb_color="707070" alpha="255" state="hasFocus"/>
+	    </subtype>
+    </type>
+    <type type="waterway">
+	    <sizes4scale_range scale_range="1" trail_width="14" text_size="20" text_rgb_color="10104f" text_outline_width="3" text_outline_rgb_color="ffffff"/>
+	    <sizes4scale_range scale_range="2" trail_width="14" text_size="15" text_rgb_color="10104f" text_outline_width="3" text_outline_rgb_color="ffffff"/>
+	    <sizes4scale_range scale_range="3" trail_width="8" text_size="8" text_rgb_color="10104f" text_outline_width="3" text_outline_rgb_color="ffffff"/>
+	    <sizes4scale_range scale_range="4" trail_width="8" text_size="8" text_rgb_color="10104f" text_outline_width="2" text_outline_rgb_color="ffffff" />
+		<subtype id="18" type="national border" >
+	        <params4state rgb_color="10104f" alpha="255" state="normal"/>
+	        <params4state rgb_color="10104f" alpha="255" state="hasFocus"/>
+	    </subtype>
+    </type>
+
+</trails>
+<areas> 	<!-- type ids much match values AreaTypes in RenderSchemeManager.java -->
+    <type id="0" type="land"  		fill_rgb_color="666666" alpha="255"  />
+    <type id="1" type="ocean" 		fill_rgb_color="324050" alpha="255"  />
+    <type id="2" type="citytown"   	fill_rgb_color="000000" alpha="255"  />
+    <type id="3" type="woods"  		fill_rgb_color="2b4221" alpha="255"  />
+    <type id="4" type="park"   		fill_rgb_color="003b07" alpha="255"  />
+    <type id="5" type="water" 		fill_rgb_color="324050" alpha="255"  />
+    <type id="6" type="scrub"  		fill_rgb_color="afafaf" alpha="255"  />
+    <type id="7" type="tundra" 		fill_rgb_color="CFD2D8" alpha="255"  />
+    <type id="8" type="skiresort" 	fill_rgb_color="ffffff" alpha="255"  />
+    <type id="9" type="nodatazone" 	fill_rgb_color="324050" alpha="255"  />
+</areas>
+</rendering_scheme>

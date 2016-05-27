@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="horizontal" >
+      <Button
+        android:id="@+id/btnpt"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="P.T."
+        />
+
+
+    <Button
+        android:id="@+id/btnnt"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="N.T."
+        />
+
+
+    <Button
+        android:id="@+id/btnvu"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="V.U."
+        />
+    
+       <Button
+        android:id="@+id/btnvd"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="V.D."
+        />
+  
+      <Button
+        android:id="@+id/btntpp"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="P/P"
+        />
+
+</LinearLayout>

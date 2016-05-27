@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_height="fill_parent" android:layout_width="fill_parent"
+	android:id="@+id/last_jump_layout" android:paddingLeft="15px">
+
+	<TextView android:id="@+id/tab_title" android:text="--"
+		android:textColor="@color/vert_blue" style="@style/detailText"
+		android:layout_width="wrap_content" android:layout_height="wrap_content" />
+
+	
+	<!-- Total Vert -->
+	<TextView android:id="@+id/total_vert" android:text="Total"
+		style="@style/detailText" android:layout_below="@+id/tab_title" />
+
+	<TextView android:id="@+id/total_vert_field" android:text="--"
+		android:textColor="@color/vert_blue" style="@style/detailText"
+		android:layout_toLeftOf="@+id/total_vert_field_unit"
+		android:layout_marginRight="10px" android:layout_alignBaseline="@+id/total_vert" />
+
+	<TextView android:id="@+id/total_vert_field_unit"
+		android:text="m" style="@style/detailText"
+		android:layout_alignParentRight="True" android:layout_alignBaseline="@+id/total_vert" />
+
+	
+	<!-- Runs -->
+	<TextView android:id="@+id/runs" android:text="Runs"
+		style="@style/detailText" android:layout_below="@+id/total_vert" />
+
+	<TextView android:id="@+id/runs_field" android:text="--"
+		android:textColor="@color/vert_blue" style="@style/detailText"
+		android:layout_alignParentRight="True" android:layout_alignBaseline="@+id/runs" />
+	
+	
+	<!-- All Time Vert -->
+	<TextView android:id="@+id/all_time_vert" android:text="All Time"
+		style="@style/detailText" android:layout_below="@+id/runs" />
+
+	<TextView android:id="@+id/all_time_vert_field" android:text="--"
+		android:textColor="@color/vert_blue" style="@style/detailText"
+		android:layout_toLeftOf="@+id/all_time_vert_field_unit"
+		android:layout_marginRight="10px" android:layout_alignBaseline="@+id/all_time_vert" />
+
+	<TextView android:id="@+id/all_time_vert_field_unit"
+		android:text="m" style="@style/detailText"
+		android:layout_alignParentRight="True" android:layout_alignBaseline="@+id/all_time_vert" />
+	
+	
+	<!--  All Time Runs -->
+	<TextView android:id="@+id/all_time_runs" android:text="All Runs"
+		style="@style/detailText" android:layout_below="@+id/all_time_vert" />
+
+	<TextView android:id="@+id/all_time_runs_field" android:text="--"
+		android:textColor="@color/vert_blue" style="@style/detailText"
+		android:layout_alignParentRight="True" android:layout_alignBaseline="@+id/all_time_runs" />
+	
+</RelativeLayout>

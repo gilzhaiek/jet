@@ -1,0 +1,47 @@
+diff --exclude='*[!.ch]' -uN /work/tttttt_mydroid_froyo/omap/arch/arm/mach-omap2/board-zoom2-wifi.c /work/mydroid_L25_froyo_3.3/omap/arch/arm/mach-omap2/board-zoom2-wifi.c
+--- /work/tttttt_mydroid_froyo/omap/arch/arm/mach-omap2/board-zoom2-wifi.c	2010-10-05 14:25:14.000000000 +0200
++++ /work/mydroid_L25_froyo_3.3/omap/arch/arm/mach-omap2/board-zoom2-wifi.c	2010-10-12 17:40:21.000000000 +0200
+@@ -24,6 +24,7 @@
+ {
+ 	/* WLAN PW_EN and IRQ */
+ 	omap_mux_init_gpio(ZOOM2_WIFI_PMENA_GPIO, OMAP_PIN_OUTPUT);
++	omap_mux_init_gpio(ZOOM2_WIFI_PMENA_GPIO_EXT, OMAP_PIN_OUTPUT);
+ 	omap_mux_init_gpio(ZOOM2_WIFI_IRQ_GPIO, OMAP_PIN_INPUT);
+ 
+ 	/* MMC3 */
+@@ -70,6 +71,7 @@
+ {
+ 	pr_info("%s: %d\n", __func__, on);
+ 	gpio_set_value(ZOOM2_WIFI_PMENA_GPIO, on);
++	gpio_set_value(ZOOM2_WIFI_PMENA_GPIO_EXT, on);
+ 	zoom2_wifi_power_state = on;
+ 	return 0;
+ }
+@@ -133,8 +135,16 @@
+ 		gpio_free(ZOOM2_WIFI_IRQ_GPIO);
+ 		goto out;
+ 	}
++	ret = gpio_request(ZOOM2_WIFI_PMENA_GPIO_EXT, "wifi_pmena_ext");
++	if (ret < 0) {
++		pr_err("%s: can't reserve GPIO EXT: %d\n", __func__,
++			ZOOM2_WIFI_PMENA_GPIO_EXT);
++		gpio_free(ZOOM2_WIFI_IRQ_GPIO);
++		goto out;
++	}
+ 	gpio_direction_input(ZOOM2_WIFI_IRQ_GPIO);
+ 	gpio_direction_output(ZOOM2_WIFI_PMENA_GPIO, 0);
++	gpio_direction_output(ZOOM2_WIFI_PMENA_GPIO_EXT, 0);
+ #ifdef CONFIG_WIFI_CONTROL_FUNC
+ 	ret = platform_device_register(&zoom2_wifi_device);
+ #endif
+diff --exclude='*[!.ch]' -uN /work/tttttt_mydroid_froyo/omap/arch/arm/mach-omap2/board-zoom2-wifi.h /work/mydroid_L25_froyo_3.3/omap/arch/arm/mach-omap2/board-zoom2-wifi.h
+--- /work/tttttt_mydroid_froyo/omap/arch/arm/mach-omap2/board-zoom2-wifi.h	2010-10-05 14:25:14.000000000 +0200
++++ /work/mydroid_L25_froyo_3.3/omap/arch/arm/mach-omap2/board-zoom2-wifi.h	2010-10-04 11:44:32.000000000 +0200
+@@ -12,6 +12,7 @@
+ #define _BOARD_ZOOM2_WIFI_H
+ 
+ #define ZOOM2_WIFI_PMENA_GPIO	101
++#define ZOOM2_WIFI_PMENA_GPIO_EXT 157
+ #define ZOOM2_WIFI_IRQ_GPIO	162
+ 
+ void config_wlan_mux(void);

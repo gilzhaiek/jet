@@ -1,0 +1,1 @@
+android update project -p . -n "GeodataService" -t android-16

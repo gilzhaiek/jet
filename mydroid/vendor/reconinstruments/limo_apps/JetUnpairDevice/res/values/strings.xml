@@ -1,0 +1,4 @@
+<resources>
+	<string name="app_name">JetUnpairDevice</string>
+	<string name="desc_unpair_device"><![CDATA[Are you sure you want to forget <font color=\"#ffb300\">%1$s</font>?]]></string>
+</resources>

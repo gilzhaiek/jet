@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="app_name">Mfi Tester</string>
+	<string name="bluetoothPowerButtonLabel">BT Power:</string>
+	<string name="bluetoothPowerOn">On</string>
+	<string name="bluetoothPowerOff">Off</string>
+	<string name="commandLabel">Command:</string>
+	<string name="commandDropDownLabel">Select Command</string>
+	<string name="executeCommandLabel">Submit</string>
+	<string name="remoteDeviceLabel">Remote Device Address</string>
+	<string name="parameter1Label">Parameter 1</string>
+	<string name="parameter2Label">Parameter 2</string>
+	<string name="parameter3Label">Parameter 3</string>
+	<string name="parameter4Label">Parameter 4</string>
+	<string name="parameter5Label">Parameter 5</string>
+	<string name="logOutputLabel">Output log:</string>
+	<string name="logOutputInitialText">Output</string>
+	<string name="bluetoothEnablingStatusText">Turning on</string>
+	<string name="bluetoothEnabledStatusText">Enabled</string>
+	<string name="bluetoothDisablingStatusText">Turning off</string>
+	<string name="bluetoothDisabledStatusText">Disabled</string>
+	<string name="localAddressLogMessagePrefix">Local device: </string>
+	<string name="bluetoothEnablingToastMessage">Bluetooth is turning on.</string>
+	<string name="bluetoothEnabledToastMessage">Bluetooth is enabled.</string>
+	<string name="bluetoothDisablingToastMessage">Bluetooth is turning off.</string>
+	<string name="bluetoothDisabledToastMessage">Bluetooth is disabled.</string>
+	<string name="bluetoothUnknownStateToastMessage">Received notification of Bluetooth state &lt;unrecognized&gt;.</string>
+	<string name="errorPreferencesOutOfDate">WARNING: Saved application state is out of date. State has been reset to default.</string>
+	<string name="errorBluetoothNotSupportedToastMessage">ERROR: Bluetooth is not supported on this device.</string>
+	<string name="errorEnableBluetoothToastMessage">ERROR: Bluetooth must be enabled to perform this function.</string>
+	<string name="errorInvalidBluetoothAddressToastMessage">ERROR: Bluetooth address is not formatted correctly.</string>
+	<string name="errorBTPMServerNotReachableToastMessage">ERROR: Could not connect to the BluetopiaPM service.</string>
+</resources>

@@ -1,0 +1,7 @@
+wifi.interface=wlan0
+com.ti.omap_enhancement=true
+com.ti.omap_enhancement_s3d=true
+com.ti.blueti_enhancement=false
+
+#define a property for hdmi sink channel count
+dolby.audio.hdmi.channels=0

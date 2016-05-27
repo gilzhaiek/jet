@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:gravity="center_vertical"
+	android:orientation="horizontal"
+	android:paddingBottom="5dp"
+	android:paddingLeft="30px"
+	android:paddingTop="5dp" >
+	<ImageView
+		android:id="@+id/setting_uninst_icon"
+		android:layout_width="48px"
+		android:layout_height="48px"
+		android:layout_alignParentLeft="true" />
+	<com.reconinstruments.commonwidgets.CustomTextView
+		android:id="@+id/setting_uninst_name"
+		style="@style/recon_selectable_text_shadow"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginLeft="5dp"
+		android:textSize="24px"
+		android:textStyle="normal" />
+</LinearLayout>

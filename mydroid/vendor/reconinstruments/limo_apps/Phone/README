@@ -1,0 +1,5 @@
+This project contains activities for interacting with calls and text messages.
+This was formerly a standalone application, but now parts of it are accessed through the message center.
+The old activities are kept in place as a way to browse the call/text database for debugging and or reference
+
+TODO: Aggregate all telephony related code and services here. Add missing features

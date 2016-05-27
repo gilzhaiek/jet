@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/android_layouts_suck"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:paddingLeft="20dp"
+	android:paddingRight="20dp" >
+	<!-- 1st Row: Category Name, Message Timestamp right aligned -->
+	<LinearLayout
+		android:id="@+id/topBar"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="12dp"
+		android:orientation="horizontal" >
+		<TextView
+			android:id="@+id/msgCategory"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:gravity="center"
+			android:includeFontPadding="false"
+			android:text="Category"
+			android:textColor="#FFF"
+			android:textSize="26sp"
+			android:textStyle="bold" />
+		<TextView
+			android:id="@+id/msgDate"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:fontFamily="sans-serif-semibold"
+			android:gravity="right"
+			android:text="Date"
+			android:textSize="20sp" />
+	</LinearLayout>
+	<!-- 2nd Row: Back/Forth Nav, Nav count, reply button -->
+	<RelativeLayout
+		android:id="@+id/secondRow"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:layout_below="@id/topBar"
+		android:layout_marginTop="-5dp"
+		android:orientation="horizontal" >
+		<ImageView
+			android:id="@+id/msgbtn_navprev"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_centerVertical="true"
+			android:focusable="false"
+			android:src="@drawable/left_arrow_active" />
+		<ImageView
+			android:id="@+id/msgbtn_navnext"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_centerVertical="true"
+			android:layout_marginLeft="5dip"
+			android:layout_toRightOf="@+id/msgbtn_navprev"
+			android:focusable="false"
+			android:src="@drawable/right_arrow_active" />
+		<TextView
+			android:id="@+id/msgnav_count"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginLeft="10dip"
+			android:layout_toRightOf="@+id/msgbtn_navnext"
+			android:includeFontPadding="false"
+			android:text="X/X"
+			android:textColor="#FFF"
+			android:textSize="24sp" />
+	</RelativeLayout>
+	<LinearLayout
+		android:id="@+id/bottomRow"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_alignParentBottom="true"
+		android:layout_marginBottom="20dp"
+		android:orientation="horizontal" >
+		<ImageView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:src="@drawable/select_button" />
+		<TextView
+			android:id="@+id/msgbtn_Handle"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_gravity="center"
+			android:layout_marginLeft="10dp"
+			android:text="@string/alert_handle"
+			android:textColor="#FFF"
+			android:textSize="20sp"
+			android:textStyle="bold" />
+	</LinearLayout>
+	<!-- Center Row: Message Body -->
+	<RelativeLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_above="@+id/bottomRow"
+		android:layout_below="@id/secondRow"
+		android:layout_marginTop="3dp" >
+		<ImageView
+			android:id="@+id/messageIcon"
+			android:layout_width="wrap_content"
+			android:layout_height="0dp" />
+		<TextView
+			android:id="@+id/notification"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_centerVertical="true"
+			android:focusable="true"
+			android:maxLines="4"
+			android:scrollbars="vertical"
+			android:text="LALALALKJDSFLKDS JFLKDJ FLKDJ FLKDSJFdsfadfasddsf fSDFD SFDSF DSF  fdsfsdafdsafdfasdfds  IDSFJ DSIF OJDSFLI JDLIF JDSLIF JDSLIF JDSLIF JDdsafs dfdsaf asd fdsaf dsafsda fsadSLIFJDSIF JDSLI FJSDILF JLISDJF LIJLD SIJLSFDILJSLIDFJLIDSJFIL f"
+			android:textColor="#ffffff"
+			android:textSize="22sp"
+			android:textStyle="bold" />
+		<!--
+        <ImageView
+            android:id="@+id/msgbtn_scrollup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/notification"
+            android:focusable="false"
+            android:src="@drawable/up_arrow"/>
+        
+		<ImageView
+            android:id="@+id/msgbtn_scrolldown"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/notification"
+            android:layout_alignParentRight="true"
+            android:focusable="false"
+            android:src="@drawable/down_arrow"/>
+		-->
+	</RelativeLayout>
+</RelativeLayout>

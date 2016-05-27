@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:baselineAligned="false"
+    android:orientation="horizontal" >
+
+    <LinearLayout
+        android:layout_width="0px"
+        android:layout_height="match_parent"
+        android:layout_weight="1.2"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <Button
+                android:id="@+id/bluetoothToggleButton"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:text="@string/bluetoothPowerButtonLabel"
+                android:textSize="14sp" />
+
+            <Button
+                android:id="@+id/scanButton"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:text="@string/Scan"
+                android:textSize="14sp" />
+
+            <Button
+                android:id="@+id/getDevButton"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:maxLines="1"
+                android:text="@string/getServices"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/connectButton"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:text="@string/Connect"
+                android:textSize="14sp" />
+
+            <Button
+                android:id="@+id/disconnectButton"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:text="@string/Disconnect"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <Button
+                android:id="@+id/nextDevButton"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:text="@string/Next"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/deviceAddressText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="@string/RemoteDeviceAddress"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/deviceConnectedText"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|right"
+                android:gravity="center"
+                android:text="@string/Disconnected"
+                android:textSize="14sp" />
+            <TextView
+                android:id="@+id/deviceNameText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="@string/RemoteDeviceName"
+                android:textSize="14sp" />
+
+            
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <Button
+                android:id="@+id/eNotifyButton"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:text="@string/NotifyOn"
+                android:textSize="14sp" />
+
+            <Button
+                android:id="@+id/dNotifyButton"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:text="@string/NotifyOff"
+                android:textSize="14sp" />
+            
+            <EditText
+                android:id="@+id/attHandleText"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:hint="Att. handle(int)"
+                android:inputType="number"
+                android:textSize="14sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/wahooOutput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:layout_width="0px"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical" >
+
+        <ScrollView
+            android:id="@+id/logOutputScroller"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <TextView
+                android:id="@+id/logOutputText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/logOutputInitialText"
+                android:textSize="13sp" />
+        </ScrollView>
+    </LinearLayout>
+
+</LinearLayout>

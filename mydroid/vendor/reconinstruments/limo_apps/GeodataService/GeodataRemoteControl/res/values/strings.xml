@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Geodata Remote</string>
+    <string name="service_response">choose operating condition to change…</string>
+    <string name="service_state">Geodata Service not running</string>
+
+</resources>

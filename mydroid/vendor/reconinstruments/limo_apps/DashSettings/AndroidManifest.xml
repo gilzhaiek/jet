@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+        package="com.reconinstruments.dashsettings"
+        android:sharedUserId="android.uid.system"
+        android:versionCode="6900"
+        android:versionName="3.1_aug22" >
+        <uses-sdk
+                android:minSdkVersion="10"
+                android:targetSdkVersion="16" />
+        <uses-permission android:name="android.permission.BLUETOOTH" />
+        <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+        <uses-permission android:name="android.permission.DELETE_PACKAGES" />
+        <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+        <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+        <uses-permission android:name="android.permission.WRITE_SECURE_SETTINGS" />
+        <uses-permission android:name="android.permission.CHANGE_CONFIGURATION" />
+        <uses-permission android:name="android.permission.SET_TIME" />
+        <uses-permission android:name="android.permission.SET_TIME_ZONE" />
+        <uses-permission android:name="android.permission.REBOOT" />
+        <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+        <application
+                android:allowBackup="true"
+                android:icon="@drawable/ic_launcher"
+                android:label="@string/app_name"
+                android:theme="@style/ReconTheme.NoTitleBar" >
+                <activity
+                        android:name="com.reconinstruments.dashsettings.AppsOrSettingsActivity"
+                        android:label="@string/app_name"
+                        android:launchMode="singleInstance" >
+                        <intent-filter>
+                                <action android:name="android.intent.action.MAIN" />
+                                <category android:name="android.intent.category.DEFAULT" />
+                        </intent-filter>
+                </activity>
+                <!-- Setting -->
+                <activity
+                        android:name="com.reconinstruments.dashlauncher.applauncher.AppLauncherActivity"
+                        android:launchMode="singleInstance"
+                        android:theme="@style/ReconTheme.NoTitleBar" >
+                        <intent-filter>
+                                <action android:name="android.intent.action.MAIN" />
+                                <action android:name="com.reconinstruments.dashsettings.apps" />
+                                <category android:name="android.intent.category.DEFAULT" />
+                        </intent-filter>
+                </activity>
+                <activity
+                        android:name="com.reconinstruments.dashlauncher.settings.SettingsActivity"
+                        android:launchMode="singleInstance"
+                        android:theme="@style/ReconTheme.NoTitleBar" >
+                        <intent-filter>
+                                <action android:name="android.intent.action.MAIN" />
+                                <action android:name="com.reconinstruments.dashsettings.settings" />
+                                <category android:name="android.intent.category.DEFAULT" />
+                        </intent-filter>
+                </activity>
+                <activity
+                        android:name="com.reconinstruments.dashlauncher.settings.HelpActivity"
+                        android:launchMode="singleInstance"
+                        android:theme="@style/ReconTheme.NoTitleBar" />
+                <activity
+                        android:name="com.reconinstruments.dashlauncher.settings.BrightnessActivity"
+                        android:launchMode="singleInstance"
+                        android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+                <activity
+                        android:name="com.reconinstruments.dashlauncher.settings.bluetooth.BluetoothActivity"
+                        android:launchMode="singleInstance"
+                        android:theme="@style/ReconTheme.NoTitleBar" />
+                <activity
+                        android:name="com.reconinstruments.dashlauncher.settings.DateTimeActivity"
+                        android:launchMode="singleInstance"
+                        android:theme="@style/ReconTheme.NoTitleBar" />
+                <activity
+                        android:name="com.reconinstruments.dashlauncher.settings.TimeZoneActivity"
+                        android:launchMode="singleInstance"
+                        android:theme="@style/ReconTheme.NoTitleBar" />
+                <activity
+                        android:name="com.reconinstruments.dashlauncher.settings.ResetStatsActivity"
+                        android:launchMode="singleInstance"
+                        android:theme="@style/ReconTheme.NoTitleBar" />
+                <activity
+                        android:name="com.reconinstruments.dashlauncher.settings.SetUnitsActivity"
+                        android:launchMode="singleInstance"
+                        android:theme="@style/ReconTheme.NoTitleBar" />
+                <activity
+                        android:name="com.reconinstruments.dashlauncher.settings.UpdateActivity"
+                        android:launchMode="singleInstance"
+                        android:theme="@style/ReconTheme.NoTitleBar" />
+                <activity
+                        android:name="com.reconinstruments.dashlauncher.settings.ManualTimeActivity"
+                        android:launchMode="singleInstance"
+                        android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+                <activity
+                        android:name="com.reconinstruments.dashlauncher.settings.advanced.AdvancedActivity"
+                        android:launchMode="singleInstance"
+                        android:theme="@style/ReconTheme.NoTitleBar" />
+                <activity
+                        android:name="com.reconinstruments.dashlauncher.settings.AboutActivity"
+                        android:launchMode="singleInstance"
+                        android:theme="@style/ReconTheme.NoTitleBar" />
+                <activity
+                        android:name="com.reconinstruments.dashlauncher.settings.advanced.UninstallActivity"
+                        android:launchMode="singleInstance"
+                        android:theme="@style/ReconTheme.NoTitleBar" />
+                <activity
+                        android:name="com.reconinstruments.dashlauncher.settings.advanced.CLearPhoneHistoryActivity"
+                        android:launchMode="singleInstance"
+                        android:theme="@style/ReconTheme.NoTitleBar" />
+                <activity
+                        android:name="com.reconinstruments.dashlauncher.settings.advanced.FactoryResetActivity"
+                        android:launchMode="singleInstance"
+                        android:theme="@style/ReconTheme.NoTitleBar" />
+                <receiver
+                        android:name="com.reconinstruments.dashlauncher.settings.service.SyncTimeReceiver"
+                        android:enabled="true"
+                        android:exported="true" >
+                        <intent-filter>
+                                <action android:name="HUD_STATE_CHANGED" />
+                                <action android:name="com.reconinstruments.hud_phone_status_exchange.tohud.tz_response" />
+                        </intent-filter>
+                </receiver>
+                <service
+                        android:name="com.reconinstruments.dashlauncher.settings.service.SettingService"
+                        android:enabled="true" >
+                        <intent-filter>
+                                <action android:name="RECON_SETTING_SERVICE" />
+                        </intent-filter>
+                </service>
+        </application>
+</manifest>

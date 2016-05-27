@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:paddingTop="10dip"
+    android:paddingBottom="10dip"
+    android:paddingLeft="20dip"
+    android:paddingRight="20dip" >
+
+    <!-- Speed -->
+    <RelativeLayout
+        android:id="@+id/speed_widget"
+        android:layout_width="250dip"
+        android:layout_height="fill_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true" >
+
+        <ImageView
+            android:id="@+id/gauge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="True"
+            android:layout_alignParentTop="True"
+            android:src="@drawable/speed_gauge_0_lrg" />
+
+        <TextView
+            android:id="@+id/speed_unit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:text=""
+            android:textColor="#FFFFFF"
+            android:textSize="35dp" />
+
+        <TextView
+            android:id="@+id/speed_field"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="20dip"
+            android:textSize="100dp"
+            android:textColor="#FFFFFF"
+            android:text="--" />
+    </RelativeLayout>
+
+    <RelativeLayout 
+        android:layout_height="fill_parent"
+        android:layout_width="125dip"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true" >
+    	
+    	<!-- Glide -->
+        <RelativeLayout
+            android:id="@+id/glide"
+            android:layout_width="fill_parent"
+            android:layout_height="90dip"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/border_grey" >
+            
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dip"
+                android:orientation="horizontal"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true" >
+                
+                <ImageView
+                    android:id="@+id/glide_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="7dip"
+                    android:layout_marginRight="10dip"
+                    android:src="@drawable/glide_grey_20" />
+                
+                <TextView android:id="@+id/glide_title" 
+	                android:text="GR"
+	                android:textSize="30dip"
+	                android:textColor="#FFCCCCCC"
+	                android:lines="1"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content" />
+                
+            </LinearLayout>
+            
+            <TextView android:id="@+id/glide_field" 
+                android:text="--"
+                style="@style/field"
+                android:layout_marginBottom="10dip"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentBottom="true" />
+            
+        </RelativeLayout>
+
+        <!-- Alt -->
+        <RelativeLayout
+            android:id="@+id/alt"
+            android:layout_width="fill_parent"
+            android:layout_height="90dip"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/border_orange" >
+            
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dip"
+                android:orientation="horizontal"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true" >
+                
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="7dip"
+                    android:layout_marginRight="10dip"
+                    android:src="@drawable/altitude_20" />
+                
+                <TextView android:id="@+id/alt_title" 
+	                android:text="ALT"
+	                android:textSize="30dip"
+	                android:textColor="#FFFF8C14"
+	                android:lines="1"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content" />
+                
+            </LinearLayout>
+            
+            <TextView android:id="@+id/alt_field" 
+                android:text="--"
+                style="@style/field"
+                android:layout_marginBottom="10dip"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentBottom="true" />
+            
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+</RelativeLayout>

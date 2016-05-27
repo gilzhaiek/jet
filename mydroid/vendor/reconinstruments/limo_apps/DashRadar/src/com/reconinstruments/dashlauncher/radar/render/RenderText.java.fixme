@@ -1,0 +1,183 @@
+package com.reconinstruments.dashlauncher.radar.render;
+
+import java.nio.ByteBuffer;
+import java.nio.ByteOrder;
+import java.nio.FloatBuffer;
+import java.text.DecimalFormat;
+
+import javax.microedition.khronos.opengles.GL10;
+
+import android.graphics.Bitmap;
+import android.graphics.Typeface;
+import android.opengl.GLUtils;
+
+import com.reconinstruments.dashlauncher.radar.User;
+import com.reconinstruments.dashlauncher.radar.util.GraphicUtil;
+
+/**
+ *  This class renders text on the screen using a map of unicode on the screen
+ * 
+ *
+ */
+
+public class RenderText
+{
+	private static final String TAG = "RenderText";
+
+	private static final float LONGITUDE_POINT	= -0.37f;
+	private static final float LATITUDE_POINT	= 0.40f;
+	private static final float VERTICAL_POINT	= -0.62f;
+
+
+	private float fontSize = 10f;
+	
+	private float[] width = new float[67];
+	private float[] height = new float[67];
+
+	// buffer holding the vertices	
+	private FloatBuffer vertexBuffer;
+
+	private int[] textures = new int[67];                               
+
+	private FloatBuffer textureBuffer; // buffer holding the texture coordinates
+
+	// Mapping coordinates for the vertices
+	private float texture[] = { 0.0f, 1.0f, // top left (V2)
+			0.0f, 0.0f, // bottom left (V1)
+			1.0f, 1.0f, // top right (V4)
+			1.0f, 0.0f  // bottom right (V3)
+	};
+
+	private DecimalFormat df = new DecimalFormat();
+
+	public RenderText()
+	{
+		df.setMaximumFractionDigits(4);
+		df.setMinimumFractionDigits(4);
+		init();
+	}
+
+
+
+	private void init()
+	{
+
+		vertexBuffer = ByteBuffer.allocateDirect(4 * 3 * 4).order(ByteOrder.nativeOrder()).asFloatBuffer();
+
+		textureBuffer = ByteBuffer.allocateDirect( texture.length * 4 ).order(ByteOrder.nativeOrder()).asFloatBuffer();
+		textureBuffer.put(texture);
+		textureBuffer.position(0);
+		
+	}
+
+	/** The draw method for the square with the GL context */
+	public void draw(GL10 gl , float x , float y , float z , String text ) {
+
+		float[] vertice = {
+				x	,	y 	,	z,	// 0 , 1 , 2 Bottom Left
+				x	,	y	,	z,	// 3 , 4 , 5 Top Left
+				x	,	y	,	z,	// 6 , 7 , 8 Bottom Right
+				x	,	y	,	z	// 9 ,10 ,11 Top Right
+		};   
+
+		for (int i = 0 ; i < text.length() ; i++){
+
+			char glyph = text.charAt(i);
+			int glyphInt = -1;
+			
+			if ( 48 <= glyph && glyph <= 57)
+				glyphInt = glyph - 48;
+			else if ( 65 <= glyph && glyph <= 90)
+				glyphInt = glyph - 55; 
+			else if ( 97 <= glyph && glyph <= 122)
+				glyphInt = glyph - 61;
+			else if ( 43 <= glyph && glyph <= 47 )
+				glyphInt = glyph + 19;
+			else
+				return;
+			
+			vertice[6] += width[glyphInt]; // right
+			vertice[9] += width[glyphInt]; // right
+			vertice[4] = vertice[1]+height[glyphInt];// top = bottom + heightofglyph
+			vertice[10] = vertice[7]+height[glyphInt];// top = bottom + heightofglyph
+			
+			// bind the previously generated texture
+			gl.glBindTexture(GL10.GL_TEXTURE_2D, textures[glyphInt]);
+
+			// Point to our buffers
+			gl.glEnableClientState(GL10.GL_VERTEX_ARRAY);
+			gl.glEnableClientState(GL10.GL_TEXTURE_COORD_ARRAY);
+
+			vertexBuffer.put(vertice);
+			vertexBuffer.position(0);
+			
+			// Point to our vertex buffer
+			gl.glVertexPointer(3, GL10.GL_FLOAT, 0, vertexBuffer);
+			gl.glTexCoordPointer(2, GL10.GL_FLOAT, 0, textureBuffer);
+
+			
+
+			gl.glDrawArrays(GL10.GL_TRIANGLE_STRIP, 0, vertice.length / 3);
+
+			// Disable the client state before leaving
+			gl.glDisableClientState(GL10.GL_VERTEX_ARRAY);
+			gl.glDisableClientState(GL10.GL_TEXTURE_COORD_ARRAY);
+			
+			vertice[0] = vertice[6]; // left = right
+			vertice[3] = vertice[9]; // left = right
+		}
+	}
+
+	public void setup(GL10 gl , int fontSize)
+	{
+		// Generate Texture Pointers
+		gl.glGenTextures(67, textures, 0);
+
+		for (int i = 0 ; i < textures.length ; i++){
+			// loading texture
+			Bitmap bitmap;
+
+			// ...and bind it to our array
+			gl.glBindTexture(GL10.GL_TEXTURE_2D, textures[i]);
+
+			// create nearest filtered texture
+			gl.glTexParameterf(GL10.GL_TEXTURE_2D, GL10.GL_TEXTURE_MIN_FILTER, GL10.GL_NEAREST);
+			gl.glTexParameterf(GL10.GL_TEXTURE_2D, GL10.GL_TEXTURE_MAG_FILTER, GL10.GL_LINEAR);
+			
+			if ( i < 10 )
+				bitmap = GraphicUtil.getGlyph(""+i, fontSize);
+			else if ( i < 36 )
+				bitmap = GraphicUtil.getGlyph(Character.toString((char)(i+55)), fontSize);
+			else if ( i < 62 )
+				bitmap = GraphicUtil.getGlyph(Character.toString((char)(i+61)), fontSize);
+			else if ( i < 67 )
+				bitmap = GraphicUtil.getGlyph(Character.toString((char)(i-19)), fontSize);
+			else return;
+			// calculate the bitmap's size respectively to the size of the screen 
+			width[i] = bitmap.getWidth() / 100f;
+			height[i] = bitmap.getHeight() / 100f;
+
+			// Use Android GLUtils to specify a two-dimensional texture image from our bitmap
+			GLUtils.texImage2D(GL10.GL_TEXTURE_2D, 0, bitmap, 0);
+
+			// Clean up
+			bitmap.recycle();
+
+			/*
+		// resize the vertices according to the size of the bitmap
+		vertices_long[0] = LONGITUDE_POINT - width; // left
+		vertices_long[3] = LONGITUDE_POINT - width; // left
+		vertices_long[1] = VERTICAL_POINT - height;// bottom
+		vertices_long[7] = VERTICAL_POINT - height;// bottom
+
+
+		// resize the vertices according to the size of the bitmap
+		vertices_lat[6] = LATITUDE_POINT + width; // right
+		vertices_lat[9] = LATITUDE_POINT + width; // right
+		vertices_lat[1] = VERTICAL_POINT - height;// bottom
+		vertices_lat[7] = VERTICAL_POINT - height;// bottom
+			 */
+		}
+	}
+
+}

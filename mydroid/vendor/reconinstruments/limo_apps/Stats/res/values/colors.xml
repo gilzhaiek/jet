@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="background_color">#000000</color>
+    <color name="background_color_light">#f5f5f5</color>
+    <color name="separator_color_light">#606164</color>
+    <color name="strip_color_run">#ea5142</color>
+    <color name="strip_color_spd">#6cd123</color>
+    <color name="strip_color_vrt">#00aeef</color>
+    <color name="strip_color_dst">#f2e22c</color>
+    <color name="strip_color_alt">#ea9500</color>
+    <color name="strip_color_jmp">#b157ff</color>
+</resources>

@@ -1,0 +1,77 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:0.6.+'
+    }
+}
+
+// Search through the variants to find the Release variant
+Object releaseVariant(Project project, String variantName) {
+    Object releaseVariant = null
+    project.android.libraryVariants.each { variant ->
+        if (variant.name.equals(variantName)) {
+            releaseVariant = variant
+        }
+    }
+    assert (releaseVariant != null)
+    return releaseVariant
+}
+
+afterEvaluate {
+    // ***** GENERATE JAVADOC ******/
+    task('generateJavadoc') << {
+        task('_generateJavadoc', type: Javadoc) {
+            source subprojects.collect { Project project ->
+                releaseVariant(project, "Release").javaCompile.source
+            }
+            destinationDir = new File(buildDir, "javadoc")
+            classpath = files(subprojects.collect { Project project ->
+                releaseVariant(project, "Release").javaCompile.classpath.files +
+                        "${project.android.plugin.sdkDirectory}/platforms/${project.android.compileSdkVersion}/android.jar"
+            })
+        }
+        tasks._generateJavadoc.execute()
+    }
+    tasks.generateJavadoc.description = "Generates the Javadocs for all the subprojects in one location"
+
+    // ***** JAVADOC JAR ******/
+    task('javadocJar', dependsOn: 'generateJavadoc') << {
+        task('_javadocJar', type: Jar) {
+            baseName rootProject.name
+            classifier 'javadoc'
+            from new File(buildDir, "javadoc")
+            destinationDir buildDir
+        }
+        tasks._javadocJar.execute()
+    }
+    tasks.javadocJar.description = 'Creates a Jar containing all the Javadocs for all the subprojects'
+
+    // ***** COMPILED JAR ******/
+    task("bundleJar") << {
+        subprojects.each { Project project ->
+            /*  Since manual execution of tasks does not honour explicit task execution
+            *   We will at least check all the folders exist. The user must first manually
+            *   execute the 'compileRelease' task before this one.
+            */
+            assert releaseVariant(project, "Release").javaCompile.destinationDir.exists()
+        }
+        task("_bundleJar", type: Jar) {
+            baseName rootProject.name
+            from subprojects.collect { Project project ->
+                releaseVariant(project, "Release").javaCompile.destinationDir
+            }
+            exclude '**/R.class', '**/R$*.class', '**/BuildConfig.class'
+            destinationDir buildDir
+        }
+        tasks._bundleJar.execute()
+    }
+    tasks.bundleJar.description = "Bundles a Jar file containing all the subprojects' compiled .class files. IMPORTANT: the \'compileRelease\' task should be executed first"
+}
+
+task('clean', type: Delete) {
+    delete buildDir
+    description "Deletes the root project's build directory"
+}

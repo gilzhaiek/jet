@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/bg_1" >
+
+    <!-- Bottom layer:  The selection highlights (buttons)+ line in between -->
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <Button
+            android:id="@+id/time1Selector"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/line1"
+            android:layout_centerInParent="true"
+            android:background="@drawable/highlight_button"
+            android:onClick="onClick_alarm1"/>
+
+        <ImageView
+            android:id="@+id/line1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/time2Selector"
+            android:layout_centerInParent="true"
+            android:contentDescription="@string/des"
+            android:src="@drawable/line" />
+
+        <Button
+            android:id="@+id/time2Selector"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@drawable/highlight_button"
+            android:onClick="onClick_alarm2" />
+
+        <ImageView
+            android:id="@+id/line2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/time2Selector"
+            android:layout_centerInParent="true"
+            android:contentDescription="@string/des"
+            android:src="@drawable/line" />
+
+        <Button
+            android:id="@+id/time3Selector"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/line2"
+            android:layout_centerInParent="true"
+            android:background="@drawable/highlight_button"
+            android:onClick="onClick_alarm3" />
+    </RelativeLayout>
+    <!-- Arrow layer -->
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <ImageView
+            android:id="@+id/arrow11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/arrow12"
+           	android:layout_marginLeft="26dp"
+           	android:layout_marginBottom="30dp"
+            android:contentDescription="@string/des"
+            android:src="@drawable/arrow_horizontal" />
+
+        <ImageView
+            android:id="@+id/arrow12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+     
+            android:layout_centerVertical="true"
+            android:paddingTop="5dp"
+            android:layout_marginLeft="26dp"
+            android:contentDescription="@string/des"
+            android:src="@drawable/arrow_horizontal" />
+        
+         <ImageView
+            android:id="@+id/arrow13"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/arrow12"
+            android:layout_marginLeft="26dp"
+           	android:layout_marginTop="35dp"
+            android:contentDescription="@string/des"
+            android:src="@drawable/arrow_horizontal" />
+
+    </RelativeLayout>
+
+    <!-- Top layer:  The selection highlights (buttons)+ line in between -->
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <!-- top line -->
+
+        <TextView
+            android:id="@+id/on_off1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/text1"
+            android:layout_toLeftOf="@+id/text1"
+            android:layout_marginRight="65dp"
+            android:text="@string/on"
+            android:textColor="#00aaff"
+            android:textSize="35sp" />
+
+        <TextView
+            android:id="@+id/text1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/text2"
+            android:layout_centerInParent="true"
+            android:layout_marginBottom="3dp"
+            android:text="@string/hello_world"
+            android:textColor="#ffffff"
+            android:textSize="48sp" />
+
+        <TextView
+            android:id="@+id/am_pm1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/text1"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/text1"
+            android:text="@string/ampm"
+            android:textColor="#ffffff"
+            android:textSize="28sp" />
+
+        <!-- middle line -->
+
+        <TextView
+            android:id="@+id/on_off2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/text2"
+            android:layout_marginRight="65dp"
+            android:layout_toLeftOf="@+id/text2"
+            android:text="@string/on"
+            android:textColor="#00aaff"
+            android:textSize="35sp" />
+
+        <TextView
+            android:id="@+id/text2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/hello_world"
+            android:textColor="#ffffff"
+            android:textSize="48sp" />
+
+        <TextView
+            android:id="@+id/am_pm2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/text2"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/text2"
+            android:text="@string/ampm"
+            android:textColor="#ffffff"
+            android:textSize="28sp" />
+
+        <!-- bottom line -->
+ 
+
+        <TextView
+            android:id="@+id/on_off3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/text3"
+            android:layout_toLeftOf="@+id/text3"
+            android:layout_marginRight="65dp"
+            android:text="@string/on"
+            android:textColor="#00aaff"
+            android:textSize="35sp" />
+
+        <TextView
+            android:id="@+id/text3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text2"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="3dp"
+            android:text="@string/hello_world"
+            android:textColor="#ffffff"
+            android:textSize="48sp" />
+
+        <TextView
+            android:id="@+id/am_pm3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/text3"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/text3"
+            android:text="@string/ampm"
+            android:textColor="#ffffff"
+            android:textSize="28sp" />
+    </RelativeLayout>
+    
+    
+
+</FrameLayout>

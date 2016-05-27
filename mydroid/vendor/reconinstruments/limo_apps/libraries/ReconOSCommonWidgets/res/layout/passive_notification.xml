@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="48dp"
+    android:gravity="center_vertical"
+    android:background="@drawable/passive_notification_shadow_bg">
+	<ImageView
+		android:id="@+id/passive_icon"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+		android:layout_alignParentLeft="true"
+		android:src="@drawable/placeholder_passive_icon" />
+	<TextView
+		android:id="@+id/passive_text"
+		android:layout_width="match_parent"
+		android:layout_height="40dp"
+        android:background="#4d4d4d"
+        android:layout_marginLeft="2dp"
+		android:paddingLeft="10dp"
+        android:paddingBottom="4dp"
+        android:includeFontPadding="false"
+        android:textColor="@android:color/white"
+        android:gravity="center_vertical"
+        android:layout_marginTop="8dp"
+		android:layout_toRightOf="@+id/passive_icon"
+		android:ellipsize="marquee"
+		android:maxLines="1"
+		android:textSize="22sp" />
+</RelativeLayout>

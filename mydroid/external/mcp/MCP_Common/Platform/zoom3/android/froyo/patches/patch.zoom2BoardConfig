@@ -1,0 +1,23 @@
+--- /work/shoreket_test__mydroid_froyo/device/ti/zoom2/BoardConfig.mk	2010-10-05 15:06:37.000000000 +0200
++++ /work/mydroid_L25_froyo_3.3/device/ti/zoom2/BoardConfig.mk	2010-10-18 14:10:20.000000000 +0200
+@@ -4,8 +4,7 @@
+ # Board configuration
+ #
+ TARGET_NO_BOOTLOADER := true
+-TARGET_CPU_ABI := armeabi-v7a
+-TARGET_CPU_ABI2 := armeabi
++TARGET_CPU_ABI := armeabi
+ TARGET_ARCH_VARIANT := armv7-a-neon
+ TARGET_PROVIDES_INIT_RC := true
+ OMAP_ENHANCEMENT := true
+@@ -25,8 +24,8 @@
+ USES_TI_WL1271 := true
+ BOARD_WPA_SUPPLICANT_DRIVER := CUSTOM
+ ifdef USES_TI_WL1271
+-BOARD_WLAN_DEVICE           := wl1271
+-BOARD_SOFTAP_DEVICE         := wl1271
++BOARD_WLAN_DEVICE           := mcp_2.x
++#BOARD_SOFTAP_DEVICE         := wl1271
+ endif
+ WPA_SUPPLICANT_VERSION      := VER_0_6_X
+ WIFI_DRIVER_MODULE_PATH     := "/system/etc/wifi/tiwlan_drv.ko"

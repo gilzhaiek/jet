@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent" android:layout_height="fill_parent">
+
+	<TextView android:id="@+id/time" android:text="00:00"
+		android:textColor="@color/chrono_yellow" android:textSize="70px"
+		android:layout_width="wrap_content" android:layout_height="wrap_content"
+		android:layout_centerHorizontal="true" />
+	<TextView android:id="@+id/time_ms" android:text=".00" android:visibility="invisible"
+		android:textColor="@color/chrono_yellow" android:textSize="40px"
+		android:layout_width="wrap_content" android:layout_height="wrap_content"
+		android:layout_alignBaseline="@+id/time" android:layout_toRightOf="@+id/time" />
+
+	<TableLayout android:id="@+id/lap_list"
+		android:layout_below="@+id/time" android:layout_width="280px"
+		android:layout_height="wrap_content" android:layout_alignParentRight="true"
+		android:stretchColumns="1">
+		
+	</TableLayout>
+</RelativeLayout>

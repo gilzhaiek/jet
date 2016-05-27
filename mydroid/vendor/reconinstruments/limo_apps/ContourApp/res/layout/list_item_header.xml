@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/text"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:background="@color/list_header_bg"
+	android:gravity="center_vertical|left"
+	android:paddingBottom="3dp"
+	android:paddingLeft="10dp"
+	android:paddingTop="3dp"
+	android:shadowColor="#000"
+	android:shadowDx="1.0"
+	android:shadowDy="1.0"
+	android:shadowRadius="1.0"
+	android:textAppearance="?android:attr/textAppearanceMedium"
+	android:textColor="@color/header_text_color" />

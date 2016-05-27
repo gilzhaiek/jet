@@ -1,0 +1,20 @@
+BLE sensor connection instructions:
+
+1) Open Wahoo Monitor app
+2) Press up on keypad to enter BLE Utility
+It will start to scan for ble devices for 100 seconds
+
+2) Make sure sensors are activated, that is start pedalling or put on the heart rate sensor 
+
+3) Press next until the device you want is selected
+
+4) Press connect and wait a few moments until it says Connected and there is a new number in the Att. handle field
+
+5) Press notify on and make sure new data starts streaming in on the right
+If you see data coming in with the attribute handle 1a, the heart rate sensor is working
+If you see data coming in with the attribute handle 23, the cadence sensor is working
+
+Extra info:
+You shouldn't have to but if there are problems with interference you may have to do the following.
+If a device is connected but you are not receiving data, make sure the device appears and says Connected, press Get services to get the attribute handle followed by Notify On
+If a device is disconnected you should be able to reconnect without activating the device

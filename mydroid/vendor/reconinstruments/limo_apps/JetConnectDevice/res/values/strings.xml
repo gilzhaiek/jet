@@ -1,0 +1,31 @@
+<resources>
+	<string name="app_name">JetConnectDevice</string>
+	<string name="title_choose_device">CONNECT SMARTPHONE</string>
+	<string name="desc_choose_device">Choose the smartphone type you would like to connect with.</string>
+	<string name="desc_choose_device_snow2">Connect a smartphone to display calls and texts on your HUD.</string>
+	<string name="desc_choose_device_jet">Connect a smartphone to display calls and texts on JET. This also helps JET get a quick GPS fix.</string>
+	<string name="title_disconnect_device_android">ANDROID CONNECTED</string>
+	<string name="title_disconnect_device_iphone">IPHONE CONNECTED</string>
+	<string name="title_enable_notification">ENABLE NOTIFICATIONS</string>
+	<string name="title_reconnect_device_android">RECONNECT ANDROID</string>
+	<string name="title_reconnect_device_iphone">RECONNECT IPHONE</string>
+	<string name="title_waiting_device_android">WAITING FOR MOBILE APP</string>
+	<string name="desc_waiting_device_android1">Open Engage on your Android Phone and tap \"Device Pairing\" then follow prompts.</string>
+	<string name="desc_waiting_device_android2">Engage is available in Google Play.</string>
+	<string name="title_waiting_device_iphone">WAITING FOR IPHONE...</string>
+	<string name="title_waiting_engage">WAITING FOR MOBILE APP</string>
+	<string name="title_quit_confirm">QUIT SETUP?</string>
+	<string name="desc_quit_confirm_snow2">You need Engage open to display calls and texts on Snow2.</string>
+	<string name="desc_quit_confirm_jet">You need Engage open to enable calls and texts, and to get a faster GPS fix on JET.</string>
+	<!-- Tutorial overlay strings -->
+	<!-- Snow2 -->
+	<string name="snow_press_left">Press </string>
+	<string name="snow_or_right"> or </string>
+	<string name="snow_on_your_remote"> on your remote to </string>
+	<string name="snow_navigate_snow2_menus"> navigate Snow2 menus.</string>
+	<string name="snow_press_button">Press </string>
+	<string name="snow_to_interact"> to interact.</string>
+	<!-- JET -->
+	<string name="jet_press_select">Press </string>
+	<string name="jet_to_interact"> (SELECT) to interact.</string>
+</resources>

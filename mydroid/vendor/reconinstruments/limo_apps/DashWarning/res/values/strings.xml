@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="app_name">DashWarning</string>
+	<string name="action_settings">Settings</string>
+	<string name="hello_world">Hello world!</string>
+	<string name="read_and_understood">ON YOUR REMOTE TO ACCEPT</string>
+	<string name="press">PRESS </string>
+	<string name="paragraph1">Always be aware of your surroundings, direction and speed.</string>
+	<string name="paragraph2">Concentrating on the display while moving may distract you and cause injury or death to yourself or others.</string>
+	<string name="paragraph3">Do not use product while driving, running, cycling, or walking on uneven surfaces or stairways.</string>
+</resources>

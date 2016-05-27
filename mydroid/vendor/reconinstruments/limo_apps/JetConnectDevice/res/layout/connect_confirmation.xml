@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:background="@color/recon_jet_background" >
+	<TextView
+		android:id="@+id/title"
+		style="@style/recon_jet_text_regular"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_alignParentTop="true"
+		android:layout_marginLeft="30dp"
+		android:layout_marginRight="30dp"
+		android:layout_marginTop="20dp"
+		android:ellipsize="end"
+		android:gravity="center"
+		android:lines="1"
+		android:maxLines="1"
+		android:text=""
+		android:textSize="30sp" />
+	<TextView
+		android:id="@+id/body"
+		style="@style/recon_jet_text_regular"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:layout_above="@+id/pager_container"
+		android:layout_alignLeft="@+id/title"
+		android:layout_below="@+id/title"
+		android:layout_centerHorizontal="true"
+		android:layout_centerVertical="true"
+		android:layout_marginRight="30dp"
+		android:layout_marginTop="-8dp"
+		android:gravity="center"
+		android:lineSpacingExtra="-6dp"
+		android:textSize="24sp" />
+	<com.reconinstruments.commonwidgets.CarouselPagerContainer
+		android:id="@+id/pager_container"
+		android:layout_width="match_parent"
+		android:layout_height="60dp"
+		android:layout_alignParentBottom="true"
+		android:layout_marginBottom="20dp" >
+		<android.support.v4.view.ViewPager
+			android:id="@+id/view_pager"
+			android:layout_width="230dp"
+			android:layout_height="wrap_content"
+			android:layout_gravity="center_horizontal" />
+	</com.reconinstruments.commonwidgets.CarouselPagerContainer>
+</RelativeLayout>

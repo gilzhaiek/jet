@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical" android:layout_width="fill_parent"
+	android:layout_height="fill_parent" android:paddingLeft="15px">
+
+	<TextView android:id="@+id/trial_time" android:text="00:00:00.00"
+		android:textColor="@color/chrono_yellow" android:layout_width="wrap_content"
+		android:layout_height="wrap_content" android:textSize="40px" />
+
+	<TextView android:id="@+id/trial_time_ms" android:text=".00"
+		android:textColor="@color/chrono_yellow" android:layout_width="wrap_content"
+		android:layout_height="wrap_content" android:textSize="30px"
+		android:layout_toRightOf="@+id/trial_time"
+		android:layout_alignBaseline="@+id/trial_time" />
+
+	<TextView android:id="@+id/number_of_trials" android:text="#"
+		android:layout_width="wrap_content" android:layout_height="wrap_content"
+		android:layout_below="@+id/trial_time" android:textColor="@color/white"
+		android:textSize="30px" />
+
+	<TextView android:id="@+id/start_end_time" android:text="start - end"
+		android:layout_width="wrap_content" android:layout_height="wrap_content"
+		android:layout_alignParentBottom="True" android:textSize="25px" />
+
+	<ImageView android:id="@+id/arrow" android:src="@drawable/arrow"
+		android:layout_width="wrap_content" android:layout_height="wrap_content"
+		android:layout_alignParentTop="True" android:layout_alignParentRight="True" />
+
+</RelativeLayout>

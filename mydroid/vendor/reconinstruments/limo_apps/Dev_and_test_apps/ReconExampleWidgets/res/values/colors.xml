@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="tab_selector">#ff148cc8</color>
+    <color name="transparent">#00000000</color>     	
+    <color name="menu_highlight">#ffffffff</color>
+    <color name="menu_regular">#ffa0a0a0</color>
+    <color name="menu_selector">#ff148cc8</color>
+    
+</resources>
