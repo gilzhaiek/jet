@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#77000000" >
+
+    <ImageView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="27.5dp"
+        android:gravity="center"
+        android:src="@drawable/info_icon" />
+
+    <TextView
+        android:id="@+id/body"
+        style="@style/recon_jet_text_regular"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:gravity="center|top"
+        android:textSize="24sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/body"
+        android:layout_marginTop="10dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/body2"
+            style="@style/recon_jet_text_regular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawablePadding="5dp"
+            android:drawableRight="@drawable/jet_select"
+            android:lineSpacingExtra="-6dp"
+            android:text="@string/jet_press_select"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/body3"
+            style="@style/recon_jet_text_regular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:lineSpacingExtra="-6dp"
+            android:paddingLeft="5dp"
+            android:text="@string/jet_to_interact"
+            android:textSize="24sp" />
+    </LinearLayout>
+
+</RelativeLayout>

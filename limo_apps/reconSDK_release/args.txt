@@ -1,0 +1,8 @@
+-public ReconSDKManager.java
+        IReconDataReceiver.java IReconEventListener.java
+        ReconEvent.java  ReconAltitude.java ReconDistance.java ReconJump.java ReconLocation.java
+        ReconRun.java ReconSpeed.java ReconTemperature.java ReconTime.java ReconVertical.java
+        ReconDataResult.java
+        -overview overview.html
+        -windowtitle 'Recon SDK API Specification'
+        -stylesheetfile recon-developer-docs.css

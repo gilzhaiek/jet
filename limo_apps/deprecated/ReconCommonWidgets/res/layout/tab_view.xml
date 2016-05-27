@@ -1,0 +1,39 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="horizontal"
+    android:background="#ff000000"   
+    android:padding="20dp"
+>
+    <!-- The left side table view -->
+  	<com.reconinstruments.widgets.TabListView android:id="@+id/tab_bar"
+           android:layout_width="80dp" 
+           android:layout_height="fill_parent"
+           android:orientation="vertical"           
+           android:drawSelectorOnTop="false"
+           android:layout_centerVertical="true"
+           android:focusable="true"    
+           android:scrollbars="none"
+           android:listSelector="@drawable/tab_selector"       
+    />         
+    
+    <!-- The divider bar -->
+    <LinearLayout 
+		android:id="@+id/tab_divider"
+	    android:orientation="vertical"
+	    android:layout_width="4px"
+	    android:layout_height="fill_parent"
+	    android:background="@color/tab_selector"
+	    android:gravity="center"
+        android:layout_alignRight="@id/tab_bar" 
+	/>
+    
+    <!-- The container for holding a tabPage -->
+	<FrameLayout
+		android:id="@+id/tab_page_container" 		
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent"
+	    android:layout_weight="1"
+	    android:layout_alignLeft="@id/tab_divider"
+	/>
+</RelativeLayout>

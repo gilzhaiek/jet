@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="PopupBox">
+  	<item name="android:layout_width">fill_parent</item>
+  	<item name="android:layout_height">fill_parent</item>
+  	<item name="android:background">@drawable/round_border</item>
+  	<item name="android:layout_margin">15dip</item>
+  	<item name="android:layout_gravity">center_horizontal|center_vertical</item>
+  </style>
+  <style name="Theme.Transparent" parent="android:Theme">
+    <item name="android:windowIsTranslucent">true</item>
+    <item name="android:windowBackground">@color/transparent_bg</item>
+    <item name="android:windowContentOverlay">@null</item>
+    <item name="android:windowNoTitle">true</item>
+    <item name="android:windowIsFloating">false</item>
+    <item name="android:backgroundDimEnabled">false</item>
+  </style>
+  	<style name="white_text_shadow">
+	    <item name="android:textColor">#FFFFFFFF</item>
+		<item name="android:shadowColor">#FF000000</item>
+		<item name="android:shadowDx">0</item>
+		<item name="android:shadowDy">1</item>
+		<item name="android:shadowRadius">1</item>
+	</style>
+		<style name="selectable_text_shadow">
+	    <item name="android:textColor">@drawable/selectable_text_color</item>
+	    <item name="com.reconinstruments.nativetest:shadowColors">@drawable/selectable_text_shadow_color</item>
+		<item name="android:shadowDx">0</item>
+		<item name="android:shadowDy">1</item>
+		<item name="android:shadowRadius">1</item>
+	</style>
+</resources>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content" >
+	<RelativeLayout
+		android:id="@+id/block"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content" >
+		<TextView
+			android:id="@+id/text_view"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="0dp"
+			android:ellipsize="end"
+			android:includeFontPadding="false"
+			android:lines="1"
+			android:maxLines="1"
+			android:text="0"
+			android:textColor="#ffffff"
+			android:textSize="64sp" />
+		<TextView
+			android:id="@+id/unit"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_alignParentTop="true"
+			android:layout_marginTop="16dp"
+			android:layout_toRightOf="@+id/text_view"
+			android:includeFontPadding="false"
+			android:text="km/h"
+			android:textColor="#a3a3a3"
+			android:textSize="20sp" />
+	</RelativeLayout>
+	<TextView
+		android:id="@+id/name"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_below="@+id/block"
+		android:layout_centerHorizontal="true"
+		android:layout_marginTop="-16dp"
+		android:gravity="center"
+		android:includeFontPadding="false"
+		android:text=""
+		android:textColor="#a3a3a3"
+		android:textSize="20sp" />
+</RelativeLayout>

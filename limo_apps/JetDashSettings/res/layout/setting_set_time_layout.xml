@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:background="@color/recon_jet_background" >
+	<TextView
+		android:id="@+id/title"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_alignParentLeft="true"
+		android:layout_alignParentTop="true"
+		android:layout_marginTop="40dp"
+		android:gravity="center_horizontal"
+		android:text="SET TIME"
+		android:textColor="#ffffff"
+		android:textSize="30sp" />
+	<LinearLayout
+		android:id="@+id/linearLayout"
+		android:layout_width="match_parent"
+		android:layout_height="1dip"
+		android:layout_alignParentLeft="true"
+		android:layout_below="@+id/title"
+		android:layout_marginTop="6dp"
+		android:background="#ffffff" >
+	</LinearLayout>
+	<LinearLayout
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_below="@+id/linearLayout"
+		android:layout_centerHorizontal="true"
+		android:layout_marginTop="10dp"
+		android:gravity="center_vertical"
+		android:orientation="horizontal" >
+		<LinearLayout
+			android:id="@+id/setting_time_hour"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:focusable="true"
+			android:gravity="center_horizontal"
+			android:orientation="vertical" >
+			<ImageView
+				android:id="@+id/hour_up"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:src="@drawable/up_arrow" />
+			<TextSwitcher
+				android:id="@+id/hour_switcher"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content" >
+				<TextView
+					android:id="@+id/textView"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_marginBottom="-7px"
+					android:layout_marginTop="-7px"
+					android:text="01"
+					android:textColor="@color/recon_switcher_up"
+					android:textSize="70px" />
+			</TextSwitcher>
+			<ImageView
+				android:id="@+id/hour_down"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:src="@drawable/down_arrow" />
+		</LinearLayout>
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginLeft="5dp"
+			android:layout_marginRight="5dp"
+			android:gravity="center_horizontal"
+			android:text=":"
+			android:textColor="@color/recon_switcher_up"
+			android:textSize="70px" />
+		<LinearLayout
+			android:id="@+id/setting_time_min"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:focusable="true"
+			android:gravity="center_horizontal"
+			android:orientation="vertical" >
+			<ImageView
+				android:id="@+id/min_up"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:src="@drawable/up_arrow"
+				android:visibility="gone" />
+			<TextSwitcher
+				android:id="@+id/min_switcher"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content" >
+				<TextView
+					android:id="@+id/textView"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_marginBottom="-7px"
+					android:layout_marginTop="-7px"
+					android:text="01"
+					android:textColor="@color/recon_switcher_up"
+					android:textSize="70px" />
+			</TextSwitcher>
+			<ImageView
+				android:id="@+id/min_down"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:src="@drawable/down_arrow"
+				android:visibility="gone" />
+		</LinearLayout>
+		<LinearLayout
+			android:id="@+id/setting_time_meridiem"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginLeft="20px"
+			android:focusable="true"
+			android:gravity="center_horizontal"
+			android:orientation="vertical" >
+			<ImageView
+				android:id="@+id/meri_up"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:src="@drawable/up_arrow"
+				android:visibility="gone" />
+			<TextSwitcher
+				android:id="@+id/meri_switcher"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content" >
+				<TextView
+					android:id="@+id/textView"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_marginBottom="-7px"
+					android:layout_marginTop="-7px"
+					android:text="01"
+					android:textColor="@color/recon_switcher_up"
+					android:textSize="70px" />
+			</TextSwitcher>
+			<ImageView
+				android:id="@+id/meri_down"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:src="@drawable/down_arrow"
+				android:visibility="gone" />
+		</LinearLayout>
+	</LinearLayout>
+</RelativeLayout>

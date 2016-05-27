@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/circular_gradient" >
+
+    <ListView
+        android:id="@android:id/list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@drawable/horizontal_gradient_fade"
+        android:drawSelectorOnTop="false"
+        android:fadeScrollbars="false"
+        android:listSelector="@drawable/key_selector"
+        android:focusable="true"
+        android:layout_marginTop="21dp"
+        android:scrollbarSize="18dp"
+        android:scrollbarStyle="outsideOverlay"
+        android:scrollbarThumbHorizontal="@drawable/horizontal_gradient_scrollbar"
+        android:scrollbarThumbVertical="@drawable/horizontal_gradient_scrollbar"
+        android:scrollbarTrackHorizontal="@drawable/circular_gradient"
+        android:scrollbarTrackVertical="@drawable/circular_gradient" />
+    <LinearLayout
+        android:id="@android:id/empty"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical" 
+        android:layout_marginTop="21dp">
+
+        <TextView
+            style="@style/white_text_bold_shadow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:text="Live Feed"
+            android:textSize="30dp" />
+        
+ 		<TextView
+            style="@style/white_text_shadow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/empty_notifications_string"
+            android:textSize="20dp"
+            android:gravity="center_horizontal"
+            android:lineSpacingMultiplier="1.2"/>
+ 		<ImageView
+            android:layout_width="180dp"
+            android:layout_height="2dp"
+            android:background="@drawable/horizontal_gradient_fade"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="15dp" />
+ 		<TextView
+            style="@style/white_text_shadow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/empty_notifications_string2"
+            android:textSize="18dp"
+            android:gravity="center_horizontal"/>
+ 		
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res/com.reconinstruments.connectdevice"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:background="#000000"
+	android:orientation="vertical" >
+	<TextView
+		style="@style/recon_white_text_shadow"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:focusable="false"
+		android:gravity="left|center_vertical"
+		android:paddingBottom="1dip"
+		android:paddingTop="1dip"
+		android:text="Incompatible Remote"
+		android:textSize="24px"
+		android:textStyle="bold" />
+	<View
+		android:layout_width="fill_parent"
+		android:layout_height="2dip" />
+	<TextView
+		android:id="@+id/message"
+		style="@style/recon_white_text_shadow"
+		android:layout_width="340dp"
+		android:layout_height="wrap_content"
+		android:layout_gravity="center"
+		android:layout_marginTop="10dip"
+		android:gravity="left|center_vertical"
+		android:paddingLeft="20dip"
+		android:paddingRight="20dip"
+		android:text="Please obtain an iOS compatible remote. Until then, you can use the iOS app as your remote."
+		android:textSize="20dip"
+		android:textStyle="normal" />
+	<RelativeLayout
+		android:id="@+id/next"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:focusable="true" >
+		<TextView
+			style="@style/recon_focusable_text_shadow"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_centerInParent="true"
+			android:layout_marginBottom="3dip"
+			android:layout_marginLeft="3dip"
+			android:layout_marginRight="3dip"
+			android:background="@drawable/background_transition42"
+			android:gravity="left|center_vertical"
+			android:paddingLeft="37dip"
+			android:text="Next"
+			android:textSize="24dip"
+			android:textStyle="bold" />
+	</RelativeLayout>
+</LinearLayout>

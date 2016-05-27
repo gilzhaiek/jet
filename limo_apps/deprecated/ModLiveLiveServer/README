@@ -1,0 +1,34 @@
+Chris note:
+not recommended to use this anymore, the HQ Mobile code has diverged a lot since this worked and it is very slow anyway.
+Use vnc instead.
+
+=============================================================================
+ModLiveLive server
+=============================================================================
+
+Upon activation by the user through a simply UI, this program
+essentially runs a screen capture service. and periodically updates
+"/mnt/storage/ReconApps/ModLiveLive/ss.jpg"
+
+
+This program works closely with a special version of applauncher that
+grabs the above image and sends it to a special version HQ Mobile to
+for live view.
+
+Compiling this program is simple and follows the usual build as system
+app. Below the steps for preparing other components are explained
+
+------------------------------------------------------------------------------
+Preparing special version of app launcher
+------------------------------------------------------------------------------
+The special version of app launcher should be build with
+"HQMobileClassesCES.jar" as opposed to "HQMobileClasses.jar".
+
+------------------------------------------------------------------------------
+Preparing special version of HQ Mobile
+------------------------------------------------------------------------------
+The HQ mobile used for live view should be compile from branch
+"fullpathfiletransfer"
+
+
+

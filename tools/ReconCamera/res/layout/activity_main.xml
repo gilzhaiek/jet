@@ -1,0 +1,37 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainCamera" >
+
+    <FrameLayout
+        android:id="@+id/videoview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <Button
+        android:id="@+id/main_capture"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:text="@string/take_photo" />
+
+    <Button
+        android:id="@+id/main_record"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/main_capture"
+        android:layout_alignRight="@id/main_capture"
+        android:text="@string/record" />
+
+    <Button
+        android:id="@+id/main_gallery"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/main_record"
+        android:layout_alignRight="@id/main_capture"
+        android:visibility="gone"
+        android:text="@string/gallery" />
+
+</RelativeLayout>

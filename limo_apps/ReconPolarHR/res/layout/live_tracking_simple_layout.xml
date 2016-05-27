@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/circular_gradient" 
+    >
+    
+    <LinearLayout android:layout_centerInParent="True"
+    	android:orientation="horizontal"
+    	android:layout_height="wrap_content"
+    	android:layout_width="wrap_content"
+    	android:gravity="center_vertical" >
+    	
+    	<ImageView android:src="@drawable/polar_heart" 
+			android:layout_centerVertical="True" 
+			android:layout_width="63px"
+			android:layout_height="50px" 
+			android:layout_marginRight="20px"/>
+		
+		<TextView android:id="@+id/bpm" 
+			android:text="--" 
+			android:textSize="120px"
+			android:textColor="#FFFFFF"
+			android:layout_width="wrap_content" 
+			android:layout_height="wrap_content" />
+    	
+    </LinearLayout>
+
+</RelativeLayout>

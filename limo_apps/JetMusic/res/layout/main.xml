@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:background="@color/recon_jet_background"
+	android:paddingBottom="10dp"
+	android:paddingLeft="30dp"
+	android:paddingRight="30dp"
+	android:paddingTop="10dp" >
+	<TextView
+		android:id="@+id/title"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_alignParentTop="true"
+		android:layout_centerHorizontal="true"
+		android:text="MUSIC PLAYER"
+		android:textColor="#ffffff"
+		android:textSize="30dp" />
+	<LinearLayout
+		android:id="@+id/seperator"
+		android:layout_width="match_parent"
+		android:layout_height="1dp"
+		android:layout_below="@+id/title"
+		android:layout_centerHorizontal="true"
+		android:layout_marginTop="2dp"
+		android:background="#ffffff"
+		android:orientation="vertical" >
+	</LinearLayout>
+	<RelativeLayout
+		android:id="@+id/body"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:layout_above="@+id/action"
+		android:layout_below="@+id/seperator"
+		android:layout_centerHorizontal="true" >
+		<RelativeLayout
+			android:id="@+id/two_lines_layout"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:orientation="vertical"
+			android:visibility="gone" >
+			<TextView
+				android:id="@+id/line1"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_alignParentTop="true"
+				android:layout_centerHorizontal="true"
+				android:layout_marginTop="20dp"
+				android:text="TextView"
+				android:textColor="#ffffff"
+				android:textSize="30dp" />
+			<TextView
+				android:id="@+id/line2"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_below="@+id/line1"
+				android:layout_centerHorizontal="true"
+				android:layout_marginTop="10dp"
+				android:text="TextView" />
+		</RelativeLayout>
+		<TextView
+			android:id="@+id/body_text"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_centerHorizontal="true"
+			android:layout_centerVertical="true"
+			android:layout_marginTop="30dp"
+			android:gravity="center"
+			android:text="TextView"
+			android:textColor="#ffffff"
+			android:textSize="24dp"
+			android:visibility="visible" />
+	</RelativeLayout>
+	<LinearLayout
+		android:id="@+id/action"
+		android:layout_width="match_parent"
+		android:layout_height="38dp"
+		android:layout_alignParentBottom="true"
+		android:layout_centerHorizontal="true" >
+		<ImageView
+			android:id="@+id/action_img"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_gravity="center"
+			android:src="@drawable/select" />
+		<TextView
+			android:id="@+id/actoin_text"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_gravity="center"
+			android:layout_marginLeft="4dp"
+			android:text="CONTROLS"
+			android:textSize="30dp" />
+	</LinearLayout>
+</RelativeLayout>

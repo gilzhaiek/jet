@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:background="@color/recon_jet_background"
+	android:paddingBottom="30dp"
+	android:paddingLeft="30dp"
+	android:paddingRight="30dp"
+	android:paddingTop="20dp" >
+	<com.reconinstruments.commonwidgets.AutoTextView
+		android:id="@+id/title"
+		style="@style/recon_jet_text_regular"
+		android:layout_width="368dp"
+		android:layout_height="wrap_content"
+		android:layout_alignParentTop="true"
+		android:ellipsize="end"
+		android:gravity="center"
+		android:lines="1"
+		android:maxLines="1"
+		android:text=""
+		android:textSize="30sp" />
+	<TextView
+		android:id="@+id/body"
+		style="@style/recon_jet_text_regular"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:layout_alignLeft="@+id/title"
+		android:layout_below="@+id/title"
+		android:layout_centerHorizontal="true"
+		android:layout_centerVertical="true"
+		android:gravity="center"
+		android:lineSpacingExtra="-4dp"
+		android:text=""
+		android:textSize="24sp" />
+</RelativeLayout>

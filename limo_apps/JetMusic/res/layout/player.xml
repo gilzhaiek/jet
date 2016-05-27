@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:background="@color/recon_jet_background"
+	android:paddingBottom="20dp"
+	android:paddingLeft="30dp"
+	android:paddingRight="30dp"
+	android:paddingTop="20dp" >
+	<RelativeLayout
+		android:id="@+id/two_lines_layout"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_alignParentTop="true"
+		android:orientation="vertical"
+		android:visibility="visible" >
+		<TextView
+			android:id="@+id/line1"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_alignParentTop="true"
+			android:layout_centerHorizontal="true"
+			android:ellipsize="end"
+			android:maxLines="1"
+			android:singleLine="true"
+			android:text=""
+			android:textColor="#ffffff"
+			android:textSize="32dp" />
+		<TextView
+			android:id="@+id/line2"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_below="@+id/line1"
+			android:layout_centerHorizontal="true"
+			android:ellipsize="end"
+			android:maxLines="1"
+			android:singleLine="true"
+			android:text="-"
+			android:textColor="#999999"
+			android:textSize="24dp" />
+	</RelativeLayout>
+	<RelativeLayout
+		android:id="@+id/body"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:layout_above="@+id/action"
+		android:layout_below="@+id/two_lines_layout"
+		android:layout_centerHorizontal="true"
+		android:layout_marginTop="20dp" >
+		<RelativeLayout
+			android:id="@+id/body1"
+			android:layout_width="30dp"
+			android:layout_height="match_parent"
+			android:layout_alignParentLeft="true"
+			android:layout_alignParentTop="true" >
+		</RelativeLayout>
+		<RelativeLayout
+			android:id="@+id/body3"
+			android:layout_width="30dp"
+			android:layout_height="match_parent"
+			android:layout_alignParentRight="true"
+			android:layout_centerVertical="true" >
+		</RelativeLayout>
+		<RelativeLayout
+			android:id="@+id/body2"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:layout_below="@+id/seperator"
+			android:layout_centerHorizontal="true"
+			android:layout_centerVertical="true"
+			android:layout_toLeftOf="@+id/body3"
+			android:layout_toRightOf="@+id/body1" >
+			<RelativeLayout
+				android:id="@+id/controller"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_centerHorizontal="true"
+				android:clickable="true" >
+				<ImageView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_centerInParent="true"
+					android:src="@drawable/remote_container" />
+				<ImageView
+					android:id="@+id/play_pause_icon"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_centerInParent="true"
+					android:clickable="true"
+					android:focusable="true"
+					android:src="@drawable/controller_play_selector" />
+				<ImageView
+					android:id="@+id/prev_icon"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_centerInParent="true"
+					android:clickable="true"
+					android:focusable="true"
+					android:paddingRight="76dip"
+					android:src="@drawable/controller_prev_selector" />
+				<ImageView
+					android:id="@+id/next_icon"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_centerInParent="true"
+					android:clickable="true"
+					android:focusable="true"
+					android:paddingLeft="76dip"
+					android:src="@drawable/controller_next_selector" />
+				<ImageView
+					android:id="@+id/volup_icon"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_centerInParent="true"
+					android:clickable="true"
+					android:focusable="true"
+					android:paddingBottom="76dip"
+					android:src="@drawable/controller_volup_selector" />
+				<ImageView
+					android:id="@+id/voldown_icon"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_centerInParent="true"
+					android:clickable="true"
+					android:focusable="true"
+					android:paddingTop="76dip"
+					android:src="@drawable/controller_voldown_selector" />
+			</RelativeLayout>
+		</RelativeLayout>
+	</RelativeLayout>
+</RelativeLayout>

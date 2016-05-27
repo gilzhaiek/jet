@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:layout_width="428dp"
+             android:layout_height="match_parent"
+             android:gravity="center_horizontal">
+
+    <RelativeLayout
+            android:id="@+id/mainView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <ImageView
+                android:id="@+id/centerView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/remote_image"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"/>
+
+        <ImageView
+                android:id="@+id/onTopCenterView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/music_icon"/>
+
+        <ImageView
+                android:id="@+id/leftView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@+id/centerView"
+                android:layout_centerVertical="true"
+                android:src="@drawable/notifications_icon"/>
+
+        <ImageView
+                android:id="@+id/rightView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/centerView"
+                android:layout_centerVertical="true"
+                android:src="@drawable/smartphone_icon"/>
+
+        <ImageView
+                android:id="@+id/topView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/centerView"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/home_icon"/>
+
+        <ImageView
+                android:id="@+id/bottomView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/centerView"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/power_icon"/>
+    </RelativeLayout>
+
+    <TextView
+            android:id="@+id/timeView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"/>
+
+</RelativeLayout>

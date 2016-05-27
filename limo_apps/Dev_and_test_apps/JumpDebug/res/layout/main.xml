@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/debug"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:textSize="15dp" />
+
+        <Button
+            android:id="@+id/debug_on"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:text="On" />
+
+        <Button
+            android:id="@+id/debug_off"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:padding="5dp"
+            android:text="Off" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/factor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:textSize="15dp" />
+
+        <EditText
+            android:id="@+id/factor_edit"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:inputType="numberDecimal"
+            android:padding="5dp" />
+
+        <Button
+            android:id="@+id/factor_plus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:text="+"
+            android:textSize="15dp" />
+
+        <Button
+            android:id="@+id/factor_minus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:text="-"
+            android:textSize="15dp" />
+
+        <Button
+            android:id="@+id/factor_set"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:text="Set" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/minimum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:textSize="15dp" />
+
+        <EditText
+            android:id="@+id/minimum_edit"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:inputType="numberDecimal"
+            android:padding="5dp" />
+
+        <Button
+            android:id="@+id/minimum_plus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:text="+"
+            android:textSize="15dp" />
+
+        <Button
+            android:id="@+id/minimum_minus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:text="-"
+            android:textSize="15dp" />
+
+        <Button
+            android:id="@+id/minimum_set"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:text="Set" />
+    </LinearLayout>
+
+</LinearLayout>

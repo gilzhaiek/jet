@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent">
+	<TextView
+		android:id="@+id/title"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_alignParentLeft="true"
+		android:layout_alignParentTop="true"
+		android:layout_marginTop="40dp"
+		android:gravity="center_horizontal"
+		android:text="WHEEL SIZE (mm)"
+		android:textColor="#ffffff"
+		android:textSize="30sp" />
+	<LinearLayout
+		android:id="@+id/linearLayout"
+		android:layout_width="match_parent"
+		android:layout_height="1dip"
+		android:layout_alignParentLeft="true"
+		android:layout_below="@+id/title"
+		android:layout_marginTop="6dp"
+		android:background="#ffffff" >
+	</LinearLayout>
+	<LinearLayout
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_below="@+id/linearLayout"
+		android:layout_centerHorizontal="true"
+		android:layout_marginTop="10dp"
+		android:gravity="center_vertical"
+		android:orientation="horizontal" >
+		<LinearLayout
+			android:id="@+id/first_num"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:focusable="true"
+			android:gravity="center_horizontal"
+			android:orientation="vertical" >
+			<ImageView
+				android:id="@+id/first_num_up"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:src="@drawable/up_arrow" />
+			<TextSwitcher
+				android:id="@+id/first_num_switcher"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content" >
+				<TextView
+					android:id="@+id/textView"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_marginBottom="@dimen/wheel_layout_bottom_margin"
+					android:layout_marginTop="@dimen/wheel_layout_top_margin"
+					android:text="2"
+					android:textColor="@color/recon_switcher_up"
+					android:textSize="@dimen/wheel_layout_text_size" />
+			</TextSwitcher>
+			<ImageView
+				android:id="@+id/first_num_down"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:src="@drawable/wheel_down_arrow" />
+		</LinearLayout>
+		<LinearLayout
+			android:id="@+id/second_num"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginLeft="20px"
+			android:focusable="true"
+			android:gravity="center_horizontal"
+			android:orientation="vertical" >
+			<ImageView
+				android:id="@+id/second_num_up"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:src="@drawable/up_arrow"
+				android:visibility="gone" />
+			<TextSwitcher
+				android:id="@+id/second_num_switcher"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content" >
+				<TextView
+					android:id="@+id/textView"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_marginBottom="@dimen/wheel_layout_bottom_margin"
+					android:layout_marginTop="@dimen/wheel_layout_top_margin"
+					android:text="0"
+					android:textColor="@color/recon_switcher_up"
+					android:textSize="@dimen/wheel_layout_text_size" />
+			</TextSwitcher>
+			<ImageView
+				android:id="@+id/second_num_down"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:src="@drawable/wheel_down_arrow"
+				android:visibility="gone" />
+		</LinearLayout>
+		<LinearLayout
+			android:id="@+id/third_num"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginLeft="@dimen/wheel_layout_left_margin"
+			android:focusable="true"
+			android:gravity="center_horizontal"
+			android:orientation="vertical" >
+			<ImageView
+				android:id="@+id/third_num_up"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:src="@drawable/up_arrow"
+				android:visibility="gone" />
+			<TextSwitcher
+				android:id="@+id/third_num_switcher"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content" >
+				<TextView
+					android:id="@+id/textView"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_marginBottom="@dimen/wheel_layout_bottom_margin"
+					android:layout_marginTop="@dimen/wheel_layout_top_margin"
+					android:text="9"
+					android:textColor="@color/recon_switcher_up"
+					android:textSize="@dimen/wheel_layout_text_size" />
+			</TextSwitcher>
+			<ImageView
+				android:id="@+id/third_num_down"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:src="@drawable/wheel_down_arrow"
+				android:visibility="gone" />
+		</LinearLayout>
+		<LinearLayout
+			android:id="@+id/forth_num"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginLeft="@dimen/wheel_layout_left_margin"
+			android:focusable="true"
+			android:gravity="center_horizontal"
+			android:orientation="vertical" >
+			<ImageView
+				android:id="@+id/forth_num_up"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:src="@drawable/up_arrow"
+				android:visibility="gone" />
+			<TextSwitcher
+				android:id="@+id/forth_num_switcher"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content" >
+				<TextView
+					android:id="@+id/textView"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_marginBottom="@dimen/wheel_layout_bottom_margin"
+					android:layout_marginTop="@dimen/wheel_layout_top_margin"
+					android:text="6"
+					android:textColor="@color/recon_switcher_up"
+					android:textSize="@dimen/wheel_layout_text_size" />
+			</TextSwitcher>
+			<ImageView
+				android:id="@+id/forth_num_down"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:src="@drawable/wheel_down_arrow"
+				android:visibility="gone" />
+		</LinearLayout>
+	</LinearLayout>
+</RelativeLayout>

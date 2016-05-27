@@ -1,0 +1,104 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="${relativePackage}.${activityClass}" >
+
+    <Button
+        android:id="@+id/Bind"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="33dp"
+        android:layout_marginTop="29dp"
+        android:text="@string/Bindlabel" />
+
+    <Button
+        android:id="@+id/Unbind"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/Bind"
+        android:layout_alignBottom="@+id/Bind"
+        android:layout_toRightOf="@+id/Bind"
+        android:text="@string/Unbindlabel" />
+
+    <Button
+        android:id="@+id/Gatconnect"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/Bind"
+        android:layout_below="@+id/Bind"
+        android:text="@string/Gatconnectlabel" />
+
+    <Button
+        android:id="@+id/Gatdisconnect"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/Gatconnect"
+        android:layout_alignBottom="@+id/Gatconnect"
+        android:layout_marginLeft="28dp"
+        android:layout_toRightOf="@+id/Gatconnect"
+        android:text="@string/Gatdisconnectlabel" />
+
+    <Button
+        android:id="@+id/StopScan"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/Unbind"
+        android:layout_alignBottom="@+id/Unbind"
+        android:layout_toRightOf="@+id/Gatdisconnect"
+        android:text="@string/StopScanlabel" />
+
+    <Button
+        android:id="@+id/startScan"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/Unbind"
+        android:layout_alignLeft="@+id/Gatdisconnect"
+        android:text="@string/StartScanlabel" />
+
+    <Button
+        android:id="@+id/EnableNotify"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/Gatconnect"
+        android:layout_below="@+id/Gatconnect"
+        android:text="@string/Notifylabel" />
+
+    <Button
+        android:id="@+id/DisableNotify"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/EnableNotify"
+        android:layout_alignBottom="@+id/EnableNotify"
+        android:layout_toRightOf="@+id/Unbind"
+        android:text="@string/DisableNotifylabel" />
+
+    <Button
+        android:id="@+id/Write"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/EnableNotify"
+        android:layout_below="@+id/EnableNotify"
+        android:text="@string/Writelabel" />
+
+    <Button
+        android:id="@+id/Read"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/DisableNotify"
+        android:layout_below="@+id/DisableNotify"
+        android:text="@string/Readlabel" />
+
+</RelativeLayout>

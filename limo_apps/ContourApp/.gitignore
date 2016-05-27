@@ -1,0 +1,23 @@
+syntax: glob
+
+bin
+gen
+out
+local.properties
+.classpath
+.DS_Store
+.metadata
+.project
+.settings
+*.class
+*.dll
+*.exe
+*.gz
+*.lib
+*.log
+*.o
+*.obj
+*.orig
+*.tar
+*.tgz
+*.zip

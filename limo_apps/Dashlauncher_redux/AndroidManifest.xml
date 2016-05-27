@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+	package="com.reconinstruments.dashlauncherredux"
+	android:versionCode="6900"
+	android:versionName="3.1_aug22"
+	  android:sharedUserId="android.uid.system">
+	<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+	<application
+		android:label="@string/app_name"
+		android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+	   android:persistent="true">
+		<activity
+			android:name="DashlauncherRedux"
+			android:label="Manage Profiles" >
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<action android:name="dashlauncher_redux" />
+				<category android:name="android.intent.category.DEFAULT" />
+				<!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+			</intent-filter>
+		</activity>
+		<service
+			android:name=".ColumnHandlerService"
+			android:enabled="true"
+			android:exported="true" >
+			<intent-filter>
+				<action android:name="com.reconinstruments.COLUMN_HANDLER_SERVICE" />
+			</intent-filter>
+		</service>
+	</application>
+</manifest>

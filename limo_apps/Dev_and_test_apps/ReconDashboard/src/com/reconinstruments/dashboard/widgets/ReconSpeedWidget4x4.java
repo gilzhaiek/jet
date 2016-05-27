@@ -1,0 +1,79 @@
+package com.reconinstruments.dashboard.widgets;
+
+import com.reconinstruments.dashboard.ConversionUtil;
+import com.reconinstruments.dashboard.R;
+import com.reconinstruments.dashboard.ReconSettingsUtil;
+
+import android.content.Context;
+import android.os.Bundle;
+import android.util.AttributeSet;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.widget.TextView;
+
+public class ReconSpeedWidget4x4 extends ReconDashboardWidget {
+
+	private TextView fieldTextView;
+	private TextView unitTextView;
+	
+	public ReconSpeedWidget4x4(Context context, AttributeSet attrs, int defStyle) {
+		super(context, attrs, defStyle);
+		LayoutInflater infl = LayoutInflater.from(context);
+        View myView = infl.inflate(R.layout.recon_speed_4x4, null);
+        this.addView(myView);
+        
+        prepareInsideViews();
+	}
+
+
+	public ReconSpeedWidget4x4(Context context, AttributeSet attrs) {
+		super(context, attrs);
+		LayoutInflater infl = LayoutInflater.from(context);
+        View myView = infl.inflate(R.layout.recon_speed_4x4, null);
+        this.addView(myView);
+        
+        prepareInsideViews();
+	}
+
+	public ReconSpeedWidget4x4(Context context) {
+		super(context);
+		LayoutInflater infl = LayoutInflater.from(context);
+        View myView = infl.inflate(R.layout.recon_speed_4x4, null);
+        this.addView(myView);
+        
+        prepareInsideViews();
+	}
+
+	
+	@Override
+	public void updateInfo(Bundle fullinfo) {
+		Bundle tempBundle = (Bundle) fullinfo.get("SPEED_BUNDLE");
+		float spd = tempBundle.getFloat("Speed");
+		
+		if(ReconSettingsUtil.getUnits(this.getContext()) == ReconSettingsUtil.RECON_UINTS_METRIC) {
+			if(spd > -1) {
+				fieldTextView.setText(Integer.toString((int)spd));
+			} else {
+				fieldTextView.setText("--");
+			}
+			unitTextView.setText("km/h");
+		} else {
+			if(spd > -1) {
+				fieldTextView.setText(Integer.toString((int)ConversionUtil.kmsToMiles(spd)));
+			} else {
+				fieldTextView.setText("--");
+			}
+			unitTextView.setText("mph");
+		}
+	}
+
+
+	@Override
+	public void prepareInsideViews() {
+		fieldTextView = (TextView) findViewById(R.id.speed);
+		unitTextView = (TextView) findViewById(R.id.unit);
+		fieldTextView.setTypeface(recon_typeface);
+		unitTextView.setTypeface(recon_typeface);
+	}
+
+}

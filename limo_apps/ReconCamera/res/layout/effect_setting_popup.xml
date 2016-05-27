@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.reconinstruments.camera.ui.EffectSettingPopup xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/SettingPopupWindow" >
+
+    <LinearLayout
+        android:layout_width="@dimen/big_setting_popup_window_width"
+        android:layout_height="wrap_content"
+        android:background="@color/popup_background"
+        android:orientation="vertical" >
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="@dimen/popup_title_frame_min_height" >
+
+            <TextView
+                android:id="@+id/title"
+                style="@style/PopupTitleText" />
+        </FrameLayout>
+
+        <View style="@style/PopupTitleSeparator" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/clear_effects"
+                    style="@style/EffectSettingTypeTitle"
+                    android:background="@drawable/bg_pressed"
+                    android:minHeight="@dimen/effect_setting_clear_text_min_height"
+                    android:text="@string/clear_effects"
+                    android:textSize="@dimen/effect_setting_clear_text_size" />
+
+                <TextView
+                    android:id="@+id/effect_silly_faces_title"
+                    style="@style/EffectSettingTypeTitle"
+                    android:text="@string/effect_silly_faces"
+                    android:visibility="gone" />
+
+                <View
+                    android:id="@+id/effect_silly_faces_title_separator"
+                    style="@style/EffectTypeSeparator"
+                    android:visibility="gone" />
+
+                <com.reconinstruments.camera.ui.ExpandedGridView
+                    android:id="@+id/effect_silly_faces"
+                    style="@style/EffectSettingGrid" />
+
+                <View
+                    android:id="@+id/effect_background_separator"
+                    style="@style/EffectTitleSeparator"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/effect_background_title"
+                    style="@style/EffectSettingTypeTitle"
+                    android:text="@string/effect_background"
+                    android:visibility="gone" />
+
+                <View
+                    android:id="@+id/effect_background_title_separator"
+                    style="@style/EffectTypeSeparator"
+                    android:visibility="gone" />
+
+                <com.reconinstruments.camera.ui.ExpandedGridView
+                    android:id="@+id/effect_background"
+                    style="@style/EffectSettingGrid"
+                    android:visibility="gone" />
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+</com.reconinstruments.camera.ui.EffectSettingPopup>

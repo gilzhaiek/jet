@@ -1,0 +1,12 @@
+Overview of DashLauncher Architecture
+
+BoardActivity is the base class for all home pages in the sideways scrolling. This superclass ensures that left/right traversal between apps is consistent. To change the order or all more pages, modify the classes array. It is important to note that each of the main activities in the manifest are marked "noHistory". This ensures a stack of activities isn't built up as you traverse left/right through music, stats, dash, etc.
+
+Music Player
+The Music Player entry point is MusicActivity. This activity launches the MusicControllerActivity and library/LibraryActivity.
+
+Resources
+All resources should be prefixed by the function they belong to. For example, all view layout pertaining solely to the music player should be prefixed with music (e.g. music_library_list_layout). It is important this this convention is followed.
+
+Possible Areas of Improvement
+Check for repeated code that can be consolidated in library/ between ArtistsActivity, PlaylistsActivity, SongsActivity, and maybe even MusicListActivity.

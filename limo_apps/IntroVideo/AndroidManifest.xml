@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.reconinstruments.intro"
+    android:versionCode="6773"
+    android:sharedUserId="android.uid.system"
+    android:versionName="3.1_aug22" >
+
+    <uses-sdk
+        android:minSdkVersion="10"
+        android:targetSdkVersion="10" />
+
+    <uses-permission android:name="android.permission.REBOOT" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.WRITE_SECURE_SETTINGS" />
+    <uses-permission android:name="android.permission.CHANGE_CONFIGURATION" />
+    
+
+    <application
+        android:icon="@drawable/icon"
+        android:label="@string/app_name" >
+        
+        <!-- FLAG TO SWITCH BETWEEN OAKLEY AND RECON START UP VIDEOS -->
+        <meta-data android:name="isOakley" android:value="false" />
+        
+        <!-- FLAG TO LOCK DEVICE AND FORCE USER TO UPGRADE -->
+        <meta-data android:name="lockout" android:value="false" />
+        
+        <activity
+            android:name=".startup.Screen1Activity"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.NoTitleBar"
+            android:noHistory="true"
+            android:screenOrientation="landscape" >
+            <intent-filter>
+		      	<action android:name="RECON_INTRO_VIDEO" />
+		      	<category android:name="android.intent.category.MAIN" />
+		      	<category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+	<activity
+            android:name=".startup.ActivateDeviceActivityConfirm"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.NoTitleBar"
+            android:noHistory="true"
+            android:screenOrientation="landscape" >
+            <intent-filter>
+	      <action android:name="RECON_CONFIRM_ACTIVATE" />
+		      	<category android:name="android.intent.category.MAIN" />
+		      	<category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+	<activity
+            android:name=".startup.ActivateDeviceActivity"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.NoTitleBar"
+            android:noHistory="true"
+            android:screenOrientation="landscape" >
+            <intent-filter>
+	      <action android:name="RECON_UPDATE_AND_ACTIVATE" />
+	      <category android:name="android.intent.category.MAIN" />
+	      <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+
+        
+        <activity
+            android:name=".startup.OakleyDemoActivity"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+            android:noHistory="true"
+            android:screenOrientation="landscape" />
+        
+        <activity
+            android:name=".startup.TutorialActivity"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+            android:noHistory="true"
+            android:screenOrientation="landscape" />
+        
+        <activity
+            android:name=".startup.ReplayDemoPromptActivity"
+            android:theme="@android:style/Theme.NoTitleBar"
+            android:noHistory="true"
+            android:screenOrientation="landscape" />
+        
+        <activity
+            android:name=".startup.ReplayTutorialPromptActivity"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+            android:noHistory="true"
+            android:screenOrientation="landscape" />
+        
+        <activity
+            android:name=".onhill.VideoSelectorActivity"
+            android:theme="@android:style/Theme.NoTitleBar"
+            android:screenOrientation="landscape" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+		      	<category android:name="android.intent.category.DEFAULT" />
+                <action android:name="RECON_TUTORIAL_VIDEO_SELECTOR" />
+            </intent-filter>
+        </activity>
+        
+        <activity 
+            android:name=".onhill.VideoActivity"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+            android:screenOrientation="landscape" />
+        
+        <activity
+            android:name=".LockOutActivity"
+            android:theme="@android:style/Theme.NoTitleBar"
+            android:screenOrientation="landscape" />
+            
+        <service
+            android:name=".instore.InStoreDemoService"
+            android:enabled="true" >
+            <intent-filter>
+                <action android:name="IN_STORE_DEMO_SERVICE" />
+            </intent-filter>
+        </service>
+        
+        <activity
+            android:name=".instore.InStoreDemoActivity"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+           	android:screenOrientation="landscape" />
+        
+        <activity
+            android:name=".instore.InStoreDemoModalActivity"
+            android:theme="@android:style/Theme.NoTitleBar"
+           	android:screenOrientation="landscape" />
+    </application>
+
+</manifest>

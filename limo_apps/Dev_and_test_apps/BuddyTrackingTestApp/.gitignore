@@ -1,0 +1,5 @@
+# Ignore bin and gen
+gen/
+bin/
+.classpath
+lint.xml

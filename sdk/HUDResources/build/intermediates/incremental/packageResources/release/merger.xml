@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="3"><dataSet config="main"><source path="/Users/gilzhaiek/Dev/jet/sdk/HUDResources/res"><file name="ic_launcher" path="/Users/gilzhaiek/Dev/jet/sdk/HUDResources/res/drawable-hdpi/ic_launcher.png" qualifiers="hdpi-v4" type="drawable"/><file name="ic_launcher" path="/Users/gilzhaiek/Dev/jet/sdk/HUDResources/res/drawable-mdpi/ic_launcher.png" qualifiers="mdpi-v4" type="drawable"/><file name="ic_launcher" path="/Users/gilzhaiek/Dev/jet/sdk/HUDResources/res/drawable-xhdpi/ic_launcher.png" qualifiers="xhdpi-v4" type="drawable"/><file name="ic_launcher" path="/Users/gilzhaiek/Dev/jet/sdk/HUDResources/res/drawable-xxhdpi/ic_launcher.png" qualifiers="xxhdpi-v4" type="drawable"/><file name="bluetooh_device_list" path="/Users/gilzhaiek/Dev/jet/sdk/HUDResources/res/layout/bluetooh_device_list.xml" qualifiers="" type="layout"/><file name="bluetooh_device_name" path="/Users/gilzhaiek/Dev/jet/sdk/HUDResources/res/layout/bluetooh_device_name.xml" qualifiers="" type="layout"/><file path="/Users/gilzhaiek/Dev/jet/sdk/HUDResources/res/values/strings.xml" qualifiers=""><string name="none_paired">No devices have been paired</string><string name="title_paired_devices">Paired Devices</string><string name="none_found">No devices found</string><string name="button_scan">Scan for devices</string><string name="app_name">HUDResources</string><string name="scanning">scanning for devices…</string><string name="title_other_devices">Other Available Devices</string><string name="select_device">select a device to connect</string></file><file path="/Users/gilzhaiek/Dev/jet/sdk/HUDResources/res/values/styles.xml" qualifiers=""><style name="AppBaseTheme" parent="android:Theme.Light">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
+    </style><style name="AppTheme" parent="AppBaseTheme">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+    </style></file><file path="/Users/gilzhaiek/Dev/jet/sdk/HUDResources/res/values-v11/styles.xml" qualifiers="v11"><style name="AppBaseTheme" parent="android:Theme.Holo.Light">
+        <!-- API 11 theme customizations can go here. -->
+    </style></file><file path="/Users/gilzhaiek/Dev/jet/sdk/HUDResources/res/values-v14/styles.xml" qualifiers="v14"><style name="AppBaseTheme" parent="android:Theme.Holo.Light.DarkActionBar">
+        <!-- API 14 theme customizations can go here. -->
+    </style></file></source><source path="/Users/gilzhaiek/Dev/jet/sdk/HUDResources/build/generated/res/rs/release"/><source path="/Users/gilzhaiek/Dev/jet/sdk/HUDResources/build/generated/res/generated/release"/></dataSet><dataSet config="release"><source path="/Users/gilzhaiek/Dev/jet/sdk/HUDResources/build-types/release/res"/></dataSet><mergedItems/></merger>

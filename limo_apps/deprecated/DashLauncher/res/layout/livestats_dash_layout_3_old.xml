@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:paddingLeft="22px"
+    android:paddingRight="21px"
+    android:paddingTop="8px" >
+
+    <com.reconinstruments.dashlauncher.livestats.widgets.ReconWidgetHolder
+        android:id="@+id/recon_dash_widget_1"
+        style="@style/placeholder4x2_no_bg"
+        android:layout_alignParentLeft="True"
+        android:layout_alignParentTop="True" />
+
+    <com.reconinstruments.dashlauncher.livestats.widgets.ReconWidgetHolder
+        android:id="@+id/recon_dash_widget_2"
+        style="@style/placeholder2x2"
+        android:layout_alignParentRight="True"
+        android:layout_alignParentTop="True" />
+
+    <com.reconinstruments.dashlauncher.livestats.widgets.ReconWidgetHolder
+        android:id="@+id/recon_dash_widget_3"
+        style="@style/placeholder4x1"
+        android:layout_alignParentLeft="True"
+        android:layout_below="@+id/recon_dash_widget_1" />
+
+    <com.reconinstruments.dashlauncher.livestats.widgets.ReconWidgetHolder
+        android:id="@+id/recon_dash_widget_4"
+        style="@style/placeholder2x2"
+        android:layout_alignParentRight="True"
+        android:layout_below="@+id/recon_dash_widget_2" />
+
+    <com.reconinstruments.dashlauncher.livestats.widgets.ReconWidgetHolder
+        android:id="@+id/recon_dash_widget_5"
+        style="@style/placeholder4x1"
+        android:layout_alignParentLeft="True"
+        android:layout_below="@+id/recon_dash_widget_3" />
+
+</RelativeLayout>

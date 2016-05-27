@@ -1,0 +1,8 @@
+# Ignore bin and gen
+gen/
+bin/
+obj/
+libs/armeabi
+local.properties
+.classpath
+lint.xml

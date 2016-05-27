@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="3"><dataSet config="unspecified"><source path="/Users/gilzhaiek/Dev/jet/sdk/connectivity/HUDConnectivityService/build/intermediates/exploded-aar/connectivity/HUDConnectivityLib/unspecified/assets"/></dataSet><dataSet config="main"><source path="/Users/gilzhaiek/Dev/jet/sdk/connectivity/HUDConnectivityService/assets"/></dataSet><dataSet config="debug"><source path="/Users/gilzhaiek/Dev/jet/sdk/connectivity/HUDConnectivityService/build-types/debug/assets"/></dataSet></merger>

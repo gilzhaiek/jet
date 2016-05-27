@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:background="@color/recon_jet_background"
+	android:gravity="center_vertical"
+	android:orientation="vertical" >
+	<TextView
+		android:id="@+id/text_view"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginBottom="10dp"
+		android:gravity="center"
+		android:includeFontPadding="false"
+		android:text="DAY IN PROGRESS"
+		android:textColor="#ffffff"
+		android:textSize="30sp" />
+	<FrameLayout
+		android:id="@+id/pager_container"
+		android:layout_width="match_parent"
+		android:layout_height="100dp"
+		android:layout_alignParentBottom="true"
+		android:layout_marginBottom="10dp" >
+		<android.support.v4.view.ViewPager
+			android:id="@+id/view_pager"
+			android:layout_width="230dp"
+			android:layout_height="wrap_content"
+			android:layout_gravity="center_horizontal" />
+	</FrameLayout>
+	<LinearLayout
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_gravity="left"
+		android:layout_marginLeft="10dp"
+		android:layout_marginTop="10dp"
+		android:gravity="center_vertical" >
+		<ImageView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginRight="5dp"
+			android:src="@drawable/icon_select" />
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:includeFontPadding="false"
+			android:text="FINISH DAY"
+			android:textColor="#ffffff"
+			android:textSize="30sp" />
+	</LinearLayout>
+</LinearLayout>

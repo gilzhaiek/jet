@@ -1,0 +1,13 @@
+This package contains three directories:
+
+ * doc/
+ * lib/
+ * sample_code/
+
+doc/ contains documentation on the SDK.
+
+lib/ contains the jar file for the SDK to be linked to the project.
+
+sample_code/ contains a sample code that uses the SDK in a minimal
+application. It can be built using the standard tools e.g. ant. A bash
+file that automates the build process is also provided.

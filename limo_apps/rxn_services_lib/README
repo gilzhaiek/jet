@@ -1,0 +1,8 @@
+Library project provided by rx networks.  It has an RXNetworksService
+which we override to have file watcher capabilities. The original
+service looks for WiFi capabilities before it downloads and injects a
+seed file. We have modified this so that it injects any file that is
+created or modified in /data/RXN/seed/. The orginal download
+capabilities are intact though. The RXNetworksService that is defined
+in this library is used by rxn_services_xybrid.
+

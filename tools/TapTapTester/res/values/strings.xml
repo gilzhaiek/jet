@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">TapTapTester</string>
+    <string name="interval">Default is 10 second</string>
+    <string name="ACC">ACC</string>
+    <string name="MAG">MAG</string>
+    <string name="GYRO">GYRO</string>
+    <string name="TEMP">TEMP</string>
+    <string name="PRESSURE">PRESSURE</string>
+    <string name="MainBoardT">MainBoardT</string>
+    <string name="CompassT">CompassT</string>
+    <string name="DOWN">DOWN</string>
+    <string name="UP">UP</string>
+	<string name="Send">Send</string>
+	<string name="ready">Ready to log</string>
+	<string name="start_record">Start Recording</string>
+	<string name="reset_counter">Reset Counter</string>
+	<string name="frequency">0 Hz</string>
+	<string name="taps">0</string>
+	<string name="temperature_status">Temperature Log</string>
+</resources>

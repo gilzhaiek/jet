@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<declare-styleable name="Theme">
+		<attr name="CustomTextView" format="reference" />
+	</declare-styleable>
+	<declare-styleable name="CustomTextView">
+		<attr name="shadowColors" format="color|reference" />
+		<attr name="android:shadowDx" />
+		<attr name="android:shadowDy" />
+		<attr name="android:shadowRadius" />
+	</declare-styleable>
+	<declare-styleable name="StatBadge">
+		<attr name="statType" format="enum">
+			<enum name="speed" value="0" />
+			<enum name="vertical" value="1" />
+			<enum name="distance" value="2" />
+			<enum name="jump" value="3" />
+			<enum name="altitude" value="4" />
+		</attr>
+		<attr name="shapeWidth" format="dimension" />
+		<attr name="shapeHeight" format="dimension" />
+		<attr name="shapeColor" format="color" />
+		<attr name="shapeBackColor" format="color" />
+		<attr name="mainStatText" format="string" />
+		<attr name="mainStatTextColor" format="color" />
+		<attr name="subStatText" format="string" />
+		<attr name="subStatTextColor" format="color" />
+		<attr name="subTitleText" format="string" />
+		<attr name="subTitleTextColor" format="color" />
+	</declare-styleable>
+	<declare-styleable name="AutofitTextView">
+		<attr name="minTextSize" format="dimension" />
+		<attr name="precision" format="float" />
+		<attr name="sizeToFit" format="boolean" />
+	</declare-styleable>
+
+	<declare-styleable name="ButtonWidgetStyle">
+		<attr name="buttonText" format="string" localization="suggested" />
+		<attr name="buttonImage" format="integer" localization="suggested" />
+	</declare-styleable>
+</resources>

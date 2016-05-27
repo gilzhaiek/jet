@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<map2D formatVer="Dec 2, 2014b">
+	<!-- map will be drawn in the following order -->
+	<!-- and objects/text will be drawn using colors and styles set by the rendering theme set in the current activity profile -->
+    <object type="land" 				source="recon_base" />
+    <object type="ocean" 				source="recon_base" />
+    <object type="city"  				source="recon_base" />
+    <object type="woods" 				source="recon_base" />
+    <object type="park"  				source="recon_base" />
+    <object type="water" 				source="recon_base" />
+    <object type="waterway" 			source="recon_base" />
+    <object type="highway-residential"  source="recon_base" />
+    <object type="highway-tirtiary"  	source="recon_base" />
+    <object type="highway-secondary" 	source="recon_base" />
+    <object type="highway-primary"   	source="recon_base" />
+    <object type="highway-motorway"  	source="recon_base" />
+    <object type="border-national"  	source="recon_base" />
+    <object type="ski-walkway"  		source="recon_snow" />
+    <object type="skitrail-green"  		source="recon_snow" />
+    <object type="skitrail-blue"  		source="recon_snow" />
+    <object type="skitrail-black" 		source="recon_snow" />
+    <object type="skitrail-dblack"   	source="recon_snow" />
+    <object type="skitrail-red"  		source="recon_snow" />
+    <name   obj="skitrail-green" 		belowCameraHeightScale="1.1" />
+    <name   obj="skitrail-blue" 		belowCameraHeightScale="1.1" />
+    <name   obj="skitrail-black" 		belowCameraHeightScale="1.1" />
+    <name   obj="skitrail-dblack" 		belowCameraHeightScale="1.1" />
+    <name   obj="skitrail-red" 			belowCameraHeightScale="1.1" />
+    <name   obj="border-national"		belowCameraHeightScale="2.1" />
+    <name   obj="highway-motorway"		belowCameraHeightScale="2.1" />
+    <name   obj="highway-primary" 		belowCameraHeightScale="2.1" />
+    <name   obj="highway-secondary" 	belowCameraHeightScale="2.1" />
+    <name   obj="highway-tirtiary" 		belowCameraHeightScale="1.1" />
+    <name   obj="highway-residential" 	belowCameraHeightScale="0.6" />
+    <object type="parking_lot"  		source="recon_snow" belowCameraHeightScale="0.9" />
+    <object type="ski-info"  			source="recon_snow" belowCameraHeightScale="1.9" />
+    <object type="ski-restaurant" 		source="recon_snow" belowCameraHeightScale="2.9" />
+    <object type="chairlift_access"  	source="recon_snow" />
+    <object type="chairlift"   			source="recon_snow" />
+    <name   obj="chairlift" 			belowCameraHeightScale="2.1" />
+</map2D>
+    

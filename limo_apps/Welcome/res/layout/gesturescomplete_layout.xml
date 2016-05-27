@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/gesturesComplete">
+    <TextView
+    	android:layout_width="wrap_content"
+    	android:layout_height="wrap_content"
+    	android:text="That's it for the basics"
+    	android:textSize="32dp"
+    	android:paddingTop="30dp"
+    	android:layout_gravity="top|center"
+    />
+    
+   <ImageView 
+	        android:layout_height="wrap_content"
+	        android:layout_width="fill_parent"
+	        android:layout_gravity="center"
+	        android:src="@drawable/jet_image_front"
+	        android:layout_weight="1"
+	/>
+	
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:layout_gravity="bottom|center"
+        android:paddingBottom="30dp" >
+		
+		<TextView
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:text="Click "
+		    android:textStyle="bold"
+		    android:textSize="22dp"
+		    android:textColor="#ffaa00"
+		    android:layout_gravity="center" 
+		/>
+		
+		<ImageView
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:layout_gravity="center"
+		    />
+		
+		<TextView
+	    	android:layout_width="wrap_content"
+	    	android:layout_height="wrap_content"
+	    	android:text=" to start piloting Jet!"
+	    	android:textSize="22dp"
+	    	android:id="@+id/tvSwipeback_Small"
+	    	android:layout_gravity="center"
+	    />
+		
+		
+	</LinearLayout>
+
+</LinearLayout>

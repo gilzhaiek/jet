@@ -1,0 +1,18 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/map_activity_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    
+        <TextView
+        android:id="@+id/critcalerrormsgview"
+    	android:layout_width="match_parent"
+    	android:layout_height="match_parent"
+    	android:textColor="#f5f5f5"
+    	android:textSize="20sp"
+    	android:maxLines="4"
+    	android:lines="4"   	
+    	android:gravity="center"
+    	android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Key map files are missing.\nPlease update Recon OS." />
+        
+</FrameLayout>

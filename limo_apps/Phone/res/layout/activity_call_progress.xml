@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent" >
+	<LinearLayout
+		android:id="@+id/titleBar"
+		android:layout_width="match_parent"
+		android:layout_height="54dp"
+		android:background="@color/call_starting"
+		android:gravity="center_horizontal"
+		android:orientation="horizontal"
+		android:paddingLeft="30dp"
+		android:paddingRight="30dp" >
+		<ImageView
+			android:id="@+id/image"
+			android:layout_width="wrap_content"
+			android:layout_height="match_parent"
+			android:layout_gravity="center"
+			android:src="@drawable/phone_icon" />
+		<TextView
+			android:id="@+id/title"
+			android:layout_width="wrap_content"
+			android:layout_height="match_parent"
+			android:layout_marginLeft="10dp"
+			android:gravity="center"
+			android:singleLine="true"
+			android:text="INCOMING CALL"
+			android:textSize="30dp" />
+		<TextView
+			android:id="@+id/duration"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:gravity="right|center_vertical"
+			android:lines="1"
+			android:maxLines="1"
+			android:singleLine="true"
+			android:text="00:55"
+			android:textSize="30dp"
+			android:visibility="gone" />
+	</LinearLayout>
+	<!--
+     	<LinearLayout
+		android:id="@+id/actionBar"
+		android:layout_width="match_parent"
+		android:layout_height="40dp"
+		android:layout_alignParentBottom="true"
+		android:background="#333"
+		android:orientation="horizontal"
+		android:padding="5dp" >
+		<ImageView
+			android:id="@+id/back_button"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginLeft="5dp"
+			android:src="@drawable/back_button" />
+		<TextView
+			android:id="@+id/back_text"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_gravity="center"
+			android:layout_marginLeft="5dp"
+			android:text="IGNORE"
+			android:textColor="#FFF"
+			android:textSize="16dp"
+			android:textStyle="bold" />
+		<ImageView
+			android:id="@+id/select_button"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginLeft="10dp"
+			android:src="@drawable/select_button" />
+		<TextView
+			android:id="@+id/select_text"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_gravity="center"
+			android:layout_marginLeft="5dp"
+			android:text="ANSWER"
+			android:textColor="#FFF"
+			android:textSize="16dp"
+			android:textStyle="bold" />
+	</LinearLayout>
+	-->
+	<TextView
+		android:id="@+id/from"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_centerHorizontal="true"
+		android:layout_centerVertical="true"
+		android:ellipsize="end"
+		android:singleLine="true"
+		android:text="FROM"
+		android:textSize="44dp" />
+	<RelativeLayout
+		android:id="@+id/action_view"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_alignParentBottom="true"
+		android:layout_marginBottom="30dp"
+		android:gravity="left" >
+		<ImageView
+			android:id="@+id/imageView1"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_alignParentLeft="true"
+			android:layout_centerVertical="true"
+			android:layout_marginLeft="30dp"
+			android:src="@drawable/select" />
+		<TextView
+			android:id="@+id/textView1"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_centerVertical="true"
+			android:layout_marginLeft="6dp"
+			android:layout_marginRight="15dp"
+			android:layout_toRightOf="@+id/imageView1"
+			android:text="ANSWER"
+			android:textSize="30dp" />
+		<ImageView
+			android:id="@+id/imageView2"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_centerHorizontal="true"
+			android:layout_centerVertical="true"
+			android:layout_toRightOf="@+id/textView1"
+			android:src="@drawable/back" />
+		<TextView
+			android:id="@+id/textView2"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_centerVertical="true"
+			android:layout_marginLeft="6dp"
+			android:layout_toRightOf="@+id/imageView2"
+			android:text="DISMISS"
+			android:textSize="30dp" />
+	</RelativeLayout>
+</RelativeLayout>

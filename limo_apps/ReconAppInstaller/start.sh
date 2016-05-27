@@ -1,0 +1,1 @@
+adb shell am startservice -a RECON_INSTALLER_SERVICE

@@ -1,0 +1,4 @@
+include ':HUDConnectivityLib'
+include ':HUDConnectivityService'
+include ':HUDConnectivityTester'
+include ':..:HUDResources'

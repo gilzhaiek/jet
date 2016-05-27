@@ -1,0 +1,37 @@
+This package contains code for updating device firmware, and
+installing rif files, by observing specific file paths for changes.
+
+RIF Installer:
+checks files placed in /ReconApps/Installer and decodes
+them into apk files inside the applications cache directory, then
+installs the apk automatically without user intervention, whether the
+app is already installed or not. It will delete the rif files or apk
+files either on successful installation or on any error.
+
+To install the apk, it uses reflection to call private methods inside
+the PackageManager, it calls the same methods that would be called
+internally by com.android.packageinstaller
+
+
+See system/README for old code for installing system apps
+
+Detailed procedure:
+1. Observe /sdcard/ReconApps/Installer/
+2. Change causes RifEventFolder
+3. Pop the top file. 
+4. Decode to APK folder /cached/
+5. call the installer function
+6. Call back causes poping the next item.
+
+
+Note: the method used here of using rif files to secure apks is not 
+completely secure because the apk needs to be publically readable at some
+point in order for android to read it, and android will log the apk name as it installs
+long term it might make more sense to use encrypted apks which android itself 
+can decode (available jelly bean onwards)
+see http://nelenkov.blogspot.ca/2012/07/using-app-encryption-in-jelly-bean.html
+ie. apk install --algo .. --key .., should also be possible via reflection
+
+    
+Firmware update:
+TODO document this

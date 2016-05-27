@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res/com.reconinstruments.connectdevice"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:background="@drawable/circular_gradient"
+	android:orientation="vertical" >
+	<TextView
+		style="@style/recon_white_text_shadow"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:background="@drawable/circular_gradient"
+		android:focusable="false"
+		android:gravity="center"
+		android:paddingBottom="1dip"
+		android:paddingTop="1dip"
+		android:text="Setup iPhone"
+		android:textSize="24px"
+		android:textStyle="bold" />
+	<View
+		android:layout_width="fill_parent"
+		android:layout_height="2dip"
+		android:background="@drawable/tab_bar_gradient" />
+	<TextView
+		android:id="@+id/activity_ios_first_text"
+		style="@style/recon_white_text_shadow"
+		android:layout_width="300dp"
+		android:layout_height="wrap_content"
+		android:layout_gravity="center"
+		android:layout_margin="10dp"
+		android:gravity="center"
+		android:text="You&apos;ll need Engage installed on your iPhone to get started. Engage is available in the App Store"
+		android:textSize="20dip"
+		android:textStyle="normal" />
+	<RelativeLayout
+		android:id="@+id/next"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:background="@drawable/selector_42"
+		android:focusable="true" >
+		<com.reconinstruments.commonwidgets.CustomTextView
+			style="@style/recon_focusable_text_shadow"
+			android:layout_width="wrap_content"
+			android:layout_height="40dp"
+			android:layout_centerInParent="true"
+			android:layout_gravity="center"
+			android:duplicateParentState="true"
+			android:gravity="center"
+			android:text="Next"
+			android:textSize="24dip"
+			android:textStyle="bold" />
+	</RelativeLayout>
+</LinearLayout>

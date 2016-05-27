@@ -1,0 +1,36 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.dsi.ant.stonestreetoneantservice"
+    android:versionCode="000008"
+    android:versionName="00.00.08" >
+
+    <uses-sdk
+        android:minSdkVersion="7"
+        android:targetSdkVersion="16" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        
+        <service 
+            android:exported="true"
+            android:name=".StonestreetOneAntService"
+            >
+            
+            <meta-data android:name="ANT_HardwareType"
+                android:value="built-in"
+                />
+            <meta-data android:name="ANT_AdapterType"
+                android:value="remote"/>
+            <intent-filter>
+                <action android:name="com.dsi.ant.intent.request.SERVICE_INFO" />
+            </intent-filter>
+            
+        </service>
+        
+        <uses-library android:name="com.stonestreetone.bluetopiapm" />
+          
+    </application>
+
+</manifest>

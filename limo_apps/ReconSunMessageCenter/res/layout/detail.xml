@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black" >
+    <ScrollView
+        android:id="@+id/scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="128dp"
+        android:layout_alignLeft="@+id/category_name"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginTop="66dp"
+        android:fadingEdgeLength="36dp"
+        android:requiresFadingEdge="vertical" >
+        <TextView
+            android:id="@+id/detail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:lineSpacingMultiplier="0.8"
+            android:paddingBottom="15dp"
+            android:paddingRight="10dp"
+            android:text="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+            android:textColor="#ffffff"
+            android:textSize="26sp" />
+    </ScrollView>
+    <TextView
+        android:id="@+id/category_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="15dp"
+        android:background="@android:color/transparent"
+        android:ellipsize="end"
+        android:gravity="left"
+        android:singleLine="true"
+        android:text="Ali Mohazab"
+        android:textColor="#ffffff"
+        android:textSize="38sp" />
+    <com.reconinstruments.commonwidgets.SansSemiBoldTextView
+        android:id="@+id/message_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="25dp"
+        android:layout_marginRight="25dp"
+        android:text="1/3"
+        android:textColor="#ffffff"
+        android:textSize="30sp" />
+    <ImageView
+        android:id="@+id/num_unread"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/message_num"
+        android:layout_toLeftOf="@+id/message_num"
+        android:paddingBottom="8dp"
+        android:paddingRight="5dp"
+        android:src="@drawable/unread_badge" />
+    <ImageView
+        android:id="@+id/text_unread"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/scroll_view"
+        android:layout_below="@+id/category_name"
+        android:layout_marginLeft="15dp"
+        android:paddingTop="10dp"
+        android:src="@drawable/unread_badge"
+        android:visibility="invisible" />
+</RelativeLayout>

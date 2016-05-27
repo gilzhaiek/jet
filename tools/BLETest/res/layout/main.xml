@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+    <Button
+        android:id="@+id/start_scan"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="START SCAN"
+        android:onClick="startScan" />
+
+      <Button
+          android:id="@+id/disconnect"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignParentTop="true"
+          android:layout_toRightOf="@+id/connect"
+          android:onClick="disconnect"
+          android:text="Disconnect" />
+
+      <Button
+          android:id="@+id/connect"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignParentTop="true"
+          android:layout_toRightOf="@+id/start_scan"
+          android:onClick="startConnect"
+          android:text="START Connect" />
+
+</RelativeLayout>
+

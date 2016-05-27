@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/circular_gradient"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/music_main_item"
+        android:layout_width="fill_parent"
+        android:layout_height="110dp"
+        android:layout_gravity="left|center_vertical"
+        android:layout_marginTop="25dip"
+        android:background="@drawable/background_transition112"
+        android:focusable="true"
+        android:gravity="left|center_vertical"
+        android:visibility="gone" >
+
+        <include
+            android:layout_gravity="left|center_vertical"
+            layout="@layout/music_song_info"
+            android:gravity="left|center_vertical" />
+    </LinearLayout>
+
+	<RelativeLayout
+        android:id="@+id/iphone_button"
+        android:layout_width="wrap_content"
+        android:layout_height="110dp"
+        android:background="@drawable/background_transition112"
+        android:layout_marginTop="25dip"
+        android:visibility="visible" >
+
+        <ImageView
+            android:id="@+id/music_img"
+            android:layout_width="85dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="50dp"
+            android:gravity="right"
+            android:src="@drawable/music" />
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="2dp"
+            android:layout_height="70dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_toRightOf="@id/music_img"
+            android:background="@drawable/vertical_gradient" />
+
+        <TextView
+            style="@style/focusable_text_shadow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/divider"
+            android:duplicateParentState="true"
+            android:includeFontPadding="false"
+            android:singleLine="true"
+            android:text="Music Control"
+            android:textSize="25dip" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/library_item"
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/background_transition62"
+        android:focusable="true"
+        android:padding="10dip"
+        android:visibility="visible" >
+
+        <com.reconinstruments.widgets.CustomTextView
+            android:id="@+id/library_text"
+            style="@style/focusable_text_shadow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:duplicateParentState="true"
+            android:text="My Library"
+            android:textSize="22dip"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/library_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/library_text"
+            android:duplicateParentState="true"
+            android:src="@drawable/music_library_selectable" />
+    </RelativeLayout>
+
+</LinearLayout>

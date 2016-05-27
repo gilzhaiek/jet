@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<lispxml version="0.1" xmlns:io="com.reconinstruments.lispxml.module.io"
+	 xmlns:m="com.reconinstruments.lispxml.module.math"
+	 xmlns:s="com.reconinstruments.lispxml.module.settings">
+  <!-- probe-adb -->
+  <s:set-secure-int><s>adb_enabled</s><m:i>1</m:i></s:set-secure-int>
+</lispxml>

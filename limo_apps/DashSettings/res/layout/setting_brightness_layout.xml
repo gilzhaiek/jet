@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	style="@style/recon_BrightnessBox" >
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="1dip"
+		android:background="#5791cc" />
+	<TextView
+		android:id="@+id/pop_up_title"
+		android:layout_width="fill_parent"
+		android:layout_height="42dip"
+		android:background="@color/recon_popup_title_bg"
+		android:gravity="center_horizontal|center_vertical"
+		android:text="BRIGHTNESS"
+		android:textColor="#ffffff"
+		android:textSize="24px"
+		android:textStyle="bold" />
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:background="@color/recon_popup_inner_stroke"
+		android:orientation="vertical"
+		android:paddingBottom="1dip"
+		android:paddingLeft="1dip"
+		android:paddingRight="1dip" >
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:background="#343434"
+			android:gravity="center_vertical"
+			android:orientation="horizontal"
+			android:paddingBottom="3dip"
+			android:paddingLeft="3dip"
+			android:paddingRight="3dip"
+			android:paddingTop="3dip" >
+			<ImageView
+				android:layout_width="30px"
+				android:layout_height="30px"
+				android:layout_marginLeft="20dip"
+				android:src="@drawable/small_sun_icon" />
+			<ImageView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginLeft="10dp"
+				android:src="@drawable/left_arrow" />
+			<RelativeLayout
+				android:layout_width="134dip"
+				android:layout_height="22dip"
+				android:layout_marginLeft="5dip"
+				android:background="@color/recon_progress_bg" >
+				<SeekBar
+					android:id="@+id/brightness_bar"
+					android:layout_width="134dip"
+					android:layout_height="22dip"
+					android:focusable="true"
+					android:max="15"
+					android:progressDrawable="@drawable/setting_seekbar"
+					android:thumb="@android:color/transparent" />
+			</RelativeLayout>
+			<ImageView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginLeft="5dip"
+				android:src="@drawable/right_arrow" />
+			<ImageView
+				android:layout_width="40px"
+				android:layout_height="40px"
+				android:layout_marginLeft="10dip"
+				android:src="@drawable/big_sun_icon" />
+		</LinearLayout>
+	</LinearLayout>
+</LinearLayout>

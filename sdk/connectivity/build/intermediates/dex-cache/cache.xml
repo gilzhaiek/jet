@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="/Users/gilzhaiek/Dev/jet/sdk/connectivity/HUDConnectivityTester/build/intermediates/exploded-aar/connectivity/HUDConnectivityLib/unspecified/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="8d99287c2c904c0fe74a2909e5be244041c507f0">
+        <dex dex="/Users/gilzhaiek/Dev/jet/sdk/connectivity/HUDConnectivityTester/build/intermediates/pre-dexed/debug/classes-74e9e1f12bd48c4bd0b0ae816f187d6e2167e86b.jar" />
+    </item>
+    <item
+        jar="/Users/gilzhaiek/Dev/jet/sdk/connectivity/HUDConnectivityService/build/intermediates/exploded-aar/connectivity/HUDConnectivityLib/unspecified/libs/ss1api.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="c81145c5b196512047993a08c5e4a8e0185c587e">
+        <dex dex="/Users/gilzhaiek/Dev/jet/sdk/connectivity/HUDConnectivityService/build/intermediates/pre-dexed/debug/ss1api-d13f4a45676d982458ce6327828382667705a5b5.jar" />
+    </item>
+    <item
+        jar="/Users/gilzhaiek/Dev/jet/sdk/connectivity/HUDConnectivityTester/build/intermediates/exploded-aar/connectivity/HUDConnectivityLib/unspecified/libs/ss1api.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="c81145c5b196512047993a08c5e4a8e0185c587e">
+        <dex dex="/Users/gilzhaiek/Dev/jet/sdk/connectivity/HUDConnectivityTester/build/intermediates/pre-dexed/debug/ss1api-d28cef9a9fab473c392b611a2cec3a28346e6afe.jar" />
+    </item>
+    <item
+        jar="/Users/gilzhaiek/Dev/jet/sdk/connectivity/HUDConnectivityTester/build/intermediates/exploded-aar/connectivity@@@/HUDResources/unspecified/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="15c9c3c6a023252822e72004e955c342fd860d15">
+        <dex dex="/Users/gilzhaiek/Dev/jet/sdk/connectivity/HUDConnectivityTester/build/intermediates/pre-dexed/debug/classes-85900d8255f4bdcf8ec12f7eee33e33993a53410.jar" />
+    </item>
+    <item
+        jar="/Users/gilzhaiek/Dev/jet/sdk/connectivity/HUDConnectivityService/build/intermediates/exploded-aar/connectivity/HUDConnectivityLib/unspecified/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="8d99287c2c904c0fe74a2909e5be244041c507f0">
+        <dex dex="/Users/gilzhaiek/Dev/jet/sdk/connectivity/HUDConnectivityService/build/intermediates/pre-dexed/debug/classes-d725b0355d4e22b80c8a517586e4da15ac5b3cc2.jar" />
+    </item>
+
+</items>

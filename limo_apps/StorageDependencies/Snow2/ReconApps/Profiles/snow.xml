@@ -1,0 +1,8 @@
+<profile name="snow">
+	<column class="home">
+		<element activity="com.reconinstruments.dashlivestats/.SnowLiveStatsActivity" />
+	</column>
+	<column>
+		<element activity="com.reconinstruments.snowmap/.SnowMapActivity" />
+	</column>
+</profile>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="250dp"
+	android:layout_height="wrap_content"
+	android:layout_gravity="center"
+	android:orientation="vertical" >
+	<TextView
+		android:id="@+id/pop_up_title"
+		android:layout_width="match_parent"
+		android:layout_height="41px"
+		android:gravity="center"
+		android:text="@string/title"
+		android:textColor="#ffffff"
+		android:textSize="24px"
+		android:textStyle="bold" />
+	<ListView
+		android:id="@+id/power_options_list"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:divider="@null"
+		android:background="@color/recon_mid_gray"
+		android:dividerHeight="0dp"
+		android:listSelector="@drawable/list_transparent_selector"
+		android:padding="3dp" />
+</LinearLayout>

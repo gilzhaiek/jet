@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">HUDMetricsClient</string>
+    <string name="action_settings">Settings</string>
+    <string name="Title">Title</string>
+    <string name="Current">Current</string>
+    <string name="Previous">Previous</string>
+    <string name="DASH">---</string>
+    
+    <string name="Pressure">Pressure</string>
+    <string name="PressureAlt">Pressure Alt</string>
+    <string name="GPSAlt">GPS Alt</string>
+    <string name="CalibratedAlt">Calibrated Alt</string>
+    <string name="DeltaAlt">Delta Alt</string>
+    
+    <string name="SpeedHorz">Horz Speed</string>
+    <string name="SpeedVert">Vert Speed</string>
+    <string name="Speed3D">3D Speed</string>
+    <string name="SpeedPace">Pace</string>
+    
+    <string name="DistanceHorz">Horz Distance</string>
+    <string name="DistanceVert">Vert Distance</string>
+    <string name="Distance3D">3D Distance</string>
+    
+    <string name="Grade">Grade</string>
+
+</resources>

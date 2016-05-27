@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html>
+  <header>
+    <title>Is it tiled?</title>
+    <script src="jquery-1.11.2.min.js"></script>
+    <script src="index.js"></script>
+    <style>
+      #wait {
+      color:red;
+      }
+      body {
+      background-color: #f0f0b0;
+      }
+    </style>
+  </header>
+  <body>
+    <h1>Is it tiled?</h1>
+    <p> Enter the address of the city you want to check</p>
+    <form id="theForm" method="post">
+      Address: <input type="text" name="address" > e.g., Vancouver, BC, Canada
+      <br>
+      Padding (km): <input type="number" step="0.1" name="padding" >  e.g., 1
+      <br>
+      <input type="submit" value="Submit">
+    </form>
+    <div id="wait">Please have patience. Depending on the size of the
+    region, this may take a while. </div>
+    <div id="result">
+      
+    </div>
+  </body>
+</html>
+

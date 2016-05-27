@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ReconAppInstaller</string>
+    <string name="prepare_info">Collecting information for installation...</string>
+    <string name="wait_for_decoding">Please Wait</string>
+    <string name="query_for_continue">There are new applications available. Do you want to install?</string>
+    <string name="query_for_reinstall">This Application has already been installed. Do you want to re-install it?</string>
+    <string name="msg_invalid_install_file">The installation file is not valid. Failed to launch the installer for this application!</string>
+</resources>

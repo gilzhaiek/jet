@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/ReconGray" >
+
+    <TextView 
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:text="Title"
+        android:background="@color/ReconGray"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:gravity="left"
+        android:paddingLeft="20dip"
+          android:paddingRight="20dip"
+        android:paddingBottom="1dip"
+        android:paddingTop="1dip"
+        android:textSize="28dip"
+        android:textStyle="bold"
+        style="@style/white_text_shadow" />
+    <ImageView 
+        android:id="@+id/divider"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:paddingLeft="20dip"
+        android:src="@drawable/separator"
+        />
+    <RelativeLayout
+	     android:layout_width="match_parent"
+   		 android:layout_height="match_parent">
+     <FrameLayout
+           android:layout_width="fill_parent"
+	        android:layout_height="fill_parent"
+	        android:layout_alignParentTop="true"
+	        android:layout_marginTop="-2dip">
+		    <ListView
+		        android:id="@android:id/list"
+		        android:layout_width="match_parent"
+		        android:layout_height="match_parent"
+		        android:layout_weight="1"
+		        android:drawSelectorOnTop="false"
+		        android:listSelector="@drawable/recon_list_item_selector"
+		        android:focusable="true"
+		        android:fadingEdge="none" />
+		
+		    <TextView
+		        android:id="@android:id/empty"
+		        android:layout_width="match_parent"
+		        android:layout_height="match_parent"
+		        android:text="No data"
+		        android:gravity="center_horizontal|center_vertical" />
+    </FrameLayout>
+</RelativeLayout>
+</LinearLayout>

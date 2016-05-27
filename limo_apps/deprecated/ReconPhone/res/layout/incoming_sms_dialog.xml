@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android" 
+	android:id="@+id/dialogScrollContainer"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:scrollbarSize="6sp">
+	 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+		android:orientation="vertical" 
+		android:layout_width="fill_parent"
+		android:layout_height="fill_parent"
+		android:background="#AA000000">
+		<LinearLayout
+			android:id="@+id/titleContainer"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			orientation="horizontal"
+			android:layout_centerHorizontal="true">
+			<ImageView
+				android:id="@+id/dialogImg"
+				android:layout_width="50px"
+		  		android:layout_height="50px"
+				android:src="@drawable/dialog_sms"
+				android:layout_marginRight="5dp" />
+			<TextView 
+				android:layout_width="wrap_content"
+				android:id="@+id/dialogTitle"
+				android:layout_height = "wrap_content"
+				android:textSize="35dp" />
+		</LinearLayout>
+		<TextView android:layout_width = "wrap_content"
+			android:id="@+id/dialogTxt"
+			android:layout_height = "wrap_content"
+			android:textSize="30dp"
+			android:layout_below="@id/titleContainer" />
+		<Button 
+			android:layout_width = "wrap_content"
+			android:layout_height = "wrap_content"
+			android:id="@+id/okButton"
+			android:textSize="25dp"
+			android:layout_centerHorizontal="true"
+			android:text="OK"
+			android:layout_below="@id/dialogTxt" />
+	</RelativeLayout>
+</ScrollView>
+

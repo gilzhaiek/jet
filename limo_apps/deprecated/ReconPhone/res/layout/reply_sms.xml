@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ListView  xmlns:android="http://schemas.android.com/apk/res/android"
+		   android:id="@+id/menu_list"
+   		   android:layout_margin = "5dp"	      		         		      		     
+           android:layout_width="fill_parent"            
+           android:layout_height="fill_parent"                      
+           android:background="@color/transparent"           
+           android:drawSelectorOnTop="false"
+           android:divider="@color/transparent"           
+           android:focusable="true"
+           android:listSelector="@drawable/menu_selector"/>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:background="#AA000000"
+	>
+	<RelativeLayout android:id="@+id/mainContainer"
+		android:layout_width="fill_parent"
+		android:layout_height="fill_parent"
+		android:layout_marginTop="10dp"
+		android:layout_marginBottom="10dp"
+		android:layout_marginLeft="30dip"
+		android:layout_marginRight="30dip"
+		android:layout_centerInParent="true"
+		android:background="@drawable/dialog_shape">
+		
+	    <LinearLayout
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_centerInParent="true"
+	        android:orientation="horizontal"
+	        android:gravity="center_vertical"
+	        android:paddingBottom="30dip" >
+	        
+		    <TextView
+				android:id="@+id/dialogText"
+		        android:layout_height="wrap_content"
+				android:layout_width="wrap_content"
+				android:textColor="#FFFFFFFF"
+				android:textSize="90dp" />
+		    
+		    <TextView 
+		        android:id="@+id/dialogTextTwo"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_marginLeft="20dip"
+		        android:textColor="#FFFFFFFF"
+		        android:textSize="30dp"
+		        android:visibility="gone"
+		        android:layout_centerVertical="true" />
+	        
+	    </LinearLayout>
+	    
+	    
+	    <LinearLayout
+			android:id="@+id/titleContainer"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:gravity="center_horizontal"
+			orientation="horizontal"
+			android:background="@drawable/dialog_top_shape"
+			android:paddingLeft="5dip"
+			android:layout_alignParentBottom="true" >
+			
+			<ImageView
+				android:id="@+id/dialogImg"
+				android:layout_width="50px"
+		  		android:layout_height="40px"
+				android:layout_gravity="center_vertical"
+				android:layout_marginRight="5dp"/>
+			
+			<TextView android:id="@+id/dialogTitle"
+				android:layout_width="wrap_content"
+				android:layout_height = "wrap_content"
+				android:layout_marginTop="2dp"
+				android:text="INCOMING CALL"
+				android:textColor="#FF000000"
+				android:layout_gravity="center_vertical"
+				android:textSize="24dp"/>
+		</LinearLayout>
+	</RelativeLayout>
+</RelativeLayout>

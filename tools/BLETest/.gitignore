@@ -1,0 +1,4 @@
+# Ignores for Android Projects
+/bin/
+/gen/
+/*.properties

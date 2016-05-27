@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<reticle_configuration>
+    
+<file_id id="jet Nov 3 2014 A"/>
+
+<pitch>
+<node scale="0.0" pitch="0.0" />
+<node scale="2.0" pitch="0.0" />
+</pitch>
+<altitude>
+<node velocity="0.0" altitudescale="2.0" />
+<node velocity="4.0" altitudescale="2.0" />
+<node velocity="10.0" altitudescale="0.5" />
+<node velocity="20.0" altitudescale="0.05" />
+<node velocity="500.0" altitudescale="0.05" />
+</altitude>
+</reticle_configuration>

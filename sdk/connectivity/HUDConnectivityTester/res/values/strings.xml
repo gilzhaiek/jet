@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">HUDConnectivityTester</string>
+    <string name="buttons_content"></string>
+    <string name="download_file">Download File</string>
+    <string name="upload_file">Upload File</string>
+    <string name="load_image">Load Image</string>
+    <string name="load_large_image">Load Big Image</string>
+    <string name="load_url">Load URL</string>
+    <string name="connect_device">Connect Device</string>
+    <string name="select_device">Select Device</string>
+    
+</resources>

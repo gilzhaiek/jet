@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/map_zoom_view"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#00000000">     
+    <ImageView
+        android:layout_width="wrap_content" 
+        android:layout_height="wrap_content" 
+        android:layout_marginTop="20dip"
+        android:layout_marginRight="20dip"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"        
+        android:padding="0dip"
+        android:src="@drawable/arrow_up"                
+    />
+    
+    <ImageView
+        android:layout_width="wrap_content" 
+        android:layout_height="wrap_content" 
+        android:layout_marginBottom="20dip"
+        android:layout_marginRight="20dip"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"        
+        android:padding="0dip"       
+        android:src="@drawable/arrow_down"        
+     />
+        
+     <com.reconinstruments.navigation.navigation.views.ZoomView
+		  android:id="@+id/zoomView"
+		  android:background="#99000000"
+		  android:layout_width="40dip"
+		  android:layout_height="wrap_content"
+		  android:layout_marginTop="45dip"
+		  android:layout_marginBottom="45dip"
+		  android:layout_marginRight="22dip"
+		  android:layout_alignParentTop="true"
+		  android:layout_alignParentBottom="true"
+          android:layout_alignParentRight="true"        		  
+	/>
+     
+</RelativeLayout>

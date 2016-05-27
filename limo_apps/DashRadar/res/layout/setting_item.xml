@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="5dp"
+    android:paddingTop="5dp" xmlns:app="http://schemas.android.com/apk/res/com.reconinstruments.dashlauncher">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="left"
+        android:orientation="vertical" >
+
+         <com.reconinstruments.widgets.CustomTextView
+        android:id="@+id/setting_text"
+        style="@style/selectable_text_shadow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="24px"/>
+        
+         <com.reconinstruments.widgets.CustomTextView
+        android:id="@+id/setting_subtext"
+        style="@style/selectable_text_shadow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18px"
+        android:visibility="gone"/>
+
+    </LinearLayout>
+
+    <CheckBox
+        android:id="@+id/setting_checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:focusable="false"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="30px"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/setting_checkmark"
+        android:layout_width="30px"
+        android:layout_height="30px"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:focusable="false"
+        android:layout_marginRight="30px"
+        android:src="@drawable/setting_icons_checked"
+        android:visibility="gone" />
+
+</RelativeLayout>

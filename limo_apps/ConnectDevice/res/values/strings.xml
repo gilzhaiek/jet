@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="hello">Hello World!</string>
+	<string name="app_name">Connect Device</string>
+	<string name="android_first">You\'ll need <b>Engage</b> installed on your <b>Android</b> device to get started. Engage is available on Google Play</string>
+	<string name="android_first_oakley">You\'ll need <b>Airwave</b> installed on your <b>Android</b> device to get started. Airwave is available on Google Play</string>
+	<string name="ios_first">You\'ll need the <b>Engage</b> app installed on your <b>iPhone</b> to get started. Engage is available in the App Store</string>
+	<string name="ios_first_oakley">You\'ll need the <b>Airwave</b> app installed on your <b>iPhone</b> to get started. Airwave is available in the App Store</string>
+	<string name="android_overlay">No Phone Connected\nOpen Engage on your Android Phone to connect</string>
+	<string name="android_overlay_oakley">No Phone Connected\nOpen Airwave on your Android Phone to connect</string>
+	<string name="ios_waiting">Open <b>Engage</b> on your iPhone and select <b>Device Pairing > MOD Live</b>, then press \"<b>Tap to pair HUD</b>\".</string>
+	<string name="ios_waiting_oakley">Open the <b>Airwave</b> app on your iPhone and select <b>Device Pairing > MOD Live</b>, then press \"<b>Tap to pair HUD</b>\".</string>
+	<string name="ios_waiting_reconnecting">Open the <b>Engage</b> on your <b>iPhone</b> and wait.</string>
+	<string name="ios_waiting_oakley_reconnecting">Open the <b>Airwave</b> on your <b>iPhone</b> and wait.</string>
+	<string name="already_connected">You are already connected to a smartphone, disconnect from Engage to connect to a new device</string>
+	<string name="already_connected_oakley">You are already connected to a smartphone, disconnect from Airwave to connect to a new device</string>
+	<string name="android_waiting">Open <b>Engage</b> on your <b>Android</b> Phone and select \'<b>Device Pairing</b>\' and follow prompts<b></b><b></b><b b=""></b></string>
+	<string name="android_waiting_oakley">Open <b>Airwave</b> on your <b>Android</b> Phone and select \'<b>Device Pairing</b>\' and follow prompts<b></b><b></b><b></b></string>
+	<string name="waiting_for_engage">WAITING FOR <b>ENGAGE</b>...</string>
+	<string name="waiting_for_engage_oakley">WAITING FOR <b>AIRWAVE</b>...</string>
+	<string name="you_need_engage">You will need the <b>Engage</b> app installed and open on your <b>iPhone</b> to enable all the features of Snow2. \n<b>Engage</b> is available in the App Store.</string>
+	<string name="you_need_engage_oakley">You will need the <b>Airwave</b> app installed and open on your <b>iPhone</b> to enable all the features of Snow2. \n<br /><b>Airwave</b> is available in the App Store.</string>
+	<string name="activity_ios_first_text_string">Go to Settings -> Bluetooth on your iPhone and ensure Bluetooth is on. This will allow your Snow2 to find your iPhone.</string>
+</resources>

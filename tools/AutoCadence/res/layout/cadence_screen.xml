@@ -1,0 +1,49 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cadence_screen"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#000000"
+    tools:context=".MainActivity" >
+
+    <TextView
+        android:id="@+id/realtext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:textColor="#ffffff"
+        android:text="Measured Cadence"
+        android:textSize="20sp"  />
+
+    <TextView
+        android:id="@+id/calctext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@id/realtext"
+        android:textColor="#ffffff"
+        android:text="Calculated Cadence"
+        android:textSize="20sp"  />
+
+    <TextView
+        android:id="@+id/realcadence"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/realtext"
+        android:layout_alignLeft="@id/realtext"
+        android:textColor="#ffffff"
+        android:text="-1"
+        android:textSize="96sp" />
+
+    <TextView
+        android:id="@+id/calccadence"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/realtext"
+        android:layout_alignLeft="@id/calctext"
+        android:textColor="#ffffff"
+        android:text="-1"
+        android:textSize="96sp" />
+
+</RelativeLayout>

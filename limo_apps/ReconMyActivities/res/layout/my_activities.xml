@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:background="@color/recon_jet_background" >
+	<LinearLayout
+		android:id="@+id/linearLayout1"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_alignParentLeft="true"
+		android:layout_alignParentTop="true"
+		android:layout_marginLeft="30dp"
+		android:layout_marginTop="25dp"
+		android:orientation="vertical"
+		android:visibility="invisible" >
+		<ImageView
+			android:id="@+id/imageView1"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="-1sp"
+			android:src="@drawable/up_down_arrows" />
+	</LinearLayout>
+	<TextView
+		android:id="@+id/text_view"
+		style="@style/recon_jet_text_regular"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_alignParentTop="true"
+		android:layout_centerHorizontal="true"
+		android:layout_marginTop="20dp"
+		android:ellipsize="end"
+		android:gravity="center"
+		android:lines="1"
+		android:maxLines="1"
+		android:text="CYCLING"
+		android:textSize="30sp" />
+	<LinearLayout
+		android:id="@+id/layout_separator"
+		android:layout_width="match_parent"
+		android:layout_height="1dp"
+		android:layout_below="@+id/text_view"
+		android:layout_marginLeft="20dp"
+		android:layout_marginRight="20dp"
+		android:background="@color/recon_white"
+		android:orientation="vertical" />
+	<TextView
+		android:id="@+id/value"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_below="@+id/layout_separator"
+		android:layout_centerHorizontal="true"
+		android:layout_marginTop="0dp"
+		android:includeFontPadding="false"
+		android:singleLine="true"
+		android:text=""
+		android:textColor="@color/recon_white"
+		android:textSize="60sp" />
+	<TextView
+		android:id="@+id/unit"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_below="@+id/value"
+		android:layout_centerHorizontal="true"
+		android:layout_marginTop="-20dp"
+		android:text=""
+		android:textColor="@color/recon_jet_non_highlight_text_button"
+		android:textSize="20sp" />
+	<com.reconinstruments.commonwidgets.CarouselPagerContainer
+		android:id="@+id/pager_container"
+		android:layout_width="match_parent"
+		android:layout_height="56dp"
+		android:layout_alignParentBottom="true"
+		android:layout_marginBottom="30dp" >
+		<android.support.v4.view.ViewPager
+			android:id="@+id/view_pager"
+			android:layout_width="200dp"
+			android:layout_height="match_parent"
+			android:layout_centerVertical="true"
+			android:layout_gravity="center_horizontal" />
+	</com.reconinstruments.commonwidgets.CarouselPagerContainer>
+</RelativeLayout>

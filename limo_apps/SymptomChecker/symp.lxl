@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<lispxml xmlns:a="com.reconinstruments.lispxml.module.android">
+  <a:start-activity>
+    <s>com.reconinstruments.symptomchecker.MainActivity</s>
+  </a:start-activity>
+
+</lispxml>

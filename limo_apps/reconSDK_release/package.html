@@ -1,0 +1,22 @@
+<HTML>
+<BODY>
+Contains set of classes that can be used by external developers in order to integrate features of MOD Live Platform to their applications.
+<p>
+Platform Data is managed by the system-wide <i>Transcend</i> Service. One of key goals of the Recon SDk is to shield this
+concept from the end developer. SDK Clients communicate instead with a <i>"proxy"</> -
+<a href="../../../com/reconinstruments/ReconSDK/ReconSDKManager.html">ReconSDKManager</a> class.
+<p> 
+
+Communication with Transcend Service is possible in 2 fundamentally different ways:
+<p><ul>
+   <li> 1. Subscribe and Publish (Event Notifications)
+   <li> 2. On-demand Acquisition (Data Retrieval)
+</ul>
+<p>
+You can think of Event Notifications as Asynchronous Data Events, or <i>interrupts</i> that are propagated to the end client once they become 
+available. Data Retrieval on the other hand represents on demand or <i>polling</i> approach - explicit <i>Data Fetch</i>, 
+regardless if Events have changed since last update. Full Event History can be retrieved this way as well.
+<p>
+Direct communication with <i>Transcend</i> while possible, is discouraged and can be regarded as undocumented/advanced feature with no benefits to the end developer. 
+</BODY>
+</HTML>

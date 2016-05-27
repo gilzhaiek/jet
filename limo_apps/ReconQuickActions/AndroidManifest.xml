@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+	  package="com.reconinstruments.quickactions"
+	  android:versionCode="6947"
+	  android:versionName="4.0" >
+  <uses-sdk
+     android:minSdkVersion="9"
+     android:targetSdkVersion="17" />
+  <application
+     android:launchMode="singleInstance"
+     android:theme="@style/ReconTheme.NoTitleBar" >
+
+      <activity
+       android:name=".QuickActionsActivity"
+       android:launchMode="singleInstance"
+       android:label="@string/app_name"
+       android:theme="@style/ReconTheme.Dialog" >
+      <intent-filter>
+	<action android:name="com.reconinstruments.quickactions" />
+	<category android:name="android.intent.category.DEFAULT" />
+      </intent-filter>
+    </activity>
+
+    <activity
+            android:name=".QuickActionsActivitySnow"
+            android:label="ReconQuickActions"
+            android:theme="@style/ReconTheme.Dialog">
+        <intent-filter>
+            <action android:name="com.reconinstruments.quickactions.snow2" />
+	    <category android:name="android.intent.category.DEFAULT" />
+        </intent-filter>
+    </activity>
+
+  </application>
+</manifest>

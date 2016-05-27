@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.reconinstruments.reconstats"
+    android:sharedUserId="android.uid.system"
+    android:versionCode="6773"
+    android:versionName="3.1_aug22" >
+
+    <uses-sdk android:minSdkVersion="10" />
+
+    <application
+        android:icon="@drawable/stats_icon"
+        android:label="@string/app_name" >
+        <activity
+            android:name=".StatsActivity"
+            android:theme="@style/ReconTheme.NoTitleBar.Fullscreen" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+                <action android:name="RECON_STATS" />
+                <action android:name="RECON_STATS_LAST_RUN" />
+                <action android:name="RECON_STATS_TODAY" />
+                <action android:name="RECON_STATS_ALLTIME" />
+				<category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".message.StatMessageActivity"
+            android:theme="@style/ReconTheme.NoTitleBar.Fullscreen" >
+            <intent-filter>
+                <action android:name="com.reconinstruments.message.stats" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

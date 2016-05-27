@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:paddingBottom="12dip"
+	android:paddingTop="12dip" >
+	<TextView
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_alignParentLeft="true"
+		android:gravity="center_vertical"
+		android:paddingLeft="20dip"
+		android:text="SELECT TIME ZONE"
+		android:textColor="#1b1e21"
+		android:textSize="22dip"
+		android:textStyle="bold" />
+	<ImageView
+		android:id="@+id/itemimage"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_alignParentRight="true"
+		android:gravity="center_vertical"
+		android:paddingRight="20dip"
+		android:src="@drawable/blue_arrow" >
+	</ImageView>
+</LinearLayout>

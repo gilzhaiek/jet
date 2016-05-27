@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="dataReceivedEventLabel">Data Received</string>
+    <string name="disconnectedEventLabel">Disconnected</string>
+    <string name="idpsStatusEventLabel">IDPS Status</string>
+    <string name="lineStatusChangedEventLabel">Line Status Changed</string>
+    <string name="nonSessionDataConfirmationEventLabel">Non-Session Data Confirmation</string>
+    <string name="nonSessionDataReceivedEventLabel">Non-Session Data Received</string>
+    <string name="portStatusChangedEventLabel">Port Status Changed</string>
+    <string name="sessionCloseEventLabel">Session Closed</string>
+    <string name="sessionDataConfirmationEventLabel">Session Data Confirmation</string>
+    <string name="sessionDataReceivedEventLabel">Session Data Received</string>
+    <string name="sessionOpenRequestEventLabel">Session Open Request</string>
+    <string name="transmitBufferEmptyEventLabel">Transmit Buffer Empty</string>
+    <string name="connectionStatusEventLabel">Connection Status</string>
+    <string name="connectedEventLabel">Connected</string>
+    <string name="connectionRequestEventLabel">Connection Request</string>
+</resources>

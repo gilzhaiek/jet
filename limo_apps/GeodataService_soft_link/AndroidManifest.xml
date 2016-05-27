@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+      package="com.reconinstruments.geodataservice"
+      android:versionCode="1"
+      android:versionName="1.0">
+  <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+  <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+  <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+  <uses-permission android:name="android.permission.INTERNET" />
+  <application android:label="@string/app_name"
+	       android:persistent="true">
+        <activity android:name="GeodataServiceActivity"
+                  android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="andd.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+                </intent-filter>
+        </activity>
+	<service android:name="GeodataService"
+             android:label="@string/app_name">
+	  <intent-filter> <action android:name="com.reconinstruments.geodataservice.start"/></intent-filter>
+	  <intent-filter> <action android:name="com.reconinstruments.geodataservice.clientinterface"/></intent-filter>
+	  <intent-filter> <action android:name="com.reconinstruments.geodataservice.developerinterface"/></intent-filter>
+	  <intent-filter> <action android:name="com.reconinstruments.mocklocation.fake_location_registered"/></intent-filter>
+	  <intent-filter> <action android:name="com.reconinstruments.mocklocation.fake_location_unregistered"/></intent-filter>
+	  	  </service>
+
+    </application>
+</manifest> 

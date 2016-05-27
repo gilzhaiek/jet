@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<stack>
+	
+		<ReconCard id="1" img="@drawable/a" right="2" left="6" />
+		<ReconCard id="2" img="@drawable/b" right="3" left="1" />
+		<ReconCard id="3" img="@drawable/c" right="4" left="2" />
+		<ReconCard id="4" img="@drawable/d" right="5" left="3" />
+		<ReconCard id="5" img="@drawable/f" right="6" left="4" />
+		<ReconCard id="6" img="@drawable/e" right="1" left="5" />
+			
+	</stack>
+</resources>

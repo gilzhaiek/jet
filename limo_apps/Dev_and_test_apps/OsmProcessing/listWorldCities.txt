@@ -1,0 +1,726 @@
+Kabul, Afghanistan, 16.0935
+Algiers, Algeria, 21.2838
+Luanda, Angola, 27.6948
+Huambo, Angola, 7.54983
+Buenos Aires, Argentina, 51.4004
+Córdoba, Argentina, 19.0526
+Rosario, Argentina, 15.2643
+Yerevan, Armenia, 18
+Sydney, Australia, 45.1331
+Melbourne, Australia, 50.4282
+Brisbane, Australia, 44.4072
+Perth, Australia, 39.5727
+Adelaide, Australia, 19.8494
+Vienna, Austria, 21.2838
+Baku, Azerbaijan, 17.2627
+Dhaka, Bangladesh, 18
+Chittagong, Bangladesh, 10.5357
+Khulna, Bangladesh, 8.3666
+Minsk, Belarus, 18
+Brussels, Belgium, 27.4044
+La Paz, Bolivia, 12.4499
+Santa Cruz de la Sierra, Bolivia, 14.8324
+São Paulo, Brazil, 56.3294
+Rio de Janeiro, Brazil, 44.9444
+Belo Horizonte, Brazil, 32.9848
+Salvador, Brazil, 19.7231
+Porto Alegre, Brazil, 27.8747
+Recife, Brazil, 20.347
+Fortaleza, Brazil, 26.9258
+Curitiba, Brazil, 29.0172
+Campinas, Brazil, 30.5287
+Brasília, Brazil, 25.9422
+Goiânia, Brazil, 25.9422
+Belém, Brazil, 16.0935
+Manaus, Brazil, 17.2627
+Santos, Brazil, 14.3875
+Vitória, Brazil, 19.0526
+Natal, Brazil, 13.4536
+São Luís Maranhão, Brazil, 20.664
+Maceió, Brazil, 10.198
+João Pessoa, Brazil, 13.9284
+Joinville, Brazil, 12.2474
+Florianópolis, Brazil, 11.4018
+Sofia, Bulgaria, 14.3875
+Ouagadougou, Burkina Faso, 18.7083
+Yangon, Burma, 18.7083
+Mandalay, Burma, 9.21954
+Naypyidaw, Burma, 15.2643
+Phnom Penh, Cambodia, 12.8841
+Douala, Cameroon, 14.3178
+Yaoundé, Cameroon, 15.1987
+Toronto, Canada, 47.8226
+Montreal, Canada, 39.3192
+Vancouver, Canada, 33.9116
+Calgary, Canada, 26.533
+N'Djamena, Chad, 9.11043
+Santiago, Chile, 31.3688
+Shanghai, China, 59.1354
+Beijing, China, 59.1354
+#Guangzhou–Foshan, China, 56.3294
+Shenzhen, China, 41.8091
+Tianjin, China, 41.0366
+Dongguan, China, 39.4208
+Chengdu, China, 31.1609
+Wuhan, China, 32.9848
+Chongqing, China, 29.6816
+Hangzhou, China, 33.5708
+Quanzhou, China, 37.4032
+Nanjing, China, 33.7639
+Shenyang, China, 29.6816
+Xi'an, China, 28.3373
+Harbin, China, 22.7596
+Qingdao, China, 33.9559
+Suzhou, China, 30.1164
+Zhengzhou, China, 25.4558
+Dalian, China, 27.8747
+Fuzhou, China, 20.9762
+Taiyuan, China, 21.587
+Hefei, China, 24.4131
+Jinan, China, 26.9258
+Wuxi, China, 25.9422
+Kunming, China, 24.4131
+Xiamen, China, 24.1454
+Ningbo, China, 27.1662
+Changsha, China, 21.587
+Changchun, China, 23.0434
+Shijiazhuang, China, 22.7596
+Changzhou, China, 28.7924
+Ürümqi, China, 19.3907
+Wenzhou, China, 16.0935
+Guiyang, China, 17.2627
+Lanzhou, China, 14.8324
+Nanchang, China, 23.3238
+Shantou, China, 19.0526
+Zhangjiagang Jiangyin, China, 22.1811
+Nanning, China, 17.4929
+Zhongshan, China, 25.4558
+Chaoyang Chaonan, China, 16.4924
+Linyi, China, 24.4131
+Shaoxing, China, 21.4709
+Baotou, China, 19.3907
+Tangshan, China, 16.6433
+Hohhot, China, 20.025
+Huai'an, China, 12.1655
+Luoyang, China, 14.8324
+Handan, China, 12.9615
+Yinchuan, China, 12.5698
+Jilin, China, 13.9284
+Datong, China, 13.4536
+Haikou, China, 17.6352
+Zibo, China, 18.7083
+Kunshan, China, 22.1811
+Yangzhou, China, 15.2643
+Anshan, China, 13.4536
+Liuzhou, China, 14.3875
+Weifang, China, 15.6844
+Fushun, China, 11.4018
+Huizhou, China, 12.9615
+Yantai, China, 16.1864
+Baoding, China, 14.8324
+Zhuhai, China, 15.6844
+Xuzhou, China, 15.2643
+Wuhu, China, 12.6886
+Qiqihar, China, 11.4018
+Cixi City, China, 17.2627
+Xining, China, 10.2956
+Zhangzhou, China, 18.7083
+Anyang, China, 13.4536
+Putian, China, 21.2838
+Zhangjiakou, China, 11.4018
+Changshu, China, 16.8819
+Huainan, China, 10.4403
+Xiangyang, China, 11.619
+Chifeng, China, 9.21954
+Jiamusi, China, 8.94427
+Dongying, China, 14.8324
+Xinxiang, China, 10.198
+Jiaxing, China, 16.0935
+Huaibei, China, 9.53939
+Nantong, China, 15.2643
+Bogotá, Colombia, 20.347
+Medellín, Colombia, 13.7477
+Cali, Colombia, 12.4499
+Barranquilla, Colombia, 11.9164
+Bucaramanga, Colombia, 7.74597
+Cartagena, Colombia, 9.11043
+San José, Costa Rica, 18
+Havana, Cuba, 16.8819
+Prague, Czech Republic, 16.8819
+Kinshasa, Democratic Republic of the Congo, 24.1454
+Lubumbashi, Democratic Republic of the Congo, 12.4499
+Mbuji-Mayi, Democratic Republic of the Congo, 11.0454
+Copenhagen, Denmark, 21.2838
+Santo Domingo, Dominican Republic, 15.6844
+Guayaquil, Ecuador, 14.8324
+Quito, Ecuador, 21.8861
+Greater Cairo, Egypt, 40.7185
+Alexandria, Egypt, 17.1172
+San Salvador, El Salvador, 12.4499
+Kabul, Afghanistan, 16.0935
+Algiers, Algeria, 21.2838
+Luanda, Angola, 27.6948
+Huambo, Angola, 7.54983
+Buenos Aires, Argentina, 51.4004
+Córdoba, Argentina, 19.0526
+Rosario, Argentina, 15.2643
+Yerevan, Armenia, 18
+Sydney, Australia, 45.1331
+Melbourne, Australia, 50.4282
+Brisbane, Australia, 44.4072
+Perth, Australia, 39.5727
+Adelaide, Australia, 19.8494
+Vienna, Austria, 21.2838
+Baku, Azerbaijan, 17.2627
+Dhaka, Bangladesh, 18
+Chittagong, Bangladesh, 10.5357
+Khulna, Bangladesh, 8.3666
+Minsk, Belarus, 18
+Brussels, Belgium, 27.4044
+La Paz, Bolivia, 12.4499
+Santa Cruz de la Sierra, Bolivia, 14.8324
+São Paulo, Brazil, 56.3294
+Rio de Janeiro, Brazil, 44.9444
+Belo Horizonte, Brazil, 32.9848
+Salvador, Brazil, 19.7231
+Porto Alegre, Brazil, 27.8747
+Recife, Brazil, 20.347
+Fortaleza, Brazil, 26.9258
+Curitiba, Brazil, 29.0172
+Campinas, Brazil, 30.5287
+Brasília, Brazil, 25.9422
+Goiânia, Brazil, 25.9422
+Belém, Brazil, 16.0935
+Manaus, Brazil, 17.2627
+Santos, Brazil, 14.3875
+Vitória, Brazil, 19.0526
+Natal, Brazil, 13.4536
+São Luís Maranhão, Brazil, 20.664
+Maceió, Brazil, 10.198
+João Pessoa, Brazil, 13.9284
+Joinville, Brazil, 12.2474
+Florianópolis, Brazil, 11.4018
+Sofia, Bulgaria, 14.3875
+Ouagadougou, Burkina Faso, 18.7083
+Yangon, Burma, 18.7083
+Mandalay, Burma, 9.21954
+Naypyidaw, Burma, 15.2643
+Phnom Penh, Cambodia, 12.8841
+Douala, Cameroon, 14.3178
+Yaoundé, Cameroon, 15.1987
+Toronto, Canada, 47.8226
+Montreal, Canada, 39.3192
+Vancouver, Canada, 33.9116
+Calgary, Canada, 26.533
+N'Djamena, Chad, 9.11043
+Santiago, Chile, 31.3688
+Shanghai, China, 59.1354
+Beijing, China, 59.1354
+Guangzhou Foshan, China, 56.3294
+Shenzhen, China, 41.8091
+Tianjin, China, 41.0366
+Dongguan, China, 39.4208
+Chengdu, China, 31.1609
+Wuhan, China, 32.9848
+Chongqing, China, 29.6816
+Hangzhou, China, 33.5708
+Quanzhou, China, 37.4032
+Nanjing, China, 33.7639
+Shenyang, China, 29.6816
+Xi'an, China, 28.3373
+Harbin, China, 22.7596
+Qingdao, China, 33.9559
+Suzhou, China, 30.1164
+Zhengzhou, China, 25.4558
+Dalian, China, 27.8747
+Fuzhou, China, 20.9762
+Taiyuan, China, 21.587
+Hefei, China, 24.4131
+Jinan, China, 26.9258
+Wuxi, China, 25.9422
+Kunming, China, 24.4131
+Xiamen, China, 24.1454
+Ningbo, China, 27.1662
+Changsha, China, 21.587
+Changchun, China, 23.0434
+Shijiazhuang, China, 22.7596
+Changzhou, China, 28.7924
+Ürümqi, China, 19.3907
+Wenzhou, China, 16.0935
+Guiyang, China, 17.2627
+Lanzhou, China, 14.8324
+Nanchang, China, 23.3238
+Shantou, China, 19.0526
+Zhangjiagang Jiangyin, China, 22.1811
+Nanning, China, 17.4929
+Zhongshan, China, 25.4558
+Chaoyang Chaonan, China, 16.4924
+Linyi, China, 24.4131
+Shaoxing, China, 21.4709
+Baotou, China, 19.3907
+Tangshan, China, 16.6433
+Hohhot, China, 20.025
+Huai'an, China, 12.1655
+Luoyang, China, 14.8324
+Handan, China, 12.9615
+Yinchuan, China, 12.5698
+Jilin, China, 13.9284
+Datong, China, 13.4536
+Haikou, China, 17.6352
+Zibo, China, 18.7083
+Kunshan, China, 22.1811
+Yangzhou, China, 15.2643
+Anshan, China, 13.4536
+Liuzhou, China, 14.3875
+Weifang, China, 15.6844
+Fushun, China, 11.4018
+Huizhou, China, 12.9615
+Yantai, China, 16.1864
+Baoding, China, 14.8324
+Zhuhai, China, 15.6844
+Xuzhou, China, 15.2643
+Wuhu, China, 12.6886
+Qiqihar, China, 11.4018
+Cixi City, China, 17.2627
+Xining, China, 10.2956
+Zhangzhou, China, 18.7083
+Anyang, China, 13.4536
+Putian, China, 21.2838
+Zhangjiakou, China, 11.4018
+Changshu, China, 16.8819
+Huainan, China, 10.4403
+Xiangyang, China, 11.619
+Chifeng, China, 9.21954
+Jiamusi, China, 8.94427
+Dongying, China, 14.8324
+Xinxiang, China, 10.198
+Jiaxing, China, 16.0935
+Huaibei, China, 9.53939
+Nantong, China, 15.2643
+Bogotá, Colombia, 20.347
+Medellín, Colombia, 13.7477
+Cali, Colombia, 12.4499
+Barranquilla, Colombia, 11.9164
+Bucaramanga, Colombia, 7.74597
+Cartagena, Colombia, 9.11043
+San José, Costa Rica, 18
+Havana, Cuba, 16.8819
+Prague, Czech Republic, 16.8819
+Kinshasa, Democratic Republic of the Congo, 24.1454
+Lubumbashi, Democratic Republic of the Congo, 12.4499
+Mbuji-Mayi, Democratic Republic of the Congo, 11.0454
+Copenhagen, Denmark, 21.2838
+Santo Domingo, Dominican Republic, 15.6844
+Guayaquil, Ecuador, 14.8324
+Quito, Ecuador, 21.8861
+Greater Cairo, Egypt, 40.7185
+Alexandria, Egypt, 17.1172
+San Salvador, El Salvador, 12.4499
+Addis Ababa, Ethiopia, 19.7231
+Helsinki, Finland, 22.1811
+Paris, France, 53.3385
+Marseille, France, 34.6987
+Lyon, France, 34.322
+Lille, France, 21.7715
+Tbilisi, Georgia, 13.9284
+Essen Düsseldorf, Germany, 51.4004
+Berlin, Germany, 36.7015
+Frankfurt, Germany, 25.9422
+Cologne Bonn, Germany, 30.5287
+Hamburg, Germany, 26.6833
+Munich, Germany, 21.587
+Stuttgart, Germany, 20.347
+Hanover Region, Germany, 47.8539
+Nuremberg, Germany, 18.3576
+Accra, Ghana, 30.7409
+Kumasi, Ghana, 18.3576
+Athens, Greece, 24.1454
+Guatemala City, Guatemala, 17.2627
+Conakry, Guinea, 12.6886
+Port-au-Prince, Haiti, 13.0767
+Tegucigalpa, Honduras, 9.89949
+Hong Kong, Hong Kong, 16.5831
+Budapest, Hungary, 29.8998
+Delhi, India, 44.0795
+Mumbai , India, 23.3666
+Kolkata, India, 34.6987
+Chennai, India, 29.0172
+Bengaluru, India, 27.1662
+Hyderabad, India, 29.6816
+Ahmedabad, India, 17.2627
+Pune, India, 19.3907
+Surat, India, 12.6886
+Jaipur, India, 12.9615
+Kanpur, India, 13.8564
+Lucknow, India, 15.4272
+Kalyan, India, 9.64365
+Nagpur, India, 14.8324
+Indore, India, 11.4018
+Coimbatore, India, 13.0767
+Kochi, India, 14.8324
+Patna, India, 11.2694
+Kozhikode, India, 10.9087
+Bhopal, India, 12.1655
+Vadodara, India, 11.7047
+Thrissur, India, 19.0526
+Agra, India, 11.4018
+Visakhapatnam, India, 13.4536
+Thiruvananthapuram, India, 11.9164
+Malappuram, India, 18
+Ludhiana, India, 12.9615
+Kannur, India, 9.53939
+Nashik, India, 10.5357
+Vijayawada, India, 7.54983
+Madurai, India, 8.66025
+Varanasi, India, 10.0499
+Meerut, India, 10.198
+Rajkot, India, 8.66025
+Jamshedpur, India, 10.4403
+Srinagar, India, 11.2694
+Jabalpur, India, 9.53939
+Asansol, India, 8.06226
+Allahabad, India, 11.1355
+Dhanbad, India, 9.79796
+Aurangabad, India, 8.544
+Amritsar, India, 9.89949
+Jodhpur, India, 9.11043
+Ranchi, India, 7.54983
+Raipur, India, 10.5357
+Durg-Bhilai, India, 10.6771
+Gwalior, India, 7.54983
+Vasai-Virar, India, 9.53939
+Kollam, India, 13.4536
+Chandigarh, India, 14.2127
+Tiruchirappalli, India, 9.21954
+Kota, India, 7.87401
+Mysore, India, 9.53939
+Bareilly, India, 9.11043
+Guwahati, India, 8.3666
+#Jakarta, Indonesia, 52.7636
+Bandung, Indonesia, 20.664
+Surabaya, Indonesia, 25.9422
+Medan, Indonesia, 15.6844
+Semarang, Indonesia, 16.0935
+Makassar, Indonesia, 13.3791
+Palembang, Indonesia, 14.8324
+Yogyakarta, Indonesia, 15.2643
+Tehran, Iran, 36.8782
+Mashhad, Iran, 17.2627
+Isfahan, Iran, 18.7083
+Shiraz, Iran, 15.6844
+Tabriz, Iran, 12.9615
+Ahvaz, Iran, 15.2643
+Qom, Iran, 10.8167
+Baghdad, Iraq, 24.4131
+Mosul, Iraq, 11.8322
+Erbil, Iraq, 8.66025
+Dublin, Ireland, 21.2838
+Tel Aviv, Israel, 21.8861
+Haifa, Israel, 15.0997
+Milan, Italy, 43.4856
+Rome, Italy, 33.3766
+Naples, Italy, 31.9844
+Turin, Italy, 19.3907
+Abidjan, Ivory Coast, 18
+Tokyo Yokohama, Japan, 92.45
+Osaka Kobe Kyoto, Japan, 56.6745
+Nagoya, Japan, 61.8061
+Addis Ababa, Ethiopia, 19.7231
+Helsinki, Finland, 22.1811
+Paris, France, 53.3385
+Marseille, France, 34.6987
+Lyon, France, 34.322
+Lille, France, 21.7715
+Tbilisi, Georgia, 13.9284
+Essen Düsseldorf, Germany, 51.4004
+Berlin, Germany, 36.7015
+Frankfurt, Germany, 25.9422
+Cologne Bonn, Germany, 30.5287
+Hamburg, Germany, 26.6833
+Munich, Germany, 21.587
+Stuttgart, Germany, 20.347
+Hanover Region, Germany, 47.8539
+Nuremberg, Germany, 18.3576
+Accra, Ghana, 30.7409
+Kumasi, Ghana, 18.3576
+Athens, Greece, 24.1454
+Guatemala City, Guatemala, 17.2627
+Conakry, Guinea, 12.6886
+Port-au-Prince, Haiti, 13.0767
+Tegucigalpa, Honduras, 9.89949
+Hong Kong, Hong Kong, 16.5831
+Budapest, Hungary, 29.8998
+Delhi, India, 44.0795
+Mumbai , India, 23.3666
+Kolkata, India, 34.6987
+Chennai, India, 29.0172
+Bengaluru, India, 27.1662
+Hyderabad, India, 29.6816
+Ahmedabad, India, 17.2627
+Pune, India, 19.3907
+Surat, India, 12.6886
+Jaipur, India, 12.9615
+Kanpur, India, 13.8564
+Lucknow, India, 15.4272
+Kalyan, India, 9.64365
+Nagpur, India, 14.8324
+Indore, India, 11.4018
+Coimbatore, India, 13.0767
+Kochi, India, 14.8324
+Patna, India, 11.2694
+Kozhikode, India, 10.9087
+Bhopal, India, 12.1655
+Vadodara, India, 11.7047
+Thrissur, India, 19.0526
+Agra, India, 11.4018
+Visakhapatnam, India, 13.4536
+Thiruvananthapuram, India, 11.9164
+Malappuram, India, 18
+Ludhiana, India, 12.9615
+Kannur, India, 9.53939
+Nashik, India, 10.5357
+Vijayawada, India, 7.54983
+Madurai, India, 8.66025
+Varanasi, India, 10.0499
+Meerut, India, 10.198
+Rajkot, India, 8.66025
+Jamshedpur, India, 10.4403
+Srinagar, India, 11.2694
+Jabalpur, India, 9.53939
+Asansol, India, 8.06226
+Allahabad, India, 11.1355
+Dhanbad, India, 9.79796
+Aurangabad, India, 8.544
+Amritsar, India, 9.89949
+Jodhpur, India, 9.11043
+Ranchi, India, 7.54983
+Raipur, India, 10.5357
+Durg-Bhilai, India, 10.6771
+Gwalior, India, 7.54983
+Vasai-Virar, India, 9.53939
+Kollam, India, 13.4536
+Chandigarh, India, 14.2127
+Tiruchirappalli, India, 9.21954
+Kota, India, 7.87401
+Mysore, India, 9.53939
+Bareilly, India, 9.11043
+Guwahati, India, 8.3666
+#Jakarta, Indonesia, 52.7636
+Bandung, Indonesia, 20.664
+Surabaya, Indonesia, 25.9422
+Medan, Indonesia, 15.6844
+Semarang, Indonesia, 16.0935
+Makassar, Indonesia, 13.3791
+Palembang, Indonesia, 14.8324
+Yogyakarta, Indonesia, 15.2643
+Tehran, Iran, 36.8782
+Mashhad, Iran, 17.2627
+Isfahan, Iran, 18.7083
+Shiraz, Iran, 15.6844
+Tabriz, Iran, 12.9615
+Ahvaz, Iran, 15.2643
+Qom, Iran, 10.8167
+Baghdad, Iraq, 24.4131
+Mosul, Iraq, 11.8322
+Erbil, Iraq, 8.66025
+Dublin, Ireland, 21.2838
+Tel Aviv, Israel, 21.8861
+Haifa, Israel, 15.0997
+Milan, Italy, 43.4856
+Rome, Italy, 33.3766
+Naples, Italy, 31.9844
+Turin, Italy, 19.3907
+Abidjan, Ivory Coast, 18
+#Tokyo–Yokohama , Japan, 92.45
+#Osaka–Kobe–Kyoto, Japan, 56.6745
+#Nagoya, Japan, 61.8061
+Sapporo, Japan, 24.9399
+Fukuoka, Japan, 23.0434
+Kitakyūshū, Japan, 22.1811
+Sendai, Japan, 18
+Hiroshima, Japan, 16.8819
+Hamamatsu, Japan, 16.0935
+Amman, Jordan, 18.5472
+Almaty, Kazakhstan, 20.4939
+Nairobi, Kenya, 23.6008
+Mombasa, Kenya, 9.21954
+Kuwait City, Kuwait, 26.6833
+Beirut, Lebanon, 25.9422
+Monrovia, Liberia, 13.9284
+Tripoli, Libya, 13.9284
+Antananarivo, Madagascar, 14.8324
+Kuala Lumpur, Malaysia, 44.0795
+Johor Bahru, Malaysia, 26.6833
+Penang, Malaysia, 17.2627
+Bamako, Mali, 17.6352
+Mexico City, Mexico, 45.2327
+Guadalajara, Mexico, 26.4386
+Monterrey, Mexico, 29.8998
+Puebla, Mexico, 24.9399
+Tijuana, Mexico, 21.587
+Toluca, Mexico, 14.8324
+León, Mexico, 12.5698
+Ciudad Juárez, Mexico, 18
+Torreón, Mexico, 12.9615
+Querétaro, Mexico, 12.2474
+Mérida, Mexico, 14.3875
+San Luis Potosí, Mexico, 11.4891
+Ulan Bator, Mongolia, 15.2643
+Casablanca, Morocco, 14.8324
+Rabat, Morocco, 11.9164
+Fes, Morocco, 7.2111
+Maputo, Mozambique, 20.347
+Kathmandu, Nepal, 7.74597
+Rotterdam, Netherlands, 29.0172
+Amsterdam, Netherlands, 20.347
+Auckland, New Zealand, 23.3238
+Niamey, Niger, 11.4018
+Lagos, Nigeria, 30.1164
+Kano, Nigeria, 15.843
+Ibadan, Nigeria, 19.7231
+Abuja, Nigeria, 15
+Port Harcourt, Nigeria, 12.5698
+Kaduna, Nigeria, 12.3693
+Benin City, Nigeria, 15.0997
+Zaria, Nigeria, 9.38083
+Pyongyang, North Korea, 13.2665
+Karachi, Pakistan, 28.3373
+Lahore, Pakistan, 24.1454
+Faisalabad, Pakistan, 13.4536
+#Rawalpindi–Islamabad, Pakistan, 20.664
+Hyderabad, Pakistan, 8.544
+Multan, Pakistan, 11.9164
+Gujranwala, Pakistan, 12.1655
+Peshawar, Pakistan, 10.8167
+Panama City, Panama, 12.9615
+Asunción, Paraguay, 23.6008
+Lima, Peru, 25.4558
+Manila, Philippines, 37.9078
+Cebu City, Philippines, 14.3875
+Davao City, Philippines, 49.4267
+Katowice, Poland, 26.9258
+Warsaw, Poland, 23.3238
+Lisbon, Portugal, 30.9516
+Porto, Portugal, 19.7231
+San Juan, Puerto Rico, 47.392
+Brazzaville, Republic of the Congo, 13.4536
+Bucharest, Romania, 16.8819
+Moscow, Russia, 66.3551
+Saint Petersburg, Russia, 34.5109
+Novosibirsk, Russia, 24.9399
+Yekaterinburg, Russia, 22.7596
+Nizhny Novgorod, Russia, 24.9399
+Samara, Russia, 19.3907
+Omsk, Russia, 22.1811
+Kazan, Russia, 22.1811
+Chelyabinsk, Russia, 24.1454
+Rostov-on-Don, Russia, 20.347
+Ufa, Russia, 12.9615
+Kigali, Rwanda, 10.6771
+Riyadh, Saudi Arabia, 38.7556
+Jeddah, Saudi Arabia, 29.0172
+Mecca, Saudi Arabia, 19.7231
+Medina, Saudi Arabia, 18.7083
+Dakar, Senegal, 13.9284
+Belgrade, Serbia, 15.2643
+Singapore, Singapore, 22.7596
+Mogadishu, Somalia, 9.79796
+Johannesburg, South Africa, 51.9038
+Cape Town, South Africa, 28.5657
+Durban  South Africa, 32.187
+Pretoria , South Africa, 35.0714
+Port Elizabeth, South Africa, 19.7231
+Seoul–Incheon , South Korea, 46.5081
+Busan, South Korea, 16.0935
+Daegu, South Korea, 15.6844
+Daejeon, South Korea, 11.4891
+Gwangju, South Korea, 11.2694
+Ulsan, South Korea, 10.198
+Changwon, South Korea, 10.198
+Madrid, Spain, 36.3456
+Barcelona, Spain, 32.7872
+Valencia, Spain, 16.4924
+Seville, Spain, 16.4924
+Colombo, Sri Lanka, 14.9332
+Khartoum, Sudan, 30.5287
+Stockholm, Sweden, 19.5448
+Aleppo, Syria, 16.0935
+Damascus, Syria, 13.4536
+Taipei, Taiwan, 33.7639
+Taichung, Taiwan, 22.1811
+Kaohsiung, Taiwan, 19.0526
+Tainan, Taiwan, 14.3875
+Dar es Salaam, Tanzania, 23.8747
+Bangkok, Thailand, 48.2804
+Lomé, Togo, 14.3875
+Tunis, Tunisia, 19.0526
+Istanbul, Turkey, 36.7015
+Ankara, Turkey, 24.1454
+İzmir, Turkey, 16.4924
+Bursa, Turkey, 11.2694
+Adana, Turkey, 11.1355
+Gaziantep, Turkey, 9.38083
+Konya, Turkey, 11.4018
+Kampala, Uganda, 22.1811
+Kiev, Ukraine, 23.3238
+Kharkiv, Ukraine, 21.587
+Odessa, Ukraine, 14.3875
+Dnipropetrovsk, Ukraine, 18
+Dubai, United Arab Emirates, 35.0714
+London, United Kingdom, 40.2865
+Birmingham, United Kingdom, 24.4949
+Manchester, United Kingdom, 23.622
+Leeds-Bradford, United Kingdom, 19.2354 
+Glasgow, United Kingdom, 19.1833
+New York City, United States, 107.898
+Los Angeles, United States, 79.3662
+Chicago, United States, 82.801
+Dallas, United States, 71.9375
+San Francisco, United States, 52.8867
+Miami, United States, 56.648
+Philadelphia, United States, 71.631
+Houston, United States, 68.1469
+Washington D.C., United States, 58.515
+Atlanta, United States, 82.7708
+Boston, United States, 72.9726
+Phoenix, United States, 57.2364
+Detroit, United States, 58.8473
+Seattle, United States, 51.1468
+San Diego, United States, 43.5431
+Minneapolis, United States, 51.449
+Petersburg, United States, 49.7896
+Denver, United States, 41.5933
+Baltimore, United States, 43.0929
+St. Louis, United States, 48.9183
+Las Vegas, United States, 32.8634
+Orlando, United States, 44.2493
+Portland, United States, 36.8375
+San Antonio, United States, 39.3192
+Sacramento, United States, 34.9285
+Cleveland, United States, 44.7102
+Pittsburgh, United States, 48.4149
+Cincinnati, United States, 45.1774
+Kansas City, United States, 41.9047
+Indianapolis, United States, 42.7668
+Austin, United States, 36.8103
+Virginia Beach-Norfolk, United States, 36.524
+Columbus, United States, 36.3456
+Milwaukee, United States, 37.6032
+Charlotte, United States, 43.8064
+Providence, United States, 37.5766
+Jacksonville, United States, 37.054
+Memphis, United States, 35.8748
+Salt Lake City, United States, 26.8328
+Nashville, United States, 38.1838
+Montevideo, Uruguay, 16.0935
+Tashkent, Uzbekistan, 23.0434
+Caracas, Venezuela, 16.4924
+Maracaibo, Venezuela, 12.4499
+Valencia, Venezuela, 14.7648
+Barquisimeto, Venezuela, 9.79796
+Maracay, Venezuela, 12.5698
+Ho Chi Minh City, Vietnam, 35.623
+Hanoi, Vietnam, 16.8819
+Sana'a, Yemen, 13.3791
+Lusaka, Zambia, 13.3791
+Harare, Zimbabwe, 24.4131

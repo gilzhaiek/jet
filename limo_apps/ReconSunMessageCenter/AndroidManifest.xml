@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.reconinstruments.messagecenter"
+    android:versionCode="7061"
+    android:versionName="Pre_Keefer_2" >
+    <uses-sdk
+        android:minSdkVersion="10"
+        android:targetSdkVersion="17" />
+    <application
+        android:allowBackup="true"
+        android:label="@string/app_name"
+        android:theme="@style/ReconTheme.NoTitleBar.Fullscreen" >
+        <!-- Group Message Viewer Activity: Full Screen -->
+        <activity
+            android:name=".frontend.SummaryActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleInstance" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <action android:name="com.reconinstruments.messagecenter.frontend" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".frontend.DetailActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <action android:name="com.reconinstruments.messagecenter.message" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".frontend.NoUnreadActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <!-- Message Viewer for single category, started by selecting category in parent screen -->
+        <activity
+            android:name=".frontend.MessageViewer"
+            android:label="@string/title_activity_message_viewer"
+            android:theme="@style/ReconTheme.NoTitleBar.Fullscreen" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="android.app.ListActivity" >
+            </meta-data>
+        </activity>
+        <!-- Message Viewer popup Activity; displayed on new message notification -->
+        <activity
+            android:name=".frontend.MessageAlert"
+            android:theme="@style/ReconTheme.Dialog" >
+            <intent-filter>
+                <action android:name="com.reconinstruments.messagecenter.MessageAlert" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <provider
+            android:name="com.reconinstruments.messagecenter.MessagesProvider"
+            android:authorities="com.reconinstruments.messagecenter" />
+    </application>
+</manifest>

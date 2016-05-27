@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<reticle_configuration>
+    
+<file_id id="jet May 21 2014 A"/>
+<enable state="true" />
+<icon type="user"   maxNum="1" maxDist="0" />    
+<icon type="buddy"  maxNum="5" maxDist="10" />    
+<icon type="ski_resort" maxNum="3" maxDist="10" />  
+  
+</reticle_configuration>

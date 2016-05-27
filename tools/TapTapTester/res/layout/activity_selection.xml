@@ -1,0 +1,61 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="16dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:orientation="vertical"
+    android:background="#000000"
+    tools:context=".Main" >
+
+        <TextView
+            android:id="@+id/Hertz"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16dp"
+            android:textColor="#FFFFFF"
+            android:text="@string/frequency" />
+
+        <TextView
+            android:id="@+id/WritingOk"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@+id/Hertz"
+            android:textSize="16dp"
+            android:textColor="#FFFFFF"
+            android:text="@string/ready" />
+            
+        <TextView
+            android:id="@+id/Taps"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/Hertz"
+            android:layout_marginTop="15dp"
+            android:textSize="40dp"
+            android:textStyle="bold"
+            android:textColor="#FFCC00"
+            android:text="@string/taps" />
+    
+        <Button
+            android:id="@+id/StartStopButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/Taps"
+            android:layout_marginTop="15dp"
+            android:textSize="18dp"
+            android:text="@string/start_record" />
+    
+        <Button
+            android:id="@+id/ResetTapCounterButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/Taps"
+            android:layout_toRightOf="@+id/StartStopButton"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="15dp"
+            android:textSize="18dp"
+            android:text="@string/reset_counter" />
+
+</RelativeLayout>

@@ -1,0 +1,10 @@
+ReconMessageCenter:
+
+Hierarchical message/notification browser.
+
+This project should be a relatively thin layer over a database (MessageDatabase) accessed via a ContentProvider (MessagesProvider)
+
+MessageGroupViewer is the top-level view that is seen on the dashboard, it drills down into MessageCategoryViewer and then either MessageViewer or a custom Intent.
+
+TODO:
+finish this documentation

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:background="#5555" >
+	<TextView
+		style="@style/recon_white_text_shadow"
+		android:layout_width="300dp"
+		android:layout_height="wrap_content"
+		android:layout_centerHorizontal="true"
+		android:layout_marginTop="60dp"
+		android:gravity="center"
+		android:text="No iPhone connected"
+		android:textSize="24dip"
+		android:textStyle="bold" />
+	<Button
+		android:id="@+id/cancel"
+		style="@style/recon_white_text_shadow"
+		android:layout_width="fill_parent"
+		android:layout_height="60dp"
+		android:layout_alignParentBottom="true"
+		android:layout_marginBottom="20dp"
+		android:background="@drawable/background_transition42"
+		android:text="Connect to iPhone"
+		android:textSize="20dip"
+		android:textStyle="bold" />
+</RelativeLayout>

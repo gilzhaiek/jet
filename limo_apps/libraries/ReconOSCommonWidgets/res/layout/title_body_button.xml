@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/recon_jet_background" >
+    <com.reconinstruments.commonwidgets.AutoTextView
+        android:id="@+id/title"
+        style="@style/recon_jet_text_regular"
+        android:layout_width="368dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="20dp"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:lines="1"
+        android:maxLines="1"
+        android:text=""
+        android:textSize="30sp" />
+    <TextView
+        android:id="@+id/body"
+        style="@style/recon_jet_text_regular"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottom_layout"
+        android:layout_alignLeft="@+id/title"
+        android:layout_below="@+id/title"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="0dp"
+        android:gravity="center"
+        android:lineSpacingExtra="-5dp"
+        android:text=""
+        android:textSize="24sp" />
+    <LinearLayout
+        android:id="@+id/bottom_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="30dp"
+        android:layout_marginLeft="20dp"
+        android:gravity="left|center_vertical"
+        android:orientation="horizontal" >
+        <ImageView
+            android:id="@+id/image_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/jet_select" />
+        <TextView
+            android:id="@+id/text_view"
+            style="@style/recon_jet_text_button"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="4dp"
+            android:layout_marginTop="-5dp"
+            android:gravity="center"
+            android:text=""
+            android:textAllCaps="true"
+            android:textSize="30sp" />
+    </LinearLayout>
+</RelativeLayout>

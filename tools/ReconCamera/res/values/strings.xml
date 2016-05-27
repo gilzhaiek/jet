@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">ReconCamera</string>
+    
+    <string name="take_photo">take photo</string>
+    <string name="record">Record</string>
+    <string name="record_stop">Stop</string>
+    <string name="zoom_in">Zoom In</string>
+    <string name="zoom_out">Zoom Out</string>
+    <string name="gallery">Gallery</string>
+    
+    <string name="error_retrieve_file">There was a problem creating the file</string>
+
+</resources>

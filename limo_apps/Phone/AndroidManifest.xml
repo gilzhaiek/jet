@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.reconinstruments.phone"
+          android:versionCode="7032"
+          android:versionName="Pre_Ivanho_14"
+          android:sharedUserId="android.uid.system">
+    <uses-sdk android:minSdkVersion="10" />
+    <application
+            android:icon="@drawable/icon"
+            android:label="Phone"
+            android:persistent="true"
+            android:theme="@style/ReconTheme.NoTitleBar" >
+        <uses-library android:name="com.stonestreetone.bluetopiapm" />
+        <activity android:name=".PhoneActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="RECON_PHONE_EVENTS" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".dialogs.SMSReplyActivity" />
+        <activity
+                android:name=".dialogs.IncomingCallActivity"
+                android:theme="@style/ReconTheme.Dialog" >
+            <intent-filter>
+                <action android:name="RECON_INCOMING_CALL" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+                android:name=".dialogs.IncomingSMSActivity"
+                android:screenOrientation="landscape" >
+            <intent-filter>
+                <action android:name="RECON_INCOMING_SMS" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+                android:name=".dialogs.CallProgressActivity"
+                android:theme="@style/ReconTheme.Dialog" >
+            <intent-filter>
+                <action android:name="RECON_CALL_PROGRESS" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".dialogs.ReplyMessageActivity" >
+            <intent-filter>
+                <action android:name="com.reconinstruments.texts.reply" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".message.CallHistoryActivity" >
+            <intent-filter>
+                <action android:name="RECON_CALL_HISTORY" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <service
+                android:name=".service.PhoneRelayService"
+                android:enabled="true" >
+            <intent-filter>
+                <action android:name="RECON_PHONE_RELAY_SERVICE" />
+            </intent-filter>
+        </service>
+        <service android:enabled="true" android:exported="true" android:name="com.reconinstruments.phone.hfpservice.TheHfpService">
+            <intent-filter>
+                <action android:name="SS1_HFP_SERVICE"/>
+            </intent-filter>
+        </service>
+        <service android:enabled="true" android:exported="true" android:name="com.reconinstruments.phone.mapservice.TheMapService">
+            <intent-filter>
+                <action android:name="SS1_MAP_SERVICE"/>
+            </intent-filter>
+        </service>
+        <provider
+                android:name="com.reconinstruments.phone.PhoneLogProvider"
+                android:authorities="com.reconinstruments.phone" />
+    </application>
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-feature android:name="android.hardware.bluetooth" />
+</manifest>

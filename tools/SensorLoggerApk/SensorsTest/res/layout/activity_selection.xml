@@ -1,0 +1,147 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0099cc"
+    tools:context=".Main" >
+
+        <CheckBox
+            android:id="@+id/AccelerometerCheckBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="15dp"
+            android:text="@string/ACC" />
+
+        <CheckBox
+            android:id="@+id/MagnetometerCheckBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/PressureCheckBox"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/AccelerometerCheckBox"
+            android:text="@string/MAG" />
+
+        <CheckBox
+            android:id="@+id/GyroScopeCheckBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/PressureCheckBox"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/MagnetometerCheckBox"
+            android:text="@string/GYRO" />
+
+        <CheckBox
+            android:id="@+id/TemperatureCheckBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/AccelerometerCheckBox"
+            android:text="@string/TEMP" />
+
+        <CheckBox
+            android:id="@+id/PressureCheckBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/TemperatureCheckBox"
+            android:layout_alignBottom="@+id/TemperatureCheckBox"
+            android:layout_toRightOf="@+id/TemperatureCheckBox"
+            android:text="@string/PRESSURE" />
+
+        <CheckBox
+            android:id="@+id/MainBoardTempCheckBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/PressureCheckBox"
+            android:layout_alignRight="@+id/UpButton"
+            android:text="@string/MainBoardT" />
+
+        <CheckBox
+            android:id="@+id/CompassTempCheckBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/UpButton"
+            android:layout_alignLeft="@+id/MainBoardTempCheckBox"
+            android:text="@string/CompassT" />
+
+        <Button
+            android:id="@+id/DownButton"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/PressureCheckBox"
+            android:text="@string/DOWN" />
+
+        <Button
+            android:id="@+id/UpButton"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/PressureCheckBox"
+            android:layout_toLeftOf="@+id/DownButton"
+            android:text="@string/UP" />
+
+        <EditText
+            android:id="@+id/TimeIntervaleditText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/UpButton"
+            android:ems="10"
+            android:hint="@string/interval"
+            android:inputType="number"
+            android:singleLine="true" >
+
+            <requestFocus />
+        </EditText>
+
+        <Button
+            android:id="@+id/TimeIntervalSendbutton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/UpButton"
+            android:layout_toRightOf="@id/TimeIntervaleditText"
+            android:text="@string/Send" />
+
+        <Button
+            android:id="@+id/StartStopButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignRight="@+id/GyroScopeCheckBox"
+            android:layout_below="@+id/WritingOk"
+            android:text="@string/start_record" />
+
+        <TextView
+            android:id="@+id/Hertz"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/UpButton"
+            android:layout_alignBottom="@+id/UpButton"
+            android:layout_alignParentLeft="true"
+            android:layout_centerHorizontal="true"
+            android:layout_centerInParent="true"
+            android:layout_toLeftOf="@+id/UpButton"
+            android:text="@string/frequency" />
+
+        <TextView
+            android:id="@+id/WritingOk"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/TimeIntervalSendbutton"
+            android:layout_alignBottom="@+id/TimeIntervalSendbutton"
+            android:layout_toRightOf="@+id/TimeIntervalSendbutton"
+            android:text="@string/ready" />
+
+        <TextView
+            android:id="@+id/TemperatureStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/StartStopButton"
+            android:layout_alignBottom="@+id/StartStopButton"
+            android:layout_toRightOf="@+id/StartStopButton"
+            android:text="@string/temperature_status" />
+
+</RelativeLayout>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="3"><dataSet config="unspecified"><source path="/Users/gilzhaiek/Dev/jet/sdk/connectivity/HUDConnectivityService/build/intermediates/exploded-aar/connectivity/HUDConnectivityLib/unspecified/res"><file name="ic_launcher" path="/Users/gilzhaiek/Dev/jet/sdk/connectivity/HUDConnectivityService/build/intermediates/exploded-aar/connectivity/HUDConnectivityLib/unspecified/res/drawable-hdpi-v4/ic_launcher.png" qualifiers="hdpi-v4" type="drawable"/><file name="ic_launcher" path="/Users/gilzhaiek/Dev/jet/sdk/connectivity/HUDConnectivityService/build/intermediates/exploded-aar/connectivity/HUDConnectivityLib/unspecified/res/drawable-mdpi-v4/ic_launcher.png" qualifiers="mdpi-v4" type="drawable"/><file name="ic_launcher" path="/Users/gilzhaiek/Dev/jet/sdk/connectivity/HUDConnectivityService/build/intermediates/exploded-aar/connectivity/HUDConnectivityLib/unspecified/res/drawable-xhdpi-v4/ic_launcher.png" qualifiers="xhdpi-v4" type="drawable"/><file name="ic_launcher" path="/Users/gilzhaiek/Dev/jet/sdk/connectivity/HUDConnectivityService/build/intermediates/exploded-aar/connectivity/HUDConnectivityLib/unspecified/res/drawable-xxhdpi-v4/ic_launcher.png" qualifiers="xxhdpi-v4" type="drawable"/><file path="/Users/gilzhaiek/Dev/jet/sdk/connectivity/HUDConnectivityService/build/intermediates/exploded-aar/connectivity/HUDConnectivityLib/unspecified/res/values/values.xml" qualifiers=""><style name="AppBaseTheme" parent="android:Theme.Light">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
+    </style><string name="app_name">HUDConnectivityLib</string><style name="AppTheme" parent="AppBaseTheme">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+    </style></file><file path="/Users/gilzhaiek/Dev/jet/sdk/connectivity/HUDConnectivityService/build/intermediates/exploded-aar/connectivity/HUDConnectivityLib/unspecified/res/values-v11/values.xml" qualifiers="v11"><style name="AppBaseTheme" parent="android:Theme.Holo.Light">
+        <!-- API 11 theme customizations can go here. -->
+    </style></file><file path="/Users/gilzhaiek/Dev/jet/sdk/connectivity/HUDConnectivityService/build/intermediates/exploded-aar/connectivity/HUDConnectivityLib/unspecified/res/values-v14/values.xml" qualifiers="v14"><style name="AppBaseTheme" parent="android:Theme.Holo.Light.DarkActionBar">
+        <!-- API 14 theme customizations can go here. -->
+    </style></file></source></dataSet><dataSet config="main"><source path="/Users/gilzhaiek/Dev/jet/sdk/connectivity/HUDConnectivityService/res"><file name="ic_launcher" path="/Users/gilzhaiek/Dev/jet/sdk/connectivity/HUDConnectivityService/res/drawable-hdpi/ic_launcher.png" qualifiers="hdpi-v4" type="drawable"/><file name="ic_launcher" path="/Users/gilzhaiek/Dev/jet/sdk/connectivity/HUDConnectivityService/res/drawable-mdpi/ic_launcher.png" qualifiers="mdpi-v4" type="drawable"/><file name="ic_launcher" path="/Users/gilzhaiek/Dev/jet/sdk/connectivity/HUDConnectivityService/res/drawable-xhdpi/ic_launcher.png" qualifiers="xhdpi-v4" type="drawable"/><file name="ic_launcher" path="/Users/gilzhaiek/Dev/jet/sdk/connectivity/HUDConnectivityService/res/drawable-xxhdpi/ic_launcher.png" qualifiers="xxhdpi-v4" type="drawable"/><file path="/Users/gilzhaiek/Dev/jet/sdk/connectivity/HUDConnectivityService/res/values/strings.xml" qualifiers=""><string name="app_name">HUDConnectivityService</string></file><file path="/Users/gilzhaiek/Dev/jet/sdk/connectivity/HUDConnectivityService/res/values/styles.xml" qualifiers=""><style name="AppBaseTheme" parent="android:Theme.Light">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
+    </style><style name="AppTheme" parent="AppBaseTheme">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+    </style></file><file path="/Users/gilzhaiek/Dev/jet/sdk/connectivity/HUDConnectivityService/res/values-v11/styles.xml" qualifiers="v11"><style name="AppBaseTheme" parent="android:Theme.Holo.Light">
+        <!-- API 11 theme customizations can go here. -->
+    </style></file><file path="/Users/gilzhaiek/Dev/jet/sdk/connectivity/HUDConnectivityService/res/values-v14/styles.xml" qualifiers="v14"><style name="AppBaseTheme" parent="android:Theme.Holo.Light.DarkActionBar">
+        <!-- API 14 theme customizations can go here. -->
+    </style></file></source><source path="/Users/gilzhaiek/Dev/jet/sdk/connectivity/HUDConnectivityService/build/generated/res/rs/debug"/><source path="/Users/gilzhaiek/Dev/jet/sdk/connectivity/HUDConnectivityService/build/generated/res/generated/debug"/></dataSet><dataSet config="debug"><source path="/Users/gilzhaiek/Dev/jet/sdk/connectivity/HUDConnectivityService/build-types/debug/res"/></dataSet><mergedItems/></merger>

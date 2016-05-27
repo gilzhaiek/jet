@@ -1,0 +1,6 @@
+root/default.prop
+root/init.usb.rc
+root/init.omap4jetboard.usb.rc
+which\ adb
+efs
+

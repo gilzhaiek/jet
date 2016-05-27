@@ -1,0 +1,11 @@
+<dash-layout id="0">
+	<main-metric>
+		<speed/>
+	</main-metric>
+	<secondary-metrics>
+		<distance/>
+		<duration/>
+		<grade/>
+		<elevgain/>
+	</secondary-metrics>
+</dash-layout>

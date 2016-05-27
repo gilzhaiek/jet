@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_height="fill_parent" android:layout_width="fill_parent"
+	android:id="@+id/last_jump_layout" android:paddingLeft="15px">
+
+	<TextView android:id="@+id/tab_title" android:text="--"
+		android:textColor="@color/dist_purple" style="@style/detailText"
+		android:layout_width="wrap_content" android:layout_height="wrap_content" />
+
+	
+	<!-- Total Vert -->
+	<TextView android:id="@+id/total_distance" android:text="Total"
+		style="@style/detailText" android:layout_below="@+id/tab_title" />
+
+	<TextView android:id="@+id/total_distance_field" android:text="--"
+		android:textColor="@color/dist_purple" style="@style/detailText"
+		android:layout_toLeftOf="@+id/total_distance_field_unit"
+		android:layout_marginRight="10px" android:layout_alignBaseline="@+id/total_distance" />
+
+	<TextView android:id="@+id/total_distance_field_unit"
+		android:text="m" style="@style/detailText"
+		android:layout_alignParentRight="True" android:layout_alignBaseline="@+id/total_distance" />
+	
+	
+	<!-- All Time Vert -->
+	<TextView android:id="@+id/all_time_distance" android:text="All Time"
+		style="@style/detailText" android:layout_below="@+id/total_distance" />
+
+	<TextView android:id="@+id/all_time_distance_field" android:text="--"
+		android:textColor="@color/dist_purple" style="@style/detailText"
+		android:layout_toLeftOf="@+id/all_time_distance_field_unit"
+		android:layout_marginRight="10px" android:layout_alignBaseline="@+id/all_time_distance" />
+
+	<TextView android:id="@+id/all_time_distance_field_unit"
+		android:text="m" style="@style/detailText"
+		android:layout_alignParentRight="True" android:layout_alignBaseline="@+id/all_time_distance" />
+	
+</RelativeLayout>

@@ -1,0 +1,58 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <com.reconinstruments.mapImages.mapview.ReconMapView
+        android:id="@+id/map_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:gravity="center" />
+    
+    <ImageView
+        android:id="@+id/pan_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/pan_btn"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:contentDescription="pan"
+        android:visibility="gone" />
+
+	<ImageView
+        android:id="@+id/zoom_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/zoom_btn"
+        android:layout_marginTop="5dp"
+        android:contentDescription="zoom"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/explore_icon"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/explore_btn"
+        android:contentDescription="explore"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/reticle"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="55dp"
+        android:layout_marginRight="149dp"
+        android:background="@drawable/reticule"
+        android:contentDescription="reticle"
+        android:visibility="gone" />
+
+    
+</RelativeLayout>

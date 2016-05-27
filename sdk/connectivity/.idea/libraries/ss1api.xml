@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="ss1api">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/HUDConnectivityLib/libs/ss1api.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

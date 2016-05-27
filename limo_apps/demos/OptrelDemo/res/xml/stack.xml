@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<stack>
+	
+		<!-- First Row -->
+		<ReconCard id="1" img="@drawable/shade" left="4" right="2" up="6" down="5" />
+		<ReconCard id="2" img="@drawable/delay" left="1" right="3" up="6" down="5" />
+		<ReconCard id="3" img="@drawable/welding" left="2" right="4" up="6" down="5" />
+		<ReconCard id="4" img="@drawable/low_battery" left="3" right="1" up="6" down="5" />
+		
+		<!-- Second Row -->
+		<ReconCard id="5" img="@drawable/autoshade" up="1" down="6" />
+		
+		<!-- Third Row -->
+		<ReconCard id="6" img="@drawable/grind" up="5" down="1" />
+	</stack>
+</resources>

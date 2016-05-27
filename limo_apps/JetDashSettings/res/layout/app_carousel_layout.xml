@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="23dp"
+    android:background="@color/recon_window_bg"
+    android:onClick="clickItem" >
+
+    <com.reconinstruments.commonwidgets.SansRegularTextView
+        android:id="@+id/app_drawer_title"
+        style="@style/recon_white_text_shadow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:ellipsize="end"
+        android:gravity="center_horizontal"
+        android:maxLines="2"
+        android:layout_marginBottom="-5dp"
+        android:layout_marginTop="-5dp"
+        android:singleLine="false"
+        android:text="@string/app_drawer_title"
+        android:textColor="#ffffff"
+        android:textSize="30sp"/>
+
+    <FrameLayout
+        android:id="@+id/frame_layout"
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:layout_below="@id/app_drawer_title"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="12dp" >
+
+        <com.reconinstruments.jetapplauncher.applauncher.CarouselViewPager
+            android:id="@+id/carousel_viewpager_id"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center" />
+
+<!--         <ImageView
+            android:id="@+id/dim_icons_overlay"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:contentDescription="@string/img_content_desc"
+            android:src="@drawable/dim_icons" /> -->
+    </FrameLayout>
+
+    <com.reconinstruments.commonwidgets.SansSemiBoldTextView
+        android:id="@+id/item_text"
+        style="@style/recon_white_text_shadow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@id/frame_layout"
+        android:ellipsize="end"
+        android:gravity="center_horizontal"
+        android:maxLines="2"
+        android:layout_marginBottom="-5dp"
+        android:layout_marginTop="-5dp"
+        android:singleLine="false"
+        android:textColor="#ffb300"
+        android:textSize="26sp" />
+
+</RelativeLayout>

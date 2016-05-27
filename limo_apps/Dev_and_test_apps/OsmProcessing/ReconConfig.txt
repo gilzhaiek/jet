@@ -1,0 +1,142 @@
+####################################################################################################################
+#                                                                                                                  #
+#                                                                                                                  #
+# This is the configure file for Recon Instruments Map (RIM)                                                       #
+# We are making dymatical configuration of the interested nodes, ways and relations, which allow easily add/remove.#
+# OSM nodes, ways and relations will be mapped into recon 'rmo' elements.                                          #
+#                                                                                                                  #
+####################################################################################################################
+
+['NODE']
+# This section is that configures the node in the format: {"OSM_TAG_KEY": "OSM_TAG_VALUE"}, "RECON_TYPE"
+MAX_NUM_TAGS = 4
+TAG0 ={"amenity":"toilets"}, "washroom"
+TAG1 ={"amenity":"drinking_water"}, "drinkingwater"
+TAG2 ={"amenity":"watering_point"}, "drinkingwater"
+TAG3 ={"amenity":"watering_place"}, "drinkingwater"
+
+
+
+####################################################################################################################
+['WAY']
+# This section is that configures the way in the format: {"OSM_TAG_KEY": "OSM_TAG_VALUE"}, "RECON_TYPE"
+
+MAX_NUM_TAGS = 34
+TAG0 ={"highway":"residential"}, "highway-residential road"
+TAG1 ={"highway":"motorway"}, "highway-motorway"
+TAG2 ={"highway":"trunk"}, "highway-primary"
+TAG3 ={"highway":"primary"}, "highway-primary"
+TAG4 ={"highway":"secondary"}, "highway-secondary"
+TAG5 ={"highway":"tertiary"}, "highway-tertiary"
+TAG6 ={"highway":"motorway_link"}, "highway-motorway"
+TAG7 ={"highway":"trunk_link"}, "highway-primary"
+TAG8 ={"highway":"primary_link"}, "highway-primary"
+TAG9 ={"highway":"secondary_link"}, "highway-secondary"
+TAG10 ={"highway":"tertiary_link"}, "highway-tertiary"
+TAG11 ={"highway":"track"}, "dirt road"
+TAG12 ={"surface":"unpaved"}, "dirt road"
+TAG13 ={"leisure":"park"}, "park", "park"
+TAG14 ={"leisure":"water_park"}, "park"
+TAG15 ={"boundary":"national_park"}, "park", "park"
+TAG16 ={"tourism":"theme_park"}, "park", "park"
+TAG17 ={"landuse":"forest"}, "wood", "wood"
+TAG18 ={"natural":"wood"}, "wood", "wood"
+TAG19 ={"landuse":"reservoir"}, "water"
+TAG20 ={"landuse":"salt_pond"}, "water", "water"
+TAG21 ={"natural":"water"}, "water", "water"
+TAG22 ={"natural":"beach"}, "land"
+TAG23 ={"natural":"bay"}, "water", "water"
+TAG24 ={"natural":"coastline"}, "ocean", "oceanGeo"
+TAG25 ={"natural":"wetland"}, "webland", "wetland"
+TAG26 ={"waterway":"riverbank"}, "ocean", "riverbank"
+TAG27 ={"waterway":"*"}, "waterway", "waterway"
+TAG28 ={"landuse":"grass"}, "park", "park"
+TAG29 ={"landuse":"meadow"}, "park", "park"
+TAG30 ={"landuse":"greenfield"}, "park", "park"
+TAG31 ={"landuse":"village_green"}, "park", "park"
+TAG32 ={"natural":"grassland"}, "park", "park"
+TAG33 ={"admin_level":"2"}, "nationalborder"
+#TAG34 ={"admin_level":"8"}, "citytown"
+
+####################################################################################################################
+["RELATION"]
+MAX_NUM_TAGS = 34
+TAG0 ={"highway":"residential"}, "highway-residential road"
+TAG1 ={"highway":"motorway"}, "highway-motorway"
+TAG2 ={"highway":"trunk"}, "highway-primary"
+TAG3 ={"highway":"primary"}, "highway-primary"
+TAG4 ={"highway":"secondary"}, "highway-secondary"
+TAG5 ={"highway":"tertiary"}, "highway-tertiary"
+TAG6 ={"highway":"motorway_link"}, "highway-motorway"
+TAG7 ={"highway":"trunk_link"}, "highway-primary"
+TAG8 ={"highway":"primary_link"}, "highway-primary"
+TAG9 ={"highway":"secondary_link"}, "highway-secondary"
+TAG10 ={"highway":"tertiary_link"}, "highway-tertiary"
+TAG11 ={"highway":"track"}, "dirt road"
+TAG12 ={"surface":"unpaved"}, "dirt road"
+TAG13 ={"leisure":"park"}, "park", "park"
+TAG14 ={"leisure":"water_park"}, "park"
+TAG15 ={"boundary":"national_park"}, "park", "park"
+TAG16 ={"tourism":"theme_park"}, "park", "park"
+TAG17 ={"landuse":"forest"}, "wood", "wood"
+TAG18 ={"natural":"wood"}, "wood", "wood"
+TAG19 ={"landuse":"reservoir"}, "water"
+TAG20 ={"landuse":"salt_pond"}, "water", "water"
+TAG21 ={"natural":"water"}, "water", "water"
+TAG22 ={"natural":"beach"}, "land"
+TAG23 ={"natural":"bay"}, "water", "water"
+TAG24 ={"natural":"coastline"}, "ocean", "oceanGeo"
+TAG25 ={"natural":"wetland"}, "wetland", "wetland"
+TAG26 ={"waterway":"riverbank"}, "ocean", "riverbank"
+TAG27 ={"waterway":"*"}, "waterway", "waterway"
+TAG28 ={"landuse":"grass"}, "park", "park"
+TAG29 ={"landuse":"meadow"}, "park", "park"
+TAG30 ={"landuse":"greenfield"}, "park", "park"
+TAG31 ={"landuse":"village_green"}, "park", "park"
+TAG32 ={"natural":"grassland"}, "park", "park"
+TAG33 ={"admin_level":"2"}, "nationalborder"
+#TAG34 ={"admin_level":"8"}, "citytown"
+
+####################################################################################################################
+####################################################################################################################
+['NODE_DISP_TAGS']
+# This section is that configures the Node Tags that it will be showed in output xml file
+MAX_NUM_TAGS = 5
+TAG0 ="name"
+TAG1 ="place"
+TAG2 ="highway"
+TAG3 ="shop"
+TAG4 ="amenity"
+
+####################################################################################################################
+['WAY_DISP_TAGS']
+# This section is that configures the Way Tags that will be showed in output xml file
+MAX_NUM_TAGS = 6
+
+TAG0 ="name"
+TAG1 ="highway"
+TAG2 ="landuse"
+TAG3 ="natural"
+TAG4 ="leisure"
+TAG5 ="surface"
+
+
+
+####################################################################################################################
+['RELATION_DISP_TAGS']
+# This section is that configures the Relation Tags that will be showed in output xml file
+MAX_NUM_TAGS = 6
+
+TAG0 ="name"
+TAG1 ="highway"
+TAG2 ="landuse"
+TAG3 ="natural"
+TAG4 ="leisure"
+TAG5 ="surface"
+
+
+####################################################################################################################
+#                                                                                                                  #
+# The 'END of Configure file'                                                                                      #
+#                                                                                                                  #
+####################################################################################################################

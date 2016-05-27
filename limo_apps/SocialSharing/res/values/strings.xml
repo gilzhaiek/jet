@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="app_name">SocialSharing</string>
+	<string name="nomsg">No Messages</string>
+	<string name="intentexception">Could not instantiate Message Handler. Reason: "</string>
+	<string name="share_disclaimer">This will post your %1$s on Facebook. Your %1$s will be set to public on Engage.</string>
+</resources>

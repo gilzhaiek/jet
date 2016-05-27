@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <com.reconinstruments.commonwidgets.SansRegularTextView
+        android:id="@+id/recording_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/ic_recording_indicator"
+        android:drawablePadding="5dp"
+        android:gravity="center"
+        android:layout_marginBottom="0dp"
+        android:paddingBottom="0dp"
+        android:shadowColor="@color/black"
+        android:shadowDy="3.0"
+        android:shadowRadius="3.0"
+        android:textSize="40dp"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/time_lapse_label"
+        style="@style/OnViewfinderLabel"
+        android:text="@string/time_lapse_title"
+        android:visibility="gone" />
+
+</LinearLayout>

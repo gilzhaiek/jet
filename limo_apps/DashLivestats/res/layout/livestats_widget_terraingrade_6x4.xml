@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    <com.reconinstruments.commonwidgets.SansSemiBoldTextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:text="@string/grade"
+        android:textColor="#808080"
+        android:textSize="22dp" />
+    <LinearLayout
+        android:id="@+id/seperator"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/title"
+        android:layout_marginTop="-2dp"
+        android:background="#6cd123"
+        android:orientation="vertical" >
+    </LinearLayout>
+    <include layout="@layout/livestats_value_unit_6x4"/>
+</RelativeLayout>

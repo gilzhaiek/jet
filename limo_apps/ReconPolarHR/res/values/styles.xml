@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <style name="menu_item_text">
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:textSize">30px</item>
+    </style>
+
+    <style name="black_text_shadow">
+        <item name="android:textColor">#FF000000</item>
+        <item name="android:shadowColor">#FFFFFFFF</item>
+        <item name="android:shadowDx">0</item>
+        <item name="android:shadowDy">1.0</item>
+        <item name="android:shadowRadius">1.0</item>
+        <item name="android:textSize">30sp</item>
+    </style>
+
+    <style name="white_text_shadow">
+        <item name="android:textColor">#FFFFFFFF</item>
+        <item name="android:shadowColor">#FFFFFFFF</item>
+        <item name="android:shadowDx">0</item>
+        <item name="android:shadowDy">1.0</item>
+        <item name="android:shadowRadius">1.0</item>
+        <item name="android:textSize">30sp</item>
+    </style>
+
+</resources>

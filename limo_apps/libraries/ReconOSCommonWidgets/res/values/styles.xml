@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+	<!-- Widget placeholder styles -->
+	<style name="recon_white_text_shadow">
+		<item name="android:textColor">#FFFFFFFF</item>
+		<item name="android:shadowColor">#FF000000</item>
+		<item name="android:shadowDx">0</item>
+		<item name="android:shadowDy">1</item>
+		<item name="android:shadowRadius">1</item>
+	</style>
+	<style name="recon_white_text_bold_shadow">
+		<item name="android:textColor">#FFFFFFFF</item>
+		<item name="android:shadowColor">#FF000000</item>
+		<item name="android:shadowDx">0</item>
+		<item name="android:shadowDy">1</item>
+		<item name="android:shadowRadius">1</item>
+		<item name="android:textStyle">bold</item>
+	</style>
+	<style name="recon_gray_text_shadow">
+		<item name="android:textColor">#FFE5E5E5</item>
+		<item name="android:shadowColor">#FF000000</item>
+		<item name="android:shadowDx">0</item>
+		<item name="android:shadowDy">1</item>
+		<item name="android:shadowRadius">1</item>
+	</style>
+	<style name="recon_black_text_shadow">
+		<item name="android:textColor">#FF000000</item>
+		<item name="android:shadowColor">#FFFFFFFF</item>
+		<item name="android:shadowDx">0</item>
+		<item name="android:shadowDy">1</item>
+		<item name="android:shadowRadius">1</item>
+	</style>
+	<style name="recon_selectable_text_shadow">
+		<item name="android:textColor">@drawable/recon_selectable_text_color</item>
+		<!-- <item name="com.reconinstruments.commonwidgets:shadowColors">@drawable/recon_selectable_text_shadow_color</item> -->
+		<item name="android:shadowDx">0</item>
+		<item name="android:shadowDy">1</item>
+		<item name="android:shadowRadius">1</item>
+	</style>
+	<style name="recon_focusable_text_shadow">
+		<item name="android:textColor">@drawable/recon_focusable_text_color</item>
+		<!-- <item name="com.reconinstruments.commonwidgets:shadowColors">@drawable/recon_focusable_text_shadow_color</item> -->
+		<item name="android:shadowDx">0</item>
+		<item name="android:shadowDy">1</item>
+		<item name="android:shadowRadius">1</item>
+	</style>
+	<!-- Widget placeholder styles -->
+	<style name="recon_placeholder">
+		<item name="android:gravity">center</item>
+		<item name="android:layout_marginBottom">5px</item>
+	</style>
+	<style name="recon_placeholder2x2" parent="recon_placeholder">
+		<item name="android:layout_width">125px</item>
+		<item name="android:layout_height">91px</item>
+	</style>
+	<style name="recon_placeholder4x1" parent="recon_placeholder">
+		<item name="android:layout_width">255px</item>
+		<item name="android:layout_height">43px</item>
+	</style>
+	<style name="recon_placeholder4x2_no_bg" parent="recon_placeholder">
+		<item name="android:layout_width">256px</item>
+		<item name="android:layout_height">91px</item>
+		<item name="android:padding">5px</item>
+	</style>
+	<style name="recon_placeholder4x2" parent="recon_placeholder4x2_no_bg"></style>
+	<style name="recon_placeholder4x3" parent="recon_placeholder">
+		<item name="android:layout_width">255px</item>
+		<item name="android:layout_height">139px</item>
+	</style>
+	<style name="recon_placeholder4x4" parent="recon_placeholder">
+		<item name="android:layout_width">255px</item>
+		<item name="android:layout_height">185px</item>
+	</style>
+	<style name="recon_placeholder6x4" parent="recon_placeholder">
+		<item name="android:layout_width">384px</item>
+		<item name="android:layout_height">185px</item>
+	</style>
+	<style name="recon_placeholder3x4" parent="recon_placeholder">
+		<item name="android:layout_width">192px</item>
+		<item name="android:layout_height">185px</item>
+	</style>
+	<style name="recon_placeholder3x2" parent="recon_placeholder">
+		<item name="android:layout_width">192px</item>
+		<item name="android:layout_height">91px</item>
+	</style>
+	<!-- Widget Styles -->
+	<style name="recon_widget2x2">
+		<item name="android:orientation">vertical</item>
+		<item name="android:gravity">center_horizontal</item>
+		<item name="android:layout_width">fill_parent</item>
+		<item name="android:layout_height">fill_parent</item>
+	</style>
+	<style name="recon_widget4x1">
+		<item name="android:orientation">horizontal</item>
+	</style>
+	<style name="recon_widget_field">
+		<item name="android:text">--</item>
+		<item name="android:textColor">#FFFFFF</item>
+		<item name="android:textSize">29px</item>
+		<item name="android:layout_width">wrap_content</item>
+		<item name="android:layout_height">wrap_content</item>
+		<item name="android:layout_marginBottom">8px</item>
+		<item name="android:shadowColor">#FF000000</item>
+		<item name="android:shadowDx">0</item>
+		<item name="android:shadowDy">1</item>
+		<item name="android:shadowRadius">1</item>
+		<item name="android:textStyle">bold</item>
+	</style>
+	<style name="recon_widget_field4x1">
+		<item name="android:text">--</item>
+		<item name="android:textColor">#FFFFFF</item>
+		<item name="android:textSize">29px</item>
+		<item name="android:layout_gravity">center</item>
+		<item name="android:includeFontPadding">False</item>
+		<item name="android:lineSpacingMultiplier">.85</item>
+		<item name="android:shadowColor">#FF000000</item>
+		<item name="android:shadowDx">0</item>
+		<item name="android:shadowDy">1</item>
+		<item name="android:shadowRadius">1</item>
+		<item name="android:textStyle">bold</item>
+		<item name="android:paddingBottom">5dip</item>
+	</style>
+	<style name="recon_speed" parent="recon_widget_field">
+		<item name="android:layout_alignParentBottom">True</item>
+		<item name="android:layout_alignParentRight">True</item>
+		<item name="android:layout_marginRight">20px</item>
+		<item name="android:includeFontPadding">False</item>
+		<item name="android:lineSpacingMultiplier">.85</item>
+	</style>
+	<style name="recon_speed6x4" parent="recon_speed">
+		<item name="android:textSize">150px</item>
+	</style>
+	<style name="recon_speed4x4" parent="recon_speed">
+		<item name="android:textSize">130px</item>
+	</style>
+	<style name="recon_speed4x3" parent="recon_speed">
+		<item name="android:textSize">110px</item>
+	</style>
+	<style name="recon_speed3x4" parent="recon_speed">
+		<item name="android:textSize">110px</item>
+	</style>
+	<style name="recon_speed3x2" parent="recon_speed">
+		<item name="android:textSize">85px</item>
+	</style>
+	<style name="recon_speed4x2">
+		<item name="android:textSize">85px</item>
+		<item name="android:includeFontPadding">False</item>
+		<item name="android:shadowColor">#FF000000</item>
+		<item name="android:shadowDx">0</item>
+		<item name="android:shadowDy">1</item>
+		<item name="android:shadowRadius">1</item>
+		<item name="android:textStyle">bold</item>
+	</style>
+	<!-- Detail Views -->
+	<style name="recon_detailText">
+		<item name="android:layout_width">wrap_content</item>
+		<item name="android:layout_height">wrap_content</item>
+		<item name="android:textSize">26px</item>
+		<item name="android:textColor">#FFFFFF</item>
+		<item name="android:shadowColor">#FF000000</item>
+		<item name="android:shadowDx">0</item>
+		<item name="android:shadowDy">1</item>
+		<item name="android:shadowRadius">1</item>
+		<item name="android:textStyle">bold</item>
+	</style>
+	<style name="recon_PopupBox">
+		<item name="android:layout_width">fill_parent</item>
+		<item name="android:layout_height">wrap_content</item>
+		<item name="android:background">@drawable/recon_dialog_background</item>
+		<item name="android:layout_marginLeft">50dip</item>
+		<item name="android:layout_marginRight">50dip</item>
+		<item name="android:layout_marginTop">25dip</item>
+		<item name="android:layout_marginBottom">37dip</item>
+		<item name="android:layout_gravity">center_horizontal</item>
+		<item name="android:padding">2dip</item>
+		<item name="android:orientation">vertical</item>
+	</style>
+	<style name="recon_SetTimePopupBox">
+		<item name="android:layout_width">fill_parent</item>
+		<item name="android:layout_height">wrap_content</item>
+		<item name="android:background">@drawable/recon_dialog_background</item>
+		<item name="android:layout_marginLeft">50dip</item>
+		<item name="android:layout_marginRight">50dip</item>
+		<item name="android:layout_marginTop">25dip</item>
+		<item name="android:layout_marginBottom">15dip</item>
+		<item name="android:layout_gravity">center_horizontal</item>
+		<item name="android:padding">2dip</item>
+		<item name="android:orientation">vertical</item>
+	</style>
+	<style name="ReconProgressDialog" parent="@android:style/Theme.Dialog">
+		<item name="android:windowFrame">@null</item>
+		<item name="android:windowIsFloating">true</item>
+		<item name="android:windowContentOverlay">@null</item>
+		<item name="android:windowTitleStyle">@null</item>
+		<item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+		<item name="android:windowSoftInputMode">stateUnspecified|adjustPan</item>
+		<item name="android:backgroundDimEnabled">true</item>
+		<item name="android:width">180dip</item>
+		<item name="android:height">34dip</item>
+		<item name="android:background">@drawable/recon_dialog_top_shadow</item>
+	</style>
+	<style name="recon_jet_text_regular">
+		<item name="android:fontFamily">sans-serif</item>
+		<item name="android:includeFontPadding">false</item>
+		<item name="android:textColor">#ffffff</item>
+	</style>
+	<style name="recon_jet_text_button">
+		<item name="android:fontFamily">sans-serif-light</item>
+		<item name="android:includeFontPadding">false</item>
+		<item name="android:textColor">#ffffff</item>
+	</style>
+	<style name="Theme.Transparent" parent="android:Theme">
+		<item name="android:windowIsTranslucent">true</item>
+		<item name="android:windowBackground">@android:color/transparent</item>
+		<item name="android:windowContentOverlay">@null</item>
+		<item name="android:windowNoTitle">true</item>
+		<item name="android:backgroundDimEnabled">false</item>
+		<item name="android:windowFullscreen">true</item>
+	</style>
+	<style name="dialog_animation">
+		<item name="android:windowEnterAnimation">@anim/fade_slide_in_bottom</item>
+		<item name="android:windowExitAnimation">@anim/fadeout_faster</item>
+	</style>
+</resources>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#CC202020"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background_transition112"
+        android:focusable="true" >
+
+        <TextView
+            android:id="@+id/setup_text"
+        	style="@style/white_text_shadow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+			android:layout_centerHorizontal="true"
+            android:text="Music Control"
+            android:textSize="24dip"
+            android:textStyle="bold" />
+
+        <TextView
+            style="@style/white_text_shadow"
+            android:layout_width="360dp"
+            android:layout_height="wrap_content"
+			android:layout_centerHorizontal="true"
+			android:gravity="center"
+            android:layout_below="@id/setup_text"
+            android:text="Access music control from the Home screen by holding the select button\n\nYou need a smartphone to play music"
+            android:textSize="20dip"
+            android:textStyle="normal" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/setup_item"
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="20dip"
+        android:background="@drawable/background_transition62"
+        android:focusable="true" >
+
+         <com.reconinstruments.widgets.CustomTextView
+       		style="@style/focusable_text_shadow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+			android:layout_centerInParent="true"
+            android:text="Setup new smartphone"
+            android:textSize="24dip"
+            android:textStyle="normal"
+            android:duplicateParentState="true" />
+            
+    </RelativeLayout>
+
+</LinearLayout>

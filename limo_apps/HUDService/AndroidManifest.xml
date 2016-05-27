@@ -1,0 +1,55 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+	  package="com.reconinstruments.hudservice"
+	  android:versionCode="6773"
+	  android:versionName="3.1_aug22"
+	  android:sharedUserId="android.uid.system"
+	  >
+  <uses-sdk
+     android:minSdkVersion="10"
+     android:targetSdkVersion="10" />
+  <uses-permission android:name="android.permission.BLUETOOTH" />
+  <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+  <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+  <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+  <application
+     android:allowBackup="true"
+     android:persistent="true"
+     android:icon="@drawable/ic_launcher"
+     android:label="@string/app_name"
+     android:theme="@style/AppTheme" >
+    <activity
+       android:name=".SDKTesterActivity"
+       android:label="@string/app_name" >
+      <intent-filter>
+	<action android:name="android.intent.action.MAIN" />
+	<category android:name="android.intent.category.DEFAULT" />
+      </intent-filter>
+      <intent-filter>
+	<action android:name="RECON_HUD_SERVICE_TEST_ACTIVITY" />
+	<category android:name="android.intent.category.DEFAULT" />
+      </intent-filter>
+
+    </activity>
+    <service
+       android:name=".HUDService"
+       android:enabled="true" >
+      <intent-filter>
+	<action android:name="RECON_HUD_SERVICE" />
+      </intent-filter>
+    </service>
+    <receiver
+       android:name=".IncomingPhoneStatusReceiver"
+       android:enabled="true"
+       android:exported="true">
+      <intent-filter>
+	 <action android:name="com.reconinstruments.hud_phone_status_exchange.PHONE_STATUS_CHANGE" />
+	 <action android:name="com.reconinstruments.hud_phone_status_exchange.HUD_STATUS_CHANGE" />
+	 <action android:name="com.reconinstruments.SPORTS_ACTIVITY" />
+      </intent-filter>
+    
+       >
+    </receiver>
+    <uses-library android:name="com.stonestreetone.bluetopiapm" />
+    <uses-library android:name="com.reconinstruments.mfi" />
+  </application>
+</manifest>

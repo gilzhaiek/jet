@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="app_name">Dashboard</string>
+	<string name="no_activities_title">No Activities Yet</string>
+	<string name="no_activities_body">Stats from finished activities will\nappear here. Start a New Activity.</string>
+</resources>

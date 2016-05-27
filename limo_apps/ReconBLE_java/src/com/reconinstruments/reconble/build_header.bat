@@ -1,0 +1,2 @@
+javah -jni -classpath C:\zeljkok\work\APK\ReconBLE\src\ -o C:\zeljkok\work\APK\ReconBLE\jni\ReconBLE.h com.reconinstruments.reconble.ReconBLE
+javah -jni -classpath C:\zeljkok\work\APK\ReconBLE\src\ -o C:\zeljkok\work\APK\ReconBLE\jni\BLENative.h com.reconinstruments.reconble.BLENative

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="hello">Hello World, DashLauncherActivity!</string>
+    <string name="app_name">DashLauncher</string>
+    <string name="error">Connection Error</string>
+    <string name="meters">m</string>
+    <string name="feet">ft</string>
+    <string name="kmh">km/h</string>
+    <string name="mph">mph</string>
+    <string name="invalid_value">--</string>
+    <string name="max_speed">MAX\nSPEED</string>
+    <string name="air_time">AIR TIME</string>
+    <string name="altitude">ALTITUDE</string>
+    <string name="vertical">VERTICAL</string>
+    <string name="set_datetime">Date &amp; Time</string>
+    <string name="set_date">Set Date</string>
+    <string name="set_time_auto">Automatic</string>
+    <string name="set_time">Set Time</string>
+    <string name="set_brightness">Brightness</string>
+    <string name="set_lang">Set Language</string>
+    <string name="uninstall">Uninstall Applications</string>
+    <string name="reset_stat">Reset Stats</string>
+    <string name="bluetooth_setting">Bluetooth Settings</string>
+    <string name="title">SETTINGS</string>
+    <string name="set_language_title">SET LANGUAGE</string>
+    <string name="set_datetime_title">DATE &amp; TIME</string>
+    <string name="set_zone_title">SET TIME ZONE</string>
+    <string name="set_brightness_title">Set Brightness</string>
+    <string name="set_zone">Set Time Zone</string>
+    <string name="set_24hr">Use 24-hour format</string>
+    <string name="system_status">System Status</string>
+    <string name="firmware_upgrade">Firmware Upgrade</string>
+    <string name="uninstall_title">UNINSTALL APPS</string>
+    <string name="system_status_title">SYSTEM STATUS</string>
+    <string name="button_set">OK</string>
+    <string name="button_cancel">CANCEL</string>
+    <string name="reset_stats">Reset All Stats</string>
+    <string name="reset_stats_confirm">Reset all stats?</string>
+    <string name="reset_stats_confirm_desc">You can reset individual stats from separate Application settings!</string>
+    <string name="display_pop_title">Brightness</string>
+    <string name="set_units">Set Units</string>
+    <string name="metric">Metric</string>
+    <string name="imperial">Imperial</string>
+    <string name="firmware_reset">Reset Firmware</string>
+    <string name="firmware_update">Upgrade Firmware</string>
+    <string name="set_firmware">FIRMWARE UPGRADE</string>
+    <string name="firmware_reset_confirm_title">Reset Firmware</string>
+    <string name="firmware_reset_confirm_content">This will reset the Firmware to factory default. Do you want to proceed?</string>
+    <string name="firmware_update_confirm_title">Upgrade Firmware</string>
+    <string name="firmware_update_confirm_content">Do you want to upgrade to the downloaded firmware?</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+
+    <string-array name="language_titles">
+        <item>English</item>
+        <item>French</item>
+    </string-array>
+    <string-array name="locale_strings">
+        <item>EN</item>
+        <item>FR</item>
+    </string-array>
+    <string-array name="system_status_strings">
+        <item>Model Number</item>
+        <item>Version Number</item>
+        <item>Android Version</item>
+        <item>Build Number</item>
+        <item>Kernel Version</item>
+        <item>Serial Number</item>
+    </string-array>
+    <string-array name="month_name_string">
+        <item>January</item>
+        <item>February</item>
+        <item>March</item>
+        <item>April</item>
+        <item>May</item>
+        <item>June</item>
+        <item>July</item>
+        <item>August</item>
+        <item>September</item>
+        <item>October</item>
+        <item>November</item>
+        <item>December</item>
+    </string-array>
+    <string-array name="weekday_name_string">
+        <item>Monday</item>
+        <item>Tuesday</item>
+        <item>March</item>
+        <item>Wednesday</item>
+        <item>Thursday</item>
+        <item>Friday</item>
+        <item>Saturday</item>
+        <item>Sunday</item>
+    </string-array>
+
+    <string name="set_units_title">SET UNITS</string>
+    <string name="developer">Developer</string>
+    <string name="firmware_adb_prompt_title">ADB Disabled!</string>
+    <string name="firmware_adb_confirm_title">Do you want to enable ADB?</string>
+    <string name="firmware_adb_prompt_desc">Firmware upgrade requires ADB.</string>
+    
+    
+    
+    <string name="empty_notifications_string">Live Feed is the hub of your latest\n
+      <b>notifications</b> and <b>achievements</b></string>
+          
+    <string name="empty_notifications_string2"> Check back here when you\'re on the hill.</string>
+
+    <string name="android_overlay">No Phone Connected\nOpen Engage on your Android Phone to connect</string>
+    <string name="android_overlay_oakley">No Phone Connected\nOpen AirWave on your Android Phone to connect</string>
+
+</resources>

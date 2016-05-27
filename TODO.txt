@@ -1,0 +1,30 @@
+Things to Remove:
+Apps:
+Beam
+Bluetooth.apk
+BluetoothSC
+Browser
+Downloads
+FM Radio
+FM Transmit
+People
+Phone
+Sound Recor
+Contact
+Calendar
+
+ASFDummyExtractor
+BackupManagerService
+
+Logs:
+GC_CONCURRENT freed 196K, 4% free 6400K/6663K, paused 18ms+40ms, total 103ms
+WAIT_FOR_CONCURRENT_GC blocked 21ms
+GC_EXPLICIT freed 15K, 14% free 2219K/2560K, paused 2ms+2ms, total 26ms
+
+I/SystemServer(  315): Dock Observer
+W/DockObserver(  315): This kernel does not have dock station support
+I/SystemServer(  315): Wired Accessory Observer
+W/WiredAccessoryObserver(  315): This kernel does not have wired headset support
+W/WiredAccessoryObserver(  315): This kernel does not have HDMI audio support
+
+

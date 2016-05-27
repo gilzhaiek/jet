@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+	     android:orientation="vertical"
+	     android:layout_width="fill_parent"
+	     android:layout_height="fill_parent">
+    
+    <LinearLayout 
+       android:orientation="horizontal"
+       android:layout_width="fill_parent"
+       android:layout_height="fill_parent"
+       android:layout_weight="1">
+
+	    <TextView
+	       android:layout_height="fill_parent"
+	       android:layout_width="wrap_content"
+	       android:text="Last Jump:"
+	       android:textSize="25dp"
+	       android:layout_weight="1"/>
+	    
+	    <TextView
+	       android:id="@+id/jtime"
+	       android:layout_height="fill_parent"
+	       android:layout_width="wrap_content"
+	       android:text="Unknown"
+	       android:textSize="20dp"
+	       android:layout_weight="1"/>
+	    
+	</LinearLayout>
+	
+    <LinearLayout 
+       android:orientation="horizontal"
+       android:layout_width="fill_parent"
+       android:layout_height="fill_parent"
+       android:layout_weight="1">
+    
+	    <TextView
+	       android:layout_width="wrap_content"
+	       android:layout_height="fill_parent"
+	       android:text="End Time: "
+	       android:textSize="25dp"
+	       android:layout_weight="1"/>
+	    
+	    <TextView
+	       android:id="@+id/jcount"
+	       android:layout_width="wrap_content"
+	       android:layout_height="fill_parent"
+	       android:text="0"
+	       android:textSize="20dp"
+	       android:layout_weight="1"/>
+	    
+	</LinearLayout>    
+	
+    <LinearLayout 
+       android:orientation="horizontal"
+       android:layout_width="fill_parent"
+       android:layout_height="fill_parent"
+       android:layout_weight="1">
+    
+	    <TextView
+	       android:layout_width="wrap_content"
+	       android:layout_height="fill_parent"
+	       android:text="air:"
+	       android:textSize="25dp"
+	       android:layout_weight="1"/>
+	    
+	    <TextView
+	       android:id="@+id/air"
+	       android:layout_width="wrap_content"
+	       android:layout_height="fill_parent"
+	       android:text="0"
+	       android:textSize="20dp"
+	       android:layout_weight="1"/>
+	    
+	    <TextView
+	       android:layout_width="wrap_content"
+	       android:layout_height="fill_parent"
+	       android:text="drop:"
+	       android:textSize="25dp"
+	       android:layout_weight="1"/>
+	    
+	    <TextView
+	       android:id="@+id/drop"
+	       android:layout_width="wrap_content"
+	       android:layout_height="fill_parent"
+	       android:text="0"
+	       android:textSize="20dp"
+	       android:layout_weight="1"/>
+	    
+	    <TextView
+	       android:layout_width="wrap_content"
+	       android:layout_height="fill_parent"
+	       android:text="height:"
+	       android:textSize="25dp"
+	       android:layout_weight="1"/>
+	    
+	    <TextView
+	       android:id="@+id/height"
+	       android:layout_width="wrap_content"
+	       android:layout_height="fill_parent"
+	       android:text="0"
+	       android:textSize="20dp"
+	       android:layout_weight="1"/>
+	    
+	</LinearLayout>   
+		<TextView
+	       android:layout_width="wrap_content"
+	       android:layout_height="fill_parent"
+	       android:text="Jump:"
+	       android:textSize="25dp"
+	       android:layout_weight="1"/>    
+
+	    <TextView
+	       android:id="@+id/jump"
+	       android:layout_width="wrap_content"
+	       android:layout_height="fill_parent"
+	       android:text="0"
+	       android:textSize="20dp"
+	       android:layout_weight="1"/>
+</LinearLayout>

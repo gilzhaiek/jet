@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+ <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal" >
+     
+    <Button
+        android:id="@+id/btnmastermode"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="MasterMode"
+        />
+
+
+    <Button
+        android:id="@+id/btnslavemode"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="SlaveMode"
+        />
+
+
+    <Button
+        android:id="@+id/btnpair"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="@string/Pair"
+        />
+    
+       <Button
+        android:id="@+id/btnunpair"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="@string/Unpair"
+        />
+  
+      <Button
+        android:id="@+id/btnreset"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="@string/Reset"
+        />
+                   
+  </LinearLayout>
+ 
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal" >
+
+    <Button
+        android:id="@+id/btnprior0"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="prior0"
+        />
+
+    <Button
+       android:id="@+id/btnprior1"
+       android:layout_height="wrap_content"
+       android:layout_width="wrap_content"
+       android:text="prior1"
+       />
+
+    <Button
+       android:id="@+id/btngetrcvprior"
+       android:layout_height="wrap_content"
+       android:layout_width="wrap_content"
+       android:text="getrcvprior"
+       />
+
+    <Button
+       android:id="@+id/btngetprior"
+       android:layout_height="wrap_content"
+       android:layout_width="wrap_content"
+       android:text="getprior"
+       />
+    
+    <Button
+        android:id="@+id/btncancelsend"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="cancel send"
+        />
+          
+    <TextView
+        android:id="@+id/bletxdata"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        />
+          
+  </LinearLayout>
+  
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal" >
+    
+ 
+     <Button
+        android:id="@+id/btnsend"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="@string/send_file"
+         />
+     <Button
+        android:id="@+id/btnsendxml"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="send xml"
+        />
+
+     
+     <EditText
+        android:id="@+id/bleinput"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        />
+         
+ </LinearLayout>
+   
+</LinearLayout>

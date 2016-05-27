@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/ReconGray"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@drawable/background_transition112" >
+
+        <ImageView
+            android:id="@+id/music_main_music_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/music_image" />
+
+        <TextView
+            android:id="@+id/music_main_title"
+            style="@style/focusable_text_shadow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@+id/music_main_music_image"
+            android:duplicateParentState="true"
+            android:text="MUSIC PLAYER"
+            android:textSize="28dp" 
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/no_song"
+            style="@style/focusable_text_shadow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/music_main_title"
+            android:layout_marginTop="47dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_horizontal"
+            android:duplicateParentState="true"
+            android:singleLine="true"
+            android:text="No Music Playing"
+            android:textColor="@color/reconGrayText"
+            android:textSize="20dp" />
+
+        <RelativeLayout
+            android:id="@+id/song_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left|center_vertical"
+            android:layout_below="@+id/music_main_title"
+            android:duplicateParentState="true"
+            android:gravity="left|center_vertical"
+            android:visibility="gone" >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:layout_marginLeft="20dp"
+                android:duplicateParentState="true"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/song_name"
+                    style="@style/focusable_text_shadow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:duplicateParentState="true"
+                    android:includeFontPadding="false"
+                    android:singleLine="true"
+                    android:text="Song Name"
+                    android:textSize="22dip"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/artist_name"
+                    style="@style/focusable_text_shadow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:duplicateParentState="true"
+                    android:includeFontPadding="false"
+                    android:singleLine="true"
+                    android:text="Artist"
+                    android:textSize="20dip" 
+                    android:textStyle="bold"/>
+
+                <!-- android:ellipsize="marquee" -->
+
+                <TextView
+                    android:id="@+id/album_name"
+                    style="@style/focusable_text_shadow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:duplicateParentState="true"
+                    android:includeFontPadding="false"
+                    android:singleLine="true"
+                    android:text="Album"
+                    android:textSize="20dip" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/music_main_shuffle_songs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:src="@drawable/select_button" />
+
+        <TextView
+            android:id="@+id/music_main_shuffle_text"
+            style="@style/focusable_text_shadow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="13dp"
+            android:layout_marginBottom="12dp"
+            android:layout_toRightOf="@+id/music_main_shuffle_songs"
+            android:duplicateParentState="true"
+            android:singleLine="true"
+            android:text="SHUFFLE SONGS"
+            android:textSize="20dp"
+            android:textStyle="bold"
+             />
+
+        <ImageView
+            android:id="@+id/music_main_library"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_toRightOf="@+id/music_main_shuffle_text"
+            android:src="@drawable/down_button" />
+
+        <TextView
+            android:id="@+id/music_main_library_text"
+            style="@style/focusable_text_shadow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="13dp"
+            android:layout_marginBottom="12dp"
+            android:layout_toRightOf="@+id/music_main_library"
+            android:duplicateParentState="true"
+            android:singleLine="true"
+            android:text="MY MUSIC"
+            android:textSize="20dp" 
+            android:textStyle="bold"/>
+    </RelativeLayout>
+
+</LinearLayout>

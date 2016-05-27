@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+ <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	style="@style/PopupBox" >
+	
+	<LinearLayout
+		android:id="@+id/sm_title_container"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:gravity="center"
+		android:orientation="horizontal" 
+		android:layout_marginTop="3dip" 
+		android:layout_marginBottom="3dip" >
+		
+		<TextView 
+			android:id="@+id/sm_timer_counter"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:textSize="30dp" 
+			android:layout_gravity="center_vertical" />
+		
+		<TextView 
+			android:id="@+id/sm_dialog_title"
+			android:layout_height = "wrap_content"
+			android:layout_width="200dip"
+			android:textColor="#FFFFFFFF"
+			android:textSize="25dp"
+			android:text="Press the power button to choose."
+			android:gravity="center"
+			android:layout_marginLeft="25dip"
+			android:layout_marginRight="25dip" />
+		
+		<ImageView
+			android:id="@+id/dialog_img"
+			android:layout_width="wrap_content"
+	  		android:layout_height="wrap_content"
+			android:src="@drawable/recon_blue" 
+			android:layout_gravity="center_vertical" />
+		
+	</LinearLayout>
+	
+	<!-- Divide line -->
+    <LinearLayout
+    	android:id="@+id/divide_line"
+	    android:layout_width="fill_parent"
+	    android:layout_height="2dip"
+	    android:background="@color/border_color"
+	    android:layout_below="@+id/title_container"
+    />
+    
+    <LinearLayout android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="80dip" 
+        android:layout_below="@+id/divide_line"
+        android:layout_centerHorizontal="True"
+        android:layout_marginTop="17dip"
+        android:gravity="center_horizontal|center_vertical"
+        android:baselineAligned="false">
+        
+		<LinearLayout android:id="@+id/device_list_one" 
+		    android:orientation="vertical"
+		    android:layout_width="wrap_content" 
+		    android:layout_height="wrap_content"
+		     />
+		
+		<LinearLayout android:id="@+id/device_list_two"  
+		    android:orientation="vertical"
+		    android:layout_width="wrap_content" 
+		    android:layout_height="wrap_content"
+		    android:visibility="gone"
+		    android:layout_marginLeft="30dip" 
+		    android:layout_gravity="top"/>
+        
+    </LinearLayout>
+	
+  	<LinearLayout 
+		android:orientation="vertical" 
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:layout_centerHorizontal="true"
+		android:id="@+id/remotes_list"
+		android:layout_below="@+id/divide_line"
+		android:visibility="gone" >
+	</LinearLayout>
+	
+</RelativeLayout>

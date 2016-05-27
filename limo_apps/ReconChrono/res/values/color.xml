@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="max_speed_green">#64b446</color>
+    <color name="vert_blue">#148cc8</color>
+    <color name="dist_purple">#a000ff</color>
+    <color name="jump_pink">#be3c96</color>
+    <color name="chrono_yellow">#ffff14</color>
+    <color name="alt_orange">#FF8C14</color>
+    <color name="temp_green">#32C8A0</color>
+    
+    <color name="tab_selector">#ff148CC8</color>
+	<color name="menu_selector">#ff148CC8</color>
+	<!--  ff0096aa -->
+	<color name="transparent">#00000000</color>
+	<color name="white">#FFFFFFFF</color>
+	<color name="grey">#FF404040</color>
+    
+</resources>

@@ -1,0 +1,23 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+       
+	  <TextView
+	     android:id="@+id/text_label"
+	     android:layout_width="fill_parent"
+	     android:layout_height="fill_parent"
+	     android:focusable="false"
+	     android:gravity="center_horizontal"
+	     android:textSize="24px"
+	     android:text="'up' key to create Tiles; 'down' to stop"/>
+
+	
+	   <ImageView
+	     android:id="@+id/created_bitmap"
+	     android:layout_width="fill_parent"
+	     android:layout_height="fill_parent"
+	     android:background="@drawable/led_blue"
+	     android:contentDescription="created_bitmap"
+	     android:visibility="gone" />
+     
+</RelativeLayout>

@@ -1,0 +1,2 @@
+This is the RXN app that lives and injects seed files. It relies on
+rxn_services_lib. Read the README on rxn_services_lib for more information.

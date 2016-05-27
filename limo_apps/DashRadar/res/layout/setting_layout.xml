@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/circular_gradient"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/setting_title"
+        style="@style/white_text_shadow"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/circular_gradient"
+        android:focusable="false"
+        android:gravity="center"
+        android:paddingBottom="1dip"
+        android:paddingTop="1dip"
+        android:textSize="24px"
+        android:textStyle="bold" />
+
+    <View
+        android:id="@+id/setting_desc_title"
+        android:layout_width="fill_parent"
+        android:layout_height="2dip"
+        android:background="@drawable/tab_bar_gradient" />
+
+    <LinearLayout
+        android:id="@+id/setting_desc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusable="false"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingBottom="5px"
+        android:paddingTop="15px" 
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/setting_desc_text"
+            style="@style/white_text_shadow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:focusable="false"
+            android:gravity="center_horizontal"
+            android:textSize="24px" />
+    
+    </LinearLayout>
+    
+    <ListView
+            android:id="@android:id/list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:listSelector="@drawable/key_selector"
+            android:padding="0dp"
+            android:scrollbars="vertical"
+        	android:scrollbarSize="18px"
+        	android:scrollbarStyle="outsideOverlay"
+        	android:paddingRight="18px"
+        	android:scrollbarThumbVertical="@drawable/horizontal_gradient"
+        	android:scrollbarTrackVertical="@drawable/circular_gradient"
+        	android:scrollbarThumbHorizontal="@drawable/horizontal_gradient"
+        	android:scrollbarTrackHorizontal="@drawable/circular_gradient"
+        	android:fadeScrollbars="false" />
+
+</LinearLayout>

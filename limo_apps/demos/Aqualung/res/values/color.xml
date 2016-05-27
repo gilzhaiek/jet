@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="alt_color">#f58020</color>
+    <color name="speed_color">#6abd45</color>
+    <color name="air_color">#FF00FF</color>
+    <color name="vertical_color">#00edff</color>
+    <color name="selected_text_color">#ff000000</color>
+    <color name="unselected_text_color">#dddddd</color>
+    
+</resources>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/circular_gradient" >
+    
+	<ImageView 
+	    android:id="@+id/polar_homemenu_logo"
+		android:src="@drawable/polar_logo" 
+		android:layout_centerHorizontal="TRUE"
+		android:layout_marginTop="35dp"
+		android:layout_width="wrap_content" 
+		android:layout_height="wrap_content" />
+
+
+	<TableLayout 
+	    android:layout_below="@+id/polar_homemenu_logo"
+	    android:stretchColumns="0,1"
+		android:layout_marginTop="30px"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content">
+		
+		<TableRow 
+		    android:id="@+id/table_row_live_tracking" 
+			android:layout_width="wrap_content"
+			android:padding="5dp">
+			
+			<TextView android:id="@+id/text_live_tracking" 
+				android:text="Live Tracking"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"	
+				android:layout_gravity="center"/>
+		</TableRow>
+		
+		
+		<TableRow 
+		    android:id="@+id/table_row_select_device"
+		    android:padding="5dp">
+	
+			<TextView 
+			    android:id="@+id/text_select_device" 
+				android:text="Setup"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"	
+				android:layout_gravity="center"/>
+		</TableRow>
+		
+	</TableLayout>
+
+</RelativeLayout>

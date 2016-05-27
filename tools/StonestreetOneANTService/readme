@@ -1,0 +1,4 @@
+#instruction:
+1. Update master branch from https://lichenrecon@bitbucket.org/stonestreetoneant/stonestreetoneantservice.git
+2. Get new changes from master to reocn_test branch to test, reocn_test branch is to build stonestreetoneantservice test apk located at tools/StonestreetOneANTService
+3. Get new changes from reocn_test to recon_framework branch, recon_framework branch is the built-in service for jet located at mydroid/device/ti/jet/framework/JET_ANT/StonestreetOneANTService

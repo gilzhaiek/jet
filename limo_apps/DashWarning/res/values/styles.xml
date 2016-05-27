@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+	<!-- Widget placeholder styles -->
+	<style name="white_text_shadow">
+		<item name="android:textColor">#FFFFFFFF</item>
+		<item name="android:shadowColor">#FF000000</item>
+		<item name="android:shadowDx">0</item>
+		<item name="android:shadowDy">1</item>
+		<item name="android:shadowRadius">1</item>
+	</style>
+	<style name="white_text_bold_shadow">
+		<item name="android:textColor">#FFFFFFFF</item>
+		<item name="android:shadowColor">#FF000000</item>
+		<item name="android:shadowDx">0</item>
+		<item name="android:shadowDy">1</item>
+		<item name="android:shadowRadius">1</item>
+		<item name="android:textStyle">bold</item>
+	</style>
+	<style name="gray_text_shadow">
+		<item name="android:textColor">#FFE5E5E5</item>
+		<item name="android:shadowColor">#FF000000</item>
+		<item name="android:shadowDx">0</item>
+		<item name="android:shadowDy">1</item>
+		<item name="android:shadowRadius">1</item>
+	</style>
+	<style name="black_text_shadow">
+		<item name="android:textColor">#FF000000</item>
+		<item name="android:shadowColor">#FFFFFFFF</item>
+		<item name="android:shadowDx">0</item>
+		<item name="android:shadowDy">1</item>
+		<item name="android:shadowRadius">1</item>
+	</style>
+	<style name="selectable_text_shadow">
+		<item name="android:textColor">@drawable/selectable_text_color</item>
+		<item name="android:shadowDx">0</item>
+		<item name="android:shadowDy">1</item>
+		<item name="android:shadowRadius">1</item>
+	</style>
+	<style name="focusable_text_shadow">
+		<item name="android:textColor">@drawable/focusable_text_color</item>
+		<item name="android:shadowDx">0</item>
+		<item name="android:shadowDy">1</item>
+		<item name="android:shadowRadius">1</item>
+	</style>
+	<!-- Widget placeholder styles -->
+	<style name="placeholder">
+		<item name="android:gravity">center</item>
+		<item name="android:layout_marginBottom">5px</item>
+	</style>
+	<style name="placeholder2x2" parent="placeholder">
+		<item name="android:layout_width">125px</item>
+		<item name="android:layout_height">91px</item>
+	</style>
+	<style name="placeholder4x1" parent="placeholder">
+		<item name="android:layout_width">255px</item>
+		<item name="android:layout_height">43px</item>
+	</style>
+	<style name="placeholder4x2_no_bg" parent="placeholder">
+		<item name="android:layout_width">256px</item>
+		<item name="android:layout_height">91px</item>
+		<item name="android:padding">5px</item>
+	</style>
+	<style name="placeholder4x2" parent="placeholder4x2_no_bg"></style>
+	<style name="placeholder4x3" parent="placeholder">
+		<item name="android:layout_width">255px</item>
+		<item name="android:layout_height">139px</item>
+	</style>
+	<style name="placeholder4x4" parent="placeholder">
+		<item name="android:layout_width">255px</item>
+		<item name="android:layout_height">185px</item>
+	</style>
+	<style name="placeholder6x4" parent="placeholder">
+		<item name="android:layout_width">384px</item>
+		<item name="android:layout_height">185px</item>
+	</style>
+	<!-- Widget Styles -->
+	<style name="widget2x2">
+		<item name="android:orientation">vertical</item>
+		<item name="android:gravity">center_horizontal</item>
+		<item name="android:layout_width">fill_parent</item>
+		<item name="android:layout_height">fill_parent</item>
+	</style>
+	<style name="widget4x1">
+		<item name="android:orientation">horizontal</item>
+	</style>
+	<style name="widget_field">
+		<item name="android:text">--</item>
+		<item name="android:textColor">#FFFFFF</item>
+		<item name="android:textSize">29px</item>
+		<item name="android:layout_width">wrap_content</item>
+		<item name="android:layout_height">wrap_content</item>
+		<item name="android:layout_marginBottom">8px</item>
+		<item name="android:shadowColor">#FF000000</item>
+		<item name="android:shadowDx">0</item>
+		<item name="android:shadowDy">1</item>
+		<item name="android:shadowRadius">1</item>
+		<item name="android:textStyle">bold</item>
+	</style>
+	<style name="widget_field4x1">
+		<item name="android:text">--</item>
+		<item name="android:textColor">#FFFFFF</item>
+		<item name="android:textSize">29px</item>
+		<item name="android:layout_gravity">center</item>
+		<item name="android:includeFontPadding">False</item>
+		<item name="android:lineSpacingMultiplier">.85</item>
+		<item name="android:shadowColor">#FF000000</item>
+		<item name="android:shadowDx">0</item>
+		<item name="android:shadowDy">1</item>
+		<item name="android:shadowRadius">1</item>
+		<item name="android:textStyle">bold</item>
+		<item name="android:paddingBottom">5dip</item>
+	</style>
+	<style name="speed" parent="widget_field">
+		<item name="android:layout_alignParentBottom">True</item>
+		<item name="android:layout_alignParentRight">True</item>
+		<item name="android:layout_marginRight">20px</item>
+		<item name="android:includeFontPadding">False</item>
+		<item name="android:lineSpacingMultiplier">.85</item>
+	</style>
+	<style name="speed6x4" parent="speed">
+		<item name="android:textSize">150px</item>
+	</style>
+	<style name="speed4x4" parent="speed">
+		<item name="android:textSize">130px</item>
+	</style>
+	<style name="speed4x3" parent="speed">
+		<item name="android:textSize">110px</item>
+	</style>
+	<style name="speed4x2">
+		<item name="android:textSize">85px</item>
+		<item name="android:includeFontPadding">False</item>
+		<item name="android:shadowColor">#FF000000</item>
+		<item name="android:shadowDx">0</item>
+		<item name="android:shadowDy">1</item>
+		<item name="android:shadowRadius">1</item>
+		<item name="android:textStyle">bold</item>
+	</style>
+	<!-- Detail Views -->
+	<style name="detailText">
+		<item name="android:layout_width">wrap_content</item>
+		<item name="android:layout_height">wrap_content</item>
+		<item name="android:textSize">26px</item>
+		<item name="android:textColor">#FFFFFF</item>
+		<item name="android:shadowColor">#FF000000</item>
+		<item name="android:shadowDx">0</item>
+		<item name="android:shadowDy">1</item>
+		<item name="android:shadowRadius">1</item>
+		<item name="android:textStyle">bold</item>
+	</style>
+	<style name="PopupBox">
+		<item name="android:layout_width">fill_parent</item>
+		<item name="android:layout_height">wrap_content</item>
+		<item name="android:background">@drawable/dialog_background</item>
+		<item name="android:layout_marginLeft">50dip</item>
+		<item name="android:layout_marginRight">50dip</item>
+		<item name="android:layout_marginTop">25dip</item>
+		<item name="android:layout_marginBottom">37dip</item>
+		<item name="android:layout_gravity">center_horizontal</item>
+		<item name="android:padding">2dip</item>
+		<item name="android:orientation">vertical</item>
+	</style>
+	<style name="SetTimePopupBox">
+		<item name="android:layout_width">fill_parent</item>
+		<item name="android:layout_height">wrap_content</item>
+		<item name="android:background">@drawable/dialog_background</item>
+		<item name="android:layout_marginLeft">50dip</item>
+		<item name="android:layout_marginRight">50dip</item>
+		<item name="android:layout_marginTop">25dip</item>
+		<item name="android:layout_marginBottom">15dip</item>
+		<item name="android:layout_gravity">center_horizontal</item>
+		<item name="android:padding">2dip</item>
+		<item name="android:orientation">vertical</item>
+	</style>
+	
+	<style name="WarningText">
+		<item name="android:fontFamily">@raw/opensans_semibold</item>
+		<item name="android:gravity">center_horizontal</item>
+	    <item name="android:layout_width">wrap_content</item>
+		<item name="android:layout_height">wrap_content</item>
+		<item name="android:paddingBottom">8dp</item>
+		<item name="android:textColor">@android:color/white</item>
+		<item name="android:lineSpacingMultiplier">0.90</item>
+		<!-- <item name="android:textStyle">bold</item> -->
+	    <item name="android:textSize">21dp</item>
+	</style>
+</resources>

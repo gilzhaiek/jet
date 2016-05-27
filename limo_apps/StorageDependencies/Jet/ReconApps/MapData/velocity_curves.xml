@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<reticle_configuration>
+    
+<file_id id="jet June 3 2014 A"/>
+<pitch>
+<node velocity="0.0" pitch="0.0" />
+<node velocity="4.0" pitch="0.0" />
+<node velocity="10.0" pitch="15.0" />
+<node velocity="20.0" pitch="60.0" />
+<node velocity="500.0" pitch="60.0" />
+
+<!-- the following 5 velocity/pitch pairs 
+	 below are actually scale/pitch pairs.
+	 Ignore these if scale_pitch_curves.xml
+	 is present-->
+<!--<node velocity="0.0" pitch="60.0" />
+<node velocity="0.15" pitch="55.0" />
+<node velocity="0.45" pitch="45.0" />
+<node velocity="1.0" pitch="30.0" />
+<node velocity="1.55" pitch="15.0" />
+<node velocity="1.85" pitch="5.0" />
+<node velocity="2.0" pitch="0.0" />-->
+
+
+<!--<node velocity="0.0" pitch="30.0" />
+<node velocity="4.0" pitch="30.0" />
+<node velocity="10.0" pitch="45.0" />
+<node velocity="20.0" pitch="75.0" />
+<node velocity="500.0" pitch="75.0" />-->
+
+</pitch>
+<altitude>
+<node velocity="0.0" altitudescale="2.0" />
+<node velocity="4.0" altitudescale="2.0" />
+<node velocity="10.0" altitudescale="0.5" />
+<node velocity="20.0" altitudescale="0.05" />
+<node velocity="500.0" altitudescale="0.05" />
+</altitude>
+</reticle_configuration>

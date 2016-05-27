@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    >
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    >
+<TextView  
+    android:layout_width="fill_parent" 
+    android:layout_height="wrap_content" 
+    android:text="Hello World, BTWizardAPITestActivity"
+    />
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    >
+<Button
+   android:id="@+id/ble_device_name"
+   android:layout_width="wrap_content"
+   android:layout_height="wrap_content"
+   android:text="BLEDevName"/>
+<Button
+   android:id="@+id/bt_device_name"
+   android:layout_width="wrap_content"
+   android:layout_height="wrap_content"
+   android:text="BTDevName"/>
+<Button
+   android:id="@+id/map_status"
+   android:layout_width="wrap_content"
+   android:layout_height="wrap_content"
+   android:text="MapStat"/>
+<Button
+   android:id="@+id/hfp_status"
+   android:layout_width="wrap_content"
+   android:layout_height="wrap_content"
+   android:text="HfpStat"/>
+</LinearLayout>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    >
+<Button
+   android:id="@+id/send_bt_stat"
+   android:layout_width="wrap_content"
+   android:layout_height="wrap_content"
+   android:text="SendBTStat"/>
+
+<Button
+   android:id="@+id/is_master_before"
+   android:layout_width="wrap_content"
+   android:layout_height="wrap_content"
+   android:text="isMasterBeforeonCreate"/>
+
+<Button
+   android:id="@+id/disconnect_bt"
+   android:layout_width="wrap_content"
+   android:layout_height="wrap_content"
+   android:text="BT discX"/>
+
+</LinearLayout>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    >
+<Button
+   android:id="@+id/connect_with_bt"
+   android:layout_width="wrap_content"
+   android:layout_height="wrap_content"
+   android:text="Connect with ->"/>
+<Spinner
+    android:id="@+id/devices_spinner"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" />
+
+</LinearLayout>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    >
+<Button
+   android:id="@+id/request_ios_rc_status"
+   android:layout_width="wrap_content"
+   android:layout_height="wrap_content"
+   android:text="requestRCStatus"/>
+<Button
+   android:id="@+id/read_ios_rc_status"
+   android:layout_width="wrap_content"
+   android:layout_height="wrap_content"
+   android:text="readRCStatus"/>
+</LinearLayout>
+</LinearLayout>
+</ScrollView>

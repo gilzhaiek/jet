@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+	package="com.reconinstruments.ble_ss1"
+	android:sharedUserId="android.uid.system"
+	android:versionCode="6900"
+	android:versionName="3.1_aug22" >
+	<!--  -->
+	<uses-permission android:name="android.permission.BLUETOOTH" />
+	<uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+	<uses-permission android:name="android.permission.INJECT_EVENTS" />
+	<uses-sdk android:minSdkVersion="16" />
+	<uses-feature android:name="android.hardware.bluetooth" />
+	<application
+		android:icon="@drawable/ic_launcher"
+		android:label="BLE Utility"
+		android:persistent="true"
+		android:theme="@style/ReconTheme.NoTitleBar" >
+		<activity
+			android:name=".device.UtilActivity"
+			android:label="BLE Utility"
+			android:windowSoftInputMode="adjustPan" >
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+			</intent-filter>
+		</activity>
+		<activity
+			android:name=".remote.RemotePairActivity"
+			android:launchMode="singleInstance"
+			android:screenOrientation="landscape"
+			android:theme="@style/ReconTheme.NoTitleBar.Fullscreen" >
+			<intent-filter>
+				<action android:name="RECON_BLE_PAIRING_ACTIVITY_SS1" />
+				<category android:name="android.intent.category.DEFAULT" />
+			</intent-filter>
+		</activity>
+		<service
+			android:name=".TheBLEService"
+			android:enabled="true"
+			android:exported="true" >
+			<intent-filter>
+				<action android:name="RECON_THE_BLE_SERVICE" />
+			</intent-filter>
+		</service>
+		<uses-library android:name="com.stonestreetone.bluetopiapm" />
+	</application>
+</manifest>

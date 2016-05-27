@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical" android:layout_width="fill_parent"
+	android:layout_height="fill_parent">
+	
+ <LinearLayout 
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+    
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="register_group"
+        android:text="@string/button_register_group" />
+    
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="register_category"
+        android:text="@string/button_register_category" />
+    
+ </LinearLayout>
+    
+ <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+    
+    <EditText android:id="@+id/edit_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="@string/test_notification" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="notify"
+        android:text="@string/button_notify" />
+    
+</LinearLayout>
+
+ 
+
+
+<View
+android:layout_width="fill_parent"
+android:layout_height="4dip"
+android:background="#FF00FF00" />
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+ 
+     <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="getallgroups"
+        android:text="@string/button_getallgroups" />
+     
+ 
+     <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="getallcategories"
+        android:text="@string/button_getallcategories" />
+    
+</LinearLayout>
+
+<View
+android:layout_width="fill_parent"
+android:layout_height="4dip"
+android:background="#FF00FF00" />
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+   
+      <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="deleteallgroups"
+        android:text="@string/button_admin_deleteallgroups" />
+      
+      <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="deleteallcategories"
+        android:text="@string/button_admin_deleteallcategories" />
+      
+</LinearLayout>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+   
+      <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="deleteallnotifications"
+        android:text="@string/button_admin_deleteallnotifications" />
+      
+    
+      
+</LinearLayout>
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+ 
+    <TextView android:id="@+id/lblServerResponse"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textIsSelectable="false"
+        android:layout_alignParentBottom="true"
+     />
+
+    
+</RelativeLayout>
+
+
+</LinearLayout>

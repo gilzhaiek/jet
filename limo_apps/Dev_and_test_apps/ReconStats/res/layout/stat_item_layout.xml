@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+ 
+ <!-- Most of the attributes are copied from simple_list_item_1.xml  which is defined as the default textview for ListView-->
+ <TextView xmlns:android="http://schemas.android.com/apk/res/android"
+     android:id="@+id/stat_item_text"
+     android:layout_width="fill_parent"
+     android:layout_height="wrap_content"                
+     android:gravity="center_vertical"         
+     android:typeface="sans"
+     android:textSize="24sp"
+     android:textStyle="bold"
+     android:textColor="#ffffffff"
+     android:layout_marginTop="0dip"
+     android:layout_marginBottom="0dip"
+ />    
+

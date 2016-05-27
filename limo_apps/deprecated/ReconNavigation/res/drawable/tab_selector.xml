@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+<!-- 
+  <item android:state_selected="false" android:state_focused="true" android:drawable="@drawable/black_white_gradient"  />  
+  <item android:state_selected="true" android:state_focused="true"  android:drawable="@@color/opaque_red" />
+  <item android:state_pressed="true" android:state_focused="true"  android:drawable="@color/opaque_red" />
+
+	<item android:state_selected="false" android:state_pressed="true" android:drawable="@color/opaque_green" />
+	<item android:state_selected="true" android:state_pressed="true" android:drawable="@color/opaque_green" />
+	
+-->
+
+  <item android:state_focused="true" android:state_pressed="false" >
+      <shape>
+        <solid android:color="@color/tab_selector" />
+        <stroke android:width="3dp" android:color="@color/tab_selector" />
+		<corners android:radius="1dp"
+		  android:bottomRightRadius="2dp" android:bottomLeftRadius="2dp" 
+		  android:topLeftRadius="2dp" android:topRightRadius="2dp"/> 
+    </shape>
+  </item>  
+  
+  <item android:state_pressed="true" >
+        <shape>
+        <solid android:color="@color/tab_selector" />
+    </shape>
+  </item>  
+  	
+  
+  <!--  this really makes no effect at all -->
+  <item android:state_selected="true" android:state_focused="false">
+      <shape>
+        <solid android:color="#ff00ff00" />
+    </shape>
+  </item>  
+  
+  <!--  this really makes no effect at all -->
+   <item android:state_selected="false" android:state_focused="false" android:state_pressed="false" >
+      <shape>
+        <solid android:color="#aa0000ff" />
+    </shape>
+  </item>  
+  
+
+    <!-- Even though these two point to the same resource, have two states so the drawable will invalidate itself when coming out of pressed state. -->
+<!-- 
+    <item android:state_focused="true" android:state_enabled="false"
+        android:state_pressed="true"
+        android:drawable="@drawable/arrow_down_float" />
+    <item android:state_focused="true" android:state_enabled="false"
+        android:drawable="@drawable/arrow_down_float" />
+
+    <item android:state_focused="true" android:state_pressed="true"
+        android:drawable="@drawable/arrow_up_float" />
+    <item android:state_focused="false" android:state_pressed="true"
+        android:drawable="@drawable/arrow_up_float" />
+
+    <item android:state_focused="true"
+        android:drawable="@drawable/arrow_up_float" />
+-->
+    
+
+</selector>

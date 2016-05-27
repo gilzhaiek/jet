@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string-array name="default_social_reply_message">
+		<item>Yes</item>
+		<item>No</item>
+		<item>Talk to you later</item>
+		<item>Thanks</item>
+		<item>I\'m on the mtn today, ttyl</item>
+		<item>Top of Lift</item>
+		<item>Bottom of Lift</item>
+		<item>On the Lift</item>
+		<item>Lunch</item>
+		<item>Meet at the Spot</item>
+		<item>Call me</item>
+	</string-array>
+</resources>

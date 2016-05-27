@@ -1,0 +1,115 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+     <TextView
+        android:id="@+id/textview"
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+    	android:textColor="#f5f5f5"
+    	android:textSize="30sp"
+    	android:gravity="center"
+    	android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="textview" />
+	
+    <ProgressBar
+        android:id="@+id/loadmap_progressbar"
+        android:layout_width="fill_parent"
+        android:layout_height="8dp"
+        android:background="#6c6c6c"
+        style="@android:style/Widget.ProgressBar.Horizontal"
+        android:layout_below="@id/textview" />
+
+    <ProgressBar
+        android:id="@+id/loadmap_timeoutbar"
+        android:layout_width="fill_parent"
+        android:layout_height="2dp"
+        android:background="#6c6c6c"
+        style="@android:style/Widget.ProgressBar.Horizontal"
+        android:layout_below="@id/loadmap_progressbar" />
+    	
+    <ProgressBar
+        android:id="@+id/activemap_progressbar"
+        style="@android:style/Widget.ProgressBar.Horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="5dp"
+        android:layout_alignParentBottom="true" />
+
+    <LinearLayout
+        android:id="@+id/rollover_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:gravity="center_horizontal"
+        android:background="@drawable/fadebackground_top_bottom"
+        android:orientation="horizontal"
+        android:paddingTop="16dp"
+        android:visibility="visible" >
+
+        <com.reconinstruments.mapsdk.mapview.SansSemiBoldTextView
+            android:id="@+id/rollover_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="14dp"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:singleLine="true"
+            android:textColor="@android:color/white"
+            android:textSize="28sp" />
+
+        <TextView
+            android:id="@+id/rollover_distance_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="18dp"
+            android:gravity="center_horizontal"
+            android:paddingLeft="10dp"
+            android:textColor="@android:color/white"
+            android:textSize="22sp" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/zoom_pan_icons"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/zoom_pan"
+        android:contentDescription="@string/zoom_contentDescription"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/find_explore_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:background="@drawable/find_button_gradient"
+        android:contentDescription="@string/explore_contentDescription"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/debug_service_connected"
+        android:layout_width="43dp"
+        android:layout_height="43dp"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:background="@drawable/led_green"
+        android:contentDescription="@string/connection_btn_contentDescription"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/debug_gps_blinker"
+        android:layout_width="43dp"
+        android:layout_height="43dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/led_blue"
+        android:contentDescription="@string/gps_blink_contentDescription"
+        android:visibility="gone" />
+
+</RelativeLayout>

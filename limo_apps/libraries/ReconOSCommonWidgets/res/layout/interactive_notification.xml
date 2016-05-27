@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent" >
+	<RelativeLayout
+		android:id="@+id/body_view"
+		android:layout_width="match_parent"
+		android:layout_height="96dp"
+		android:layout_alignParentBottom="true"
+		android:layout_alignParentLeft="true"
+		android:background="@drawable/interactive_notif_container" >
+		<RelativeLayout
+			android:id="@+id/icon_view"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_alignParentBottom="true"
+			android:layout_alignParentLeft="true"
+			android:background="@drawable/text_icon_container" >
+			<ImageView
+				android:id="@+id/alertIcon"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_centerInParent="true"
+				android:src="@drawable/text_icon_notif" />
+		</RelativeLayout>
+		<TextView
+			android:id="@+id/alertCategory"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginLeft="80dp"
+			android:layout_marginTop="14dp"
+			android:ellipsize="marquee"
+			android:maxLines="1"
+			android:singleLine="true"
+			android:text="Alex McRoberts"
+			android:textSize="30dp" />
+		<TextView
+			android:id="@+id/alertMessage"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_alignBottom="@+id/icon_view"
+			android:layout_marginBottom="14dp"
+			android:layout_marginLeft="80dp"
+			android:ellipsize="end"
+			android:maxLines="1"
+			android:singleLine="true"
+			android:text=""
+			android:textSize="24dp" />
+	</RelativeLayout>
+	<RelativeLayout
+		android:id="@+id/action_view"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_above="@id/body_view"
+		android:gravity="right" >
+		<TextView
+			android:id="@+id/textView1"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_alignParentLeft="true"
+			android:layout_centerVertical="true"
+			android:text="OPEN"
+			android:textSize="30dp" />
+		<ImageView
+			android:id="@+id/imageView1"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_centerVertical="true"
+			android:layout_marginLeft="6dp"
+			android:layout_marginRight="20dp"
+			android:layout_toRightOf="@+id/textView1"
+			android:src="@drawable/select" />
+	</RelativeLayout>
+</RelativeLayout>

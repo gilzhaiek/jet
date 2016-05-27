@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.reconinstruments.offsetkeyboard.KeyView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/key_view"
+    android:layout_width="30dip"
+    android:layout_height="30dip" >
+
+    <TextView
+        android:id="@+id/key_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" />
+
+    <ImageView
+        android:id="@+id/key_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:contentDescription="key image" />
+
+</com.reconinstruments.offsetkeyboard.KeyView>

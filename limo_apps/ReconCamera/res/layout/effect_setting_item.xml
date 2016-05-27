@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/EffectSettingItem"
+    tools:ignore="UseCompoundDrawables" >
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="@dimen/effect_setting_item_icon_width"
+        android:layout_height="@dimen/effect_setting_item_icon_width"
+        android:layout_gravity="center_horizontal"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter" />
+
+    <TextView
+        android:id="@+id/text"
+        style="@style/EffectSettingItemTitle" />
+
+</LinearLayout>

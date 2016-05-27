@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="GazeDetText" type="id"/>
+    <item name="CalText" type="id"/>
+    <item name="CheckBox" type="id"/>
+    <item name="CalAheadImg" type="id"/>
+    <item name="CalDisplayImg" type="id"/>
+</resources>

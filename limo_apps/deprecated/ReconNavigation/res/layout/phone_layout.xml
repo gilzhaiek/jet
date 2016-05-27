@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res/com.reconinstruments.navigation"
+	android:id="@+id/root_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">  
+
+	<LinearLayout		
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent"
+	    android:orientation="vertical"
+	>
+	
+		<!-- the toolbar for  manipulate the mapView  -->
+		<LinearLayout
+			android:id="@+id/nav_bar"
+	    	android:layout_width="match_parent"
+	    	android:layout_height="wrap_content"
+	    	android:orientation="horizontal"
+	    	android:focusable="true"
+	    	android:visibility="gone"
+	    	android:padding="0dp">
+	 
+	    	<Button
+		        android:id="@+id/zoomOut_button"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_gravity="center_vertical"
+		        android:text="@string/zoom_out"
+		        android:width="35dip"
+		    />    	
+		    
+	    	<Button
+		        android:id="@+id/zoomIn_button"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_gravity="center_vertical"
+		        android:text="@string/zoom_in"
+		        android:width="35dip"
+		    />
+		    
+		    <Button
+		        android:id="@+id/rotateLeft_button"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_gravity="center_vertical"
+		        android:text="@string/rotate_left"
+		        android:width="35dip"
+		    />
+		    
+		    <Button
+		        android:id="@+id/rotateRight_button"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_gravity="center_vertical"
+		        android:text="@string/rotate_right"
+		        android:width="35dip"
+		    />
+		    	    
+		    <Button
+		        android:id="@+id/zoomRestore_button"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_gravity="center_vertical"
+		        android:text="@string/zoom_restore"
+		        android:width="35dip"
+		    />	    
+		    <Button
+		        android:id="@+id/zoomFit_button"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_gravity="center_vertical"
+		        android:text="@string/zoom_fit"	        
+		        android:width="35dip"
+		    />    
+		    <Button
+		        android:id="@+id/selectPoi_button"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_gravity="center_vertical"
+		        android:text="@string/select_poi"	        
+		        android:width="35dip"
+		    />
+		    <Button
+		        android:id="@+id/selectResort_button"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_gravity="center_vertical"
+		        android:text="@string/select_resort"	        
+		        android:width="35dip"
+		    />        
+		    <ToggleButton
+		        android:id="@+id/gps_button"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_gravity="center_vertical"
+		        android:text="@string/enable_gps"
+		        android:textOn="@string/enable_gps"
+		        android:textOff="@string/disable_gps"
+		        android:width="55dip"	      
+		        android:layout_weight="1"
+		    />    	    	        
+		</LinearLayout>
+	
+	 
+		<com.reconinstruments.navigation.navigation.MapView
+		  android:id="@+id/mapView"
+		  android:layout_width="match_parent"
+		  android:layout_height="match_parent"
+		 />
+	</LinearLayout>
+</FrameLayout>

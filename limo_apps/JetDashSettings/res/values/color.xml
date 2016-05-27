@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<color name="recon_progress_bg">#717171</color>
+	<color name="recon_progress">#ffffff</color>
+	<color name="recon_switcher_up">#9a9a9a</color>
+	<color name="recon_switcher_over">#ffffff</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="recon_grey">#808080</color>
+    <color name="recon_orange">#FFB300</color>
+    <color name="recon_dark_grey">#747474</color>
+</resources>

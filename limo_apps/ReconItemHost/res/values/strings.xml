@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="app_name">Item Host</string>
+	<string name="action_settings">Settings</string>
+	<string name="new_activity">New Activity</string>
+	<string name="my_apps">My Apps</string>
+	<string name="my_activities">My Records</string>
+	<string name="notifications">Notifications</string>
+	<string name="settings">Settings</string>
+	<string name="cycling">Cycling</string>
+	<string name="running">Running</string>
+	
+	<!-- Item host tutorial strings -->
+	<string name="snow_hold">Hold </string>
+	<string name="snow_to_open_quick_nav"> to open QUICK NAV.</string>
+	<string name="snow_connect_smartphone"> Connect your Smartphone, view Notifications and change Music.</string>
+	<string name="jet_connect_smartphone"> Connect your Smartphone, view Notifications and open Camera.</string>
+</resources>

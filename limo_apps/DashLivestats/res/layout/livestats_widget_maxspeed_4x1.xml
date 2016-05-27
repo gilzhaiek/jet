@@ -1,0 +1,8 @@
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:gravity="center" android:layout_width="fill_parent"
+	android:layout_height="fill_parent" android:background="@drawable/widget_maxspd_4x1">
+	<TableRow>
+		<TextView android:layout_width="125px" android:text=""></TextView>
+		<TextView android:id="@+id/maxspd_field" style="@style/recon_widget_field4x1" android:singleLine="True" />
+	</TableRow>
+</TableLayout>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+      package="com.reconinstruments.lispxml"
+	  android:sharedUserId="android.uid.system"
+      android:versionCode="1"
+      android:versionName="1.0">
+    <application android:label="@string/app_name" android:icon="@drawable/ic_launcher">
+        <activity android:name="LispXmlActivity"
+                  android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+		<action android:name="com.reconinstruments.lispxml.LispXmlActivity"/>
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+	<service
+            android:name="LispXmlService"
+            android:enabled="true">
+	  <intent-filter>
+            <action android:name="com.reconinstruments.lispxml.LispXmlService" />
+            <action android:name="com.reconinstruments.lispxml.LispXmlService.BT" />
+	  </intent-filter>
+        </service>
+    <receiver
+       android:name=".LispXmlReceiver"
+       android:enabled="true"
+       android:exported="true">
+      <intent-filter>
+	 <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED" />
+	 <action android:name="android.intent.action.ACTION_POWER_CONNECTED" />
+	 <action android:name="com.reconinstruments.lispxml.BluetoothReceiver" />
+      </intent-filter>
+    </receiver>
+
+
+    </application>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.WRITE_SECURE_SETTINGS" />
+    <uses-permission android:name="android.permission.REBOOT"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.SET_TIME" />
+    <uses-permission android:name="android.permission.SET_TIME_ZONE" />
+    <uses-permission android:name="android.permission.DELETE_PACKAGES"/>
+</manifest>

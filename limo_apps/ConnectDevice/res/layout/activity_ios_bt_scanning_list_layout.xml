@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical"
+	android:paddingLeft="0dp"
+	android:paddingRight="0dp" >
+	<RelativeLayout
+		android:id="@+id/header"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:background="@drawable/circular_gradient"
+		android:focusable="false" >
+		<TextView
+			android:id="@+id/header_text"
+			style="@style/recon_white_text_shadow"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_centerInParent="true"
+			android:focusable="false"
+			android:text=""
+			android:textSize="24dip"
+			android:textStyle="normal" />
+	</RelativeLayout>
+	<View
+		android:id="@+id/divider"
+		android:layout_width="fill_parent"
+		android:layout_height="2dip"
+		android:layout_below="@id/header"
+		android:background="@drawable/tab_bar_gradient"
+		android:focusable="false" />
+	<ListView
+		android:id="@android:id/list"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:drawSelectorOnTop="false"
+		android:fadeScrollbars="false"
+		android:focusable="true"
+		android:focusableInTouchMode="true"
+		android:listSelector="@drawable/key_selector"
+		android:paddingRight="5px"
+		android:scrollbarSize="5px"
+		android:scrollbarStyle="outsideOverlay"
+		android:scrollbarThumbHorizontal="@drawable/horizontal_gradient"
+		android:scrollbarThumbVertical="@drawable/horizontal_gradient"
+		android:scrollbarTrackHorizontal="@drawable/circular_gradient"
+		android:scrollbarTrackVertical="@drawable/circular_gradient"
+		android:scrollbars="vertical" />
+	<TextView
+		android:id="@android:id/empty"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="10dp"
+		android:gravity="center_horizontal|center_vertical"
+		android:text=""
+		android:textSize="20dip" />
+	<RelativeLayout
+		android:id="@+id/ok"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:layout_above="@id/cancel"
+		android:layout_marginTop="10dp"
+		android:background="@drawable/background_transition42"
+		android:focusable="true" >
+		<com.reconinstruments.commonwidgets.CustomTextView
+			style="@style/recon_focusable_text_shadow"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_centerInParent="true"
+			android:layout_gravity="center"
+			android:duplicateParentState="true"
+			android:gravity="center"
+			android:text="Try Again"
+			android:textSize="24dip"
+			android:textStyle="bold" />
+	</RelativeLayout>
+	<RelativeLayout
+		android:id="@+id/cancel"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:layout_alignParentBottom="true"
+		android:background="@drawable/background_transition42"
+		android:focusable="true" >
+		<com.reconinstruments.commonwidgets.CustomTextView
+			style="@style/recon_focusable_text_shadow"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_centerInParent="true"
+			android:layout_gravity="center"
+			android:duplicateParentState="true"
+			android:gravity="center"
+			android:text="Cancel"
+			android:textSize="24dip"
+			android:textStyle="bold" />
+	</RelativeLayout>
+</LinearLayout>

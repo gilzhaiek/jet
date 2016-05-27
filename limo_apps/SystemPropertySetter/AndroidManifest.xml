@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+	  package="com.reconinstruments.systempropertysetter"
+	  android:versionCode="1"
+	  android:versionName="1.0"
+	  android:sharedUserId="android.uid.system"
+>
+  <application android:label="@string/app_name" android:icon="@drawable/ic_launcher">
+    <activity android:name="TestActivity"
+              android:label="@string/app_name">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN" />
+      </intent-filter>
+    </activity>
+    <receiver
+	android:name=".SystemPropSetterReceiver"
+	android:enabled="true"
+	android:exported="true">
+      <intent-filter>
+	<action android:name="com.reconinstruments.systempropertysetter.SET_PROP"/>
+	<action android:name="com.reconinstruments.systempropertysetter.GET_PROP"/>
+      </intent-filter>
+    </receiver>
+  </application>
+</manifest>

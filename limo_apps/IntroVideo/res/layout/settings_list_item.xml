@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:client="http://schemas.android.com/apk/res/com.reconinstruments.dashlauncher"
+    
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="left|center_vertical"
+    android:paddingLeft="80dp"
+    android:paddingTop="5dp"
+    android:paddingBottom="5dp"
+    android:orientation="horizontal" >
+
+    <ImageView
+        android:id="@+id/setting_icon"
+        android:layout_width="21dp"
+        android:layout_height="21dp"
+        android:layout_marginRight="10dp"
+        android:duplicateParentState="true" />
+
+    <!--TextView
+        android:id="@+id/setting_text"
+        style="@style/white_text_shadow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="24px" /-->
+    
+    <com.reconinstruments.widgets.CustomTextView
+        android:id="@+id/setting_text"
+        style="@style/selectable_text_shadow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="24px"/>
+
+</LinearLayout>

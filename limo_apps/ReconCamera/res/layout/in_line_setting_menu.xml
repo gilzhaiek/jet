@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.reconinstruments.camera.ui.InLineSettingMenu xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/SettingRow"
+    android:background="@drawable/bg_pressed_exit_fading" >
+
+    <TextView
+        android:id="@+id/title"
+        style="@style/SettingItemTitle" />
+
+    <TextView
+        android:id="@+id/current_setting"
+        style="@style/SettingItemText" />
+
+</com.reconinstruments.camera.ui.InLineSettingMenu>

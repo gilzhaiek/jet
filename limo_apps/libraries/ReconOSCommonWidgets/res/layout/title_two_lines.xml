@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:background="@color/recon_jet_background" >
+	<TextView
+		android:id="@+id/title"
+		style="@style/recon_jet_text_regular"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_alignParentTop="true"
+		android:layout_marginLeft="30dp"
+		android:layout_marginRight="30dp"
+		android:layout_marginTop="20dp"
+		android:ellipsize="end"
+		android:gravity="center"
+		android:lines="1"
+		android:maxLines="1"
+		android:text=""
+		android:textSize="30sp" />
+	<TextView
+		android:id="@+id/body1"
+		style="@style/recon_jet_text_regular"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_alignLeft="@+id/title"
+		android:layout_below="@+id/title"
+		android:layout_marginRight="30dp"
+		android:layout_marginTop="10dp"
+		android:gravity="center"
+		android:lineSpacingExtra="-4dp"
+		android:text="sdfsafsa"
+		android:textSize="24sp" />
+	<TextView
+		android:id="@+id/body2"
+		style="@style/recon_jet_text_regular"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_below="@+id/body1"
+		android:layout_marginLeft="20dp"
+		android:layout_marginRight="20dp"
+		android:layout_marginTop="14dp"
+		android:gravity="center"
+		android:lineSpacingExtra="-2dp"
+		android:text="TextView"
+		android:textSize="24sp" />
+</RelativeLayout>

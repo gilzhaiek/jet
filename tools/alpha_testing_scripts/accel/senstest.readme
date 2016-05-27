@@ -1,0 +1,11 @@
+#### sentest.c readme ###
+
+The senstest.c included with the accelerometer calibration tools here will not build from this directory as it needs to be built from within the jet source tree. This is a modified version of senstest which outputs raw values from the sensors as integers instead of transforming the result by various physical constants (gravity etc). The acceleration calibration tools will not work with the stock version of senstest. A binary of senstest built from this source is included so you don't need to build it yourself, but in case you need to change it or rebuilt it for some reason, instructions are included below, from root directory of jet repo.
+
+$ cd mydroid/
+$ source build/envsetup.sh 
+$ lunch 16
+$ cp ../tools/alpha_testing_scripts/accel/senstest.c device/ti/jet/libsensors/
+$ ./build_module.sh senstest
+$ adb remount
+$ adb push {out/target/product/jet,}/system/bin/senstest

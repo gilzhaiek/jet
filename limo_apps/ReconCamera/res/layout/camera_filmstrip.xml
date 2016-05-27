@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/camera_layout_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <com.reconinstruments.camera.ui.FilmStripView
+        android:id="@+id/filmstrip_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <FrameLayout
+        android:id="@+id/cam_video_select_wrapper"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" 
+        android:layout_marginBottom="12dp">
+
+        <View
+            android:id="@+id/selected_outline"
+            android:layout_width="62dp"
+            android:layout_height="62dp"
+            android:layout_gravity="center"
+            android:background="@drawable/module_select_outline_draw" />
+
+        <com.reconinstruments.camera.ui.CameraSideMenu
+            android:id="@+id/filmstrip_sidemenu"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:orientation="horizontal" />
+
+    </FrameLayout>
+
+    <ImageView
+        android:id="@+id/corner_gradient"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:src="@drawable/corner_gradient_fade"/>
+
+    <ImageView
+        android:id="@+id/go_to_gallery_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/gallery_mode" />
+
+</RelativeLayout>

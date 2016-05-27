@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#66000000">
+
+<LinearLayout style="@style/PopupBox">
+
+<!-- Title  -->
+	<TextView
+	android:id="@+id/pop_up_title"
+	android:layout_width="fill_parent"
+  	android:layout_height="wrap_content"
+	style="@style/white_text_shadow"
+	android:text="Brightness"
+	android:textSize="24dp"
+	android:textStyle="bold"
+	android:gravity="center"
+	android:background="@drawable/circular_gradient"
+    android:paddingBottom="1dip"
+    android:paddingTop="1dip" 	
+	 />
+
+		  
+	<RelativeLayout
+		android:layout_width="fill_parent"
+	  	android:layout_height="fill_parent"
+	  	android:background="@drawable/circular_gradient">
+	  	
+	  	<View
+	        android:id="@+id/Divider"
+	        android:layout_width="fill_parent"
+	        android:layout_height="10dip"
+	        android:background="@drawable/tab_bar_gradient"
+	        android:layout_alignParentTop="true" />
+	  	
+	    <LinearLayout
+	            android:layout_width="match_parent"
+	            android:layout_height="match_parent"
+	            android:layout_weight="1"
+	            android:gravity="center"
+	            android:orientation="horizontal"
+		  		android:layout_alignParentTop="true" >
+		  		
+	            
+		            <ImageView
+		                android:layout_width="wrap_content"
+		                android:layout_height="wrap_content"
+		                android:layout_marginRight="10dp"
+		                android:src="@drawable/setting_icons_dim"
+		                />
+		            <ImageView
+		                android:layout_width="wrap_content"
+		                android:layout_height="wrap_content"
+		                android:src="@drawable/setting_icons_left"
+		                />
+		            <RelativeLayout
+		                android:layout_width="146dip"
+		                android:layout_height="18dip"
+		                android:background="@drawable/setting_icons_inde"
+		                android:paddingTop="1dip"
+		                android:paddingBottom="2dip">
+
+			            <SeekBar    
+			                android:id="@+id/brightness_bar"
+			                android:layout_width="match_parent"
+	            			android:layout_height="match_parent"
+			                android:minHeight="15dip"    
+			                android:maxHeight="15dip"          
+			                android:focusable="true"  
+			                android:max="15"
+			                android:progressDrawable="@drawable/setting_seekbar"
+			                android:thumb="@android:color/transparent"
+			                android:layout_marginLeft="5dip"
+			                android:layout_marginRight="5dip" />
+			            </RelativeLayout>
+		            
+		            <ImageView
+		                android:layout_width="wrap_content"
+		                android:layout_height="wrap_content"
+		                android:src="@drawable/setting_icons_right"
+		                />
+		            <ImageView
+		                android:layout_width="wrap_content"
+		                android:layout_height="wrap_content"
+		                android:layout_marginLeft="10dp"
+		                android:src="@drawable/setting_icons_bright"
+		                />
+            
+        		</LinearLayout>
+        	</RelativeLayout>
+    </LinearLayout>
+
+</FrameLayout>

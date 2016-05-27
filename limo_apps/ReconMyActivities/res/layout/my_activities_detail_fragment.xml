@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content" >
+		<TextView
+			android:id="@+id/text_view"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_centerInParent="true"
+			android:layout_marginTop="0dp"
+			android:ellipsize="end"
+			android:includeFontPadding="false"
+			android:lines="1"
+			android:maxLines="1"
+			android:text="0"
+			android:textColor="@color/recon_white"
+			android:textSize="64sp" />
+		<TextView
+			android:id="@+id/unit_view"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_alignParentTop="true"
+			android:layout_marginTop="35dp"
+			android:layout_toRightOf="@+id/text_view"
+			android:includeFontPadding="false"
+			android:text=""
+			android:textColor="@color/recon_jet_non_highlight_text_button"
+			android:textSize="20sp" />
+	<TextView
+		android:id="@+id/type_view"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_below="@+id/text_view"
+		android:layout_centerHorizontal="true"
+		android:layout_marginTop="-16dp"
+		android:gravity="center"
+		android:includeFontPadding="false"
+		android:text=""
+		android:textColor="@color/recon_jet_non_highlight_text_button"
+		android:textSize="20sp" />
+</RelativeLayout>

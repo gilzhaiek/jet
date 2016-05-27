@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+    <Button
+        android:id="@+id/set_cycling"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="CYCLING"
+        android:onClick="setCycling" />
+
+    <Button
+        android:id="@+id/set_running"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_toRightOf="@id/set_cycling"
+        android:text="RUNNING"
+        android:onClick="setRunning" />
+
+    <TextView
+        android:id="@+id/activity_label"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_below="@id/set_running"
+        android:textSize="25sp"
+        android:text="Activity: " />
+
+    <TextView
+        android:id="@+id/activity"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_below="@id/set_running"
+        android:layout_toRightOf="@id/activity_label"
+        android:textSize="25sp"
+        android:text="---" />
+
+    <Button
+        android:id="@+id/start_test"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_below="@id/activity_label"
+        android:text="START"
+        android:onClick="startTest" />
+
+    <Button
+        android:id="@+id/stop_test"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_below="@id/activity_label"
+        android:layout_toRightOf="@id/start_test"
+        android:text="STOP"
+        android:onClick="stopTest" />
+
+    <Button
+        android:id="@+id/get_event"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_below="@id/activity_label"
+        android:layout_toRightOf="@id/stop_test"
+        android:text="GET"
+        android:onClick="getEvent" />
+
+    <TextView
+        android:id="@+id/motion"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_below="@id/start_test"
+        android:textSize="50sp"
+        android:text="---" />
+</RelativeLayout>
+

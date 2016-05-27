@@ -1,0 +1,28 @@
+
+To build and run this app:
+
+1) choose version of MapSDK rendering: Canvas or OpenGL (noting OpenGL is not fully functional yet)
+  - cd limo_apps/MapSDK
+  - bash switchRenderingMode.bash [opengl | canvas]
+  - ant clean
+  - bash make_app.bash (confirms no errors in MapSDK. Optional as it will be done during other builds)
+  
+2) load JET configuration data onto the HUD
+  - cd limo_apps/StorageDependencies
+  - bash installDependencies jet
+
+  - IF you don't have network connectivity, you will have to preinstall map tiles before running geodataservice
+
+  - rebuild/restart GeodataService service (to load JET data)
+    - cd limo_apps/GeodataService/GeodataService
+    - bash clean_build_install_and_run.bash
+
+3) build & install this app
+  - cd limo_apps/mapApp
+  - bash clean_build_install_and_run.bash
+  
+  
+  
+Notes:
+- step 1 is only required if the MapSDK code has changed or you have switched rendering modes
+- step 2 is required at least once to start up the GeodataService.  If only the app is changed, step 2 can be skipped after initial run

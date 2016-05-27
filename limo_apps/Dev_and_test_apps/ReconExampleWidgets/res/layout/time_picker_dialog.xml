@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center_horizontal">
+  	<com.reconinstruments.example.widgets.ReconPickerView
+  		android:id="@+id/hourPicker"
+  		android:layout_width="wrap_content"
+  		android:layout_height="wrap_content"
+  		android:layout_margin="2dip" />
+  	<com.reconinstruments.example.widgets.ReconPickerView 
+  		android:id="@+id/minutePicker"
+  		android:layout_width="wrap_content"
+  		android:layout_height="wrap_content" 
+  		android:layout_margin="2dip"/>
+  	<ToggleButton
+  		android:id="@+id/amPmToggle"
+  		android:layout_width="wrap_content"
+  		android:layout_height="wrap_content"
+  		android:textOff="AM"
+  		android:textOn="PM"
+  		android:layout_gravity="center_vertical"	/>
+</LinearLayout>

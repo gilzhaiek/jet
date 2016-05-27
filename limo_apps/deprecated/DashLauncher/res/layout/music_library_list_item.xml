@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="40dp" xmlns:app="http://schemas.android.com/apk/res/com.reconinstruments.dashlauncher">
+
+         <com.reconinstruments.widgets.CustomTextView
+        android:id="@+id/maintext"
+       		style="@style/selectable_text_shadow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="5dp"
+        android:paddingBottom="5dp"
+        android:paddingTop="0dp"
+        android:paddingLeft="50dip"
+        android:singleLine="true"
+        android:text="DFDFSDFDSFDSF"
+        android:textSize="24dp"
+        android:duplicateParentState="true" />
+
+    <ImageView
+        android:id="@+id/mainimage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="2dp"
+        android:paddingRight="60dip"
+        android:layout_alignParentRight="true"
+        android:duplicateParentState="true"
+        android:focusable="true"
+        android:src="@drawable/music_shuffle_selectable" />
+        
+
+</RelativeLayout>

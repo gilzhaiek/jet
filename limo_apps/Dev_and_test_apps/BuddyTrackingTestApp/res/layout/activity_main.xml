@@ -1,0 +1,26 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000" >
+    
+     <TextView
+         android:id="@+id/buddy_service"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_margin="10dp"
+        android:padding="@dimen/padding_medium"
+        android:text="Buddies Simulation"
+        tools:context=".MainActivity" />
+     
+     <Button
+         android:id="@+id/buddy_service_btn"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_toRightOf="@id/buddy_service"
+         android:text="start"
+         android:padding="@dimen/padding_medium" />
+   
+</RelativeLayout>

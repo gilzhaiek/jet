@@ -1,0 +1,16 @@
+# Ignores for Eclipse
+/.settings/
+
+# Ignores for Android Projects
+/bin/
+/gen/
+/proguard/
+/publish/
+/local.properties
+/secure.properties
+
+# Ignores for Mac machines
+.DS_Store
+
+# Allow to debug with "Fake" classes
+Fake*.java

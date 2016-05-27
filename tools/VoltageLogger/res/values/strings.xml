@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">VoltageLogger</string>
+    <string name="action_settings">Settings</string>
+    <string name="LogButtonLabel">Log Setting</string>
+    <string name="ModeButtonLabel">Mode</string>
+    <string name="LogOn">On</string>
+    <string name="LogOff">Off</string>
+    <string name="normal">Normal</string>
+    <string name="polling">Polling</string>
+    <string name="interval">Default is 100 second</string>
+    <string name="send">Send</string>
+
+</resources>

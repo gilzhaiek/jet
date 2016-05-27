@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<stack>
+
+		<!-- Main Menu -->
+		<ReconCard id="1" img="@drawable/uvex_slide_1" down="2" up="5" />
+		<ReconCard id="2" img="@drawable/uvex_slide_2" down="3" up="1" />
+		<ReconCard id="3" img="@drawable/uvex_slide_3" down="4" up="2" />
+		<ReconCard id="4" img="@drawable/uvex_slide_4" down="5" up="3" />
+		<ReconCard id="5" img="@drawable/uvex_slide_5" down="1" up="4" />
+
+	</stack>
+</resources>

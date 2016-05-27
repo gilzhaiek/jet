@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+	package="com.reconinstruments.socialsharing"
+	android:versionCode="1"
+	android:versionName="1.0" >
+	<uses-sdk
+		android:minSdkVersion="10"
+		android:targetSdkVersion="10" />
+	<uses-permission android:name="android.permission.WRITE_SETTINGS" />
+	<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+	<application
+		android:allowBackup="true"
+		android:icon="@drawable/ic_launcher"
+		android:label="@string/app_name"
+		android:theme="@style/ReconTheme.NoTitleBar.Fullscreen" >
+		<activity
+			android:name="com.reconinstruments.socialsharing.StatActivity"
+			android:label="@string/app_name" >
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<action android:name="com.reconinstruments.socialsharing.StatActivity" />
+				<category android:name="android.intent.category.DEFAULT" />
+			</intent-filter>
+		</activity>
+		<activity
+			android:name="com.reconinstruments.socialsharing.SharingActivity"
+			android:label="@string/app_name" >
+		</activity>
+		<activity
+			android:name="com.reconinstruments.socialsharing.ShareDayActivity"
+			android:label="@string/app_name" >
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<action android:name="com.reconinstruments.social.facebook.ShareDayActivity" />
+				<category android:name="android.intent.category.DEFAULT" />
+			</intent-filter>
+		</activity>
+		<activity
+			android:name="com.reconinstruments.socialsharing.ConnectPhoneActivity"
+			android:label="@string/app_name" >
+		</activity>
+		<activity
+			android:name="com.reconinstruments.socialsharing.ConnectFacebookActivity"
+			android:label="@string/app_name" >
+		</activity>
+		<activity
+			android:name="com.reconinstruments.socialsharing.PostFailedActivity"
+			android:label="@string/app_name" >
+		</activity>
+		<activity
+			android:name="com.reconinstruments.socialsharing.ShowMessageActivity"
+			android:label="@string/app_name" >
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<action android:name="com.reconinstruments.social.facebook.fromhud" />
+				<category android:name="android.intent.category.DEFAULT" />
+			</intent-filter>
+		</activity>
+		<activity
+			android:name="com.reconinstruments.socialsharing.ShowFacebookCommentsActivity"
+			android:label="@string/app_name" >
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<action android:name="com.reconinstruments.social.facebook.comments.fromhud" />
+				<category android:name="android.intent.category.DEFAULT" />
+			</intent-filter>
+		</activity>
+		<activity
+			android:name="com.reconinstruments.socialsharing.ShowFacebookLikesActivity"
+			android:label="@string/app_name" >
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<action android:name="com.reconinstruments.social.facebook.likes.fromhud" />
+				<category android:name="android.intent.category.DEFAULT" />
+			</intent-filter>
+		</activity>
+		<activity
+			android:name="com.reconinstruments.socialsharing.ReplyMessageActivity"
+			android:label="@string/app_name" >
+		</activity>
+		<receiver android:name="com.reconinstruments.socialsharing.SocialMessageReceiver" >
+			<intent-filter>
+				<action android:name="com.reconinstruments.hud_phone_status_exchange.PHONE_STATUS_CHANGE" />
+				<action android:name="com.reconinstruments.social.tohud.share_status" />
+				<action android:name="com.reconinstruments.social.facebook.tohud.thread" />
+				<action android:name="com.reconinstruments.social.facebook.tohud.likes_and_comments" />
+				<action android:name="com.reconinstruments.applauncher.transcend.FIRST_RUN_OF_THE_DAY" />
+			</intent-filter>
+		</receiver>
+	</application>
+</manifest>

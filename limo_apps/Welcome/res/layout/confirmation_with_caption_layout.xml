@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    <LinearLayout
+	    android:orientation="horizontal"
+	    android:layout_width="wrap_content"
+	    android:layout_height="0dp"
+	    android:layout_gravity="center|bottom"
+	    android:layout_weight="1"
+	    >
+	    
+        <ImageView
+            android:layout_width="54dp"
+            android:layout_height="71dp"
+            android:layout_gravity="center|bottom"
+            android:paddingRight="10dp"
+            android:src="@drawable/checkmark" />
+		
+		<TextView
+		    android:id="@+id/confirmation_string"
+		    android:text="Nice!"
+	    	android:layout_width="wrap_content"
+	    	android:layout_height="wrap_content"
+	    	android:textSize="56dp"
+	    	android:layout_gravity="bottom"
+	    />
+	    
+    </LinearLayout>  
+    
+    <LinearLayout
+	    android:orientation="horizontal"
+	    android:layout_width="wrap_content"
+	    android:layout_height="0dp"
+	    android:layout_weight="1"
+	    android:layout_gravity="center|top"
+	    android:paddingTop="10dp"
+	    >
+	    
+        <TextView
+		    android:id="@+id/you_selected"
+		    android:text="You opened the "
+	    	android:layout_width="wrap_content"
+	    	android:layout_height="wrap_content"
+	    	android:textSize="22dp"
+	    	android:layout_gravity="center|top"
+	    />
+		
+		<TextView
+		    android:id="@+id/item_selected"
+		    android:text=""
+	    	android:layout_width="wrap_content"
+	    	android:layout_height="wrap_content"
+	    	android:textSize="22dp"
+	    	android:fontFamily="open_sans_semi_bold"
+	    	android:textColor="#ffaa00"
+	    	android:layout_gravity="center|top"
+	    />
+	    
+    </LinearLayout>  
+
+</LinearLayout>

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<!-- iOS MATCH -->
+	<!-- ********* -->
+	<string name="aboutcontourtitle">About Contour Connect</string>
+	<!-- **NEW** NEEDS iOS UPDATE -->
+	<string name="aboutdesc1">Get just the right angle with Contour Connect\'s live preview.</string>
+	<string name="aboutdesc2">Quickly check GPS status, camera battery level, and available memory on your MicroSD card.</string>
+	<string name="aboutdesc3">Start and stop recording a video or shoot continuous photos. Files are saved directly to your Contour camera.</string>
+	<string name="aboutdesc4">Tweak resolution, frame rate, audio, exposure, white balance and more to get the perfect shot for your surrounding conditions.</string>
+	<string name="aboutheading1">Preview Your Shot</string>
+	<string name="aboutheading2">At a Glance Camera Status</string>
+	<string name="aboutheading3">Remote Control</string>
+	<string name="aboutheading4">Adjust Your Camera Settings</string>
+	<string name="camerasettingstitle">%1$s Settings</string>
+	<string name="contourcamera">Contour Camera</string>
+	<string name="errormsgsdcardlow">SD Card memory is low</string>
+	<string name="firmwareupdatedesc">To update your firmware, please connect your camera to a computer and launch Contour Storyteller. Follow the prompts that will appear when Storyteller is launched.</string>
+	<string name="firmwareupdatetitle">Firmware Update Required</string>
+	<string name="firmwareupdatetitledesc">Your Camera is running an old version of firmware</string>
+	<string name="ok">OK</string>
+	<string name="alertbuttoncancel">Cancel</string>
+	<string name="settingsresetdefaultalerttitle">Reset Settings</string>
+	<string name="statusmsglivepreviewsupport">Live preview is currently not supported at %1$d </string>
+	<string name="statusmsgloading">Loading&#8230;</string>
+	<string name="statusmsgunknown">Unknown</string>
+	<string name="switchpositiontitle">Switch Position %1$d</string>
+	<!-- **NEW** NEEDS iOS UPDATE -->
+	<string name="tutorialdesc3">1) Go to Settings &gt; Bluetooth on your HUD. 2) Power on Contour. 3) Press and hold the BT button on Contour for 5 seconds to make it discoverable. 4) Select \'Contour\' from your HUD Bluetooth Settings to initiate a pair. 5) Return to the Contour app, and press the BT button again on Contour to connect.</string>
+	<!-- SETTINGS -->
+	<string name="camera">Camera</string>
+	<string name="mode">Mode</string>
+	<string name="quality">Quality</string>
+	<string name="photofrequency">Photo Frequency</string>
+	<string name="video">Video</string>
+	<string name="metering">Metering</string>
+	<string name="whitebalance">White Balance</string>
+	<string name="advanced">Advanced</string>
+	<string name="audio">Audio</string>
+	<string name="camerabeeps">Camera Beeps</string>
+	<string name="microphone">Microphone</string>
+	<string name="cameragps">Camera GPS</string>
+	<string name="gps">GPS</string>
+	<string name="gpsupdaterate">GPS Update Rate</string>
+	<string name="gpsassist">GPS Assist</string>
+	<string name="globalsettings">Global Settings</string>
+	<string name="videoformat">Video Format</string>
+	<string name="resettodefaults">Reset to Defaults</string>
+	<string name="logoutfromfacebook">Log Out from Facebook</string>
+	<string name="off">Off</string>
+	<string name="low">Low</string>
+	<string name="medium">Medium</string>
+	<string name="high">High</string>
+	<string name="max">Max</string>
+	<string name="e1sec">every 1 second</string>
+	<string name="e3sec">every 3 seconds</string>
+	<string name="e5sec">every 5 seconds</string>
+	<string name="e10sec">every 10 seconds</string>
+	<string name="e15sec">every 15 seconds</string>
+	<string name="e20sec">every 20 seconds</string>
+	<string name="e30sec">every 30 seconds</string>
+	<string name="e45sec">every 45 seconds</string>
+	<string name="e60sec">every 60 seconds</string>
+	<string name="center">Center</string>
+	<string name="average">Average</string>
+	<string name="spot">Spot</string>
+	<string name="auto">Auto</string>
+	<string name="sunrisesunset">Sunrise/Sunset</string>
+	<string name="incandescent">Incandescent</string>
+	<string name="daylight">Daylight</string>
+	<string name="fluorescent">Fluorescent</string>
+	<string name="daylightd50">Daylight D50</string>
+	<string name="daylightd65">Daylight D65</string>
+	<string name="cloudy">Cloudy</string>
+	<string name="shade">Shade</string>
+	<string name="xenon">Xenon</string>
+	<string name="internalmic">Internal Microphone</string>
+	<string name="externalmic">External Microphone</string>
+	<string name="contrast">Contrast</string>
+	<string name="exposure">Exposure</string>
+	<string name="sharpness">Sharpness</string>
+	<!-- ANDROID ONLY -->
+	<!-- ********* -->
+	<string name="notif_connecting">Connecting to Camera&#8230;</string>
+	<string name="notif_connected">Contour Camera Connected</string>
+	<string name="notif_title_recording">Camera Recording</string>
+	<!-- Needs 2-3 letter abbreviations for Battery, Memory and GPS -->
+	<string name="notif_status">Bat: %1$d \\ Mem: %3$.1f GB \\ GPS: %2$s </string>
+	<!-- Recording variable represents a timer, e.g. Recording: 01:26 -->
+	<string name="notif_status_recording">Recording: %1$s</string>
+	<string name="bluetooth_not_available">Bluetooth is not available</string>
+	<string name="settingsresetdefaultmsg">This will reset settings for both switch positions. Are you sure?</string>
+	<string name="connectionhelptitle">No Camera Connected</string>
+	<string name="app_version">App Version</string>
+	<string name="fw_version">Firmware Version</string>
+	<string name="app_info_title">Application Information</string>
+	<string name="app_info_title_short">App Info</string>
+	<!-- Photo variable represents a number of seconds, e.g. PHOTO/30 sec is displayed to indicate a photo for every 30 seconds -->
+	<string name="status_photo_label">PHOTO/%1$d sec</string>
+	<string name="on">ON</string>
+	<string name="switch_positons">Switch Positions</string>
+	<string name="cameraname">Camera Name</string>
+	<string name="cameramodel">Camera Model</string>
+	<string name="firmwareupdatehelpmsg">If you\'re having trouble connecting make sure your camera is running the latest version of firmware. To update your camera please plug it in to a computer running Contour Storyteller and follow the onscreen instructions.</string>
+</resources>

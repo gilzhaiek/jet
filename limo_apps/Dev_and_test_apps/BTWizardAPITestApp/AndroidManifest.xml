@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+      package="com.reconinstruments.btwizardapitest"
+      android:versionCode="1"
+      android:versionName="1.0">
+  <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+  <uses-permission android:name="android.permission.BLUETOOTH" />
+    <application android:label="@string/app_name" >
+        <activity android:name="BTWizardAPITestActivity"
+                  android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+	        <activity android:name="BTWizardAPITestActivity2"
+                  android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+	<receiver
+	   android:name="com.reconinstruments.btwizardapitest.BtTelephonyReceiver"
+	   android:enabled="true"
+	   android:exported="true"
+	   android:process=":bttelephonyreceiver" >
+	  <intent-filter>
+	    <action android:name="com.reconinstruments.BtTelephonyStateChanged" />
+	  </intent-filter>
+	</receiver>
+    </application>
+</manifest> 

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- this is the JET-specific configuration for geodata service data - replace for other products -->
+
+<root>
+<file_id id="dsm_configuration.xml Oct 30, 2014 A"/>
+<profile name="street" >
+	<transcoder name="ReconBaseTranscoder" />     <!-- referenced as client-friendly source id enum RECON_BASE (hardcoded in transcoder) -->
+</profile>
+</root>

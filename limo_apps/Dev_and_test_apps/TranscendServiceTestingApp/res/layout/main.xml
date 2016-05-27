@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView  xmlns:android="http://schemas.android.com/apk/res/android"
+	     android:layout_width="fill_parent"
+	     android:layout_height="fill_parent"
+	     >
+  <LinearLayout
+     android:orientation="vertical"
+     android:layout_width="fill_parent"
+     android:layout_height="wrap_content"
+     >
+    <TextView  
+       android:layout_width="fill_parent" 
+       android:layout_height="wrap_content" 
+       android:text="Hello World, TranscendTester"
+       />
+    <Button
+       android:id="@+id/start_activity"
+       android:layout_width="wrap_content" 
+       android:layout_height="wrap_content"
+       android:text="Start Sports Activity"
+       />
+    <Button
+       android:id="@+id/pause_activity"
+       android:layout_width="wrap_content" 
+       android:layout_height="wrap_content"
+       android:text="Pause Sports Activity"
+       />
+    <Button
+       android:id="@+id/resume_activity"
+       android:layout_width="wrap_content" 
+       android:layout_height="wrap_content"
+       android:text="Resume Sports Activity"
+       />
+    <Button
+       android:id="@+id/finish_activity"
+       android:layout_width="wrap_content" 
+       android:layout_height="wrap_content"
+       android:text="Finish Sports Activity"
+       />
+  </LinearLayout>
+</ScrollView>

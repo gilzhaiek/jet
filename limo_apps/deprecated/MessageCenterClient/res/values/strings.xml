@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Message Center Client</string>
+    <string name="action_settings">Settings</string>
+    <string name="test_notification">Test Notification</string>
+    <string name="button_notify">Notify</string>
+    
+    <string name="button_admin_deleteallgroups">Delete All Groups</string>
+    <string name="button_admin_deleteallcategories">Delete All Categories</string>
+    <string name="button_admin_deleteallnotifications"> Delete All Notifications</string>
+    
+    <string name="button_register_group">Register Group</string>
+    <string name="button_register_category">Register Category</string>
+    <string name="button_getallgroups">Get All Groups</string>
+    <string name="button_getallcategories">Get All Categories for Group</string>
+
+</resources>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/../...iml" filepath="$PROJECT_DIR$/../...iml" />
+      <module fileurl="file://$PROJECT_DIR$/HUDConnectivityLib/HUDConnectivityLib.iml" filepath="$PROJECT_DIR$/HUDConnectivityLib/HUDConnectivityLib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/HUDConnectivityService/HUDConnectivityService.iml" filepath="$PROJECT_DIR$/HUDConnectivityService/HUDConnectivityService.iml" />
+      <module fileurl="file://$PROJECT_DIR$/HUDConnectivityTester/HUDConnectivityTester.iml" filepath="$PROJECT_DIR$/HUDConnectivityTester/HUDConnectivityTester.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../HUDResources/HUDResources.iml" filepath="$PROJECT_DIR$/../HUDResources/HUDResources.iml" />
+      <module fileurl="file://$PROJECT_DIR$/connectivity.iml" filepath="$PROJECT_DIR$/connectivity.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../../jet.iml" filepath="$PROJECT_DIR$/../../../jet.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../../jet.iml" filepath="$PROJECT_DIR$/../../../jet.iml" />
+    </modules>
+  </component>
+</project>

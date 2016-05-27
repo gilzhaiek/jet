@@ -1,0 +1,8 @@
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:gravity="center" android:layout_width="fill_parent"
+	android:layout_height="fill_parent" android:background="@drawable/widget_chr_4x1_new">
+	<TableRow>
+		<TextView android:layout_width="90px" android:text=""></TextView>
+		<TextView android:id="@+id/time_field" style="@style/widget_field4x1"  android:singleLine="True"/>
+	</TableRow>
+</TableLayout>

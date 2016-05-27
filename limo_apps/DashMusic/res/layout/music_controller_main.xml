@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/ReconGray"
+    android:paddingBottom="0dip"
+    android:paddingLeft="15dip"
+    android:paddingRight="15dip" >
+
+    <RelativeLayout
+        android:id="@+id/controller"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="8dip"
+        android:layout_marginLeft="10dip"
+         >
+				<ImageView
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_centerInParent="true"
+		            android:src="@drawable/music_remote_container" />
+        
+		        <ImageView
+		            android:id="@+id/play_pause_icon"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_centerInParent="true"
+		            android:focusable="true" 
+		            android:clickable="true"
+		            android:src="@drawable/music_icon_play" />
+		
+		        <ImageView
+		            android:id="@+id/prev_icon"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_centerInParent="true"
+		            android:paddingRight="83dip"
+		            android:focusable="true" 
+		            android:clickable="true"
+		            android:src="@drawable/controller_prev_selector" />
+		
+		        <ImageView
+		            android:id="@+id/next_icon"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_centerInParent="true"
+		            android:paddingLeft="83dip"
+		            android:src="@drawable/controller_next_selector"
+		            android:focusable="true" 
+		            android:clickable="true"/>
+		        
+		        <ImageView
+		            android:id="@+id/volup_icon"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_centerInParent="true"
+		            android:paddingBottom="83dip"
+		            android:focusable="true" 
+		            android:clickable="true"
+		            android:src="@drawable/controller_volup_selector" />
+		
+		        <ImageView
+		            android:id="@+id/voldown_icon"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_centerInParent="true"
+		            android:paddingTop="83dip"
+		            android:focusable="true" 
+		            android:clickable="true"
+		            android:src="@drawable/controller_voldown_selector" />
+    </RelativeLayout>
+    <LinearLayout
+        android:id="@+id/song_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="15dip"
+        android:layout_weight="1"
+        android:visibility="gone"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/song_name"
+            style="@style/white_text_shadow"
+            android:layout_width="328dip"
+            android:layout_height="wrap_content"
+            android:includeFontPadding="false"
+            android:singleLine="true"
+            android:text="Song Name"
+            android:textSize="26dip" 
+            android:textStyle="bold"
+            android:ellipsize="marquee"
+            />
+        
+        <TextView
+            android:id="@+id/artist_name"
+            style="@style/white_text_shadow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:includeFontPadding="false"
+            android:singleLine="true"
+            android:text="Artist"
+            android:textSize="20dip"
+            android:fontFamily="sans-light"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/album_name"
+            style="@style/white_text_shadow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:includeFontPadding="false"
+            android:singleLine="true"
+            android:text="Album"
+            android:textSize="18dip"
+            android:fontFamily="sans-light"
+            android:textStyle="bold"
+            android:textColor="@color/reconGrayText"
+            android:paddingTop="2dip" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/musicplayer_state"
+        android:layout_width="wrap_content"
+        android:layout_height="100dip"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="20dip"
+        android:layout_marginRight="15dip"
+        android:visibility="visible"
+        android:orientation="vertical"
+        >
+         <ImageView
+		            android:id="@+id/shuffle_icon"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:visibility="visible"
+		            android:src="@drawable/shuffle_icon_up" />
+          <ImageView
+		            android:id="@+id/loop_icon"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_marginTop="10dip"
+		            android:visibility="visible"
+		            android:src="@drawable/repeat_icon" />
+    </LinearLayout>
+	<LinearLayout
+        android:id="@+id/no_song"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="15dip"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:visibility="gone"
+        android:layout_centerHorizontal="true"
+        android:orientation="vertical" >
+
+        <TextView
+            style="@style/gray_text_shadow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:includeFontPadding="false"
+            android:singleLine="true"
+            android:text="No Music Playing"
+            android:textSize="24dip"
+            android:textStyle="bold" />
+
+        <!-- android:ellipsize="marquee" -->
+
+        <TextView
+            style="@style/gray_text_shadow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:includeFontPadding="false"
+            android:singleLine="true"
+            android:text="Press select to shuffle"
+            android:textSize="20dip" 
+            android:textStyle="bold" />
+    </LinearLayout>
+
+	<com.reconinstruments.dashlauncher.music.VolumeBarView
+	    android:id="@+id/volume_seekbar"
+        android:layout_width="170dip"
+        android:layout_height="27dip"
+	    android:layout_alignParentBottom = "true"
+	    android:layout_alignParentRight = "true"
+	    android:layout_marginRight="70dip"
+	    android:layout_marginBottom="50dip"
+	    />
+
+</RelativeLayout>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+ <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical" 
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:paddingTop="10dip"
+	android:paddingBottom="10dip"
+	android:paddingLeft="30dip"
+	android:paddingRight="30dip" >
+	
+	<ListView android:id="@+id/smsReplies"
+           android:layout_width="fill_parent"            
+           android:layout_height="wrap_content"                      
+           android:background="#FF000000"           
+           android:drawSelectorOnTop="false"           
+           android:focusable="true"
+           android:listSelector="@drawable/menu_selector"
+    />     
+</LinearLayout>
+

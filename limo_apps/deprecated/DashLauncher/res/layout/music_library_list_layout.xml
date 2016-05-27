@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/circular_gradient" >
+
+    <TextView 
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:text="Title"
+        android:background="@drawable/circular_gradient"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:gravity="center_horizontal"
+        android:paddingBottom="1dip"
+        android:paddingTop="1dip"
+        android:textSize="24dip"
+        android:textStyle="bold"
+        style="@style/white_text_shadow" />
+    <RelativeLayout
+	     android:layout_width="match_parent"
+   		 android:layout_height="match_parent">
+     <FrameLayout
+           android:layout_width="fill_parent"
+	        android:layout_height="fill_parent"
+	        android:layout_alignParentTop="true"
+	        android:layout_marginTop="-2dip">
+		    <ListView
+		        android:id="@android:id/list"
+		        android:layout_width="match_parent"
+		        android:layout_height="match_parent"
+		        android:layout_weight="1"
+		        android:drawSelectorOnTop="false"
+		        android:listSelector="@drawable/key_selector"
+		        android:focusable="true"
+		        android:fadingEdge="none"
+		        android:fadeScrollbars="false"
+		        android:scrollbarSize="18dp"
+		        android:scrollbarStyle="outsideOverlay"
+		        android:scrollbarThumbHorizontal="@drawable/horizontal_gradient_scrollbar"
+		        android:scrollbarThumbVertical="@drawable/horizontal_gradient_scrollbar"
+		        android:scrollbarTrackHorizontal="@drawable/circular_gradient"
+		        android:scrollbarTrackVertical="@drawable/circular_gradient" />
+		
+		    <TextView
+		        android:id="@android:id/empty"
+		        android:layout_width="match_parent"
+		        android:layout_height="match_parent"
+		        android:text="No data"
+		        android:gravity="center_horizontal|center_vertical" />
+    </FrameLayout>
+     <View
+        android:layout_width="fill_parent"
+        android:layout_height="10dip"
+        android:background="@drawable/tab_bar_gradient"
+        android:layout_alignParentTop="true" />
+</RelativeLayout>
+</LinearLayout>

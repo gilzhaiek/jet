@@ -1,0 +1,143 @@
+package com.dsi.ant.stonestreetoneantservice;
+
+import android.content.Context;
+import android.database.ContentObserver;
+import android.os.Handler;
+import android.provider.Settings;
+import android.util.Log;
+
+/**
+ * Listens to changes to the 'low power wireless mode' setting and triggers matching events.
+ */
+public class LowPowerWirelessModeSettingObserver extends ContentObserver {
+    public static final String TAG = LowPowerWirelessModeSettingObserver.class.getSimpleName();
+    public static final boolean DEBUG = BuildConfig.DEBUG && true;
+
+    // TODO These values need to be used in Settings.Secure (part of platform set up).
+    /** The WiLink is in ANT mode. */
+    public static final String LOW_POWER_WIRELESS_MODE_ANT = "0";
+    /** The WiLink is in BLE mode. */
+    public static final String LOW_POWER_WIRELESS_MODE_BLE = "1";
+    /** The low power wireless mode to use if the setting does not exist. */
+    public static final String LOW_POWER_WIRELESS_MODE_DEFAULT = LOW_POWER_WIRELESS_MODE_ANT;
+    /** The key for reading the low power wireless mode setting from 'Settings.Secure'. */
+    public static final String LOW_POWER_WIRELESS_MODE = "low_power_wireless_mode";
+
+    /**
+     * The events triggered by the {@link LowPowerWirelessModeSettingObserver}.
+     */
+    public interface ILowPowerWirelessModeChanged {
+        /**
+         * The WiLink 'low power wireless mode' has changed.
+         * 
+         * @param isAnt If the new setting is in ANT mode.
+         */
+        public void onIsLowPowerWirelessModeAntChange(boolean isAnt);
+    }
+
+    /** The low power wireless mode until the setting is changed. */
+    private boolean mLastKnownIsLowPowerWirelessModeAnt;
+
+    /** The context where the settings apply. */
+    private Context mContext;
+
+    /** Where to send mode changed events. */
+    private ILowPowerWirelessModeChanged mCallback = null;
+
+    /**
+     * Creates a new setting observer. Will only be running between {@link start()} and 
+     * {@link stop()}. {@link destroy()} must be called when finished to prevent a context leak.
+     * 
+     * @param context The context the settings apply to.
+     * @param handler The handler the observer will run on.
+     */
+    public LowPowerWirelessModeSettingObserver(Context context, Handler handler) {
+        super(handler);
+
+        if(null == context) {
+            throw new IllegalArgumentException("Context must be provided");
+        }
+        mContext = context;
+
+        mLastKnownIsLowPowerWirelessModeAnt = isLowPowerWirelessModeAnt(context);
+    }
+
+    /**
+     * Clean up. This instance will no longer be usable after this is called.
+     */
+    public void destroy() {
+        if(DEBUG) Log.v(TAG, "destroy");
+
+        stop();
+        mContext = null;
+    }
+
+    @Override
+    public void onChange(boolean selfChange) {
+        if(DEBUG) Log.v(TAG, "onChange");
+
+        super.onChange(selfChange);
+
+        boolean currentIsModeAnt = isLowPowerWirelessModeAnt(mContext);
+
+        if(currentIsModeAnt != mLastKnownIsLowPowerWirelessModeAnt) {
+            if(DEBUG) Log.i(TAG, "Mode setting has changed. Is ANT: "+ currentIsModeAnt);
+
+            mLastKnownIsLowPowerWirelessModeAnt = currentIsModeAnt;
+
+            ILowPowerWirelessModeChanged callback = mCallback;
+            if(null != callback) {
+                callback.onIsLowPowerWirelessModeAntChange(currentIsModeAnt);
+            } else {
+                if(DEBUG) Log.w(TAG, "No mode changed event sent as no callback set.");
+            }
+        }
+    }
+
+    /**
+     * Read the current low power wireless mode from the settings.
+     * 
+     * @param context The context where the settings apply.
+     * 
+     * @return true if the setting is currently 'ANT mode'.
+     */
+    public static boolean isLowPowerWirelessModeAnt(Context context) {
+        /*
+        String lowPowerWirelessMode = Settings.Secure.getString(context.getApplicationContext().getContentResolver(), LOW_POWER_WIRELESS_MODE);
+
+        if(null == lowPowerWirelessMode) {
+            // Setting does not exist, use default
+            lowPowerWirelessMode = LOW_POWER_WIRELESS_MODE_DEFAULT;
+        }
+        */
+        String lowPowerWirelessMode = LOW_POWER_WIRELESS_MODE_DEFAULT;
+        boolean isAnt = LOW_POWER_WIRELESS_MODE_ANT.equals(lowPowerWirelessMode);
+
+        if(DEBUG) Log.i(TAG, "isLowPowerWirelessModeAnt = "+ isAnt);
+
+        return isAnt;
+    }
+
+    /**
+     * Begin listening for changes to the setting.
+     *  
+     * @param callback where to send events when a change occurs.
+     */
+    public void start(ILowPowerWirelessModeChanged callback) {
+        if(DEBUG) Log.v(TAG, "start");
+
+        mCallback = callback;
+
+        mContext.getApplicationContext().getContentResolver().registerContentObserver(Settings.Secure.CONTENT_URI, true, this);
+    }
+
+    /**
+     * Cancel listening for changes to the setting.
+     */
+    public void stop() {
+        if(DEBUG) Log.v(TAG, "stop");
+
+        mCallback = null;
+        mContext.getApplicationContext().getContentResolver().unregisterContentObserver(this);
+    }
+}

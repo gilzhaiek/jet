@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<stack>
+		<!-- Main Menu -->
+		<ReconCard id="1" img="@drawable/m_menu1" down="2" up="5" select="6" />  <!-- Timeline -->
+		<ReconCard id="2" img="@drawable/m_menu2" down="3" up="1" select="20" /> <!-- Procedures -->
+		<ReconCard id="3" img="@drawable/m_menu3" down="4" up="2" select="7" /> <!-- Test display -->
+		<ReconCard id="4" img="@drawable/m_menu4" down="5" up="3" select="8" /> <!-- Statuses -->
+		<ReconCard id="5" img="@drawable/m_menu5" down="1" up="4" select="17" /> <!-- Photos -->
+		
+		<!-- Timeline -->
+		<ReconCard id="6" img="@drawable/timeline_1" back="1" />
+		
+		<!-- Test display -->
+		<ReconCard id="7" img="@drawable/test_disp1" back="3" />
+		
+		<!-- Statuses -->
+		<ReconCard id="8" img="@drawable/status1"  down="9" up="16" back="4"/>
+		<ReconCard id="9" img="@drawable/status2"  down="10" up="8" back="4"/>
+		<ReconCard id="10" img="@drawable/status3"  down="11" up="9" back="4"/>
+		<ReconCard id="11" img="@drawable/status4"  down="12" up="10" back="4"/>
+		<ReconCard id="12" img="@drawable/status5"  down="13" up="11" back="4"/>
+		<ReconCard id="13" img="@drawable/status6"  down="14" up="12" back="4"/>
+		<ReconCard id="14" img="@drawable/status7"  down="15" up="13" back="4"/>
+		<ReconCard id="15" img="@drawable/status8"  down="16" up="14" back="4"/>
+		<ReconCard id="16" img="@drawable/status9"  down="8" up="15" back="4"/>
+		
+		<!-- Photos -->
+		<ReconCard id="17" img="@drawable/photo1_428"  down="18" up="19" back="5"/>
+		<ReconCard id="18" img="@drawable/photo2_428"  down="19" up="17" back="5"/>
+		<ReconCard id="19" img="@drawable/photo3_428"  down="17" up="18" back="5"/>
+		
+		<!-- Procedures -->
+		<ReconCard id="20" img="@drawable/p_menu1"  down="21" up="22" select="23" back="2"/>
+		<ReconCard id="21" img="@drawable/p_menu2"  down="22" up="20" select="49" back="2"/>
+		<ReconCard id="22" img="@drawable/p_menu3"  down="20" up="21" select="55" back="2"/>
+		
+			<!-- Lsep -->
+			<ReconCard id="23" img="@drawable/lsep1"  down="24" up="48" back="20"/>
+			<ReconCard id="24" img="@drawable/lsep2"  down="25" up="23" back="20"/>
+			<ReconCard id="25" img="@drawable/lsep3"  down="26" up="24" back="20"/>
+			<ReconCard id="26" img="@drawable/lsep4"  down="27" up="25" back="20"/>
+			<ReconCard id="27" img="@drawable/lsep5"  down="28" up="26" back="20"/>
+			<ReconCard id="28" img="@drawable/lsep6"  down="29" up="27" back="20"/>
+			<ReconCard id="29" img="@drawable/lsep7"  down="30" up="28" back="20"/>
+			<ReconCard id="30" img="@drawable/lsep8"  down="31" up="29" back="20"/>
+			<ReconCard id="31" img="@drawable/lsep9"  down="32" up="30" back="20"/>
+			<ReconCard id="32" img="@drawable/lsep10"  down="33" up="31" back="20"/>
+			<ReconCard id="33" img="@drawable/lsep11"  down="34" up="32" back="20"/>
+			<ReconCard id="34" img="@drawable/lsep12"  down="35" up="33" back="20"/>
+			<ReconCard id="35" img="@drawable/lsep13"  down="36" up="34" back="20"/>
+			<ReconCard id="36" img="@drawable/lsep14"  down="37" up="35" back="20"/>
+			<ReconCard id="37" img="@drawable/lsep15"  down="38" up="36" back="20"/>
+			<ReconCard id="38" img="@drawable/lsep16"  down="39" up="37" back="20"/>
+			<ReconCard id="39" img="@drawable/lsep17"  down="40" up="38" back="20"/>
+			<ReconCard id="40" img="@drawable/lsep18"  down="41" up="39" back="20"/>
+			<ReconCard id="41" img="@drawable/lsep19"  down="42" up="40" back="20"/>
+			<ReconCard id="42" img="@drawable/lsep20"  down="43" up="41" back="20"/>
+			<ReconCard id="43" img="@drawable/lsep21"  down="44" up="42" back="20"/>
+			<ReconCard id="44" img="@drawable/lsep22"  down="45" up="43" back="20"/>
+			<ReconCard id="45" img="@drawable/lsep23"  down="46" up="44" back="20"/>
+			<ReconCard id="46" img="@drawable/lsep24"  down="47" up="45" back="20"/>
+			<ReconCard id="47" img="@drawable/lsep25"  down="48" up="46" back="20"/>
+			<ReconCard id="48" img="@drawable/lsep26"  down="23" up="47" back="20"/>
+			
+			<!-- Egress -->
+			<ReconCard id="49" img="@drawable/cab_egress1"  down="50" up="54" back="21"/>
+			<ReconCard id="50" img="@drawable/cab_egress2"  down="51" up="49" back="21"/>
+			<ReconCard id="51" img="@drawable/cab_egress3"  down="52" up="50" back="21"/>
+			<ReconCard id="52" img="@drawable/cab_egress4"  down="53" up="51" back="21"/>
+			<ReconCard id="53" img="@drawable/cab_egress5"  down="54" up="52" back="21"/>
+			<ReconCard id="54" img="@drawable/cab_egress6"  down="49" up="53" back="21"/>
+			
+			<!-- Samp Col -->
+			<ReconCard id="55" img="@drawable/samp_col1"  down="56" up="58" back="22"/>
+			<ReconCard id="56" img="@drawable/samp_col2"  down="57" up="55" back="22"/>
+			<ReconCard id="57" img="@drawable/samp_col3"  down="58" up="56" back="22"/>
+			<ReconCard id="58" img="@drawable/samp_col4"  down="55" up="57" back="22"/>
+			
+	</stack>
+</resources>

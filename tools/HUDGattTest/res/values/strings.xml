@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">HUDGattTest</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="Bindlabel">Bind</string>
+    <string name="Unbindlabel">Unbind</string>
+    <string name="StartScanlabel">StartScan</string>
+	<string name="StopScanlabel">StopScan</string>
+	<string name="Gatconnectlabel">Gatconnect</string>
+	<string name="Gatdisconnectlabel">Disconnect</string>
+	<string name="Notifylabel">Notify</string>
+	<string name="DisableNotifylabel">DisableNotify</string>
+	<string name="Writelabel">Write</string>
+	<string name="Readlabel">Read</string>
+</resources>

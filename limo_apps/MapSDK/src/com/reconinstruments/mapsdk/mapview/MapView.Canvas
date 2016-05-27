@@ -1,0 +1,1164 @@
+package com.reconinstruments.mapsdk.mapview;
+
+//  This is the Android.Canvas implementation of MapView.java
+//
+//  use the script "changeRenderingMethod.bash canvas" to change the MapSDK to use this version,   OR
+//             use "changeRenderingMethod.bash opengl" to change the MapSDK to use the opengl version
+
+
+import java.security.acl.LastOwnerException;
+import java.util.ArrayList;
+import java.util.HashMap;
+
+import android.app.Activity;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.Canvas;
+import android.graphics.Color;
+import android.graphics.Matrix;
+import android.graphics.Paint;
+import android.graphics.RectF;
+import android.graphics.Paint.Style;
+import android.os.Build;
+import android.os.Handler;
+import android.os.RemoteException;
+import android.os.SystemClock;
+import android.text.TextPaint;
+import android.util.Log;
+import android.view.View;
+
+import com.reconinstruments.mapsdk.R;
+import com.reconinstruments.mapsdk.geodataservice.clientinterface.GeoDataServiceState;
+import com.reconinstruments.mapsdk.geodataservice.clientinterface.GeoRegion;
+import com.reconinstruments.mapsdk.geodataservice.clientinterface.IGeodataService;
+import com.reconinstruments.mapsdk.geodataservice.clientinterface.IGeodataServiceResponse;
+import com.reconinstruments.mapsdk.geodataservice.clientinterface.ResortInfoResponse;
+import com.reconinstruments.mapsdk.geodataservice.clientinterface.worldobjects.PointXY;
+import com.reconinstruments.mapsdk.geodataservice.clientinterface.worldobjects.RectXY;
+import com.reconinstruments.mapsdk.geodataservice.clientinterface.worldobjects.WO_POI;
+import com.reconinstruments.mapsdk.mapfragment.MapFragment;
+import com.reconinstruments.mapsdk.mapview.WO_drawings.POIDrawing;
+import com.reconinstruments.mapsdk.mapview.WO_drawings.RenderSchemeManager;
+import com.reconinstruments.mapsdk.mapview.camera.CameraViewport;
+import com.reconinstruments.mapsdk.mapview.dynamicdatainterfaces.cameraposition.DynamicCameraPositionInterface.IDynamicCameraPosition;
+import com.reconinstruments.mapsdk.mapview.dynamicdatainterfaces.focusableitems.DynamicFocusableItemsInterface;
+import com.reconinstruments.mapsdk.mapview.dynamicdatainterfaces.garbagecollection.DynamicGarbageCollectionInterface.IDynamicGarbageCollection;
+import com.reconinstruments.mapsdk.mapview.dynamicdatainterfaces.geodataservice.DynamicGeoDataInterface.IDynamicGeoData;
+import com.reconinstruments.mapsdk.mapview.dynamicdatainterfaces.reticleitems.DynamicReticleItemsInterface;
+import com.reconinstruments.mapsdk.mapview.dynamicdatainterfaces.userposition.DynamicUserPositionInterface.IDynamicUserPosition;
+import com.reconinstruments.mapsdk.mapview.renderinglayers.RenderingLayer;
+import com.reconinstruments.mapsdk.mapview.renderinglayers.World2DrawingTransformer;
+import com.reconinstruments.mapsdk.mapview.renderinglayers.buddylayer.BuddyLayer;
+import com.reconinstruments.mapsdk.mapview.renderinglayers.customlayer.CustomAnnotationCache;
+import com.reconinstruments.mapsdk.mapview.renderinglayers.customlayer.CustomLayer;
+import com.reconinstruments.mapsdk.mapview.renderinglayers.gridlayer.GridLayer;
+import com.reconinstruments.mapsdk.mapview.renderinglayers.maplayer.Map2DLayer;
+import com.reconinstruments.mapsdk.mapview.renderinglayers.maplayer.Map2DLayer.BackgroundSize;
+import com.reconinstruments.mapsdk.mapview.renderinglayers.reticulelayer.ReticleConfig;
+import com.reconinstruments.mapsdk.mapview.renderinglayers.reticulelayer.ReticuleLayer;
+import com.reconinstruments.mapsdk.mapview.renderinglayers.usericonlayer.UserIconLayer;
+
+/**
+ * @author stevenmason
+ *
+ */
+public class MapView extends View  {
+	
+// Constants
+	private static final String TAG = "MapView";
+	private static final boolean WAIT_FOR_DEBUGGER = false;
+	private static final int USER_ICON_SIZE = 15;
+	private static final int PROGRESS_START_VALUE = 5; // pixels
+	private static final double BASE_CAMERA_VIEWPORT_WIDTH_IN_METERS = 2000.;
+	private static final int RETICULE_DISTANCE = 61;
+																					// the larger this value, the more memory is used for the two drawingSet background images
+	
+	public enum MapViewState {
+		INITIALIZING,
+		ERROR_INITIALIZING,			// problem encounter during initialization, should only happen during testing...
+		WAITING_FOR_DATA_SERVICE,	// during startup
+		WAITING_FOR_LOCATION,		// have binding to service but no location data yet
+		PROBLEM_WITH_DATA_SERVICE,
+		REQUIRED_DATA_UNAVAILABLE,	// service is running but does does not have desired capabilities to supply data
+		OUT_OF_MEMORY,
+		ERROR_LOADING_THEMES,		// issue loading rendering themes
+		LOADING_DATA,
+		ERROR_LOADING_DATA,
+		DRAW_LAYERS,				// everything is ok, draw layers
+		WAITING_FOR_LAYER_INITIALIZATION
+	}
+	public enum CameraPanDirection {
+		LEFT,
+		UP,
+		RIGHT,
+		DOWN
+	}
+
+// members
+	public  Activity 				mParentActivity = null;
+	public  String	 				mIdentifier = "notDefined";
+	public  MapFragment 			mParentFragment = null;
+	protected RenderSchemeManager 	mRenderSchemeManager = null;
+	public  static IGeodataService	mGeodataServiceInterface  = null;
+	public  GeoDataServiceState 	mGeodataServiceState = null;
+	public  MapViewState			mViewState = MapViewState.WAITING_FOR_DATA_SERVICE;
+	protected MapViewState			mLastViewState = MapViewState.WAITING_FOR_DATA_SERVICE;
+	public World2DrawingTransformer	mWorld2DrawingTransformer= null;
+	protected PointXY				mMapViewDimensions= null;
+			
+	protected CameraViewport		mCameraViewport = null;
+	protected ArrayList<ResortInfoResponse> 	mClosestResortList = null;
+	protected Map2DLayer			mMapLayer;
+	protected CustomLayer			mCustomLayer;
+	protected GridLayer				mGridLayer;
+	protected BuddyLayer			mBuddyLayer;
+	protected ReticuleLayer			mReticleLayer;
+	protected UserIconLayer			mUserIconLayer;
+	
+	protected ReticleConfig			mReticleConfig = null;
+	
+	public ArrayList<RenderingLayer> mRenderingLayers = new ArrayList<RenderingLayer>();
+	public HashMap<MapViewState, String>  mModeMessages = new HashMap<MapViewState, String>();
+	
+	boolean							mCameraIsReady = false;
+//	boolean							mMapRotates = false;
+	boolean							mDrawingMap = false;
+	boolean							mNotEnoughMemoryError = false;
+	boolean							mShowGrid = false;
+	boolean 						mHaveUserLocation = false;
+	boolean							mAllLayersReady = false;
+	protected boolean 				mShowClosestItemDescription = false;	
+	protected boolean				mMapLoaded = false;
+//	boolean 						mNewDrawingSetAvailable = false;
+	public boolean					mCameraFollowsUser = false;
+	public boolean					mCameraRotateWithUser = false;
+	int 							mStatusBarHeight = 30;
+	
+    long 							mFrameIntervalInMS;		// ms per frame - set as 1000/framerate defined in renderscheme manager
+	long 							mViewRefreshClockStartTime;
+	boolean							doGCOnPause = false;
+	
+	public float					mMapPreloadMultiplier = 1.0f;		// non-documented API, used by MapFragment 
+	protected double		    	mAspectRatio = 0.0;
+	protected double 				mUserLatitude = 0.0;
+	protected double 				mUserLongitude = 0.0;
+	protected float 				mCameraHeading = 0.0f;
+	protected float 				mUserHeading = 0.0f;
+	
+	protected boolean				mExploreMode = false;
+   
+	// rendering related members... 	- note, these move these to related layers when the layers are created
+//	protected Matrix 				mUserIconRotationMatrix = new Matrix();
+	
+    				// many of these are preallocated for efficiency in time-constrained draw cycle
+	float[] 						dl 									= new float[2];
+	double  						mMaxDrawingY 						= 0.0;
+    ArrayList<POIDrawing> 			mFocusTestList 	= new ArrayList<POIDrawing>();
+	PointXY 						mLoadingGeoRegionCenter   			= new PointXY(0.f,0.f);
+    PointXY 						mDrawingUserPosition   				= new PointXY(0.f,0.f);
+    PointXY 						mDrawingCameraViewportCenter   		= new PointXY(0.f,0.f);
+	PointXY 						onDrawCameraViewportCurrentCenter 	= new PointXY(0.f,0.f);
+	RectF							mDrawingCameraViewportBoundary 		= new RectF();
+	RectF							mDrawingCameraViewportTestBoundary 	= new RectF();
+	RectF  							mDrawingGeoRegionLoadBoundary  		= new RectF();
+	RectF   						mDrawingResortTestBoundary  		= new RectF();
+	RectF							mLoadingGeoRegionBoundary 			= new RectF();
+	RectF							mDrawingReticuleBoundary 			= new RectF();
+	RectF							mLoadingBoundsInGPS 				= new RectF();
+	RectF 							mDescRect 							= new RectF();
+	RectXY 							onDrawCameraViewportBoundary 		= new RectXY(0.f,0.f,0.f,0.f);
+	Matrix 							mLoadTransformMatrix 				= new Matrix(); 
+	Matrix 							mDrawTransformMatrix 				= new Matrix(); 
+	Matrix							mDrawingTransform 					= null;
+
+	Bitmap							mGPSLostIcon = null;
+
+	int 							mMessageTextX=0;
+    int 							mMessageTextY=0;
+    TextPaint						mMessageTextPaint;
+    TextPaint						mMessageSubTextPaint;
+    Paint							mGreyBackdropPaint;
+    Paint							mErrorBackdropPaint;
+    Paint							mProgressBarPaint;
+    Paint							mProgressBarBackdropPaint;
+    float							mMessageTextHeight = 0;
+
+    int								mProgressLimit = 0;
+    float							mCurrentProgress = 1.0f;
+    float							mTargetProgress = 1.0f;
+    float							mProgressStepSize = 0.f;
+ 
+    // redraw clock/timer members
+	Handler mHandler = new Handler();
+	Runnable mTick = new Runnable() {
+	    public void run() {
+	    	mCameraViewport.UpdateViewport();	// track target viewport
+	        invalidate();						// force redraw
+			mHandler.postDelayed(this, mFrameIntervalInMS); 	// queue repeated call to run() in future
+	    }
+	};
+
+
+	
+// interfaces
+	public interface IReconMapViewCallbacks {
+		public void MapViewReadyToConfigure();				// called when mapview camera is ready for configuration
+		public void MapViewReadyForAnnotation();  			// called when mapview is ready for annotations calls	- old... removed	
+	}
+
+
+//======================================================================================
+// constructor	
+	public MapView(Activity parentActivity, String identifier) throws Exception {	
+ 		super(parentActivity);
+ 		mParentActivity = parentActivity;
+		mIdentifier = identifier;
+		
+		String productName = Build.PRODUCT;
+		String modelName = Build.MODEL;
+	    Log.i(TAG, "Hardware product Name: "+productName + ", model: " + modelName);
+	    
+	    mRenderSchemeManager = new RenderSchemeManager(mParentActivity, productName, mParentActivity.getResources(), mParentActivity.getPackageName()) ;
+        mReticleConfig = new ReticleConfig(mParentActivity.getResources());
+		mWorld2DrawingTransformer = new World2DrawingTransformer();
+		
+		mCameraViewport = new CameraViewport(parentActivity, BASE_CAMERA_VIEWPORT_WIDTH_IN_METERS, mRenderSchemeManager);
+		
+		double frameRate = mRenderSchemeManager.GetRate(RenderSchemeManager.Rates.FRAME_RATE);
+		if(frameRate >= 5.0) {
+			mFrameIntervalInMS = (long)(1000.0/frameRate);
+		}
+        mAllLayersReady = false;
+        Map2DLayer mapLayer=null;
+
+        mMessageTextPaint = new TextPaint(Paint.ANTI_ALIAS_FLAG);		// set up paint for onDraw
+        mMessageTextPaint.setColor(Color.WHITE);
+        mMessageTextPaint.bgColor = Color.BLACK;
+        mMessageTextPaint.setTextSize(24);
+        if (mMessageTextHeight == 0) {
+            mMessageTextHeight = mMessageTextPaint.getTextSize();
+        } else {
+            mMessageTextPaint.setTextSize(mMessageTextHeight);
+        }
+        mGreyBackdropPaint = new Paint(Paint.ANTI_ALIAS_FLAG);		// set up paint for onDraw
+        mGreyBackdropPaint.setStyle(Style.FILL) ;
+        mGreyBackdropPaint.setColor(Color.GRAY);		
+//        mGreyBackdropPaint.setAlpha(255);
+        mGreyBackdropPaint.setAntiAlias(true);
+
+        mErrorBackdropPaint = new Paint(Paint.ANTI_ALIAS_FLAG);		// set up paint for onDraw
+        mErrorBackdropPaint.setStyle(Style.FILL) ;
+        mErrorBackdropPaint.setColor(Color.RED);		
+        mErrorBackdropPaint.setAntiAlias(true);
+
+        mProgressBarPaint = new Paint(Paint.ANTI_ALIAS_FLAG);		// set up paint for onDraw
+        mProgressBarPaint.setStyle(Style.FILL) ;
+        mProgressBarPaint.setColor(Color.WHITE);		
+        mProgressBarPaint.setAntiAlias(true);
+        
+        mProgressBarBackdropPaint = new Paint(Paint.ANTI_ALIAS_FLAG);		// set up paint for onDraw
+        mProgressBarBackdropPaint.setStyle(Style.FILL) ;
+        mProgressBarBackdropPaint.setColor(Color.BLACK);		
+        mProgressBarBackdropPaint.setAntiAlias(true);
+        
+		mGPSLostIcon = BitmapFactory.decodeResource(mParentActivity.getResources(), R.drawable.user); // FIXME should be gps_lost_icon
+
+		
+		mModeMessages.put(MapViewState.INITIALIZING, "");
+		mModeMessages.put(MapViewState.ERROR_INITIALIZING, mRenderSchemeManager.GetMessage(RenderSchemeManager.Messages.ERROR_INITIALIZING));
+		mModeMessages.put(MapViewState.WAITING_FOR_DATA_SERVICE, mRenderSchemeManager.GetMessage(RenderSchemeManager.Messages.WAITING_FOR_DATA_SERVICE));
+		mModeMessages.put(MapViewState.WAITING_FOR_LOCATION, mRenderSchemeManager.GetMessage(RenderSchemeManager.Messages.WAITING_FOR_LOCATION));
+		mModeMessages.put(MapViewState.PROBLEM_WITH_DATA_SERVICE, mRenderSchemeManager.GetMessage(RenderSchemeManager.Messages.PROBLEM_WITH_DATA_SERVICE));
+		mModeMessages.put(MapViewState.REQUIRED_DATA_UNAVAILABLE, mRenderSchemeManager.GetMessage(RenderSchemeManager.Messages.REQUIRED_DATA_UNAVAILABLE));
+		mModeMessages.put(MapViewState.OUT_OF_MEMORY, mRenderSchemeManager.GetMessage(RenderSchemeManager.Messages.OUT_OF_MEMORY));
+		mModeMessages.put(MapViewState.ERROR_LOADING_THEMES, mRenderSchemeManager.GetMessage(RenderSchemeManager.Messages.ERROR_LOADING_THEMES));
+		mModeMessages.put(MapViewState.WAITING_FOR_LAYER_INITIALIZATION, mRenderSchemeManager.GetMessage(RenderSchemeManager.Messages.WAITING_FOR_MAP));
+		mModeMessages.put(MapViewState.DRAW_LAYERS, "");
+
+	}
+	
+//======================================================================================
+// lifecycle callbacks - designed to be called from parent activity/fragment lifecycle routines
+	public void onCreateView() {
+		Log.i(TAG,"onCreate "+System.currentTimeMillis());
+		
+		if(WAIT_FOR_DEBUGGER) {
+			android.os.Debug.waitForDebugger();
+		} 
+
+		try {
+			DefineMapLayers(mRenderingLayers);
+		} 
+		catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			mNotEnoughMemoryError = true;
+			Log.e(TAG, "Error creating/initializing MapRenderingLayer. " + e.getMessage());
+		}
+		
+		mParentFragment.ConfigurePostMapViewInit();		// allows fragment to override base configuration after all objects have been created...
+
+        
+	}
+	
+	// Override this method when defining a subclass
+	public void DefineMapLayers(ArrayList<RenderingLayer> layers) throws Exception {
+//		mGridLayer = new GridLayer(this, mRenderSchemeManager, mWorld2DrawingTransformer);
+		mMapLayer = new Map2DLayer("osm_street_map", mParentActivity, mRenderSchemeManager, mWorld2DrawingTransformer, mIdentifier, mMapPreloadMultiplier, BackgroundSize.NORMAL);
+		mBuddyLayer  = new BuddyLayer(mParentActivity, mRenderSchemeManager, mWorld2DrawingTransformer, BackgroundSize.NORMAL);
+		mCustomLayer = new CustomLayer(mParentActivity, mRenderSchemeManager, mWorld2DrawingTransformer);
+		mUserIconLayer  = new UserIconLayer(mParentActivity, mRenderSchemeManager, mWorld2DrawingTransformer, BackgroundSize.NORMAL);
+		if(mReticleConfig.mEnabled) {
+			mReticleLayer  = new ReticuleLayer(mParentActivity, mRenderSchemeManager, mWorld2DrawingTransformer, false, BackgroundSize.NORMAL);
+		}
+//		layers.add(mGridLayer);
+		layers.add(mMapLayer);
+		layers.add(mCustomLayer);
+		layers.add(mBuddyLayer);
+		layers.add(mUserIconLayer);
+		if(mReticleConfig.mEnabled) {
+			layers.add(mReticleLayer);
+		}
+	}
+	
+
+	public void SetScreenStatusBarHeight(int height){
+		mStatusBarHeight = height;
+		mCameraViewport.SetStatusBarHeight(height);
+	}
+	
+
+	public void SetScreenDimensions(float width, float height){
+		mAspectRatio = (double)width/(double)height;		
+		mCameraViewport.SetViewPortDimensions(width,height);
+		mMapViewDimensions = new PointXY(width,height);
+		
+		if((mParentActivity instanceof IReconMapViewCallbacks) ) {
+			((IReconMapViewCallbacks) mParentActivity).MapViewReadyToConfigure();
+		}
+	}
+	
+	public void UserLeavingApp() {
+    	doGCOnPause = true;		// only do GC if user leaves app, not during some interruption such as a phone call
+
+    	
+//    	// for testing... remove following lines for production release
+//		if(doGCOnPause) {
+//	    	for(RenderingLayer layer : mRenderingLayers) {
+//	    		if(layer instanceof IDynamicGarbageCollection) {
+//	    			((IDynamicGarbageCollection)layer).DoGarbageCollection(mCameraFollowsUser);
+//	    		}
+//	    	}
+//		}
+
+	}
+	
+	public void onResumeView(){
+		mNotEnoughMemoryError = false;
+
+		
+    	for(RenderingLayer layer : mRenderingLayers) {
+   			layer.Resume();
+    	}
+    	
+		if(mBuddyLayer != null) {		
+			if(mGeodataServiceInterface != null) {  // if not ready, will do this when interface is established
+				try {
+					mGeodataServiceInterface.registerForBuddies(mParentActivity.getPackageName()); 
+				} catch (RemoteException e) {
+//					e.printStackTrace();
+					Log.e(TAG, "Error registering for buddy updates");
+				} 
+			}
+		}
+
+//		if(mWorld2DrawingTransformer != null && mCameraViewport != null && mCameraViewport.mCurrentLatitude != 0.f) {
+//			mWorld2DrawingTransformer.SetDrawingOrigin(mCameraViewport.mCurrentLatitude, mCameraViewport.mCurrentLongitude);  // have also have to reload all tiles in maplayer cache as they have been converted...
+//		}
+		
+    	doGCOnPause = false;
+		startViewRefreshClock();
+	}
+
+	public void onPauseView(){
+		stopViewRefreshClock();
+		// as maps is a critical feature/service, avoid release / realloc of large memory chunks until maps service is rewritten and disconnected
+		// let system reclaim if from background if necessary.. This decision is due because of delays in Java garbage collection could cause moving into and out of maps quickly to thrash the heap
+		// resulting in an Out of Memory error experience for the user.
+
+		if(mBuddyLayer != null) {		
+			if(mGeodataServiceInterface != null) {
+				try {
+					mGeodataServiceInterface.unregisterForBuddies(mParentActivity.getPackageName()); 
+				} catch (RemoteException e) {
+//					e.printStackTrace();
+					Log.e(TAG, "Error unregistering for buddy updates");
+				} 
+			}
+		}
+
+		
+		if(doGCOnPause) {
+	    	for(RenderingLayer layer : mRenderingLayers) {
+	    		if(layer instanceof IDynamicGarbageCollection) {
+	    			((IDynamicGarbageCollection)layer).DoGarbageCollection(mCameraFollowsUser);
+	    		}
+	    	}
+		}
+		
+	}
+	
+	public void onDestroy(){
+		stopViewRefreshClock();
+		
+    	for(RenderingLayer layer : mRenderingLayers) {
+   			layer.Release();
+    	}
+	}
+
+
+	
+//======================================================================================
+// other MapSDK API calls 
+
+// camera setup
+	public void	SetCameraPerspective(int dimensions) {
+		if(mCameraViewport != null) {
+			// tbd
+		}
+	}
+	
+	public void	SetZoomLevels(double[] zoomLevels) {
+		if(mCameraViewport != null) {
+			mCameraViewport.SetZoomLevels(zoomLevels);  // NOT TESTED YET...  
+		}
+	}
+	
+	public void	SetPanStepScale(float scaleFactor) {
+		if(mCameraViewport != null) {
+			mCameraViewport.SetPanStepScale(scaleFactor);
+		}
+	}
+	
+// --------------------- camera absolute positioning and scaling
+	public void	SetCameraGPSPosition(double longitude, double latitude) {
+		if(mCameraViewport != null) {
+			mCameraViewport.SetGPSPosition(longitude, latitude, true); 
+			mCameraViewport.UpdateViewport();
+			
+//			if(!mWorld2DrawingTransformer.isDrawingOriginSet() || mWorld2DrawingTransformer.centerIsFarFrom(longitude, latitude)) {	// TODO in future, will need to flush layer caches if we change drawing transformer so that no old drawing objects exist with old transformation
+			if(!mWorld2DrawingTransformer.isDrawingOriginSet()) {
+				mWorld2DrawingTransformer.SetDrawingOrigin(longitude, latitude);		// long, lat before we can get here...
+				
+				if(mCustomLayer != null) {
+					mCustomLayer.HandleDrawingTransformerChange(mWorld2DrawingTransformer); // incase custom annotations have been previously added.. they need to be updated
+				}
+				
+				// TODO in future, flush layer drawing caches if virtually teleported to a new location far away - as in a demo (see comment above)
+			}
+	
+			if(mViewState == MapViewState.WAITING_FOR_LOCATION) setViewState(MapViewState.WAITING_FOR_LAYER_INITIALIZATION);	
+			
+			RespondToCameraViewportChange(mCameraViewport);  
+			
+		}
+	}
+	
+
+	// note the mapsdk currently exposes the camera altitude to the client, but (currently) converts this to the older zoom magnification scale used within the mapview and layers
+	// the future plan is to convert this to a height (or equiv, region width scaling) instead of a zoom mag scale
+	
+	public void	SetCameraAltitude(float altitude) {		// absolute altitude setting
+		if(mCameraViewport != null) {
+			mCameraViewport.SetCameraAltitude(altitude, true);		
+			RespondToCameraViewportChange(mCameraViewport);  
+		}
+	}
+	
+	public void	SetCameraAltitudeScale(float altitudeScale) {	// relative setting, scale version of camera's base altitude
+		if(mCameraViewport != null) {
+			mCameraViewport.SetCameraAltitudeScale(altitudeScale, true);		
+			RespondToCameraViewportChange(mCameraViewport);  
+		}
+	}
+	
+	public void SetCameraToShowGeoRegion(GeoRegion geoRegion, float percentWidthMargin, boolean immediate) {	
+		if(mCameraViewport != null) {
+			mCameraFollowsUser = false;		// using this method, forces user tracking off
+			mCameraViewport.SetCameraToShowGeoRegion(geoRegion, percentWidthMargin, immediate, mCameraRotateWithUser);		
+
+			if(!mWorld2DrawingTransformer.isDrawingOriginSet()) {
+				mWorld2DrawingTransformer.SetDrawingOrigin(geoRegion.mCenterPoint.x, geoRegion.mCenterPoint.y);		// long, lat before we can get here...
+				
+				if(mCustomLayer != null) {
+					mCustomLayer.HandleDrawingTransformerChange(mWorld2DrawingTransformer); // incase custom annotations have been previously added.. they need to be updated
+				}
+				
+				// TODO in future, flush layer drawing caches if virtually teleported to a new location far away - as in a demo (see comment above)
+			}
+
+			RespondToCameraViewportChange(mCameraViewport);  
+		}
+	}
+
+	
+	public float GetCameraAltitudeScale() {
+		if(mCameraViewport != null) {
+			return mCameraViewport.GetAltitudeScale();
+		}
+		return 1.0f;
+	}
+	
+	public GeoRegion GetCameraBoundingGeoRegion() {
+		if(mCameraViewport != null) {
+			return mCameraViewport.GetBoundingGeoRegion();
+		}
+		return null;
+	}
+	
+	public GeoRegion GetCameraLowestResolutionBoundingGeoRegion() {
+		if(mCameraViewport != null) {
+			return mCameraViewport.GetBoundingLowestResolutionGeoRegion();
+		}
+		return null;
+	}
+	
+// --------------------- camera relative positioning and scaling
+	public void	SetCameraZoomIndex(int zoomIndex) {
+		if(mCameraViewport != null) {
+			mCameraViewport.SetZoomIndex(zoomIndex);  	// NOT TESTED YET...
+			RespondToCameraViewportChange(mCameraViewport);  
+		}
+	}
+	
+	
+	public void	Pan(CameraPanDirection direction) {
+		if(mCameraViewport != null) {
+			switch(direction) {
+			case LEFT:
+				mCameraViewport.panLeft();
+				break;
+			case RIGHT:
+				mCameraViewport.panRight();
+				break;
+			case UP:
+				mCameraViewport.panUp();
+				break;
+			case DOWN:
+				mCameraViewport.panDown();
+				break;
+			}
+			RespondToCameraViewportChange(mCameraViewport);						
+		}
+	}
+	
+	public void StopPan() { // internal, non-API
+		mCameraViewport.FreezePan();	// stop automated position
+	}
+
+	public void	ZoomCameraIn() {
+		if(mCameraViewport != null) {
+			mCameraViewport.ZoomIn();
+			RespondToCameraViewportChange(mCameraViewport);						
+		}
+	}
+	
+	public void	ZoomCameraOut() {
+		if(mCameraViewport != null) {
+			mCameraViewport.ZoomOut();
+			RespondToCameraViewportChange(mCameraViewport);						
+		}
+	}
+	
+	public void FreezePan() { // internal, non-API
+		mCameraViewport.FreezePan();	// stop automated panning
+	}
+
+	public void	setCameraPitch(float pitch) {
+		if(mCameraViewport != null) {
+			// tbd
+		}
+	}
+
+	// calculations / filtering
+	public ArrayList<PointXY> RemoveRedundantPathPointsForCurrentViewport(ArrayList<PointXY> pathNodes) {
+		if(mCameraViewport != null) {
+			return mCameraViewport.RemoveRedundantPathPointsForCurrentViewport(pathNodes);
+		}
+		return null;
+	}
+	
+// --------------------- camera heading/orientation
+	public void SetCameraHeading(float heading) {	// included for completeness - not thoroughly tested
+		mCameraHeading = heading;
+
+		for(RenderingLayer layer : mRenderingLayers) {
+    		if(layer instanceof IDynamicCameraPosition) {
+    			((IDynamicCameraPosition)layer).SetCameraHeading(heading);
+    		}
+    	}
+
+		if(mCameraViewport != null) {
+			mCameraViewport.SetViewAngleRelToNorth(mCameraHeading, false);
+			RespondToCameraViewportChange(mCameraViewport);  
+		}
+	}
+		
+	
+
+// --------------------- grid backdrop 
+	public void ShowGrid(boolean showGrid) {
+		mShowGrid = showGrid;
+	}
+	
+// --------------------- user position, rotation, tracking & icon visibility 
+	public void ShowUserIcon(boolean showUserIcon) {
+		if(mUserIconLayer != null) mUserIconLayer.ShowUserPosition(showUserIcon);
+	}
+	
+	public void SetUserPosition(double newLongitude, double newLatitude, double userVelocity) {
+		mUserLatitude = newLatitude;		
+		mUserLongitude = newLongitude;
+
+		mHaveUserLocation = true;
+    	for(RenderingLayer layer : mRenderingLayers) {
+    		if(layer instanceof IDynamicUserPosition) {
+    			((IDynamicUserPosition)layer).SetUserPosition((float)newLongitude, (float)newLatitude);
+    		}
+    	}
+//    	Log.e(TAG, "camera follows user = " + mCameraFollowsUser);
+    	if(mCameraFollowsUser) {
+    		SetCameraGPSPosition((float)newLongitude, (float)newLatitude);
+    	}
+	}
+
+	public void SetCameraToFollowUser(boolean cameraFollowsUser) {
+		mCameraFollowsUser = cameraFollowsUser;
+//    	Log.e(TAG, "setting camera follows user = " + cameraFollowsUser);
+		if(mCameraFollowsUser && mHaveUserLocation) {
+    		SetCameraGPSPosition((float)mUserLongitude, (float)mUserLatitude);
+		}
+	}
+	
+	public boolean IsMapCenteredOnUser() {
+		return mCameraFollowsUser;
+	}
+	
+	
+	public void SetUserHeading(float heading) {		// 
+		mUserHeading = heading;
+//		Log.e(TAG, "heading: " + heading);
+    	for(RenderingLayer layer : mRenderingLayers) {
+    		if(layer instanceof IDynamicUserPosition) {
+    			((IDynamicUserPosition)layer).SetUserHeading(heading);
+    		}
+    	}
+
+		if(mCameraRotateWithUser) {
+//			Log.e(TAG, "camera: " + heading);
+	    	SetCameraHeading(mUserHeading);
+		}
+	}
+	
+	public void SetCameraToRotateWithUser(boolean cameraRotatesWithUser) {
+		mCameraRotateWithUser = cameraRotatesWithUser;
+		mCameraViewport.SetCameraToRotateWithUser(cameraRotatesWithUser);
+//    	Log.e(TAG, "setting camera to rotate with user = " + cameraRotatesWithUser);
+		if(mCameraRotateWithUser ) {
+	    	SetCameraHeading(mUserHeading);
+		}
+		else {
+	    	SetCameraHeading(mCameraHeading);
+		}
+	}
+	
+	public boolean DoesCameraRotateWithUser() {
+		return mCameraRotateWithUser;
+	}
+	
+
+// --------------------- Annotations
+
+	public CustomAnnotationCache.AnnotationErrorCode AddPointAnnotation(String poiID, PointXY poiLocation, Bitmap image, int alpha) {
+		return mCustomLayer.AddPointAnnotation(poiID, poiLocation, image, alpha);
+	}
+
+	public CustomAnnotationCache.AnnotationErrorCode AddLineAnnotation(String lineID, ArrayList<PointXY> nodes, float lineWidthInM,  int color,  int alpha) {
+		return mCustomLayer.AddLineAnnotation(lineID, nodes, lineWidthInM, color, alpha);
+	}
+
+	public CustomAnnotationCache.AnnotationErrorCode AddOverlayAnnotation(String overlayID, ArrayList<PointXY> nodes, int color,  int alpha) {
+		return mCustomLayer.AddOverlayAnnotation(overlayID,  nodes, color,  alpha);
+	}
+
+	public CustomAnnotationCache.AnnotationErrorCode RemovePointAnnotation(String objectID) {
+		return mCustomLayer.RemovePointAnnotation(objectID);
+	}
+
+	public CustomAnnotationCache.AnnotationErrorCode RemoveLineAnnotation(String objectID) {
+		return mCustomLayer.RemoveLineAnnotation(objectID);
+	}
+
+	public CustomAnnotationCache.AnnotationErrorCode RemoveOverlayAnnotation(String objectID) {
+		return mCustomLayer.RemoveOverlayAnnotation(objectID);
+	}
+
+	
+
+	
+//	
+////======================================================================================
+//// layer management
+//	public void loadRenderingLayers() {
+//		
+//	}
+	
+//======================================================================================
+// methods
+	
+	public void	SetPreloadMultiplier(float preloadMultiplier) {
+		mMapPreloadMultiplier = preloadMultiplier;
+	}
+	
+	boolean serviceHasError(GeoDataServiceState serviceState) {
+		if(mGeodataServiceState != null && 
+		   (mGeodataServiceState.mState == GeoDataServiceState.ServiceStates.ERROR_DURING_SERVICE_INITIALIZATION ||		
+			mGeodataServiceState.mState == GeoDataServiceState.ServiceStates.ERROR_WITH_SERVICE)) {
+			return true;
+		}
+		return false;
+	}
+
+	boolean serviceIsReady(GeoDataServiceState serviceState) {
+		if(mCameraFollowsUser) {
+			if(mGeodataServiceState != null && 
+				(mGeodataServiceState.mState == GeoDataServiceState.ServiceStates.SERVICE_READY_WITH_STALE_USER_LOCATION ||		
+				mGeodataServiceState.mState == GeoDataServiceState.ServiceStates.SERVICE_READY_WITH_USER_LOCATION)) {
+				return true;
+			}
+		}
+		else {
+			if(mGeodataServiceState != null && 
+				(mGeodataServiceState.mState == GeoDataServiceState.ServiceStates.SERVICE_READY_WITH_STALE_USER_LOCATION ||
+				mGeodataServiceState.mState == GeoDataServiceState.ServiceStates.SERVICE_READY_WITH_NO_USER_LOCATION ||		
+				mGeodataServiceState.mState == GeoDataServiceState.ServiceStates.SERVICE_READY_WITH_USER_LOCATION_LOADING_DATA ||		
+				mGeodataServiceState.mState == GeoDataServiceState.ServiceStates.SERVICE_READY_WITH_USER_LOCATION)) {
+				return true;
+			}
+		}
+		return false;
+	}
+	
+	void startViewRefreshClock() {
+		mViewRefreshClockStartTime = SystemClock.uptimeMillis();
+	    mHandler.removeCallbacks(mTick);
+	    mHandler.post(mTick);
+	}
+
+	void stopViewRefreshClock() {
+	    mHandler.removeCallbacks(mTick);
+	}
+	
+//    public boolean AllRenderingLayersInitialized() {
+//    	boolean rc = true;
+//    	for(RenderingLayer layer : mRenderingLayers) {
+//    		if(!layer.IsReady()) {
+//    			rc = false;
+//    			break;
+//    		}
+//    	}
+//    	return rc;
+//    }
+//
+	public void SetIGeodataService(IGeodataService	geodataServiceInterface)  {
+		mGeodataServiceInterface = geodataServiceInterface;
+		
+		if(mBuddyLayer != null) {		// assumes this mapview is created/initialized before binding to geodataservice in mapfragment
+			if(mGeodataServiceInterface != null) {
+				try {
+					mGeodataServiceInterface.registerForBuddies(mParentActivity.getPackageName()); 
+				} catch (RemoteException e) {
+//					e.printStackTrace();
+					Log.e(TAG, "Error registering for buddy updates");
+				} 
+			}
+		}
+
+		
+    	for(RenderingLayer layer : mRenderingLayers) {
+    		if(layer instanceof IDynamicGeoData) {		// if it support iDynamicGeoData interface
+    			try {
+					((IDynamicGeoData)layer).SetGeodataServiceInterface(geodataServiceInterface);
+				} 
+    			catch (RemoteException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+					Log.e(TAG,"Cannot access geodata service during layer initialization... Layer: " + layer);
+				}
+    		}
+    	}
+ 	}
+	
+	public void SetGeodataServiceState(GeoDataServiceState geodataServiceState) {
+		mGeodataServiceState = geodataServiceState;
+		
+		if(mGeodataServiceState == null) {
+			setViewState(MapViewState.WAITING_FOR_DATA_SERVICE);	// will only happen if geoservice disconnects for some reason
+			return;
+		}
+		if(serviceHasError(mGeodataServiceState)) {
+			setViewState(MapViewState.PROBLEM_WITH_DATA_SERVICE);	
+		}
+		else {
+			if(serviceIsReady(mGeodataServiceState)) { 
+				Log.d(TAG, "Geodata service is now ready... have state ");
+
+				// for all layers needing GeodataServiceState..., pass it to them
+				boolean serviceHasCapabilitiesRequiredByAllLayers = true;
+		    	for(RenderingLayer layer : mRenderingLayers) {
+		    		if(layer instanceof IDynamicGeoData) {
+		    			serviceHasCapabilitiesRequiredByAllLayers = serviceHasCapabilitiesRequiredByAllLayers && ((IDynamicGeoData)layer).SetGeodataServiceState(mGeodataServiceState);
+		    		}
+		    	}
+		    	
+				if(serviceHasCapabilitiesRequiredByAllLayers) {
+					if(!mCameraViewport.IsReady())	{	// if cameraViewport not set (expected on first time) it's due to lack of user position, so go get it and setup cameraViewport
+						try {
+							IGeodataServiceResponse rc = mGeodataServiceInterface.getUserLocation();	// causes service to broadcast user location
+							if(rc.mResponseCode == IGeodataServiceResponse.ResponseCodes.ERROR_WITH_REQUEST) {
+								Log.e(TAG, "Error triggering User Position response from geodata service: " + rc.mErrorMessage);
+							}
+	
+						} 
+						catch (Exception e) {
+							// TODO Auto-generated catch block
+							e.printStackTrace();
+							Log.e(TAG, "Exception thrown while triggering User Position response from geodata service: " + e.getMessage());
+						}
+						setViewState(MapViewState.WAITING_FOR_LOCATION);	// the reason the camera is not yet initialized
+					}
+					else {
+						if(mViewState != MapViewState.DRAW_LAYERS) {	// if not already drawing layers
+							setViewState(MapViewState.WAITING_FOR_LAYER_INITIALIZATION);	
+						}
+					}
+				}
+				else {
+					
+					setViewState(MapViewState.REQUIRED_DATA_UNAVAILABLE);	
+					Log.e(TAG, "ERROR map layers have an issue with Geodata Service state " + mGeodataServiceState);
+				}
+			}
+			else {
+				Log.d(TAG, "Geodata service is not ready ");
+				if(mGeodataServiceState.mState ==  GeoDataServiceState.ServiceStates.SERVICE_READY_WITH_NO_USER_LOCATION) {
+					setViewState(MapViewState.WAITING_FOR_LOCATION);	
+				}
+				else {
+					setViewState(MapViewState.WAITING_FOR_DATA_SERVICE);
+				}
+			}
+		}
+		Log.d(TAG, "ViewState = " + mViewState);
+	}
+	
+
+// map  
+	public boolean IsMapLoaded () {
+		return mMapLoaded;
+	}
+
+	
+	public void ShowClosestItemDescription(boolean enable) {
+		mShowClosestItemDescription = enable;
+	}
+	
+	public interface IMapView {
+		public void MapViewStateChanged(MapView.MapViewState mapViewState);		
+		public void LoadMapDataComplete(String link);
+		public void LoadingMapWithProgress(int progValue);	// called when initial map loading progress is changing
+		public void ActiveLoadingMapWithProgress(int progValue);	// called when map loading progress is changing when map displayed
+		
+	}
+
+	private void RespondToCameraViewportChange(CameraViewport cameraViewport) {
+		if(cameraViewport.IsReady() && mGeodataServiceState != null){		// if camera ready and geodata service available
+			// pass new camera position to rendering layers...
+			for(RenderingLayer layer : mRenderingLayers) {
+	    		if(layer instanceof IDynamicCameraPosition) {
+	    			((IDynamicCameraPosition)layer).SetCameraPosition(cameraViewport);
+	    		}
+			}
+		}
+	}
+
+	
+//==========================================================	
+	@Override
+	public void onSizeChanged(int w, int h, int oldw, int oldh) {
+		mMessageTextX = w/2;
+		mMessageTextY = h/2+5;
+	}
+	
+	public void setViewState(MapViewState newViewState) {
+		if(mViewState != newViewState) {
+			mViewState = newViewState;
+			mParentFragment.MapViewStateChanged(newViewState);  
+		}
+	}
+	
+	public void setExploreModeEnabled(boolean exploreMode){
+		mExploreMode = exploreMode;
+	}
+	
+	@SuppressWarnings("unchecked")
+	@Override
+	public void onDraw(Canvas canvas){
+		super.onDraw(canvas);
+		
+		// draw background gird...
+		float xoffset=0;
+		String text = "";
+		
+		canvas.drawColor(Color.argb(255, 0x1B, 0x1D, 0x21));
+		
+		if(mRenderSchemeManager.mLoadingSettingsFile) return;	// don't try and draw map if rendering scheme data is being (re)loaded 
+
+
+		if((mViewState == MapViewState.WAITING_FOR_LAYER_INITIALIZATION || mViewState == MapViewState.WAITING_FOR_LAYER_INITIALIZATION) && mGeodataServiceInterface == null) {
+			setViewState(MapViewState.WAITING_FOR_DATA_SERVICE);	// will only happen if geodataservice drops out and is not detected (bit of kludge - usually odd development test cases)
+		}
+
+		if(mRenderSchemeManager.mErrorSchemesNotLoadedCorrectly) {
+			setViewState(MapViewState.ERROR_LOADING_THEMES);	// will only happen if render scheme file is corrupted or missing
+		}
+		if(mNotEnoughMemoryError) {
+			setViewState(MapViewState.OUT_OF_MEMORY);	// will only happen if render scheme file is corrupted or missing
+		}
+		
+		
+		switch(mViewState) {
+		case INITIALIZING:
+		case ERROR_INITIALIZING:
+		case PROBLEM_WITH_DATA_SERVICE:
+		case REQUIRED_DATA_UNAVAILABLE:
+		case OUT_OF_MEMORY:
+		case ERROR_LOADING_THEMES:
+			break;		// don't do anything... fragment will draw appropriate message
+
+		case WAITING_FOR_DATA_SERVICE:
+		case WAITING_FOR_LOCATION:
+			if(!mCameraIsReady) {	// first time camera is ready
+				if(mCameraViewport.IsReady()) {
+					mCameraIsReady = true;
+					
+					RespondToCameraViewportChange(mCameraViewport);  // force all camera changes to layers (catches early parm configuration)
+				}
+			}
+			break;
+		
+		case WAITING_FOR_LAYER_INITIALIZATION:		// don't get here until geodata service and camera are ready
+			if(!mCameraIsReady) {	// first time camera is ready
+				if(mCameraViewport.IsReady()) {
+					mCameraIsReady = true;
+					
+					RespondToCameraViewportChange(mCameraViewport);  // force all camera changes to layers (catches early parm configuration)
+				}
+			}
+			boolean allLayersAreReady = true;
+			for(RenderingLayer layer : mRenderingLayers) {
+				layer.CheckForUpdates();			// check for new data on all layers... if available switch to it for this draw cycle
+				Boolean layerIsReady = layer.IsReady();
+				allLayersAreReady = allLayersAreReady && layerIsReady;
+//				if(!layerIsReady) {
+//					Log.e(TAG, "waiting for layer " + layer.mName);
+//				}
+			}
+			if(allLayersAreReady) { 
+				if((mParentActivity instanceof IReconMapViewCallbacks)) {
+					((IReconMapViewCallbacks) mParentActivity).MapViewReadyForAnnotation();
+				}
+				setViewState(MapViewState.DRAW_LAYERS);	
+			}
+			
+			if(mMapLayer.mLoadWaitingForTiles != null) {
+				int tileLoadProgress = mMapLayer.mLoadWaitingForTiles.size();
+				if(tileLoadProgress > mProgressLimit) {
+					mProgressLimit = tileLoadProgress;
+					mCurrentProgress = 0.f;
+					mProgressStepSize = 1.0f/(float) mProgressLimit * 3;
+				}
+				mTargetProgress = ((float)(mProgressLimit-tileLoadProgress) /(float)mProgressLimit);
+			
+				if(mCurrentProgress != mTargetProgress) {
+					if( (mTargetProgress-mCurrentProgress) > mProgressStepSize && mTargetProgress < 0.95) {
+						mCurrentProgress += mProgressStepSize;
+					}
+					else {
+						mCurrentProgress = mTargetProgress;
+					}
+				}
+				int progressValue = (int)(((mCurrentProgress * (mMapViewDimensions.x-(float)PROGRESS_START_VALUE)) + PROGRESS_START_VALUE) / mMapViewDimensions.x * 100);
+				
+				mParentFragment.LoadingMapWithProgress(progressValue);
+			}
+			break;
+			
+		case DRAW_LAYERS:							// don't get here until geodata service, camera and layers are ready
+			assert mWorld2DrawingTransformer.isDrawingOriginSet();		// origin set after drawingSet loaded and shouldn't get here until drawingSet is loaded
+
+			mDrawingMap = true;
+
+			for(RenderingLayer layer : mRenderingLayers) {
+				layer.CheckForUpdates();			// check for new data on all layers... if available switch to it for this draw cycle
+			}
+
+			String closestItemID = null;
+			if(mReticleLayer != null && mReticleLayer.mRolloverNamingEnabled) {
+				closestItemID = FindPOIClosestToCenter();			// TODO make this more efficient, as this only needs to be done if camera or world objects (eg buddies) have moved
+			}				
+
+			if(mReticleLayer != null) mReticleLayer.ClearItems();
+			for(RenderingLayer layer : mRenderingLayers) {
+				layer.Draw(canvas, mCameraViewport, closestItemID, mParentActivity.getResources());
+				if(mReticleLayer != null && layer instanceof DynamicReticleItemsInterface.IDynamicReticleItems) {
+					mReticleLayer.AddItems(((DynamicReticleItemsInterface.IDynamicReticleItems)layer).GetReticleItems(mCameraViewport, 10000));
+				}
+			}
+			if(mGeodataServiceState.mState == GeoDataServiceState.ServiceStates.SERVICE_READY_WITH_STALE_USER_LOCATION) {
+				canvas.drawBitmap(mGPSLostIcon, 10, 10, null);	// show that GPS has been lost if true
+			}
+
+			if(mMapLayer.mLoadWaitingForTiles != null) {
+				int tileLoadProgress = mMapLayer.mLoadWaitingForTiles.size();
+				if(tileLoadProgress > mProgressLimit && tileLoadProgress > 2) {
+					mProgressLimit = tileLoadProgress;
+					mCurrentProgress = 0.f;
+					mProgressStepSize = 1.0f/(float) mProgressLimit * 3;
+				}
+				if(tileLoadProgress > 0 || (mProgressLimit>0 && tileLoadProgress==0)) {
+					mTargetProgress = ((float)(mProgressLimit-tileLoadProgress) /(float)mProgressLimit);
+				
+					if(mCurrentProgress != mTargetProgress) {
+						if( (mTargetProgress-mCurrentProgress) > mProgressStepSize  && mTargetProgress < 0.95) {
+							mCurrentProgress += mProgressStepSize;
+						}
+						else {
+							mCurrentProgress = mTargetProgress;
+						}
+					}
+					int progressValue = (int)(((mCurrentProgress * (mMapViewDimensions.x-(float)PROGRESS_START_VALUE)) + PROGRESS_START_VALUE) / mMapViewDimensions.x * 100);
+					
+					mParentFragment.ActiveLoadingMapWithProgress(progressValue);
+				    if(tileLoadProgress==0) {
+				    	mProgressLimit = 0;
+				    }
+				}
+			}
+			break;
+		}	// end switch
+		mLastViewState = mViewState;
+	}
+	
+	public void SetCameraToRespondToUserVelocity(boolean cameraChangesWithUserVelocity) {
+	}
+	
+	
+	public void setCameraChangeWithUserVelocity(boolean changeWithVelocity){
+	}
+	
+	public void SetUserPitch(float pitch){
+	}
+
+
+	public Bitmap getBackgroundImage() {
+		return mMapLayer.getBackgroundImage();
+	}
+	
+	private String FindPOIClosestToCenter() {	// assumes only called if mReticleLayer!= null
+		// loop all rendering layers...
+		mFocusTestList.clear();
+		for(RenderingLayer layer : mRenderingLayers) {
+			if(layer instanceof DynamicFocusableItemsInterface.IDynamicFocusableItems) {
+				mFocusTestList.addAll(((DynamicFocusableItemsInterface.IDynamicFocusableItems)layer).GetFocusableItems());
+			}
+		}
+
+//		Log.e(TAG, "FocusTestList size " + mFocusTestList.size());
+
+		// create list of focused objects using some criteria... closest to screen center within X pixels...
+		//				Bitmap tempBitmap = mRenderSchemeManager.GetPOIBitmap(RenderSchemeManager.BitmapTypes. Y.ordinal(),0, mCameraViewport.mCurrentScale);		// get example icon at scale for dimension calculation
+		//				double iconRadius = (double)(tempBitmap.getWidth()/2.0 / mCameraViewport.mCurrentScale);
+		Bitmap tempBitmap = mRenderSchemeManager.GetPOIBitmap(RenderSchemeManager.BitmapTypes.BUDDY.ordinal(),0, mCameraViewport.mCurrentAltitudeScale);		// get example icon at scale for dimension calculation
+		double iconRadius = (double)(tempBitmap.getWidth()/2.0);
+		double detectionRadius = iconRadius *0.8 * mCameraViewport.mCurrentAltitudeScale;
+		//				Log.e(TAG, "closest detection radius " + radius); // 91.2
+
+		
+		mDrawingCameraViewportCenter = mWorld2DrawingTransformer.TransformGPSPointToDrawingPoint(new PointXY((float)mCameraViewport.mCurrentLongitude,(float) mCameraViewport.mCurrentLatitude));
+		mDrawingReticuleBoundary.left = (float) (mDrawingCameraViewportCenter.x - detectionRadius);
+		mDrawingReticuleBoundary.right = (float) (mDrawingCameraViewportCenter.x + detectionRadius);
+		mDrawingReticuleBoundary.bottom = (float) (mDrawingCameraViewportCenter.y + detectionRadius);   
+		mDrawingReticuleBoundary.top = (float) (mDrawingCameraViewportCenter.y - detectionRadius);
+
+		
+		float closestSqDistance = 999999999.f; 
+//		float distFromScreenCenterInM = 0.f;
+		String closestItemID = null;
+		WO_POI closestItem = null;
+		for(POIDrawing item : mFocusTestList) {
+//			Log.d(TAG,"FindClosestPOI  item: " + (String) ((WO_POI)item.mDataObject).mName + ", long="+mDrawingCameraViewportCenter.x +", "+ item.mLocation.x  + " | " +
+//					mDrawingCameraViewportCenter.y +", "+ item.mLocation.y);
+			if(mDrawingReticuleBoundary.contains(item.mLocation.x, item.mLocation.y)) {
+				float diffX = mDrawingCameraViewportCenter.x - item.mLocation.x;
+				float diffY = mDrawingCameraViewportCenter.y - item.mLocation.y;
+				float sqDistToCenter = diffX*diffX + diffY*diffY;
+				if(sqDistToCenter < closestSqDistance) {
+//
+//				
+//				distFromScreenCenterInM = World2DrawingTransformer.DistanceBetweenGPSPoints((float)mCameraViewport.mCurrentLongitude,  (float)mCameraViewport.mCurrentLatitude, 
+//						((WO_POI)item.mDataObject).mGPSLocation.x, ((WO_POI)item.mDataObject).mGPSLocation.y );
+//				if(distFromScreenCenterInM < closestDistance) {
+//					Log.d(TAG, "closest so far... " + (String) ((WO_POI)item.mDataObject).mName);
+					closestSqDistance = sqDistToCenter;
+					closestItem = (WO_POI)item.mDataObject;
+					closestItemID = item.mDataObject.mObjectID;
+				}
+			}
+			// find closest ------- String focusedItemID = ...canvas;
+		}
+		mReticleLayer.SetRollover(closestItem, closestSqDistance);
+//		if(closestItemID != null) Log.d(TAG, "closest so far... " +  closestItemID);
+		return closestItemID;
+
+	}
+			
+
+	public void HandleNewBuddies() {
+		if(mBuddyLayer != null) {
+			mBuddyLayer.HandleNewBuddies();
+			invalidate();
+		}
+	}
+
+
+//	
+//	public void LayerStateChanged(RenderingLayer reportingLayer, RenderingLayerState layerState) {
+////		if(!mAllLayersReady) {
+////			mAllLayersReady = true;
+////			for(RenderingLayer layer : mRenderingLayers) {
+////				mAllLayersReady = mAllLayersReady && layer.IsInitialized();
+////			}
+////		}
+////		if(mAllLayersReady) {
+//			if(reportingLayer instanceof Map2DLayer && reportingLayer.mLayerState == RenderingLayerState.REQUIRED_DATA_UNAVAILABLE) {
+//				setViewState(MapViewState.REQUIRED_DATA_UNAVAILABLE);
+//			}
+////			else {
+////				setViewState(MapViewState.DRAW_LAYERS);
+////			}
+////		}
+//	}
+
+
+}

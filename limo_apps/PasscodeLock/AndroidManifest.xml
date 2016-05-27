@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.reconinstruments.passcodelock"
+          android:sharedUserId="android.uid.system"
+          android:versionCode="1"
+          android:versionName="1.0">
+    <uses-sdk android:minSdkVersion="7"
+              android:targetSdkVersion="17"/>
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.WRITE_SECURE_SETTINGS" />
+    <application android:label="@string/app_name" android:icon="@drawable/ic_launcher" android:theme="@android:style/Theme.NoTitleBar">
+        <activity android:name="PasscodeLockActivity"
+                  android:label="@string/app_name"
+                  android:theme="@style/ReconTheme.NoTitleBar.Fullscreen"
+		  android:launchMode="singleTop"
+		  android:noHistory="true">
+            <intent-filter>
+                <action android:name="com.reconinstruments.passcodelock.PASSCODE_MAIN" />
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="ChangePasscodeActivity"
+                  android:label="ChangePasscodeActivity"
+                  android:theme="@style/ReconTheme.NoTitleBar.Fullscreen">
+            <intent-filter>
+                <action android:name="com.reconinstruments.passcodelock.CHANGE_PASSCODE" />
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="PasscodeLockCheckActivity"
+                  android:label="PasscodeLockCheckActivity"
+                  android:theme="@style/ReconTheme.NoTitleBar.Fullscreen">
+            <intent-filter>
+                <action android:name="com.reconinstruments.passcodelock.CHECK_PASSCODE" />
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+    </application>
+</manifest>

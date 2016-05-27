@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/reply_item"
+	android:layout_width="fill_parent"
+	android:layout_height="25dp"
+	android:gravity="left|center_vertical"
+	android:text=""
+	android:textColor="@drawable/canned_list_selector"
+	android:textSize="22px"
+	android:textStyle="normal" />

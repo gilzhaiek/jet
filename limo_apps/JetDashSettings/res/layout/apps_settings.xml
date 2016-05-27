@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:background="@color/recon_window_bg"
+	android:orientation="vertical" >
+	<LinearLayout
+		android:id="@+id/apps"
+		android:layout_width="fill_parent"
+		android:layout_height="106dp"
+		android:layout_gravity="center"
+		android:layout_marginLeft="3dip"
+		android:layout_marginRight="3dip"
+		android:layout_marginTop="3dip"
+		android:background="@drawable/background_transition42"
+		android:focusable="true"
+		android:gravity="center" >
+		<ImageView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginRight="20dp"
+			android:duplicateParentState="true"
+			android:src="@drawable/apps_selector" />
+		<com.reconinstruments.commonwidgets.CustomTextView
+			android:id="@+id/app_name"
+			style="@style/recon_focusable_text_shadow"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:duplicateParentState="true"
+			android:text="APPS"
+			android:textColor="@drawable/selectable_app_settings_color"
+			android:textSize="58dip"
+			android:textStyle="bold" />
+	</LinearLayout>
+	<LinearLayout
+		android:id="@+id/settings"
+		android:layout_width="fill_parent"
+		android:layout_height="76dp"
+		android:layout_gravity="center"
+		android:layout_marginBottom="3dip"
+		android:layout_marginLeft="3dip"
+		android:layout_marginRight="3dip"
+		android:layout_marginTop="10dip"
+		android:background="@drawable/background_transition42"
+		android:focusable="true"
+		android:gravity="center" >
+		<ImageView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginRight="20dp"
+			android:duplicateParentState="true"
+			android:src="@drawable/settings_selectable" />
+		<com.reconinstruments.commonwidgets.CustomTextView
+			android:id="@+id/settings_name"
+			style="@style/recon_focusable_text_shadow"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:duplicateParentState="true"
+			android:text="SETTINGS"
+			android:textColor="@drawable/selectable_app_settings_color"
+			android:textSize="36dip"
+			android:textStyle="bold" />
+	</LinearLayout>
+</LinearLayout>

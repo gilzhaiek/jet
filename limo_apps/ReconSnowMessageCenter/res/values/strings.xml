@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">RECON Message Center</string>
+    <string name="ok_button">OK</string>
+    <string name="title_activity_message_category_viewer">MessageCategoryViewer</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_message_viewer">MessageViewer</string>
+    <string name="nomsg">No Messages</string>
+    <string name="intentexception">Could not instantiate Message Handler. Reason: "</string>
+    <string name="alert_dismiss">DISMISS</string>
+    <string name="alert_handle">HANDLE</string>
+    <string name="title_activity_message_alert">Message Notification</string>
+    
+    <string name="nav_prev">&lt;</string>
+    <string name="nav_next">&gt;</string>
+
+</resources>

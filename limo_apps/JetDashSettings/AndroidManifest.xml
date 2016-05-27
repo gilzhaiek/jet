@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- -*-  indent-tabs-mode:nil;  -*- -->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+	package="com.reconinstruments.jetapplauncher"
+	android:sharedUserId="android.uid.system"
+	android:versionCode="7068"
+	android:versionName="Keefer_RC1" >
+	<uses-sdk
+		android:minSdkVersion="10"
+		android:targetSdkVersion="16" />
+	<uses-permission android:name="android.permission.BLUETOOTH" />
+	<uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+	<uses-permission android:name="android.permission.DELETE_PACKAGES" />
+	<uses-permission android:name="android.permission.WRITE_SETTINGS" />
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+	<uses-permission android:name="android.permission.WRITE_SECURE_SETTINGS" />
+	<uses-permission android:name="android.permission.CHANGE_CONFIGURATION" />
+	<uses-permission android:name="android.permission.SET_TIME" />
+	<uses-permission android:name="android.permission.SET_TIME_ZONE" />
+	<uses-permission android:name="android.permission.REBOOT" />
+	<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+	<uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+	<application
+		android:allowBackup="true"
+		android:icon="@drawable/ic_launcher"
+		android:label="@string/app_name"
+		android:theme="@style/ReconTheme.NoTitleBar.Fullscreen" >
+		<activity
+			android:name="com.reconinstruments.jetappsettings.AppsOrSettingsActivity"
+			android:label="@string/app_name"
+			android:launchMode="singleInstance" >
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="android.intent.category.DEFAULT" />
+			</intent-filter>
+		</activity>
+		<!-- Setting -->
+		<activity
+			android:name="com.reconinstruments.jetapplauncher.applauncher.AppLauncherActivity"
+			android:launchMode="singleInstance" >
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<action android:name="com.reconinstruments.jetappsettings.apps" />
+				<category android:name="android.intent.category.DEFAULT" />
+			</intent-filter>
+		</activity>
+		<activity
+			android:name="com.reconinstruments.jetapplauncher.settings.SettingsActivity"
+			android:launchMode="singleInstance" >
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<action android:name="com.reconinstruments.jetappsettings.settings" />
+				<category android:name="android.intent.category.DEFAULT" />
+			</intent-filter>
+		</activity>
+		<activity
+			android:name="com.reconinstruments.jetapplauncher.settings.BluetoothActivity"
+			android:launchMode="singleInstance" />
+		<activity
+			android:name="com.reconinstruments.jetapplauncher.settings.SensorActivity"
+			android:launchMode="singleInstance" />
+		<activity
+			android:name="com.reconinstruments.jetapplauncher.settings.DisplayActivity"
+			android:launchMode="singleInstance"
+			android:theme="@style/ReconTheme.Dialog" />
+		<activity
+			android:name="com.reconinstruments.jetapplauncher.settings.DisplayMenuActivity"
+			android:launchMode="singleInstance" />
+		<activity
+			android:name="com.reconinstruments.jetapplauncher.settings.NotificationsActivity"
+			android:launchMode="singleInstance" >
+		</activity>
+		<activity
+			android:name="com.reconinstruments.jetapplauncher.settings.AppsActivity"
+			android:launchMode="singleInstance" />
+		<activity
+			android:name="com.reconinstruments.jetapplauncher.settings.FacebookActivity"
+			android:launchMode="singleInstance" />
+		<activity
+			android:name="com.reconinstruments.jetapplauncher.settings.DeviceActivity"
+			android:launchMode="singleInstance" />
+		<activity
+			android:name="com.reconinstruments.jetapplauncher.settings.ActivityActivity"
+			android:launchMode="singleInstance" />
+		<activity
+			android:name="com.reconinstruments.jetapplauncher.settings.ProfileActivity"
+			android:launchMode="singleInstance" />
+		<activity
+			android:name="com.reconinstruments.jetapplauncher.settings.ProfileInfoActivity"
+			android:launchMode="singleInstance"
+			android:noHistory="true" />
+		<activity
+			android:name="com.reconinstruments.jetapplauncher.settings.AdvancedActivity"
+			android:launchMode="singleInstance" />
+		<activity
+			android:name="com.reconinstruments.jetapplauncher.settings.SoundsActivity"
+			android:launchMode="singleInstance" />
+		<activity
+			android:name="com.reconinstruments.jetapplauncher.settings.TimeActivity"
+			android:launchMode="singleInstance" />
+		<activity
+			android:name="com.reconinstruments.jetapplauncher.settings.TimezoneActivity"
+			android:launchMode="singleInstance" />
+		<activity
+			android:name="com.reconinstruments.jetapplauncher.settings.HelpActivity"
+			android:launchMode="singleInstance" />
+		<activity
+			android:name="com.reconinstruments.jetapplauncher.settings.BrightnessActivity"
+			android:launchMode="singleInstance" />
+		<activity
+			android:name="com.reconinstruments.jetapplauncher.settings.bluetooth.BluetoothActivity"
+			android:launchMode="singleInstance" />
+		<activity
+			android:name="com.reconinstruments.jetapplauncher.settings.DateTimeActivity"
+			android:launchMode="singleInstance" />
+		<activity
+			android:name="com.reconinstruments.jetapplauncher.settings.TimeZoneActivity"
+			android:launchMode="singleInstance" />
+		<activity
+			android:name="com.reconinstruments.jetapplauncher.settings.ResetStatsActivity"
+			android:launchMode="singleInstance" />
+		<activity
+			android:name="com.reconinstruments.jetapplauncher.settings.SetUnitsActivity"
+			android:launchMode="singleInstance" />
+		<activity
+			android:name="com.reconinstruments.jetapplauncher.settings.UpdateActivity"
+			android:launchMode="singleInstance" />
+		<activity
+			android:name="com.reconinstruments.jetapplauncher.settings.ManualTimeActivity"
+			android:launchMode="singleInstance" />
+		<activity
+			android:name="com.reconinstruments.jetapplauncher.settings.advanced.AdvancedActivity"
+			android:launchMode="singleInstance" />
+		<activity
+			android:name="com.reconinstruments.jetapplauncher.settings.BatterySavingActivity"
+			android:launchMode="singleInstance" />
+		<activity
+			android:name="com.reconinstruments.jetapplauncher.settings.AboutActivity"
+			android:launchMode="singleInstance" />
+		<activity
+			android:name="com.reconinstruments.jetapplauncher.settings.AboutAndHelpActivity"
+			android:launchMode="singleInstance" />
+		<activity
+			android:name="com.reconinstruments.jetapplauncher.settings.advanced.UninstallActivity"
+			android:launchMode="singleInstance" />
+		<activity
+			android:name="com.reconinstruments.jetapplauncher.settings.advanced.CLearPhoneHistoryActivity"
+			android:launchMode="singleInstance" />
+		<activity
+			android:name="com.reconinstruments.jetapplauncher.settings.advanced.FactoryResetActivity"
+			android:launchMode="singleInstance"
+			android:theme="@style/ReconTheme.NoTitleBar" >
+		</activity>
+		<activity
+			android:name=".settings.AntBleSwitchActivity"
+			android:theme="@style/Theme.Transparent" >
+			<intent-filter>
+				<action android:name="com.reconinstruments.jetappsettings.antbleswitch" />
+				<category android:name="android.intent.category.DEFAULT" />
+			</intent-filter>
+		</activity>
+		<activity
+				android:name="com.reconinstruments.jetapplauncher.settings.DiagnosticsActivity"
+				android:launchMode="singleInstance" />
+		<activity
+			android:name="com.reconinstruments.jetapplauncher.settings.PasscodeActivity"
+			android:launchMode="singleInstance" />
+		<activity
+			android:name="com.reconinstruments.jetapplauncher.settings.GlanceActivity"
+			android:launchMode="singleInstance" />
+		<activity
+			android:name="com.reconinstruments.jetapplauncher.settings.CalibrateActivity"
+			android:launchMode="singleInstance"
+			android:parentActivityName="com.reconinstruments.jetapplauncher.settings.GlanceActivity" >
+			<meta-data
+				android:name="android.support.PARENT_ACTIVITY"
+				android:value="com.reconinstruments.jetapplauncher.settings.GlanceActivity" />
+		</activity>
+		<receiver
+			android:name="com.reconinstruments.jetapplauncher.settings.service.SyncTimeReceiver"
+			android:enabled="true"
+			android:exported="true" >
+			<intent-filter>
+				<action android:name="HUD_STATE_CHANGED" />
+				<action android:name="com.reconinstruments.hud_phone_status_exchange.tohud.tz_response" />
+			</intent-filter>
+		</receiver>
+		<service
+			android:name="com.reconinstruments.jetapplauncher.settings.service.GlanceAppService"
+			android:enabled="true" >
+			<intent-filter>
+				<action android:name="com.reconinstruments.jetapplauncher.settings.service.GlanceAppService" />
+			</intent-filter>
+		</service>
+	</application>
+</manifest>

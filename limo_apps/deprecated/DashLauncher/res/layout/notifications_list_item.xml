@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:layout_marginLeft="30dp"
+    android:layout_marginTop="5dp" >
+
+    <ImageView
+        android:id="@+id/notifications_row_icon"
+        android:layout_width="45dp"
+        android:layout_height="58dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginRight="12dp"
+        android:layout_marginLeft="32dp"
+        android:scaleType="fitXY" />
+
+    <com.reconinstruments.widgets.CustomTextView
+        android:id="@+id/notifications_row_time"
+        style="@style/selectable_text_shadow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="32dp"
+        android:singleLine="true"
+        android:text="time"
+		android:textStyle="normal"
+        android:textSize="18px"
+        android:layout_marginTop="5dp"/>
+
+    <com.reconinstruments.widgets.CustomTextView
+        android:id="@+id/notifications_row_label"
+        style="@style/selectable_text_shadow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@id/notifications_row_time"
+        android:layout_toRightOf="@id/notifications_row_icon"
+        android:ellipsize="marquee"
+        android:layout_marginBottom="0dp"
+        android:singleLine="true"
+        android:textSize="24px"
+        android:textStyle="bold" />
+
+    <com.reconinstruments.widgets.CustomTextView
+        android:id="@+id/notifications_row_info"
+        style="@style/selectable_text_shadow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@id/notifications_row_label"
+        android:layout_toRightOf="@id/notifications_row_icon"
+        android:layout_marginTop="-10dp"
+        android:paddingRight="32dp"
+        android:ellipsize="marquee"
+        android:singleLine="true"
+        android:textSize="18px"
+ 	 	android:textStyle="bold"/>
+
+</RelativeLayout>

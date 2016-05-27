@@ -1,0 +1,28 @@
+####################################################################################################################
+#                                                                                                                  #
+#                                                                                                                  #
+#                                                                                                                  #
+# This is the configure one or more Geo Regions to process and get Recon Instruments Map in RECON TILE format.     #
+#                                                                                                                  #
+# You can select one or more Geo Regions to process it (by removing the comment sign '#').                         #
+#                                                                                                                  #
+# It ignores all of the comment line that starts with sign '#'                                                     #
+#                                                                                                                  #
+# Each Geo Region format: GEO_REGION_NAME; left_longitude; bottom_latitude; right_longitude; top_latitude          #
+#                                                                                                                  #
+#                                                                                                                  #
+#                                                                                                                  #
+####################################################################################################################
+
+#["'Canada_Middle_Area'", -136.0, 53.0, -56.0, 57.0]
+#[Canada_Middle_Area1     ; -136.000000;  53.000000; -128.536616;  57.000000]
+#[Canada_Middle_Area2     ; -128.536616;  53.000000; -121.073233;  57.000000]
+#[Canada_Middle_Area3     ; -121.073233;  53.000000; -113.609849;  57.000000]
+#[Canada_Middle_Area4     ; -113.609849;  53.000000; -106.146466;  57.000000]
+#[Canada_Middle_Area5     ; -106.146466;  53.000000; -98.683082;  57.000000]
+#[Canada_Middle_Area6     ; -98.683082;  53.000000; -91.219698;  57.000000]
+#[Canada_Middle_Area7     ; -91.219698;  53.000000; -83.756315;  57.000000]
+#[Canada_Middle_Area8     ; -83.756315;  53.000000; -76.292931;  57.000000]
+#[Canada_Middle_Area9     ; -76.292931;  53.000000; -68.829547;  57.000000]
+#[Canada_Middle_Area10    ; -68.829547;  53.000000; -61.366164;  57.000000]
+#[Canada_Middle_Area11    ; -61.366164;  53.000000; -56.000000;  57.000000]

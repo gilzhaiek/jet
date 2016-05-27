@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:background="#000000"
+	android:orientation="vertical" >
+	<TextView
+		android:id="@+id/header"
+		style="@style/recon_white_text_shadow"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginLeft="20dp"
+		android:layout_marginRight="20dp"
+		android:layout_marginTop="10dp"
+		android:focusable="false"
+		android:gravity="left|center_vertical"
+		android:text="SETUP IPHONE"
+		android:textSize="28dip"
+		android:textStyle="bold" />
+	<TextView
+		style="@style/recon_white_text_shadow"
+		android:layout_width="match_parent"
+		android:layout_height="0dp"
+		android:layout_marginTop="10dp"
+		android:layout_weight="1"
+		android:gravity="left"
+		android:paddingLeft="20dip"
+		android:paddingRight="20dip"
+		android:text="Go to Settings -> Bluetooth on your iPhone. This will allow your HUD to find your iPhone."
+		android:textSize="22dp"
+		android:textStyle="normal" />
+	<TextView
+		android:id="@+id/cancel"
+		style="@style/recon_focusable_text_shadow"
+		android:layout_width="fill_parent"
+		android:layout_height="40dp"
+		android:layout_marginLeft="3dip"
+		android:layout_marginRight="3dip"
+		android:background="@drawable/background_transition42"
+		android:focusable="true"
+		android:gravity="left|center_vertical"
+		android:paddingLeft="37dip"
+		android:text="NOT NOW"
+		android:textSize="24dip"
+		android:textStyle="bold" />
+	<TextView
+		android:id="@+id/ok"
+		style="@style/recon_focusable_text_shadow"
+		android:layout_width="fill_parent"
+		android:layout_height="40dp"
+		android:layout_marginBottom="3dip"
+		android:layout_marginLeft="3dip"
+		android:layout_marginRight="3dip"
+		android:background="@drawable/background_transition42"
+		android:focusable="true"
+		android:gravity="left|center_vertical"
+		android:paddingLeft="37dip"
+		android:text="CONTINUE"
+		android:textSize="24dip"
+		android:textStyle="bold" />
+</LinearLayout>

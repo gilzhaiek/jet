@@ -1,0 +1,640 @@
+# This is the world regulatory domain
+country 00:
+	(2402 - 2472 @ 40), (3, 20)
+        # Channel 12 - 13. No HT40 channel fits here
+        (2457 - 2482 @ 20), (3, 20), PASSIVE-SCAN, NO-IBSS
+        # Channel 14. Only JP enables this and for 802.11b only
+        #(2474 - 2494 @ 20), (3, 20), PASSIVE-SCAN, NO-IBSS, NO-OFDM
+        # Channel 36 - 48
+        #(5170 - 5250 @ 40), (3, 20), PASSIVE-SCAN, NO-IBSS
+        # NB: 5260 MHz - 5700 MHz requies DFS
+        # Channel 149 - 165
+        #(5735 - 5835 @ 40), (3, 20), PASSIVE-SCAN, NO-IBSS
+
+
+country AE:
+	(2402 - 2482 @ 40), (N/A, 20)
+
+country AL:
+	(2402 - 2482 @ 20), (N/A, 20)
+
+country AM:
+	(2402 - 2482 @ 40), (N/A, 20)
+
+
+
+country AN:
+	(2402 - 2482 @ 40), (N/A, 20)
+
+
+
+
+country AR:
+	(2402 - 2482 @ 20), (N/A, 20)
+
+
+
+
+
+country AT:
+	(2402 - 2482 @ 40), (N/A, 20)
+
+
+
+
+country AU:
+	(2402 - 2482 @ 40), (N/A, 20)
+
+
+
+
+country AW:
+	(2402 - 2482 @ 40), (N/A, 20)
+
+
+
+
+country AZ:
+	(2402 - 2482 @ 40), (N/A, 20)
+
+
+
+country BA:
+	(2402 - 2482 @ 40), (N/A, 20)
+
+
+
+
+country BB:
+	(2402 - 2482 @ 40), (N/A, 20)
+
+
+
+
+country BE:
+	(2402 - 2482 @ 40), (N/A, 20)
+
+
+
+
+country BG:
+	(2402 - 2482 @ 40), (N/A, 20)
+
+
+
+
+country BH:
+	(2402 - 2482 @ 40), (N/A, 20)
+
+
+
+
+country BL:
+	(2402 - 2482 @ 40), (N/A, 20)
+
+
+
+country BN:
+	(2402 - 2482 @ 40), (N/A, 20)
+
+
+
+
+country BO:
+	(2402 - 2482 @ 40), (N/A, 30)
+
+
+country BR:
+	(2402 - 2482 @ 20), (N/A, 20)
+
+
+
+
+
+country BY:
+	(2402 - 2482 @ 40), (N/A, 20)
+
+
+
+
+country BZ:
+	(2402 - 2482 @ 40), (N/A, 30)
+
+
+country CA:
+	(2402 - 2472 @ 40), (3, 27)
+
+
+
+
+
+country CH:
+	(2402 - 2482 @ 40), (N/A, 20)
+
+
+
+
+country CL:
+	(2402 - 2482 @ 40), (N/A, 20)
+
+
+
+
+country CN:
+	(2402 - 2482 @ 40), (N/A, 20)
+
+
+country CO:
+	(2402 - 2472 @ 40), (3, 27)
+
+
+
+
+country CR:
+	(2402 - 2482 @ 40), (N/A, 20)
+
+
+
+
+country CS:
+	(2402 - 2482 @ 40), (N/A, 20)
+
+
+
+
+country CY:
+	(2402 - 2482 @ 40), (N/A, 20)
+
+
+
+
+# Data from http://www.ctu.eu/164/download/VOR/VOR-12-08-2005-34.pdf
+# and http://www.ctu.eu/164/download/VOR/VOR-12-05-2007-6-AN.pdf
+country CZ:
+	(2400 - 2483.5 @ 40), (N/A, 100 mW)
+
+
+
+
+# Data from "Frequenznutzungsplan" (as published in April 2008),
+# downloaded from http://www.bundesnetzagentur.de/media/archive/13358.pdf
+# Also applicable is http://www.bundesnetzagentur.de/media/archive/5009.pdf
+# On the 5 GHz ranges TX power can be doubled if TPC is implemented.
+country DE:
+	# entries 279004 and 280006
+	(2400 - 2483.5 @ 40), (N/A, 100 mW)
+	# entries 303005, 304002 and 305002
+
+	# entries 308002, 309001 and 310003
+
+
+country DK:
+	(2402 - 2482 @ 40), (N/A, 20)
+
+
+
+
+country DO:
+	(2402 - 2472 @ 40), (3, 27)
+
+
+
+
+country DZ:
+	(2402 - 2482 @ 20), (N/A, 20)
+
+country EC:
+	(2402 - 2482 @ 40), (N/A, 20)
+
+
+
+
+country EE:
+	(2402 - 2482 @ 40), (N/A, 20)
+
+
+
+
+country EG:
+	(2402 - 2482 @ 40), (N/A, 20)
+
+
+
+country ES:
+	(2402 - 2482 @ 40), (N/A, 20)
+
+
+
+
+country FI:
+	(2402 - 2482 @ 40), (N/A, 20)
+
+
+
+
+country FR:
+	(2402 - 2482 @ 40), (N/A, 20)
+
+
+
+
+country GE:
+	(2402 - 2482 @ 40), (N/A, 20)
+
+
+
+country GB:
+	(2402 - 2482 @ 40), (N/A, 20)
+
+
+
+
+country GD:
+	(2402 - 2472 @ 40), (3, 27)
+
+
+
+
+
+country GR:
+	(2402 - 2482 @ 40), (N/A, 20)
+
+
+
+
+country GL:
+	(2402 - 2482 @ 40), (N/A, 20)
+
+
+
+
+country GT:
+	(2402 - 2472 @ 40), (3, 27)
+
+
+
+
+country GU:
+	(2402 - 2472 @ 40), (3, 27)
+
+
+
+
+country HN:
+	(2402 - 2482 @ 40), (N/A, 20)
+
+country HK:
+	(2402 - 2482 @ 40), (N/A, 20)
+
+
+
+
+
+country HR:
+	(2402 - 2482 @ 40), (N/A, 20)
+
+
+
+
+country HT:
+	(2402 - 2482 @ 40), (N/A, 20)
+
+
+
+
+country HU:
+	(2402 - 2482 @ 40), (N/A, 20)
+
+
+
+
+country ID:
+	(2402 - 2482 @ 40), (N/A, 20)
+
+country IE:
+	(2402 - 2482 @ 40), (N/A, 20)
+
+
+
+
+country IL:
+	(2402 - 2482 @ 40), (N/A, 20)
+
+country IN:
+	(2402 - 2482 @ 40), (N/A, 20)
+
+
+
+
+country IS:
+	(2402 - 2482 @ 40), (N/A, 20)
+
+
+
+
+country IR:
+	(2402 - 2482 @ 40), (N/A, 20)
+
+
+country IT:
+	(2402 - 2482 @ 40), (N/A, 20)
+
+
+
+
+country JM:
+	(2402 - 2482 @ 40), (N/A, 20)
+
+
+
+
+
+country JP:
+	(2402 - 2472 @ 40), (N/A, 20)
+	(2457 - 2482 @ 20), (N/A, 20)
+
+country JO:
+	(2402 - 2482 @ 40), (N/A, 20)
+
+
+country KH:
+	(2402 - 2482 @ 40), (N/A, 20)
+
+
+
+
+country KP:
+	(2402 - 2482 @ 40), (N/A, 20)
+
+
+
+
+
+country KR:
+	(2402 - 2482 @ 20), (N/A, 20)
+
+
+country KW:
+	(2402 - 2482 @ 40), (N/A, 20)
+
+
+
+country KZ:
+	(2402 - 2482 @ 40), (N/A, 20)
+
+country LB:
+	(2402 - 2482 @ 40), (N/A, 20)
+
+country LI:
+	(2402 - 2482 @ 40), (N/A, 20)
+
+
+
+
+country LK:
+	(2402 - 2482 @ 40), (N/A, 20)
+
+
+
+
+
+country LT:
+	(2402 - 2482 @ 40), (N/A, 20)
+
+
+
+
+country LU:
+	(2402 - 2482 @ 40), (N/A, 20)
+
+
+
+
+country LV:
+	(2402 - 2482 @ 40), (N/A, 20)
+
+
+
+
+country MC:
+	(2402 - 2482 @ 40), (N/A, 20)
+
+
+
+country MA:
+	(2402 - 2482 @ 40), (N/A, 20)
+
+country MO:
+	(2402 - 2482 @ 40), (N/A, 20)
+
+
+
+
+country MK:
+	(2402 - 2482 @ 40), (N/A, 20)
+
+country MT:
+	(2402 - 2482 @ 40), (N/A, 20)
+
+
+
+
+country MY:
+	(2402 - 2482 @ 20), (N/A, 20)
+
+country MX:
+	(2402 - 2472 @ 40), (3, 27)
+
+
+
+
+country NL:
+	(2402 - 2482 @ 40), (N/A, 20)
+
+
+
+
+country NO:
+	(2402 - 2482 @ 40), (N/A, 20)
+
+
+
+
+country NP:
+	(2402 - 2482 @ 40), (N/A, 20)
+
+
+country NZ:
+	(2402 - 2482 @ 40), (N/A, 30)
+	(5170 - 5250 @ 20), (3, 23)
+
+
+
+country OM:
+	(2402 - 2482 @ 40), (N/A, 20)
+
+
+
+
+
+country PA:
+	(2402 - 2472 @ 40), (3, 27)
+
+
+
+
+country PE:
+	(2402 - 2482 @ 40), (N/A, 20)
+	(5735 - 5835 @ 20), (N/A, 30)
+
+country PG:
+	(2402 - 2482 @ 40), (N/A, 20)
+
+
+
+
+country PH:
+	(2402 - 2482 @ 40), (N/A, 20)
+
+
+country PK:
+	(2402 - 2482 @ 40), (N/A, 20)
+
+country PL:
+	(2402 - 2482 @ 40), (N/A, 20)
+
+
+
+
+country PT:
+	(2402 - 2482 @ 40), (N/A, 20)
+
+
+
+
+country PR:
+	(2402 - 2472 @ 40), (3, 27)
+
+
+
+
+country QA:
+	(2402 - 2482 @ 40), (N/A, 20)
+
+
+country RO:
+	(2402 - 2482 @ 40), (N/A, 20)
+
+country RU:
+	(2402 - 2482 @ 40), (N/A, 20)
+
+country SA:
+	(2402 - 2482 @ 40), (N/A, 20)
+
+country SE:
+	(2402 - 2482 @ 40), (N/A, 20)
+
+
+
+
+country SG:
+	(2402 - 2482 @ 40), (N/A, 20)
+
+
+
+
+country SI:
+	(2402 - 2482 @ 40), (N/A, 20)
+
+
+
+
+country SK:
+	(2402 - 2482 @ 40), (N/A, 20)
+
+
+
+
+country SV:
+	(2402 - 2482 @ 40), (N/A, 20)
+
+
+
+
+country SY:
+	(2402 - 2482 @ 40), (N/A, 20)
+
+country TW:
+	(2402 - 2472 @ 40), (3, 27)
+	(5270 - 5330 @ 40), (3, 17), DFS
+
+
+country TH:
+	(2402 - 2482 @ 40), (N/A, 20)
+
+
+
+
+
+country TT:
+	(2402 - 2482 @ 40), (N/A, 20)
+
+
+
+
+
+country TN:
+	(2402 - 2482 @ 40), (N/A, 20)
+
+
+
+country TR:
+	(2402 - 2482 @ 40), (N/A, 20)
+
+
+
+country UA:
+	(2402 - 2482 @ 40), (N/A, 20)
+
+country US:
+	(2402 - 2472 @ 40), (3, 27)
+
+
+
+
+
+
+country UY:
+	(2402 - 2482 @ 40), (N/A, 20)
+
+
+
+
+
+country UZ:
+	(2402 - 2472 @ 40), (3, 27)
+
+
+
+
+
+country VE:
+	(2402 - 2482 @ 40), (N/A, 30)
+
+
+country VN:
+	(2402 - 2482 @ 40), (N/A, 20)
+
+country YE:
+	(2402 - 2482 @ 40), (N/A, 20)
+
+country ZA:
+	(2402 - 2482 @ 40), (N/A, 20)
+
+
+
+
+
+country ZW:
+	(2402 - 2482 @ 40), (N/A, 20)
+

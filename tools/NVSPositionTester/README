@@ -1,0 +1,9 @@
+This tool will generate prompt the user to generate a GPSCPositionFile 
+that can be copied into /data/gps/aiding/. At boot up, NAVD will read
+that file and inject its location as a initial location.
+
+To build the tool. Setup your build environement using lunch and copy 
+this folder into ../mydroid/. Go to the folder and type "mm" to build.
+Once built, copy the binary onto the HUD.
+
+**The tools needs to be run on the HUD itself.**
